@@ -1,13 +1,14 @@
-	thumb_func_start reset_all_obj_data
-reset_all_obj_data: ; 8006974
+	thumb_func_start ResetAllObjectData
+; void ResetAllObjectData()
+ResetAllObjectData: ; 8006974
 	push {r4,lr}
 	movs r0, 0
 	movs r1, 0x80
-	bl reset_super_sprites
-	bl obj_delete_all
-	bl copy_queue_clear
+	bl ResetSpriteRange
+	bl RemoveAllObjects
+	bl ClearObjectCopyRequests
 	bl rotscale_reset_all
-	bl gpu_tile_obj_tags_reset
+	bl FreeAllObjectTiles
 	ldr r1, =0x02021b38
 	movs r0, 0x40
 	strb r0, [r1]
@@ -15,7 +16,7 @@ reset_all_obj_data: ; 8006974
 	movs r4, 0
 	strh r4, [r0]
 	movs r0, 0
-	bl gpu_tile_obj_alloc
+	bl AllocObjectTiles
 	ldr r0, =0x02021bbc
 	strh r4, [r0]
 	ldr r0, =0x02021bbe
@@ -23,17 +24,16 @@ reset_all_obj_data: ; 8006974
 	pop {r4}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end reset_all_obj_data
+	thumb_func_end ResetAllObjectData
 
-	thumb_func_start call_obj_callbacks
-; void call_obj_callbacks()
-call_obj_callbacks: ; 80069C0
+	thumb_func_start CallObjectCallbacks
+; void CallObjectCallbacks()
+CallObjectCallbacks: ; 80069C0
 	push {r4-r7,lr}
 	movs r6, 0
 	movs r7, 0x1
-@080069C6:
+_080069C6:
 	lsls r0, r6, 4
 	adds r0, r6
 	lsls r0, 2
@@ -45,7 +45,7 @@ call_obj_callbacks: ; 80069C0
 	adds r0, r7, 0
 	ands r0, r1
 	cmp r0, 0
-	beq @080069F6
+	beq _080069F6
 	ldr r1, [r4, 0x1C]
 	adds r0, r4, 0
 	bl _call_via_r1
@@ -53,29 +53,28 @@ call_obj_callbacks: ; 80069C0
 	adds r0, r7, 0
 	ands r0, r1
 	cmp r0, 0
-	beq @080069F6
+	beq _080069F6
 	adds r0, r4, 0
-	bl obj_anim_step
-@080069F6:
+	bl AnimateObject
+_080069F6:
 	adds r0, r6, 0x1
 	lsls r0, 24
 	lsrs r6, r0, 24
 	cmp r6, 0x3F
-	bls @080069C6
+	bls _080069C6
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end call_obj_callbacks
+	thumb_func_end CallObjectCallbacks
 
-	thumb_func_start obj_sync_something
-; void obj_sync_something()
-obj_sync_something: ; 8006A0C
+	thumb_func_start PrepareSpritesForOamLoad
+; void PrepareSpritesForOamLoad()
+PrepareSpritesForOamLoad: ; 8006A0C
 	push {r4,r5,lr}
-	bl update_obj_oam_coords
-	bl do_something_with_obj_priorites
-	bl determine_visible_sprites_maybe
+	bl UpdateObjectOamCoords
+	bl BuildObjectPriorityList
+	bl SortObjectsByPriority
 	ldr r5, =0x030022c0
 	ldr r0, =0x00000439
 	adds r5, r0
@@ -85,8 +84,8 @@ obj_sync_something: ; 8006A0C
 	movs r1, 0x1
 	orrs r0, r1
 	strb r0, [r5]
-	bl super_sprites_fill
-	bl copy_rotscale_coeffs_to_super_sprites
+	bl PopulateSprites
+	bl CopyTransformationMatricesToSprites
 	movs r2, 0x1
 	ldrb r1, [r5]
 	movs r0, 0x2
@@ -99,19 +98,19 @@ obj_sync_something: ; 8006A0C
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end obj_sync_something
+	thumb_func_end PrepareSpritesForOamLoad
 
-	thumb_func_start update_obj_oam_coords
-update_obj_oam_coords: ; 8006A58
+	thumb_func_start UpdateObjectOamCoords
+; void UpdateObjectOamCoords()
+UpdateObjectOamCoords: ; 8006A58
 	push {r4-r7,lr}
 	movs r4, 0
 	ldr r7, =0x02020630
 	ldr r0, =0x000001ff
 	adds r5, r0, 0
 	ldr r6, =0xfffffe00
-@08006A64:
+_08006A64:
 	lsls r0, r4, 4
 	adds r0, r4
 	lsls r0, 2
@@ -122,11 +121,11 @@ update_obj_oam_coords: ; 8006A58
 	movs r0, 0x5
 	ands r0, r1
 	cmp r0, 0x1
-	bne @08006B0A
+	bne _08006B0A
 	movs r0, 0x2
 	ands r0, r1
 	cmp r0, 0
-	beq @08006AD8
+	beq _08006AD8
 	movs r2, 0x20
 	ldrsh r1, [r3, r2]
 	movs r2, 0x24
@@ -158,10 +157,9 @@ update_obj_oam_coords: ; 8006A58
 	adds r0, r1
 	ldrb r2, [r2]
 	adds r0, r2
-	b @08006B08
-	.align 2, 0
+	b _08006B08
 	.pool
-@08006AD8:
+_08006AD8:
 	movs r2, 0x20
 	ldrsh r1, [r3, r2]
 	movs r2, 0x24
@@ -186,26 +184,27 @@ update_obj_oam_coords: ; 8006A58
 	adds r0, 0x29
 	ldrb r0, [r0]
 	adds r0, r1
-@08006B08:
+_08006B08:
 	strb r0, [r3]
-@08006B0A:
+_08006B0A:
 	adds r0, r4, 0x1
 	lsls r0, 24
 	lsrs r4, r0, 24
 	cmp r4, 0x3F
-	bls @08006A64
+	bls _08006A64
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	thumb_func_end update_obj_oam_coords
+	thumb_func_end UpdateObjectOamCoords
 
-	thumb_func_start do_something_with_obj_priorites
-do_something_with_obj_priorites: ; 8006B1C
+	thumb_func_start BuildObjectPriorityList
+; void BuildObjectPriorityList()
+BuildObjectPriorityList: ; 8006B1C
 	push {r4,lr}
 	movs r2, 0
 	ldr r4, =0x02020630
 	ldr r3, =0x02021774
-@08006B24:
+_08006B24:
 	lsls r0, r2, 4
 	adds r0, r2
 	lsls r0, 2
@@ -225,16 +224,16 @@ do_something_with_obj_priorites: ; 8006B1C
 	lsls r0, 16
 	lsrs r2, r0, 16
 	cmp r2, 0x3F
-	bls @08006B24
+	bls _08006B24
 	pop {r4}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end do_something_with_obj_priorites
+	thumb_func_end BuildObjectPriorityList
 
-	thumb_func_start determine_visible_sprites_maybe
-determine_visible_sprites_maybe: ; 8006B5C
+	thumb_func_start SortObjectsByPriority
+; void SortObjectsByPriority()
+SortObjectsByPriority: ; 8006B5C
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -249,7 +248,7 @@ determine_visible_sprites_maybe: ; 8006B5C
 	mov r9, r3
 	ldr r6, =0xc0000300
 	mov r8, r6
-@08006B78:
+_08006B78:
 	mov r5, r12
 	mov r0, r12
 	subs r0, 0x1
@@ -279,72 +278,71 @@ determine_visible_sprites_maybe: ; 8006B5C
 	ldrb r2, [r4]
 	adds r0, r1, 0
 	cmp r0, 0x9F
-	ble @08006BBA
+	ble _08006BBA
 	add r0, r9
 	lsls r0, 16
 	lsrs r1, r0, 16
-@08006BBA:
+_08006BBA:
 	lsls r0, r2, 16
 	asrs r0, 16
 	cmp r0, 0x9F
-	ble @08006BC8
+	ble _08006BC8
 	add r0, r9
 	lsls r0, 16
 	lsrs r2, r0, 16
-@08006BC8:
+_08006BC8:
 	ldr r0, [r3]
 	mov r7, r8
 	ands r0, r7
 	cmp r0, r8
-	bne @08006BEC
+	bne _08006BEC
 	ldrb r0, [r3, 0x1]
 	lsrs r0, 6
 	cmp r0, 0
-	beq @08006BDE
+	beq _08006BDE
 	cmp r0, 0x2
-	bne @08006BEC
-@08006BDE:
+	bne _08006BEC
+_08006BDE:
 	lsls r0, r1, 16
 	asrs r0, 16
 	cmp r0, 0x80
-	ble @08006BEC
+	ble _08006BEC
 	add r0, r9
 	lsls r0, 16
 	lsrs r1, r0, 16
-@08006BEC:
+_08006BEC:
 	ldr r0, [r4]
 	mov r3, r8
 	ands r0, r3
 	cmp r0, r8
-	bne @08006C10
+	bne _08006C10
 	ldrb r0, [r4, 0x1]
 	lsrs r0, 6
 	cmp r0, 0
-	beq @08006C02
+	beq _08006C02
 	cmp r0, 0x2
-	bne @08006C10
-@08006C02:
+	bne _08006C10
+_08006C02:
 	lsls r0, r2, 16
 	asrs r0, 16
 	cmp r0, 0x80
-	ble @08006C10
+	ble _08006C10
 	add r0, r9
 	lsls r0, 16
 	lsrs r2, r0, 16
-@08006C10:
+_08006C10:
 	movs r7, 0x1
 	add r12, r7
 	cmp r5, 0
-	beq @08006CF6
+	beq _08006CF6
 	ldr r0, [sp]
 	cmp r0, r6
-	bhi @08006C38
+	bhi _08006C38
 	cmp r0, r6
-	bne @08006CF6
-	b @08006CEE
-	.align 2, 0
+	bne _08006CF6
+	b _08006CEE
 	.pool
-@08006C38:
+_08006C38:
 	mov r1, r10
 	adds r3, r5, r1
 	ldrb r4, [r3]
@@ -382,80 +380,80 @@ determine_visible_sprites_maybe: ; 8006B5C
 	ldrb r2, [r4]
 	adds r0, r1, 0
 	cmp r0, 0x9F
-	ble @08006C8A
+	ble _08006C8A
 	add r0, r9
 	lsls r0, 16
 	lsrs r1, r0, 16
-@08006C8A:
+_08006C8A:
 	lsls r0, r2, 16
 	asrs r0, 16
 	cmp r0, 0x9F
-	ble @08006C98
+	ble _08006C98
 	add r0, r9
 	lsls r0, 16
 	lsrs r2, r0, 16
-@08006C98:
+_08006C98:
 	ldr r0, [r3]
 	mov r7, r8
 	ands r0, r7
 	cmp r0, r8
-	bne @08006CBC
+	bne _08006CBC
 	ldrb r0, [r3, 0x1]
 	lsrs r0, 6
 	cmp r0, 0
-	beq @08006CAE
+	beq _08006CAE
 	cmp r0, 0x2
-	bne @08006CBC
-@08006CAE:
+	bne _08006CBC
+_08006CAE:
 	lsls r0, r1, 16
 	asrs r0, 16
 	cmp r0, 0x80
-	ble @08006CBC
+	ble _08006CBC
 	add r0, r9
 	lsls r0, 16
 	lsrs r1, r0, 16
-@08006CBC:
+_08006CBC:
 	ldr r0, [r4]
 	mov r3, r8
 	ands r0, r3
 	cmp r0, r8
-	bne @08006CE0
+	bne _08006CE0
 	ldrb r0, [r4, 0x1]
 	lsrs r0, 6
 	cmp r0, 0
-	beq @08006CD2
+	beq _08006CD2
 	cmp r0, 0x2
-	bne @08006CE0
-@08006CD2:
+	bne _08006CE0
+_08006CD2:
 	lsls r0, r2, 16
 	asrs r0, 16
 	cmp r0, 0x80
-	ble @08006CE0
+	ble _08006CE0
 	add r0, r9
 	lsls r0, 16
 	lsrs r2, r0, 16
-@08006CE0:
+_08006CE0:
 	cmp r5, 0
-	beq @08006CF6
+	beq _08006CF6
 	ldr r7, [sp]
 	cmp r7, r6
-	bhi @08006C38
+	bhi _08006C38
 	cmp r7, r6
-	bne @08006CF6
-@08006CEE:
+	bne _08006CF6
+_08006CEE:
 	lsls r1, 16
 	lsls r0, r2, 16
 	cmp r1, r0
-	blt @08006C38
-@08006CF6:
+	blt _08006C38
+_08006CF6:
 	mov r1, r12
 	lsls r0, r1, 24
 	lsrs r0, 24
 	mov r12, r0
 	cmp r0, 0x3F
-	bhi @08006D04
-	b @08006B78
-@08006D04:
+	bhi _08006D04
+	b _08006B78
+_08006D04:
 	add sp, 0x4
 	pop {r3-r5}
 	mov r8, r3
@@ -464,18 +462,17 @@ determine_visible_sprites_maybe: ; 8006B5C
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end determine_visible_sprites_maybe
+	thumb_func_end SortObjectsByPriority
 
-	thumb_func_start copy_rotscale_coeffs_to_super_sprites
-; void copy_rotscale_coeffs_to_super_sprites()
-copy_rotscale_coeffs_to_super_sprites: ; 8006D1C
+	thumb_func_start CopyTransformationMatricesToSprites
+; void CopyTransformationMatricesToSprites()
+CopyTransformationMatricesToSprites: ; 8006D1C
 	push {r4-r6,lr}
 	movs r4, 0
 	ldr r5, =0x030022c0
 	ldr r6, =0x02021bc0
-@08006D24:
+_08006D24:
 	lsls r2, r4, 2
 	lsls r1, r4, 5
 	adds r1, r5
@@ -502,23 +499,22 @@ copy_rotscale_coeffs_to_super_sprites: ; 8006D1C
 	lsls r0, 24
 	lsrs r4, r0, 24
 	cmp r4, 0x1F
-	bls @08006D24
+	bls _08006D24
 	pop {r4-r6}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end copy_rotscale_coeffs_to_super_sprites
+	thumb_func_end CopyTransformationMatricesToSprites
 
-	thumb_func_start super_sprites_fill
-; void super_sprites_fill()
-super_sprites_fill: ; 8006D68
+	thumb_func_start PopulateSprites
+; void PopulateSprites()
+PopulateSprites: ; 8006D68
 	push {r4-r6,lr}
 	sub sp, 0x4
 	movs r4, 0
 	mov r0, sp
 	strb r4, [r0]
-@08006D72:
+_08006D72:
 	ldr r0, =0x020217f4
 	adds r0, r4, r0
 	ldrb r1, [r0]
@@ -533,31 +529,31 @@ super_sprites_fill: ; 8006D68
 	movs r0, 0x5
 	ands r0, r1
 	cmp r0, 0x1
-	bne @08006D9E
+	bne _08006D9E
 	adds r0, r2, 0
 	mov r1, sp
-	bl super_sprite_add
+	bl AddSprite
 	lsls r0, 24
 	cmp r0, 0
-	bne @08006DD8
-@08006D9E:
+	bne _08006DD8
+_08006D9E:
 	adds r0, r4, 0x1
 	lsls r0, 24
 	lsrs r4, r0, 24
 	cmp r4, 0x3F
-	bls @08006D72
+	bls _08006D72
 	mov r0, sp
 	ldr r4, =0x02021b38
 	ldrb r0, [r0]
 	ldrb r1, [r4]
 	cmp r0, r1
-	bcs @08006DD8
+	bcs _08006DD8
 	mov r1, sp
 	ldr r5, =0x030022f8
-	ldr r0, =gUnknown_082EC690
+	ldr r0, =gDefaultOamAttributes
 	ldr r2, [r0]
 	ldr r3, [r0, 0x4]
-@08006DBE:
+_08006DBE:
 	ldrb r0, [r1]
 	lsls r0, 3
 	adds r0, r5
@@ -570,19 +566,18 @@ super_sprites_fill: ; 8006D68
 	lsrs r0, 24
 	ldrb r6, [r4]
 	cmp r0, r6
-	bcc @08006DBE
-@08006DD8:
+	bcc _08006DBE
+_08006DD8:
 	add sp, 0x4
 	pop {r4-r6}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end super_sprites_fill
+	thumb_func_end PopulateSprites
 
-	thumb_func_start obj_add_from_template_forward_search
-; int obj_add_from_template_forward_search(struct objtemplate *template, s16 x, s16 y, u8 y_height_related)
-obj_add_from_template_forward_search: ; 8006DF4
+	thumb_func_start AddObjectToFront
+; u8 AddObjectToFront(struct objtemplate *template, u16 x, u16 y, u8 subpriority)
+AddObjectToFront: ; 8006DF4
 	push {r4-r7,lr}
 	sub sp, 0x4
 	adds r7, r0, 0
@@ -593,7 +588,7 @@ obj_add_from_template_forward_search: ; 8006DF4
 	mov r12, r0
 	lsls r5, r1, 16
 	lsls r6, r2, 16
-@08006E08:
+_08006E08:
 	lsls r0, r3, 4
 	adds r0, r3
 	lsls r0, 2
@@ -602,35 +597,34 @@ obj_add_from_template_forward_search: ; 8006DF4
 	ldrb r0, [r0]
 	lsls r0, 31
 	cmp r0, 0
-	bne @08006E34
+	bne _08006E34
 	str r4, [sp]
 	adds r0, r3, 0
 	adds r1, r7, 0
 	asrs r2, r5, 16
 	asrs r3, r6, 16
-	bl template_read
+	bl AddObject
 	lsls r0, 24
 	lsrs r0, 24
-	b @08006E40
-	.align 2, 0
+	b _08006E40
 	.pool
-@08006E34:
+_08006E34:
 	adds r0, r3, 0x1
 	lsls r0, 24
 	lsrs r3, r0, 24
 	cmp r3, 0x3F
-	bls @08006E08
+	bls _08006E08
 	movs r0, 0x40
-@08006E40:
+_08006E40:
 	add sp, 0x4
 	pop {r4-r7}
 	pop {r1}
 	bx r1
-	thumb_func_end obj_add_from_template_forward_search
+	thumb_func_end AddObjectToFront
 
-	thumb_func_start obj_add_from_template_backward_search
-; int obj_add_from_template_backward_search(struct objtemplate *template, s16 x, s16 y, u8 y_height_related)
-obj_add_from_template_backward_search: ; 8006E48
+	thumb_func_start AddObjectToBack
+; u8 AddObjectToBack(struct objtemplate *template, u16 x, u16 y, u8 subpriority)
+AddObjectToBack: ; 8006E48
 	push {r4-r7,lr}
 	mov r7, r8
 	push {r7}
@@ -646,7 +640,7 @@ obj_add_from_template_backward_search: ; 8006E48
 	mov r12, r0
 	lsls r4, r1, 16
 	lsls r5, r2, 16
-@08006E66:
+_08006E66:
 	lsls r0, r3, 16
 	asrs r1, r0, 16
 	lsls r0, r1, 4
@@ -657,35 +651,34 @@ obj_add_from_template_backward_search: ; 8006E48
 	ldrb r0, [r0]
 	lsls r0, 31
 	cmp r0, 0
-	bne @08006E98
+	bne _08006E98
 	lsls r0, r3, 24
 	lsrs r0, 24
 	str r6, [sp]
 	adds r1, r7, 0
 	asrs r2, r4, 16
 	asrs r3, r5, 16
-	bl template_read
+	bl AddObject
 	lsls r0, 24
 	lsrs r0, 24
-	b @08006EA6
-	.align 2, 0
+	b _08006EA6
 	.pool
-@08006E98:
+_08006E98:
 	subs r0, r1, 0x1
 	lsls r0, 16
 	lsrs r3, r0, 16
 	asrs r0, 16
 	cmp r0, r12
-	bgt @08006E66
+	bgt _08006E66
 	movs r0, 0x40
-@08006EA6:
+_08006EA6:
 	add sp, 0x4
 	pop {r3}
 	mov r8, r3
 	pop {r4-r7}
 	pop {r1}
 	bx r1
-	thumb_func_end obj_add_from_template_backward_search
+	thumb_func_end AddObjectToBack
 
 	thumb_func_start obj_add_empty_with_callback
 ; int obj_add_empty_with_callback(void ( *func)())
@@ -696,11 +689,11 @@ obj_add_empty_with_callback: ; 8006EB4
 	movs r1, 0
 	movs r2, 0
 	movs r3, 0x1F
-	bl obj_add_from_template_forward_search
+	bl AddObjectToFront
 	lsls r0, 24
 	lsrs r5, r0, 24
 	cmp r5, 0x40
-	beq @08006EF4
+	beq _08006EF4
 	ldr r4, =0x02020630
 	lsls r1, r5, 4
 	adds r1, r5
@@ -715,20 +708,19 @@ obj_add_empty_with_callback: ; 8006EB4
 	adds r1, r4
 	str r6, [r1]
 	adds r0, r5, 0
-	b @08006EF6
-	.align 2, 0
+	b _08006EF6
 	.pool
-@08006EF4:
+_08006EF4:
 	movs r0, 0x40
-@08006EF6:
+_08006EF6:
 	pop {r4-r6}
 	pop {r1}
 	bx r1
 	thumb_func_end obj_add_empty_with_callback
 
-	thumb_func_start template_read
-; int template_read(u8 obj_id, struct objtemplate *a2, s16 x, s16 y, u8 y_height_related)
-template_read: ; 8006EFC
+	thumb_func_start AddObject
+; u8 AddObject(u8 index, struct objtemplate *template, u16 x, u16 y, u8 subpriority)
+AddObject: ; 8006EFC
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -753,7 +745,7 @@ template_read: ; 8006EFC
 	ldr r1, =0x02020630
 	adds r7, r0, r1
 	adds r0, r7, 0
-	bl obj_delete
+	bl RemoveObject
 	adds r2, r7, 0
 	adds r2, 0x3E
 	ldrb r0, [r2]
@@ -798,13 +790,13 @@ template_read: ; 8006EFC
 	lsls r3, 30
 	lsrs r3, 30
 	adds r0, r7, 0
-	bl oam_center
+	bl CalcVecFromObjectCenterToObjectUpperLeft
 	mov r0, r8
 	ldrh r1, [r0]
 	ldr r4, =0xffff0000
 	lsrs r0, r4, 16
 	cmp r1, r0
-	bne @08006FF8
+	bne _08006FF8
 	mov r1, r8
 	ldr r0, [r1, 0xC]
 	str r0, [r7, 0xC]
@@ -812,20 +804,19 @@ template_read: ; 8006EFC
 	lsrs r0, 5
 	lsls r0, 24
 	lsrs r0, 24
-	bl gpu_tile_obj_alloc
+	bl AllocObjectTiles
 	lsls r0, 16
 	lsrs r2, r0, 16
 	asrs r0, 16
 	asrs r1, r4, 16
 	cmp r0, r1
-	bne @08006FC8
+	bne _08006FC8
 	adds r0, r7, 0
-	bl obj_delete
+	bl RemoveObject
 	movs r0, 0x40
-	b @08007040
-	.align 2, 0
+	b _08007040
 	.pool
-@08006FC8:
+_08006FC8:
 	ldr r1, =0x000003ff
 	adds r0, r1, 0
 	ands r2, r0
@@ -845,46 +836,45 @@ template_read: ; 8006EFC
 	adds r1, 0x40
 	movs r0, 0
 	strh r0, [r1]
-	b @0800700C
-	.align 2, 0
+	b _0800700C
 	.pool
-@08006FF8:
+_08006FF8:
 	mov r1, r8
 	ldrh r0, [r1]
-	bl gpu_tile_obj_tag_get_range_start
+	bl GetObjectTileRangeStartByTag
 	adds r1, r7, 0
 	adds r1, 0x40
 	strh r0, [r1]
 	adds r0, r7, 0
 	bl sub_8008324
-@0800700C:
+_0800700C:
 	ldrb r0, [r7, 0x1]
 	lsls r0, 30
 	lsrs r0, 30
 	movs r1, 0x1
 	ands r0, r1
 	cmp r0, 0
-	beq @08007020
+	beq _08007020
 	adds r0, r7, 0
 	bl obj_alloc_rotscale_entry
-@08007020:
+_08007020:
 	mov r0, r8
 	ldrh r1, [r0, 0x2]
 	ldr r0, =0x0000ffff
 	cmp r1, r0
-	beq @0800703E
+	beq _0800703E
 	mov r1, r8
 	ldrh r0, [r1, 0x2]
-	bl gpu_pal_tags_index_of
+	bl IndexOfObjectPaletteTag
 	lsls r0, 4
 	ldrb r2, [r7, 0x5]
 	movs r1, 0xF
 	ands r1, r2
 	orrs r1, r0
 	strb r1, [r7, 0x5]
-@0800703E:
+_0800703E:
 	mov r0, r10
-@08007040:
+_08007040:
 	pop {r3-r5}
 	mov r8, r3
 	mov r9, r4
@@ -892,13 +882,12 @@ template_read: ; 8006EFC
 	pop {r4-r7}
 	pop {r1}
 	bx r1
-	.align 2, 0
 	.pool
-	thumb_func_end template_read
+	thumb_func_end AddObject
 
-	thumb_func_start obj_add_from_template_call_callback_once
-; int obj_add_from_template_call_callback_once(struct objtemplate *template, s16 x, s16 y, u8 y_height_related)
-obj_add_from_template_call_callback_once: ; 8007054
+	thumb_func_start AddObjectAndAnimateForOneFrame
+; u8 AddObjectAndAnimateForOneFrame(struct objtemplate *template, u16 x, u16 y, u8 subpriority)
+AddObjectAndAnimateForOneFrame: ; 8007054
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -915,7 +904,7 @@ obj_add_from_template_call_callback_once: ; 8007054
 	mov r12, r1
 	lsls r2, 16
 	mov r8, r2
-@08007074:
+_08007074:
 	lsls r0, r3, 4
 	adds r0, r3
 	lsls r6, r0, 2
@@ -925,7 +914,7 @@ obj_add_from_template_call_callback_once: ; 8007054
 	ldrb r0, [r7]
 	lsls r0, 31
 	cmp r0, 0
-	bne @080070CC
+	bne _080070CC
 	mov r0, r9
 	str r0, [sp]
 	adds r0, r3, 0
@@ -934,12 +923,12 @@ obj_add_from_template_call_callback_once: ; 8007054
 	asrs r2, r3, 16
 	mov r5, r8
 	asrs r3, r5, 16
-	bl template_read
+	bl AddObject
 	lsls r0, 24
 	lsrs r0, 24
 	adds r5, r0, 0
 	cmp r5, 0x40
-	beq @080070D6
+	beq _080070D6
 	ldr r1, =0x0202064c
 	adds r0, r6, r1
 	ldr r1, [r0]
@@ -948,23 +937,22 @@ obj_add_from_template_call_callback_once: ; 8007054
 	ldrb r0, [r7]
 	lsls r0, 31
 	cmp r0, 0
-	beq @080070C0
+	beq _080070C0
 	adds r0, r4, 0
-	bl obj_anim_step
-@080070C0:
+	bl AnimateObject
+_080070C0:
 	adds r0, r5, 0
-	b @080070D8
-	.align 2, 0
+	b _080070D8
 	.pool
-@080070CC:
+_080070CC:
 	adds r0, r3, 0x1
 	lsls r0, 24
 	lsrs r3, r0, 24
 	cmp r3, 0x3F
-	bls @08007074
-@080070D6:
+	bls _08007074
+_080070D6:
 	movs r0, 0x40
-@080070D8:
+_080070D8:
 	add sp, 0x4
 	pop {r3-r5}
 	mov r8, r3
@@ -973,11 +961,11 @@ obj_add_from_template_call_callback_once: ; 8007054
 	pop {r4-r7}
 	pop {r1}
 	bx r1
-	thumb_func_end obj_add_from_template_call_callback_once
+	thumb_func_end AddObjectAndAnimateForOneFrame
 
-	thumb_func_start obj_delete_and_free_tiles
-; void obj_delete_and_free_tiles(struct obj *obj)
-obj_delete_and_free_tiles: ; 80070E8
+	thumb_func_start RemoveObjectAndFreeTiles
+; void RemoveObjectAndFreeTiles(struct obj *object)
+RemoveObjectAndFreeTiles: ; 80070E8
 	push {r4-r7,lr}
 	adds r5, r0, 0
 	adds r0, 0x3E
@@ -985,14 +973,14 @@ obj_delete_and_free_tiles: ; 80070E8
 	movs r0, 0x1
 	ands r0, r1
 	cmp r0, 0
-	beq @08007144
+	beq _08007144
 	adds r0, r5, 0
 	adds r0, 0x3F
 	ldrb r1, [r0]
 	movs r0, 0x40
 	ands r0, r1
 	cmp r0, 0
-	bne @0800713E
+	bne _0800713E
 	ldr r0, [r5, 0xC]
 	ldrh r2, [r0, 0x4]
 	lsrs r2, 5
@@ -1002,12 +990,12 @@ obj_delete_and_free_tiles: ; 80070E8
 	adds r4, r1, r2
 	adds r3, r1, 0
 	cmp r3, r4
-	bcs @0800713E
+	bcs _0800713E
 	ldr r0, =0x02021b3c
 	mov r12, r0
 	movs r6, 0x7
 	movs r7, 0x1
-@08007122:
+_08007122:
 	lsrs r2, r3, 3
 	add r2, r12
 	adds r0, r3, 0
@@ -1021,31 +1009,30 @@ obj_delete_and_free_tiles: ; 80070E8
 	lsls r0, 16
 	lsrs r3, r0, 16
 	cmp r3, r4
-	bcc @08007122
-@0800713E:
+	bcc _08007122
+_0800713E:
 	adds r0, r5, 0
-	bl obj_delete
-@08007144:
+	bl RemoveObject
+_08007144:
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end obj_delete_and_free_tiles
+	thumb_func_end RemoveObjectAndFreeTiles
 
-	thumb_func_start reset_super_sprites
-; void reset_super_sprites(u8 a1, u8 a2)
-reset_super_sprites: ; 8007150
+	thumb_func_start ResetSpriteRange
+; void ResetSpriteRange(u8 startIndex, u8 endIndex)
+ResetSpriteRange: ; 8007150
 	push {r4-r6,lr}
 	lsls r0, 24
 	lsls r1, 24
 	lsrs r4, r1, 24
 	lsrs r3, r0, 24
 	cmp r3, r4
-	bcs @08007178
+	bcs _08007178
 	ldr r6, =0x030022f8
-	ldr r5, =gUnknown_082EC690
-@08007162:
+	ldr r5, =gDefaultOamAttributes
+_08007162:
 	lsls r0, r3, 3
 	adds r0, r6
 	ldr r1, [r5]
@@ -1056,18 +1043,17 @@ reset_super_sprites: ; 8007150
 	lsls r0, 24
 	lsrs r3, r0, 24
 	cmp r3, r4
-	bcc @08007162
-@08007178:
+	bcc _08007162
+_08007178:
 	pop {r4-r6}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end reset_super_sprites
+	thumb_func_end ResetSpriteRange
 
-	thumb_func_start copy_super_sprites_to_oam
-; void copy_super_sprites_to_oam()
-copy_super_sprites_to_oam: ; 8007188
+	thumb_func_start LoadOamFromSprites
+; void LoadOamFromSprites()
+LoadOamFromSprites: ; 8007188
 	push {lr}
 	ldr r2, =0x030022c0
 	ldr r1, =0x00000439
@@ -1076,22 +1062,22 @@ copy_super_sprites_to_oam: ; 8007188
 	movs r0, 0x1
 	ands r0, r1
 	cmp r0, 0
-	bne @080071A8
+	bne _080071A8
 	adds r0, r2, 0
 	adds r0, 0x38
 	movs r1, 0xE0
 	lsls r1, 19
 	ldr r2, =0x04000100
 	bl CpuSet
-@080071A8:
+_080071A8:
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end copy_super_sprites_to_oam
+	thumb_func_end LoadOamFromSprites
 
-	thumb_func_start copy_queue_clear
-copy_queue_clear: ; 80071B8
+	thumb_func_start ClearObjectCopyRequests
+; void ClearObjectCopyRequests()
+ClearObjectCopyRequests: ; 80071B8
 	push {r4,r5,lr}
 	ldr r0, =0x02021834
 	movs r1, 0
@@ -1102,7 +1088,7 @@ copy_queue_clear: ; 80071B8
 	ldr r4, =0x02021838
 	movs r3, 0
 	adds r5, r4, 0x4
-@080071CC:
+_080071CC:
 	lsls r0, r2, 1
 	adds r0, r2
 	lsls r0, 2
@@ -1115,23 +1101,23 @@ copy_queue_clear: ; 80071B8
 	lsls r0, 24
 	lsrs r2, r0, 24
 	cmp r2, 0x3F
-	bls @080071CC
+	bls _080071CC
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end copy_queue_clear
+	thumb_func_end ClearObjectCopyRequests
 
-	thumb_func_start reset_rotscale_coeffs
-reset_rotscale_coeffs: ; 80071F8
+	thumb_func_start ResetSpriteTransformationMatrices
+; void ResetSpriteTransformationMatrices()
+ResetSpriteTransformationMatrices: ; 80071F8
 	push {r4,lr}
 	movs r1, 0
 	ldr r4, =0x02021bc0
 	movs r3, 0
 	movs r2, 0x80
 	lsls r2, 1
-@08007204:
+_08007204:
 	lsls r0, r1, 3
 	adds r0, r4
 	strh r2, [r0]
@@ -1142,16 +1128,16 @@ reset_rotscale_coeffs: ; 80071F8
 	lsls r0, 24
 	lsrs r1, r0, 24
 	cmp r1, 0x1F
-	bls @08007204
+	bls _08007204
 	pop {r4}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end reset_rotscale_coeffs
+	thumb_func_end ResetSpriteTransformationMatrices
 
-	thumb_func_start rotscale_set_direct
-rotscale_set_direct: ; 8007224
+	thumb_func_start SetSpriteTransformationMatrix
+; void SetSpriteTransformationMatrix(u8 index, u16 a, u16 b, u16 c, u16 d)
+SetSpriteTransformationMatrix: ; 8007224
 	push {r4,r5,lr}
 	ldr r5, [sp, 0xC]
 	lsls r0, 24
@@ -1165,25 +1151,24 @@ rotscale_set_direct: ; 8007224
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end rotscale_set_direct
+	thumb_func_end SetSpriteTransformationMatrix
 
-	thumb_func_start obj_delete
-; void obj_delete(struct obj *obj)
-obj_delete: ; 8007244
+	thumb_func_start RemoveObject
+; void RemoveObject(struct obj *object)
+RemoveObject: ; 8007244
 	push {lr}
 	ldr r1, =gUnknown_082EC64C
 	movs r2, 0x44
 	bl memcpy
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end obj_delete
+	thumb_func_end RemoveObject
 
-	thumb_func_start oam_center
-oam_center: ; 8007258
+	thumb_func_start CalcVecFromObjectCenterToObjectUpperLeft
+; void CalcVecFromObjectCenterToObjectUpperLeft(struct obj *object, u8 shape, u8 size, u8 affineMode)
+CalcVecFromObjectCenterToObjectUpperLeft: ; 8007258
 	push {r4-r6,lr}
 	adds r6, r0, 0
 	lsls r1, 24
@@ -1202,12 +1187,12 @@ oam_center: ; 8007258
 	movs r0, 0x2
 	ands r3, r0
 	cmp r3, 0
-	beq @08007286
+	beq _08007286
 	lsls r0, r5, 25
 	lsrs r5, r0, 24
 	lsls r0, r1, 25
 	lsrs r1, r0, 24
-@08007286:
+_08007286:
 	adds r0, r6, 0
 	adds r0, 0x28
 	strb r5, [r0]
@@ -1216,13 +1201,12 @@ oam_center: ; 8007258
 	pop {r4-r6}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end oam_center
+	thumb_func_end CalcVecFromObjectCenterToObjectUpperLeft
 
-	thumb_func_start gpu_tile_obj_alloc
-; int gpu_tile_obj_alloc(u16 tile_count)
-gpu_tile_obj_alloc: ; 800729C
+	thumb_func_start AllocObjectTiles
+; s16 AllocObjectTiles(u16 numTiles)
+AllocObjectTiles: ; 800729C
 	push {r4-r7,lr}
 	mov r7, r9
 	mov r6, r8
@@ -1230,17 +1214,17 @@ gpu_tile_obj_alloc: ; 800729C
 	lsls r0, 16
 	lsrs r4, r0, 16
 	cmp r4, 0
-	bne @080072F2
+	bne _080072F2
 	ldr r0, =0x02021b3a
 	ldrh r3, [r0]
 	ldr r0, =0x000003ff
 	cmp r3, r0
-	bhi @080072DA
+	bhi _080072DA
 	ldr r7, =0x02021b3c
 	movs r6, 0x7
 	adds r4, r0, 0
 	movs r5, 0x1
-@080072BE:
+_080072BE:
 	lsrs r2, r3, 3
 	adds r2, r7
 	adds r0, r3, 0
@@ -1254,24 +1238,23 @@ gpu_tile_obj_alloc: ; 800729C
 	lsls r0, 16
 	lsrs r3, r0, 16
 	cmp r3, r4
-	bls @080072BE
-@080072DA:
+	bls _080072BE
+_080072DA:
 	movs r0, 0
-	b @080073A4
-	.align 2, 0
+	b _080073A4
 	.pool
-@080072EC:
+_080072EC:
 	movs r0, 0x1
 	negs r0, r0
-	b @080073A4
-@080072F2:
+	b _080073A4
+_080072F2:
 	ldr r0, =0x02021b3a
 	ldrh r3, [r0]
 	ldr r0, =0x02021b3c
 	mov r9, r0
 	movs r7, 0x7
 	movs r6, 0x1
-@080072FE:
+_080072FE:
 	lsrs r0, r3, 3
 	add r0, r9
 	ldrb r1, [r0]
@@ -1280,16 +1263,16 @@ gpu_tile_obj_alloc: ; 800729C
 	asrs r1, r0
 	ands r1, r6
 	cmp r1, 0
-	beq @08007332
+	beq _08007332
 	movs r5, 0x80
 	lsls r5, 3
 	ldr r2, =0x02021b3c
-@08007316:
+_08007316:
 	adds r0, r3, 0x1
 	lsls r0, 16
 	lsrs r3, r0, 16
 	cmp r3, r5
-	beq @080072EC
+	beq _080072EC
 	lsrs r0, 19
 	adds r0, r2
 	ldrb r1, [r0]
@@ -1298,22 +1281,22 @@ gpu_tile_obj_alloc: ; 800729C
 	asrs r1, r0
 	ands r1, r6
 	cmp r1, 0
-	bne @08007316
-@08007332:
+	bne _08007316
+_08007332:
 	mov r8, r3
 	movs r2, 0x1
 	cmp r2, r4
-	beq @0800736C
+	beq _0800736C
 	movs r1, 0x80
 	lsls r1, 3
 	mov r12, r1
 	ldr r5, =0x02021b3c
-@08007342:
+_08007342:
 	adds r0, r3, 0x1
 	lsls r0, 16
 	lsrs r3, r0, 16
 	cmp r3, r12
-	beq @080072EC
+	beq _080072EC
 	lsrs r0, 19
 	adds r0, r5
 	ldrb r1, [r0]
@@ -1322,16 +1305,16 @@ gpu_tile_obj_alloc: ; 800729C
 	asrs r1, r0
 	ands r1, r6
 	cmp r1, 0
-	bne @08007368
+	bne _08007368
 	adds r0, r2, 0x1
 	lsls r0, 16
 	lsrs r2, r0, 16
 	cmp r2, r4
-	bne @08007342
-@08007368:
+	bne _08007342
+_08007368:
 	cmp r2, r4
-	bne @080072FE
-@0800736C:
+	bne _080072FE
+_0800736C:
 	mov r1, r8
 	lsls r0, r1, 16
 	lsrs r3, r0, 16
@@ -1339,13 +1322,13 @@ gpu_tile_obj_alloc: ; 800729C
 	adds r1, r4, r1
 	adds r6, r0, 0
 	cmp r3, r1
-	bge @080073A2
+	bge _080073A2
 	ldr r0, =0x02021b3c
 	mov r8, r0
 	movs r7, 0x7
 	adds r4, r1, 0
 	movs r5, 0x1
-@08007386:
+_08007386:
 	lsrs r2, r3, 3
 	add r2, r8
 	adds r1, r3, 0
@@ -1359,23 +1342,22 @@ gpu_tile_obj_alloc: ; 800729C
 	lsls r0, 16
 	lsrs r3, r0, 16
 	cmp r3, r4
-	blt @08007386
-@080073A2:
+	blt _08007386
+_080073A2:
 	asrs r0, r6, 16
-@080073A4:
+_080073A4:
 	pop {r3,r4}
 	mov r8, r3
 	mov r9, r4
 	pop {r4-r7}
 	pop {r1}
 	bx r1
-	.align 2, 0
 	.pool
-	thumb_func_end gpu_tile_obj_alloc
+	thumb_func_end AllocObjectTiles
 
-	thumb_func_start gpu_tile_obj_alloc_map_bit_op
-; unsigned int gpu_tile_obj_alloc_map_bit_op(int tile_id, bit_operation operation)
-gpu_tile_obj_alloc_map_bit_op: ; 80073B8
+	thumb_func_start Unused_ObjectTileAllocationBitArrayOp
+; unsigned int Unused_ObjectTileAllocationBitArrayOp(u16 tileNum, u8 op)
+Unused_ObjectTileAllocationBitArrayOp: ; 80073B8
 	push {r4-r6,lr}
 	lsls r0, 16
 	lsrs r2, r0, 16
@@ -1390,7 +1372,7 @@ gpu_tile_obj_alloc_map_bit_op: ; 80073B8
 	adds r4, r2, 0
 	movs r5, 0
 	cmp r1, 0
-	bne @080073F0
+	bne _080073F0
 	movs r0, 0x1
 	lsls r0, r2
 	mvns r0, r0
@@ -1401,12 +1383,11 @@ gpu_tile_obj_alloc_map_bit_op: ; 80073B8
 	ldrb r1, [r0]
 	ands r2, r1
 	strb r2, [r0]
-	b @0800741C
-	.align 2, 0
+	b _0800741C
 	.pool
-@080073F0:
+_080073F0:
 	cmp r1, 0x1
-	bne @0800740C
+	bne _0800740C
 	lsls r1, r2
 	lsls r0, r1, 24
 	lsrs r2, r0, 24
@@ -1415,10 +1396,9 @@ gpu_tile_obj_alloc_map_bit_op: ; 80073B8
 	ldrb r1, [r0]
 	orrs r2, r1
 	strb r2, [r0]
-	b @0800741C
-	.align 2, 0
+	b _0800741C
 	.pool
-@0800740C:
+_0800740C:
 	movs r0, 0x80
 	lsls r0, 17
 	lsls r0, r4
@@ -1427,37 +1407,37 @@ gpu_tile_obj_alloc_map_bit_op: ; 80073B8
 	adds r0, r6, r0
 	ldrb r0, [r0]
 	ands r5, r0
-@0800741C:
+_0800741C:
 	adds r0, r5, 0
 	pop {r4-r6}
 	pop {r1}
 	bx r1
-	.align 2, 0
 	.pool
-	thumb_func_end gpu_tile_obj_alloc_map_bit_op
+	thumb_func_end Unused_ObjectTileAllocationBitArrayOp
 
-	thumb_func_start nullsub_12
-nullsub_12: ; 8007428
+	thumb_func_start DummyObjectCallback
+; void DummyObjectCallback(struct obj *object)
+DummyObjectCallback: ; 8007428
 	bx lr
-	thumb_func_end nullsub_12
+	thumb_func_end DummyObjectCallback
 
-	thumb_func_start copy_queue_process
-; void copy_queue_process()
-copy_queue_process: ; 800742C
+	thumb_func_start ProcessObjectCopyRequests
+; void ProcessObjectCopyRequests()
+ProcessObjectCopyRequests: ; 800742C
 	push {r4-r7,lr}
 	ldr r0, =0x02021834
 	ldrb r0, [r0]
 	cmp r0, 0
-	beq @08007474
+	beq _08007474
 	movs r4, 0
 	ldr r1, =0x02021835
 	ldrb r0, [r1]
 	cmp r0, 0
-	beq @0800746E
+	beq _0800746E
 	ldr r6, =0x02021838
 	adds r7, r6, 0x4
 	adds r5, r1, 0
-@08007446:
+_08007446:
 	lsls r1, r4, 1
 	adds r1, r4
 	lsls r1, 2
@@ -1476,22 +1456,21 @@ copy_queue_process: ; 800742C
 	lsrs r4, r0, 24
 	lsls r1, 24
 	cmp r1, 0
-	bne @08007446
-@0800746E:
+	bne _08007446
+_0800746E:
 	ldr r1, =0x02021834
 	movs r0, 0
 	strb r0, [r1]
-@08007474:
+_08007474:
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end copy_queue_process
+	thumb_func_end ProcessObjectCopyRequests
 
-	thumb_func_start copy_queue_add_oam_frame
-; void copy_queue_add_oam_frame(u16 frameIndex, u16 targetTileNum, struct obj_tiles *frames)
-copy_queue_add_oam_frame: ; 8007488
+	thumb_func_start AddPicToObjectCopyRequests
+; void AddPicToObjectCopyRequests(u16 picIndex, u16 targetTileNum, struct obj_tiles *pics)
+AddPicToObjectCopyRequests: ; 8007488
 	push {r4-r6,lr}
 	adds r5, r2, 0
 	lsls r0, 16
@@ -1501,7 +1480,7 @@ copy_queue_add_oam_frame: ; 8007488
 	ldr r4, =0x02021835
 	ldrb r0, [r4]
 	cmp r0, 0x3F
-	bhi @080074D8
+	bhi _080074D8
 	ldr r3, =0x02021838
 	adds r1, r0, 0
 	lsls r0, r1, 1
@@ -1532,17 +1511,16 @@ copy_queue_add_oam_frame: ; 8007488
 	ldrb r0, [r4]
 	adds r0, 0x1
 	strb r0, [r4]
-@080074D8:
+_080074D8:
 	pop {r4-r6}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end copy_queue_add_oam_frame
+	thumb_func_end AddPicToObjectCopyRequests
 
-	thumb_func_start copy_queue_add
-; void copy_queue_add(void *src, void *dest, u16 len)
-copy_queue_add: ; 80074EC
+	thumb_func_start AddTilesToObjectCopyRequests
+; void AddTilesToObjectCopyRequests(void *src, void *dest, u16 size)
+AddTilesToObjectCopyRequests: ; 80074EC
 	push {r4-r6,lr}
 	adds r4, r0, 0
 	adds r5, r1, 0
@@ -1551,7 +1529,7 @@ copy_queue_add: ; 80074EC
 	ldr r3, =0x02021835
 	ldrb r0, [r3]
 	cmp r0, 0x3F
-	bhi @0800752C
+	bhi _0800752C
 	ldr r2, =0x02021838
 	adds r1, r0, 0
 	lsls r0, r1, 1
@@ -1575,72 +1553,69 @@ copy_queue_add: ; 80074EC
 	ldrb r0, [r3]
 	adds r0, 0x1
 	strb r0, [r3]
-@0800752C:
+_0800752C:
 	pop {r4-r6}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end copy_queue_add
+	thumb_func_end AddTilesToObjectCopyRequests
 
-	thumb_func_start copy_all_from_objects
-; void copy_all_from_objects(void *dest)
-copy_all_from_objects: ; 800753C
+	thumb_func_start Unused_CopyFromObjects
+; void Unused_CopyFromObjects(void *dest)
+Unused_CopyFromObjects: ; 800753C
 	push {r4,lr}
 	adds r1, r0, 0
 	ldr r3, =0x02020630
 	movs r2, 0
 	ldr r4, =0x000010ff
-@08007546:
+_08007546:
 	ldrb r0, [r3]
 	strb r0, [r1]
 	adds r1, 0x1
 	adds r3, 0x1
 	adds r2, 0x1
 	cmp r2, r4
-	bls @08007546
+	bls _08007546
 	pop {r4}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end copy_all_from_objects
+	thumb_func_end Unused_CopyFromObjects
 
-	thumb_func_start copy_all_to_objects
-; void copy_all_to_objects(void *src)
-copy_all_to_objects: ; 8007564
+	thumb_func_start Unused_CopyToObjects
+; void Unused_CopyToObjects(void *src)
+Unused_CopyToObjects: ; 8007564
 	push {r4,lr}
 	adds r1, r0, 0
 	ldr r3, =0x02020630
 	movs r2, 0
 	ldr r4, =0x000010ff
-@0800756E:
+_0800756E:
 	ldrb r0, [r1]
 	strb r0, [r3]
 	adds r1, 0x1
 	adds r3, 0x1
 	adds r2, 0x1
 	cmp r2, r4
-	bls @0800756E
+	bls _0800756E
 	pop {r4}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end copy_all_to_objects
+	thumb_func_end Unused_CopyToObjects
 
-	thumb_func_start obj_delete_all
-; void obj_delete_all()
-obj_delete_all: ; 800758C
+	thumb_func_start RemoveAllObjects
+; void RemoveAllObjects()
+RemoveAllObjects: ; 800758C
 	push {r4,r5,lr}
 	movs r4, 0
-@08007590:
+_08007590:
 	lsls r0, r4, 4
 	adds r0, r4
 	lsls r0, 2
 	ldr r5, =0x02020630
 	adds r0, r5
-	bl obj_delete
+	bl RemoveObject
 	ldr r0, =0x020217f4
 	adds r0, r4, r0
 	strb r4, [r0]
@@ -1648,47 +1623,45 @@ obj_delete_all: ; 800758C
 	lsls r0, 24
 	lsrs r4, r0, 24
 	cmp r4, 0x3F
-	bls @08007590
+	bls _08007590
 	lsls r0, r4, 4
 	adds r0, r4
 	lsls r0, 2
 	adds r0, r5
-	bl obj_delete
+	bl RemoveObject
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end obj_delete_all
+	thumb_func_end RemoveAllObjects
 
-	thumb_func_start obj_free_tiles
-; void obj_free_tiles(struct obj *obj)
-obj_free_tiles: ; 80075C8
+	thumb_func_start FreeObjectTiles
+; void FreeObjectTiles(struct obj *object)
+FreeObjectTiles: ; 80075C8
 	push {lr}
 	ldr r2, [r0, 0x14]
 	ldrh r1, [r2]
 	ldr r0, =0x0000ffff
 	cmp r1, r0
-	beq @080075DA
+	beq _080075DA
 	adds r0, r1, 0
-	bl gpu_tile_obj_free_by_tag
-@080075DA:
+	bl FreeObjectTilesByTag
+_080075DA:
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end obj_free_tiles
+	thumb_func_end FreeObjectTiles
 
-	thumb_func_start obj_free_pal
-; void obj_free_pal(struct obj *obj)
-obj_free_pal: ; 80075E4
+	thumb_func_start FreeObjectPalette
+; void FreeObjectPalette(struct obj *object)
+FreeObjectPalette: ; 80075E4
 	push {lr}
 	ldr r0, [r0, 0x14]
 	ldrh r0, [r0, 0x2]
-	bl gpu_pal_free_tag
+	bl FreeObjectPaletteByTag
 	pop {r0}
 	bx r0
-	thumb_func_end obj_free_pal
+	thumb_func_end FreeObjectPalette
 
 	thumb_func_start obj_free_rotscale_entry
 ; void obj_free_rotscale_entry(struct obj *obj)
@@ -1701,7 +1674,7 @@ obj_free_rotscale_entry: ; 80075F4
 	movs r1, 0x1
 	ands r0, r1
 	cmp r0, 0
-	beq @0800761A
+	beq _0800761A
 	ldrb r0, [r4, 0x3]
 	lsls r0, 26
 	lsrs r0, 27
@@ -1711,32 +1684,32 @@ obj_free_rotscale_entry: ; 80075F4
 	negs r0, r0
 	ands r0, r1
 	strb r0, [r4, 0x1]
-@0800761A:
+_0800761A:
 	pop {r4}
 	pop {r0}
 	bx r0
 	thumb_func_end obj_free_rotscale_entry
 
-	thumb_func_start obj_delete_and_free_resources
-; void obj_delete_and_free_resources(struct obj *obj)
-obj_delete_and_free_resources: ; 8007620
+	thumb_func_start RemoveObjectAndFreeResources
+; void RemoveObjectAndFreeResources(struct obj *object)
+RemoveObjectAndFreeResources: ; 8007620
 	push {r4,lr}
 	adds r4, r0, 0
-	bl obj_free_tiles
+	bl FreeObjectTiles
 	adds r0, r4, 0
-	bl obj_free_pal
+	bl FreeObjectPalette
 	adds r0, r4, 0
 	bl obj_free_rotscale_entry
 	adds r0, r4, 0
-	bl obj_delete_and_free_tiles
+	bl RemoveObjectAndFreeTiles
 	pop {r4}
 	pop {r0}
 	bx r0
-	thumb_func_end obj_delete_and_free_resources
+	thumb_func_end RemoveObjectAndFreeResources
 
-	thumb_func_start obj_anim_step
-; void obj_anim_step(struct obj *obj)
-obj_anim_step: ; 8007640
+	thumb_func_start AnimateObject
+; void AnimateObject(struct obj *object)
+AnimateObject: ; 8007640
 	push {r4,r5,lr}
 	adds r4, r0, 0
 	ldr r2, =gUnknown_082EC6C4
@@ -1752,7 +1725,7 @@ obj_anim_step: ; 8007640
 	ldr r0, =0x02021cc0
 	ldrb r0, [r0]
 	cmp r0, 0
-	bne @08007676
+	bne _08007676
 	ldr r0, =gUnknown_082EC6CC
 	ldrb r1, [r5]
 	lsls r1, 28
@@ -1762,17 +1735,16 @@ obj_anim_step: ; 8007640
 	ldr r1, [r1]
 	adds r0, r4, 0
 	bl _call_via_r1
-@08007676:
+_08007676:
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end obj_anim_step
+	thumb_func_end AnimateObject
 
-	thumb_func_start obj_anim_image_begin
-; void obj_anim_image_begin(struct obj *obj)
-obj_anim_image_begin: ; 8007688
+	thumb_func_start BeginObjectImageAnim
+; void BeginObjectImageAnim(struct obj *object)
+BeginObjectImageAnim: ; 8007688
 	push {r4-r7,lr}
 	mov r7, r9
 	mov r6, r8
@@ -1810,7 +1782,7 @@ obj_anim_image_begin: ; 8007688
 	movs r0, 0x1
 	negs r0, r0
 	cmp r1, r0
-	beq @0800776C
+	beq _0800776C
 	ldrb r1, [r5]
 	subs r0, 0x4
 	ands r0, r1
@@ -1831,11 +1803,11 @@ obj_anim_image_begin: ; 8007688
 	lsls r0, 8
 	lsrs r6, r0, 31
 	cmp r3, 0
-	beq @08007704
+	beq _08007704
 	subs r0, r3, 0x1
 	lsls r0, 24
 	lsrs r3, r0, 24
-@08007704:
+_08007704:
 	adds r2, r4, 0
 	adds r2, 0x2C
 	movs r0, 0x3F
@@ -1851,17 +1823,17 @@ obj_anim_image_begin: ; 8007688
 	movs r1, 0x1
 	ands r0, r1
 	cmp r0, 0
-	bne @0800772E
+	bne _0800772E
 	adds r0, r4, 0
 	adds r1, r7, 0
 	adds r2, r6, 0
 	bl obj_set_horizonal_and_vertical_flip
-@0800772E:
+_0800772E:
 	ldrb r1, [r5]
 	movs r0, 0x40
 	ands r0, r1
 	cmp r0, 0
-	beq @0800775C
+	beq _0800775C
 	adds r0, r4, 0
 	adds r0, 0x40
 	ldrh r1, [r0]
@@ -1874,29 +1846,28 @@ obj_anim_image_begin: ; 8007688
 	ands r0, r2
 	orrs r0, r1
 	strh r0, [r4, 0x4]
-	b @0800776C
-	.align 2, 0
+	b _0800776C
 	.pool
-@0800775C:
+_0800775C:
 	mov r1, r8
 	lsrs r0, r1, 16
 	ldrh r1, [r4, 0x4]
 	lsls r1, 22
 	lsrs r1, 22
 	ldr r2, [r4, 0xC]
-	bl copy_queue_add_oam_frame
-@0800776C:
+	bl AddPicToObjectCopyRequests
+_0800776C:
 	pop {r3,r4}
 	mov r8, r3
 	mov r9, r4
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	thumb_func_end obj_anim_image_begin
+	thumb_func_end BeginObjectImageAnim
 
-	thumb_func_start obj_anim_image_continue
-; void obj_anim_image_continue(struct obj *obj)
-obj_anim_image_continue: ; 8007778
+	thumb_func_start ContinueObjectImageAnim
+; void ContinueObjectImageAnim(struct obj *object)
+ContinueObjectImageAnim: ; 8007778
 	push {r4,lr}
 	adds r4, r0, 0
 	adds r0, 0x2C
@@ -1904,7 +1875,7 @@ obj_anim_image_continue: ; 8007778
 	movs r0, 0x3F
 	ands r0, r1
 	cmp r0, 0
-	beq @080077C8
+	beq _080077C8
 	adds r0, r4, 0
 	bl obj_anim_image_delay_progress
 	adds r0, r4, 0
@@ -1930,16 +1901,16 @@ obj_anim_image_continue: ; 8007778
 	movs r1, 0x1
 	ands r0, r1
 	cmp r0, 0
-	bne @0800780E
+	bne _0800780E
 	adds r0, r4, 0
 	adds r1, r3, 0
 	bl obj_set_horizonal_and_vertical_flip
-	b @0800780E
-@080077C8:
+	b _0800780E
+_080077C8:
 	movs r0, 0x40
 	ands r0, r1
 	cmp r0, 0
-	bne @0800780E
+	bne _0800780E
 	adds r2, r4, 0
 	adds r2, 0x2B
 	ldrb r0, [r2]
@@ -1959,11 +1930,11 @@ obj_anim_image_continue: ; 8007778
 	movs r3, 0
 	ldrsh r0, [r1, r3]
 	cmp r0, 0
-	bge @080077FE
+	bge _080077FE
 	adds r0, 0x3
 	lsls r0, 16
 	lsrs r2, r0, 16
-@080077FE:
+_080077FE:
 	ldr r0, =gUnknown_082EC6D4
 	lsls r1, r2, 16
 	asrs r1, 14
@@ -1971,17 +1942,16 @@ obj_anim_image_continue: ; 8007778
 	ldr r1, [r1]
 	adds r0, r4, 0
 	bl _call_via_r1
-@0800780E:
+_0800780E:
 	pop {r4}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end obj_anim_image_continue
+	thumb_func_end ContinueObjectImageAnim
 
-	thumb_func_start anim_image_3
-; void anim_image_3(struct obj *obj)
-anim_image_3: ; 8007818
+	thumb_func_start ImageAnimCmd_frame
+; void ImageAnimCmd_frame(struct obj *object)
+ImageAnimCmd_frame: ; 8007818
 	push {r4-r7,lr}
 	mov r7, r8
 	push {r7}
@@ -2007,11 +1977,11 @@ anim_image_3: ; 8007818
 	lsls r0, 8
 	lsrs r5, r0, 31
 	cmp r3, 0
-	beq @08007852
+	beq _08007852
 	subs r0, r3, 0x1
 	lsls r0, 24
 	lsrs r3, r0, 24
-@08007852:
+_08007852:
 	adds r2, r4, 0
 	adds r2, 0x2C
 	movs r0, 0x3F
@@ -2027,19 +1997,19 @@ anim_image_3: ; 8007818
 	movs r1, 0x1
 	ands r0, r1
 	cmp r0, 0
-	bne @0800787C
+	bne _0800787C
 	adds r0, r4, 0
 	adds r1, r6, 0
 	adds r2, r5, 0
 	bl obj_set_horizonal_and_vertical_flip
-@0800787C:
+_0800787C:
 	adds r0, r4, 0
 	adds r0, 0x3F
 	ldrb r1, [r0]
 	movs r0, 0x40
 	ands r0, r1
 	cmp r0, 0
-	beq @080078AC
+	beq _080078AC
 	adds r0, r4, 0
 	adds r0, 0x40
 	ldrh r1, [r0]
@@ -2052,27 +2022,26 @@ anim_image_3: ; 8007818
 	ands r0, r2
 	orrs r0, r1
 	strh r0, [r4, 0x4]
-	b @080078BA
-	.align 2, 0
+	b _080078BA
 	.pool
-@080078AC:
+_080078AC:
 	mov r0, r8
 	ldrh r1, [r4, 0x4]
 	lsls r1, 22
 	lsrs r1, 22
 	ldr r2, [r4, 0xC]
-	bl copy_queue_add_oam_frame
-@080078BA:
+	bl AddPicToObjectCopyRequests
+_080078BA:
 	pop {r3}
 	mov r8, r3
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	thumb_func_end anim_image_3
+	thumb_func_end ImageAnimCmd_frame
 
-	thumb_func_start anim_image_2
-; void anim_image_2(struct obj *obj)
-anim_image_2: ; 80078C4
+	thumb_func_start ImageAnimCmd_end
+; void ImageAnimCmd_end(struct obj *object)
+ImageAnimCmd_end: ; 80078C4
 	adds r2, r0, 0
 	adds r2, 0x2B
 	ldrb r1, [r2]
@@ -2084,11 +2053,11 @@ anim_image_2: ; 80078C4
 	orrs r1, r2
 	strb r1, [r0]
 	bx lr
-	thumb_func_end anim_image_2
+	thumb_func_end ImageAnimCmd_end
 
-	thumb_func_start anim_image_1
-; void anim_image_1(struct obj *obj)
-anim_image_1: ; 80078DC
+	thumb_func_start ImageAnimCmd_jump
+; void ImageAnimCmd_jump(struct obj *object)
+ImageAnimCmd_jump: ; 80078DC
 	push {r4-r7,lr}
 	mov r7, r8
 	push {r7}
@@ -2127,11 +2096,11 @@ anim_image_1: ; 80078DC
 	lsls r0, 8
 	lsrs r5, r0, 31
 	cmp r3, 0
-	beq @08007930
+	beq _08007930
 	subs r0, r3, 0x1
 	lsls r0, 24
 	lsrs r3, r0, 24
-@08007930:
+_08007930:
 	adds r2, r4, 0
 	adds r2, 0x2C
 	movs r0, 0x3F
@@ -2147,19 +2116,19 @@ anim_image_1: ; 80078DC
 	movs r1, 0x1
 	ands r0, r1
 	cmp r0, 0
-	bne @0800795A
+	bne _0800795A
 	adds r0, r4, 0
 	adds r1, r6, 0
 	adds r2, r5, 0
 	bl obj_set_horizonal_and_vertical_flip
-@0800795A:
+_0800795A:
 	adds r0, r4, 0
 	adds r0, 0x3F
 	ldrb r1, [r0]
 	movs r0, 0x40
 	ands r0, r1
 	cmp r0, 0
-	beq @0800798C
+	beq _0800798C
 	adds r0, r4, 0
 	adds r0, 0x40
 	ldrh r1, [r0]
@@ -2172,47 +2141,46 @@ anim_image_1: ; 80078DC
 	ands r0, r2
 	orrs r0, r1
 	strh r0, [r4, 0x4]
-	b @0800799A
-	.align 2, 0
+	b _0800799A
 	.pool
-@0800798C:
+_0800798C:
 	mov r0, r8
 	ldrh r1, [r4, 0x4]
 	lsls r1, 22
 	lsrs r1, 22
 	ldr r2, [r4, 0xC]
-	bl copy_queue_add_oam_frame
-@0800799A:
+	bl AddPicToObjectCopyRequests
+_0800799A:
 	pop {r3}
 	mov r8, r3
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	thumb_func_end anim_image_1
+	thumb_func_end ImageAnimCmd_jump
 
-	thumb_func_start anim_image_0
-; void anim_image_0(struct obj *obj)
-anim_image_0: ; 80079A4
+	thumb_func_start ImageAnimCmd_loop
+; void ImageAnimCmd_loop(struct obj *object)
+ImageAnimCmd_loop: ; 80079A4
 	push {lr}
 	adds r1, r0, 0
 	adds r0, 0x2D
 	ldrb r0, [r0]
 	cmp r0, 0
-	beq @080079B8
+	beq _080079B8
 	adds r0, r1, 0
-	bl sub_80079FC
-	b @080079BE
-@080079B8:
+	bl ContinueImageAnimLoop
+	b _080079BE
+_080079B8:
 	adds r0, r1, 0
-	bl sub_80079C4
-@080079BE:
+	bl BeginImageAnimLoop
+_080079BE:
 	pop {r0}
 	bx r0
-	thumb_func_end anim_image_0
+	thumb_func_end ImageAnimCmd_loop
 
-	thumb_func_start sub_80079C4
-; void sub_80079C4(struct obj *obj)
-sub_80079C4: ; 80079C4
+	thumb_func_start BeginImageAnimLoop
+; void BeginImageAnimLoop(struct obj *object)
+BeginImageAnimLoop: ; 80079C4
 	push {r4,lr}
 	adds r4, r0, 0
 	adds r0, 0x2A
@@ -2233,17 +2201,17 @@ sub_80079C4: ; 80079C4
 	adds r1, 0x2D
 	strb r0, [r1]
 	adds r0, r4, 0
-	bl obj_anim_rewind_to_cmd00
+	bl JumpToTopOfImageAnimLoop
 	adds r0, r4, 0
-	bl obj_anim_image_continue
+	bl ContinueObjectImageAnim
 	pop {r4}
 	pop {r0}
 	bx r0
-	thumb_func_end sub_80079C4
+	thumb_func_end BeginImageAnimLoop
 
-	thumb_func_start sub_80079FC
-; void sub_80079FC(struct obj *obj)
-sub_80079FC: ; 80079FC
+	thumb_func_start ContinueImageAnimLoop
+; void ContinueImageAnimLoop(struct obj *object)
+ContinueImageAnimLoop: ; 80079FC
 	push {r4,lr}
 	adds r4, r0, 0
 	adds r1, r4, 0
@@ -2252,23 +2220,23 @@ sub_80079FC: ; 80079FC
 	subs r0, 0x1
 	strb r0, [r1]
 	adds r0, r4, 0
-	bl obj_anim_rewind_to_cmd00
+	bl JumpToTopOfImageAnimLoop
 	adds r0, r4, 0
-	bl obj_anim_image_continue
+	bl ContinueObjectImageAnim
 	pop {r4}
 	pop {r0}
 	bx r0
-	thumb_func_end sub_80079FC
+	thumb_func_end ContinueImageAnimLoop
 
-	thumb_func_start obj_anim_rewind_to_cmd00
-; void obj_anim_rewind_to_cmd00(struct obj *obj)
-obj_anim_rewind_to_cmd00: ; 8007A1C
+	thumb_func_start JumpToTopOfImageAnimLoop
+; void JumpToTopOfImageAnimLoop(struct obj *object)
+JumpToTopOfImageAnimLoop: ; 8007A1C
 	push {r4-r7,lr}
 	mov r12, r0
 	adds r0, 0x2D
 	ldrb r0, [r0]
 	cmp r0, 0
-	beq @08007A88
+	beq _08007A88
 	mov r3, r12
 	adds r3, 0x2B
 	ldrb r0, [r3]
@@ -2292,13 +2260,13 @@ obj_anim_rewind_to_cmd00: ; 8007A1C
 	negs r1, r1
 	adds r4, r3, 0
 	cmp r0, r1
-	beq @08007A82
+	beq _08007A82
 	adds r6, r1, 0
 	adds r2, r4, 0
-@08007A5C:
+_08007A5C:
 	ldrb r0, [r2]
 	cmp r0, 0
-	beq @08007A82
+	beq _08007A82
 	subs r0, 0x1
 	strb r0, [r3]
 	ldrb r1, [r5]
@@ -2314,20 +2282,20 @@ obj_anim_rewind_to_cmd00: ; 8007A1C
 	movs r1, 0
 	ldrsh r0, [r0, r1]
 	cmp r0, r6
-	bne @08007A5C
-@08007A82:
+	bne _08007A5C
+_08007A82:
 	ldrb r0, [r4]
 	subs r0, 0x1
 	strb r0, [r4]
-@08007A88:
+_08007A88:
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	thumb_func_end obj_anim_rewind_to_cmd00
+	thumb_func_end JumpToTopOfImageAnimLoop
 
-	thumb_func_start obj_anim_rotscale_begin
-; void obj_anim_rotscale_begin(struct obj *obj)
-obj_anim_rotscale_begin: ; 8007A90
+	thumb_func_start BeginObjectRotScalAnim
+; void BeginObjectRotScalAnim(struct obj *object)
+BeginObjectRotScalAnim: ; 8007A90
 	push {r4-r7,lr}
 	sub sp, 0x8
 	adds r6, r0, 0
@@ -2337,14 +2305,14 @@ obj_anim_rotscale_begin: ; 8007A90
 	movs r1, 0x1
 	ands r0, r1
 	cmp r0, 0
-	beq @08007B12
+	beq _08007B12
 	ldr r0, [r6, 0x10]
 	ldr r0, [r0]
 	movs r2, 0
 	ldrsh r1, [r0, r2]
 	ldr r0, =0x00007fff
 	cmp r1, r0
-	beq @08007B12
+	beq _08007B12
 	adds r0, r6, 0
 	bl obj_get_rotscale_entry_index
 	adds r4, r0, 0
@@ -2381,25 +2349,24 @@ obj_anim_rotscale_begin: ; 8007A90
 	movs r0, 0x80
 	ands r0, r1
 	cmp r0, 0
-	beq @08007B12
+	beq _08007B12
 	movs r0, 0x3A
 	ldrsh r1, [r6, r0]
 	movs r0, 0x3C
 	ldrsh r2, [r6, r0]
 	adds r0, r6, 0
 	bl obj_update_pos2
-@08007B12:
+_08007B12:
 	add sp, 0x8
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end obj_anim_rotscale_begin
+	thumb_func_end BeginObjectRotScalAnim
 
-	thumb_func_start obj_anim_rotscale_continue
-; void obj_anim_rotscale_continue(struct obj *obj)
-obj_anim_rotscale_continue: ; 8007B24
+	thumb_func_start ContinueObjectRotScalAnim
+; void ContinueObjectRotScalAnim(struct obj *object)
+ContinueObjectRotScalAnim: ; 8007B24
 	push {r4,r5,lr}
 	adds r4, r0, 0
 	ldrb r0, [r4, 0x1]
@@ -2408,7 +2375,7 @@ obj_anim_rotscale_continue: ; 8007B24
 	movs r1, 0x1
 	ands r0, r1
 	cmp r0, 0
-	beq @08007BC6
+	beq _08007BC6
 	adds r0, r4, 0
 	bl obj_get_rotscale_entry_index
 	lsls r0, 24
@@ -2421,21 +2388,20 @@ obj_anim_rotscale_continue: ; 8007B24
 	adds r3, r0, r1
 	ldrb r0, [r3, 0x2]
 	cmp r0, 0
-	beq @08007B60
+	beq _08007B60
 	adds r0, r2, 0
 	adds r1, r4, 0
 	bl sub_8007BD8
-	b @08007BAA
-	.align 2, 0
+	b _08007BAA
 	.pool
-@08007B60:
+_08007B60:
 	adds r0, r4, 0
 	adds r0, 0x2C
 	ldrb r1, [r0]
 	movs r0, 0x80
 	ands r0, r1
 	cmp r0, 0
-	bne @08007BC6
+	bne _08007BC6
 	ldrb r0, [r3, 0x1]
 	adds r0, 0x1
 	strb r0, [r3, 0x1]
@@ -2452,12 +2418,12 @@ obj_anim_rotscale_continue: ; 8007B24
 	ldrsh r1, [r1, r0]
 	ldr r0, =0x00007ffc
 	cmp r1, r0
-	ble @08007B98
+	ble _08007B98
 	ldr r2, =0xffff8003
 	adds r0, r1, r2
 	lsls r0, 16
 	lsrs r2, r0, 16
-@08007B98:
+_08007B98:
 	ldr r0, =gUnknown_082EC6E4
 	lsls r1, r2, 16
 	asrs r1, 14
@@ -2466,29 +2432,29 @@ obj_anim_rotscale_continue: ; 8007B24
 	adds r0, r5, 0
 	adds r1, r4, 0
 	bl _call_via_r2
-@08007BAA:
+_08007BAA:
 	adds r0, r4, 0
 	adds r0, 0x3F
 	ldrb r1, [r0]
 	movs r0, 0x80
 	ands r0, r1
 	cmp r0, 0
-	beq @08007BC6
+	beq _08007BC6
 	movs r0, 0x3A
 	ldrsh r1, [r4, r0]
 	movs r0, 0x3C
 	ldrsh r2, [r4, r0]
 	adds r0, r4, 0
 	bl obj_update_pos2
-@08007BC6:
+_08007BC6:
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end obj_anim_rotscale_continue
+	thumb_func_end ContinueObjectRotScalAnim
 
 	thumb_func_start sub_8007BD8
+; void sub_8007BD8(u8 index, struct obj *object)
 sub_8007BD8: ; 8007BD8
 	push {r4,r5,lr}
 	sub sp, 0x8
@@ -2500,7 +2466,7 @@ sub_8007BD8: ; 8007BD8
 	bl obj_anim_rotscale_delay_progress
 	lsls r0, 24
 	cmp r0, 0
-	bne @08007C02
+	bne _08007C02
 	adds r0, r4, 0
 	adds r1, r5, 0
 	mov r2, sp
@@ -2508,16 +2474,16 @@ sub_8007BD8: ; 8007BD8
 	adds r0, r4, 0
 	mov r1, sp
 	bl rotscale_frame_apply_relative_and_sync
-@08007C02:
+_08007C02:
 	add sp, 0x8
 	pop {r4,r5}
 	pop {r0}
 	bx r0
 	thumb_func_end sub_8007BD8
 
-	thumb_func_start anim_rotscale_0
-; void anim_rotscale_0(u8 index, struct obj *obj)
-anim_rotscale_0: ; 8007C0C
+	thumb_func_start RotScalAnimCmd_loop
+; void RotScalAnimCmd_loop(u8 index, struct obj *object)
+RotScalAnimCmd_loop: ; 8007C0C
 	push {lr}
 	adds r3, r1, 0
 	lsls r0, 24
@@ -2529,24 +2495,24 @@ anim_rotscale_0: ; 8007C0C
 	adds r0, r1
 	ldrb r0, [r0, 0x3]
 	cmp r0, 0
-	beq @08007C34
+	beq _08007C34
 	adds r0, r2, 0
 	adds r1, r3, 0
-	bl sub_8007C7C
-	b @08007C3C
-	.align 2, 0
+	bl ContinueRotScalAnimLoop
+	b _08007C3C
 	.pool
-@08007C34:
+_08007C34:
 	adds r0, r2, 0
 	adds r1, r3, 0
-	bl sub_8007C40
-@08007C3C:
+	bl BeginRotScalAnimLoop
+_08007C3C:
 	pop {r0}
 	bx r0
-	thumb_func_end anim_rotscale_0
+	thumb_func_end RotScalAnimCmd_loop
 
-	thumb_func_start sub_8007C40
-sub_8007C40: ; 8007C40
+	thumb_func_start BeginRotScalAnimLoop
+; void BeginRotScalAnimLoop(u8 index, struct obj *object)
+BeginRotScalAnimLoop: ; 8007C40
 	push {r4,lr}
 	adds r4, r1, 0
 	lsls r0, 24
@@ -2567,18 +2533,18 @@ sub_8007C40: ; 8007C40
 	ldrh r1, [r1, 0x2]
 	strb r1, [r3, 0x3]
 	adds r1, r4, 0
-	bl obj_anim_rotscale_rewind_to_cmd00_maybe
+	bl JumpToTopOfRotScalAnimLoop
 	adds r0, r4, 0
-	bl obj_anim_rotscale_continue
+	bl ContinueObjectRotScalAnim
 	pop {r4}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end sub_8007C40
+	thumb_func_end BeginRotScalAnimLoop
 
-	thumb_func_start sub_8007C7C
-sub_8007C7C: ; 8007C7C
+	thumb_func_start ContinueRotScalAnimLoop
+; void ContinueRotScalAnimLoop(u8 index, struct obj *object)
+ContinueRotScalAnimLoop: ; 8007C7C
 	push {r4,lr}
 	adds r4, r1, 0
 	lsls r0, 24
@@ -2592,18 +2558,18 @@ sub_8007C7C: ; 8007C7C
 	subs r2, 0x1
 	strb r2, [r1, 0x3]
 	adds r1, r4, 0
-	bl obj_anim_rotscale_rewind_to_cmd00_maybe
+	bl JumpToTopOfRotScalAnimLoop
 	adds r0, r4, 0
-	bl obj_anim_rotscale_continue
+	bl ContinueObjectRotScalAnim
 	pop {r4}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end sub_8007C7C
+	thumb_func_end ContinueRotScalAnimLoop
 
-	thumb_func_start obj_anim_rotscale_rewind_to_cmd00_maybe
-obj_anim_rotscale_rewind_to_cmd00_maybe: ; 8007CAC
+	thumb_func_start JumpToTopOfRotScalAnimLoop
+; void JumpToTopOfRotScalAnimLoop(u8 index, struct obj *object)
+JumpToTopOfRotScalAnimLoop: ; 8007CAC
 	push {r4-r7,lr}
 	mov r12, r1
 	lsls r0, 24
@@ -2616,20 +2582,19 @@ obj_anim_rotscale_rewind_to_cmd00_maybe: ; 8007CAC
 	ldrb r0, [r2, 0x3]
 	adds r6, r1, 0
 	cmp r0, 0
-	beq @08007D0C
+	beq _08007D0C
 	ldrb r0, [r2, 0x1]
 	subs r0, 0x1
 	strb r0, [r2, 0x1]
 	adds r4, r3, 0
-	b @08007CDC
-	.align 2, 0
+	b _08007CDC
 	.pool
-@08007CD4:
+_08007CD4:
 	cmp r2, 0
-	beq @08007D00
+	beq _08007D00
 	subs r0, r2, 0x1
 	strb r0, [r3, 0x1]
-@08007CDC:
+_08007CDC:
 	adds r0, r4, r5
 	lsls r0, 2
 	adds r3, r0, r6
@@ -2647,25 +2612,24 @@ obj_anim_rotscale_rewind_to_cmd00_maybe: ; 8007CAC
 	ldrsh r1, [r0, r7]
 	ldr r0, =0x00007ffd
 	cmp r1, r0
-	bne @08007CD4
-@08007D00:
+	bne _08007CD4
+_08007D00:
 	adds r1, r4, r5
 	lsls r1, 2
 	adds r1, r6
 	ldrb r0, [r1, 0x1]
 	subs r0, 0x1
 	strb r0, [r1, 0x1]
-@08007D0C:
+_08007D0C:
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end obj_anim_rotscale_rewind_to_cmd00_maybe
+	thumb_func_end JumpToTopOfRotScalAnimLoop
 
-	thumb_func_start anim_rotscale_1
-; void anim_rotscale_1(u8 index, struct obj *obj)
-anim_rotscale_1: ; 8007D18
+	thumb_func_start RotScalAnimCmd_jump
+; void RotScalAnimCmd_jump(u8 index, struct obj *object)
+RotScalAnimCmd_jump: ; 8007D18
 	push {r4-r6,lr}
 	sub sp, 0x8
 	adds r5, r0, 0
@@ -2699,13 +2663,12 @@ anim_rotscale_1: ; 8007D18
 	pop {r4-r6}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end anim_rotscale_1
+	thumb_func_end RotScalAnimCmd_jump
 
-	thumb_func_start anim_rotscale_2
-; void anim_rotscale_2(u8 index, struct obj *obj)
-anim_rotscale_2: ; 8007D64
+	thumb_func_start RotScalAnimCmd_end
+; void RotScalAnimCmd_end(u8 index, struct obj *object)
+RotScalAnimCmd_end: ; 8007D64
 	push {lr}
 	sub sp, 0x8
 	lsls r0, 24
@@ -2732,13 +2695,12 @@ anim_rotscale_2: ; 8007D64
 	add sp, 0x8
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end anim_rotscale_2
+	thumb_func_end RotScalAnimCmd_end
 
-	thumb_func_start anim_rotscale_3
-; void anim_rotscale_3(u8 index, struct obj *obj)
-anim_rotscale_3: ; 8007DA0
+	thumb_func_start RotScalAnimCmd_frame
+; void RotScalAnimCmd_frame(u8 index, struct obj *object)
+RotScalAnimCmd_frame: ; 8007DA0
 	push {r4,r5,lr}
 	sub sp, 0x8
 	adds r4, r0, 0
@@ -2762,9 +2724,8 @@ anim_rotscale_3: ; 8007DA0
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end anim_rotscale_3
+	thumb_func_end RotScalAnimCmd_frame
 
 	thumb_func_start rotscale_set_indirect
 ; void rotscale_set_indirect(u8 rotscale_entry_index, s16 rotscale_data[])
@@ -2782,7 +2743,6 @@ rotscale_set_indirect: ; 8007DD8
 	ldrh r1, [r1, 0x6]
 	strh r1, [r0, 0x6]
 	bx lr
-	.align 2, 0
 	.pool
 	thumb_func_end rotscale_set_indirect
 
@@ -2798,11 +2758,11 @@ obj_get_rotscale_entry_index: ; 8007DF8
 	movs r1, 0x1
 	ands r0, r1
 	cmp r0, 0
-	beq @08007E12
+	beq _08007E12
 	ldrb r0, [r2, 0x3]
 	lsls r0, 26
 	lsrs r3, r0, 27
-@08007E12:
+_08007E12:
 	adds r0, r3, 0
 	pop {r1}
 	bx r1
@@ -2829,14 +2789,14 @@ sub_8007E28: ; 8007E28
 	adds r5, r2, 0
 	subs r0, r1, r3
 	cmp r0, 0
-	bge @08007E3A
+	bge _08007E3A
 	negs r0, r0
 	asrs r4, r0, 9
-	b @08007E3E
-@08007E3A:
+	b _08007E3E
+_08007E3A:
 	asrs r0, 9
 	negs r4, r0
-@08007E3E:
+_08007E3E:
 	adds r0, r5, 0
 	muls r0, r1
 	adds r1, r3, 0
@@ -2865,7 +2825,7 @@ obj_update_pos2: ; 8007E54
 	lsls r0, 4
 	mov r9, r0
 	cmp r6, r9
-	beq @08007EA2
+	beq _08007EA2
 	ldr r2, =gUnknown_082EC6F4
 	lsrs r1, 6
 	lsls r1, 3
@@ -2888,9 +2848,9 @@ obj_update_pos2: ; 8007E54
 	adds r2, r6, 0
 	bl sub_8007E28
 	strh r0, [r5, 0x24]
-@08007EA2:
+_08007EA2:
 	cmp r8, r9
-	beq @08007EDA
+	beq _08007EDA
 	ldr r2, =gUnknown_082EC6F4
 	ldrb r1, [r5, 0x3]
 	lsrs r1, 6
@@ -2915,14 +2875,13 @@ obj_update_pos2: ; 8007E54
 	mov r2, r8
 	bl sub_8007E28
 	strh r0, [r5, 0x26]
-@08007EDA:
+_08007EDA:
 	pop {r3,r4}
 	mov r8, r3
 	mov r9, r4
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
 	thumb_func_end obj_update_pos2
 
@@ -3003,12 +2962,11 @@ rotscale_reset_half: ; 8007F64
 	strb r0, [r1, 0x2]
 	strb r0, [r1, 0x3]
 	bx lr
-	.align 2, 0
 	.pool
 	thumb_func_end rotscale_reset_half
 
 	thumb_func_start rotscale_reset_full_1
-; void rotscale_reset_full_1(u8 index)
+; void rotscale_reset_full_1(u8 index, u8 a2)
 rotscale_reset_full_1: ; 8007F80
 	lsls r0, 24
 	lsrs r0, 24
@@ -3028,7 +2986,6 @@ rotscale_reset_full_1: ; 8007F80
 	strh r0, [r2, 0x6]
 	strh r3, [r2, 0x8]
 	bx lr
-	.align 2, 0
 	.pool
 	thumb_func_end rotscale_reset_full_1
 
@@ -3053,7 +3010,6 @@ rotscale_reset_full_2: ; 8007FA8
 	strh r2, [r1, 0x6]
 	strh r0, [r1, 0x8]
 	bx lr
-	.align 2, 0
 	.pool
 	thumb_func_end rotscale_reset_full_2
 
@@ -3075,7 +3031,6 @@ rotscale_frame_apply_absolute: ; 8007FD0
 	lsls r0, 8
 	strh r0, [r2, 0x8]
 	bx lr
-	.align 2, 0
 	.pool
 	thumb_func_end rotscale_frame_apply_absolute
 
@@ -3088,7 +3043,7 @@ obj_anim_image_delay_progress: ; 8007FF4
 	movs r0, 0x40
 	ands r0, r2
 	cmp r0, 0
-	bne @08008018
+	bne _08008018
 	lsls r0, r2, 26
 	lsrs r0, 26
 	subs r0, 0x1
@@ -3099,12 +3054,13 @@ obj_anim_image_delay_progress: ; 8007FF4
 	ands r1, r2
 	orrs r1, r0
 	strb r1, [r3]
-@08008018:
+_08008018:
 	pop {r0}
 	bx r0
 	thumb_func_end obj_anim_image_delay_progress
 
 	thumb_func_start obj_anim_rotscale_delay_progress
+; u8 obj_anim_rotscale_delay_progress(struct obj *object, u8 index)
 obj_anim_rotscale_delay_progress: ; 800801C
 	push {lr}
 	lsls r1, 24
@@ -3115,7 +3071,7 @@ obj_anim_rotscale_delay_progress: ; 800801C
 	movs r0, 0x80
 	ands r0, r1
 	cmp r0, 0
-	bne @08008040
+	bne _08008040
 	ldr r0, =0x03000b70
 	lsls r1, r2, 1
 	adds r1, r2
@@ -3124,12 +3080,11 @@ obj_anim_rotscale_delay_progress: ; 800801C
 	ldrb r0, [r1, 0x2]
 	subs r0, 0x1
 	strb r0, [r1, 0x2]
-@08008040:
+_08008040:
 	ldrb r0, [r3]
 	lsrs r0, 7
 	pop {r1}
 	bx r1
-	.align 2, 0
 	.pool
 	thumb_func_end obj_anim_rotscale_delay_progress
 
@@ -3199,7 +3154,6 @@ rotscale_frame_apply_relative_and_sync: ; 800804C
 	pop {r4-r6}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
 	thumb_func_end rotscale_frame_apply_relative_and_sync
 
@@ -3273,7 +3227,6 @@ rotscale_load_frame: ; 80080FC
 	pop {r4}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
 	thumb_func_end rotscale_load_frame
 
@@ -3290,30 +3243,30 @@ sub_8008168: ; 8008168
 	str r1, [sp, 0x4]
 	ldrb r0, [r2, 0x5]
 	cmp r0, 0
-	beq @0800818E
+	beq _0800818E
 	subs r0, 0x1
 	strb r0, [r2, 0x5]
 	adds r0, r4, 0
 	adds r1, r2, 0
 	bl rotscale_frame_apply_relative_and_sync
-	b @0800819E
-@0800818E:
+	b _0800819E
+_0800818E:
 	adds r0, r4, 0
 	adds r1, r2, 0
 	bl rotscale_frame_apply_absolute
 	adds r0, r4, 0
 	mov r1, sp
 	bl rotscale_frame_apply_relative_and_sync
-@0800819E:
+_0800819E:
 	add sp, 0x8
 	pop {r4}
 	pop {r0}
 	bx r0
 	thumb_func_end sub_8008168
 
-	thumb_func_start obj_anim_image_start
-; void obj_anim_image_start(struct obj *object, u8 a2)
-obj_anim_image_start: ; 80081A8
+	thumb_func_start StartObjectImageAnim
+; void StartObjectImageAnim(struct obj *object, u8 whichAnim)
+StartObjectImageAnim: ; 80081A8
 	adds r2, r0, 0
 	adds r2, 0x2A
 	strb r1, [r2]
@@ -3326,10 +3279,11 @@ obj_anim_image_start: ; 80081A8
 	ands r1, r2
 	strb r1, [r0]
 	bx lr
-	thumb_func_end obj_anim_image_start
+	thumb_func_end StartObjectImageAnim
 
-	thumb_func_start obj_anim_image_start_if_different
-obj_anim_image_start_if_different: ; 80081C0
+	thumb_func_start StartObjectImageAnimIfDifferent
+; void StartObjectImageAnimIfDifferent(struct obj *object, u8 whichAnim)
+StartObjectImageAnimIfDifferent: ; 80081C0
 	push {lr}
 	adds r2, r0, 0
 	lsls r1, 24
@@ -3337,16 +3291,17 @@ obj_anim_image_start_if_different: ; 80081C0
 	adds r0, 0x2A
 	ldrb r0, [r0]
 	cmp r0, r1
-	beq @080081D6
+	beq _080081D6
 	adds r0, r2, 0
-	bl obj_anim_image_start
-@080081D6:
+	bl StartObjectImageAnim
+_080081D6:
 	pop {r0}
 	bx r0
-	thumb_func_end obj_anim_image_start_if_different
+	thumb_func_end StartObjectImageAnimIfDifferent
 
-	thumb_func_start obj_anim_image_seek
-obj_anim_image_seek: ; 80081DC
+	thumb_func_start SeekObjectImageAnim
+; void SeekObjectImageAnim(struct obj *object, u8 cmdIndex)
+SeekObjectImageAnim: ; 80081DC
 	push {r4-r7,lr}
 	adds r3, r0, 0
 	lsls r1, 24
@@ -3383,12 +3338,12 @@ obj_anim_image_seek: ; 80081DC
 	ands r0, r1
 	strb r0, [r4]
 	adds r0, r3, 0
-	bl obj_anim_image_continue
+	bl ContinueObjectImageAnim
 	ldrb r2, [r4]
 	movs r0, 0x3F
 	ands r0, r2
 	cmp r0, 0
-	beq @08008244
+	beq _08008244
 	lsls r0, r2, 26
 	lsrs r0, 26
 	adds r0, 0x1
@@ -3398,7 +3353,7 @@ obj_anim_image_seek: ; 80081DC
 	ands r1, r2
 	orrs r1, r0
 	strb r1, [r4]
-@08008244:
+_08008244:
 	lsls r2, r6, 6
 	ldrb r1, [r4]
 	adds r0, r5, 0
@@ -3408,10 +3363,11 @@ obj_anim_image_seek: ; 80081DC
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	thumb_func_end obj_anim_image_seek
+	thumb_func_end SeekObjectImageAnim
 
-	thumb_func_start sub_8008258
-sub_8008258: ; 8008258
+	thumb_func_start StartObjectRotScalAnim
+; void StartObjectRotScalAnim(struct obj *object, u8 whichAnim)
+StartObjectRotScalAnim: ; 8008258
 	push {r4,r5,lr}
 	adds r5, r0, 0
 	lsls r4, r1, 24
@@ -3432,10 +3388,11 @@ sub_8008258: ; 8008258
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	thumb_func_end sub_8008258
+	thumb_func_end StartObjectRotScalAnim
 
-	thumb_func_start sub_8008284
-sub_8008284: ; 8008284
+	thumb_func_start StartObjectRotScalAnimIfDifferent
+; void StartObjectRotScalAnimIfDifferent(struct obj *object, u8 whichAnim)
+StartObjectRotScalAnimIfDifferent: ; 8008284
 	push {r4,r5,lr}
 	adds r5, r0, 0
 	lsls r1, 24
@@ -3450,17 +3407,16 @@ sub_8008284: ; 8008284
 	adds r1, r2
 	ldrb r0, [r1]
 	cmp r0, r4
-	beq @080082AC
+	beq _080082AC
 	adds r0, r5, 0
 	adds r1, r4, 0
-	bl sub_8008258
-@080082AC:
+	bl StartObjectRotScalAnim
+_080082AC:
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end sub_8008284
+	thumb_func_end StartObjectRotScalAnimIfDifferent
 
 	thumb_func_start sub_80082B8
 sub_80082B8: ; 80082B8
@@ -3488,7 +3444,6 @@ sub_80082B8: ; 80082B8
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
 	thumb_func_end sub_80082B8
 
@@ -3508,15 +3463,14 @@ sub_80082F0: ; 80082F0
 	adds r1, r2
 	ldrb r0, [r1]
 	cmp r0, r4
-	beq @08008318
+	beq _08008318
 	adds r0, r5, 0
 	adds r1, r4, 0
 	bl sub_80082B8
-@08008318:
+_08008318:
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
 	thumb_func_end sub_80082F0
 
@@ -3529,7 +3483,7 @@ sub_8008324: ; 8008324
 	movs r0, 0x40
 	ands r0, r1
 	cmp r0, 0
-	beq @08008370
+	beq _08008370
 	adds r0, r3, 0
 	adds r0, 0x2A
 	ldrb r1, [r0]
@@ -3546,9 +3500,9 @@ sub_8008324: ; 8008324
 	movs r1, 0
 	ldrsh r0, [r0, r1]
 	cmp r0, 0
-	bge @08008358
+	bge _08008358
 	movs r2, 0
-@08008358:
+_08008358:
 	adds r0, r3, 0
 	adds r0, 0x40
 	ldrh r1, [r0]
@@ -3561,10 +3515,9 @@ sub_8008324: ; 8008324
 	ands r0, r2
 	orrs r0, r1
 	strh r0, [r3, 0x4]
-@08008370:
+_08008370:
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
 	thumb_func_end sub_8008324
 
@@ -3578,20 +3531,19 @@ rotscale_reset_all: ; 800837C
 	ldr r1, =0x03003018
 	movs r0, 0
 	str r0, [r1]
-	bl reset_rotscale_coeffs
+	bl ResetSpriteTransformationMatrices
 	movs r4, 0
-@08008390:
+_08008390:
 	adds r0, r4, 0
 	bl rotscale_reset_full_2
 	adds r0, r4, 0x1
 	lsls r0, 24
 	lsrs r4, r0, 24
 	cmp r4, 0x1F
-	bls @08008390
+	bls _08008390
 	pop {r4}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
 	thumb_func_end rotscale_reset_all
 
@@ -3604,27 +3556,26 @@ rotscale_alloc_entry: ; 80083B0
 	ldr r0, =0x03003018
 	ldr r4, [r0]
 	adds r3, r0, 0
-@080083BC:
+_080083BC:
 	adds r0, r4, 0
 	ands r0, r1
 	cmp r0, 0
-	bne @080083D4
+	bne _080083D4
 	ldr r0, [r3]
 	orrs r0, r1
 	str r0, [r3]
 	adds r0, r2, 0
-	b @080083E2
-	.align 2, 0
+	b _080083E2
 	.pool
-@080083D4:
+_080083D4:
 	adds r0, r2, 0x1
 	lsls r0, 24
 	lsrs r2, r0, 24
 	lsls r1, 1
 	cmp r2, 0x1F
-	bls @080083BC
+	bls _080083BC
 	movs r0, 0xFF
-@080083E2:
+_080083E2:
 	pop {r4}
 	pop {r1}
 	bx r1
@@ -3641,15 +3592,15 @@ rotscale_free_entry: ; 80083E8
 	movs r1, 0x1
 	ldr r3, =0x03003018
 	cmp r0, r2
-	bcs @08008406
-@080083FA:
+	bcs _08008406
+_080083FA:
 	adds r0, 0x1
 	lsls r0, 24
 	lsrs r0, 24
 	lsls r1, 1
 	cmp r0, r2
-	bcc @080083FA
-@08008406:
+	bcc _080083FA
+_08008406:
 	ldr r0, [r3]
 	bics r0, r1
 	str r0, [r3]
@@ -3659,11 +3610,10 @@ rotscale_free_entry: ; 80083E8
 	adds r0, r2, 0
 	movs r2, 0
 	movs r3, 0
-	bl rotscale_set_direct
+	bl SetSpriteTransformationMatrix
 	add sp, 0x4
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
 	thumb_func_end rotscale_free_entry
 
@@ -3676,7 +3626,7 @@ obj_alloc_rotscale_entry: ; 8008428
 	lsls r0, 24
 	lsrs r5, r0, 24
 	cmp r5, 0xFF
-	beq @08008470
+	beq _08008470
 	ldrb r3, [r4, 0x1]
 	lsrs r1, r3, 6
 	ldrb r2, [r4, 0x3]
@@ -3684,7 +3634,7 @@ obj_alloc_rotscale_entry: ; 8008428
 	lsls r3, 30
 	lsrs r3, 30
 	adds r0, r4, 0
-	bl oam_center
+	bl CalcVecFromObjectCenterToObjectUpperLeft
 	movs r0, 0x1F
 	adds r1, r5, 0
 	ands r1, r0
@@ -3703,7 +3653,7 @@ obj_alloc_rotscale_entry: ; 8008428
 	strb r0, [r2]
 	adds r0, r5, 0
 	bl rotscale_reset_full_2
-@08008470:
+_08008470:
 	pop {r4,r5}
 	pop {r0}
 	bx r0
@@ -3767,28 +3717,27 @@ sub_8008478: ; 8008478
 	pop {r4-r6}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
 	thumb_func_end sub_8008478
 
-	thumb_func_start gpu_tile_obj_alloc_tag_and_copy_to_vram
-; int gpu_tile_obj_alloc_tag_and_copy_to_vram(struct obj_tiles *x)
-gpu_tile_obj_alloc_tag_and_copy_to_vram: ; 80084F8
+	thumb_func_start LoadObjectPic
+; u16 LoadObjectPic(struct obj_tiles *pic)
+LoadObjectPic: ; 80084F8
 	push {r4-r6,lr}
 	adds r5, r0, 0
 	ldrh r0, [r5, 0x4]
 	lsrs r0, 5
-	bl gpu_tile_obj_alloc
+	bl AllocObjectTiles
 	lsls r4, r0, 16
 	asrs r6, r4, 16
 	cmp r6, 0
-	blt @08008534
+	blt _08008534
 	ldrh r0, [r5, 0x6]
 	lsrs r4, 16
 	ldrh r2, [r5, 0x4]
 	lsrs r2, 5
 	adds r1, r4, 0
-	bl gpu_tile_obj_tag_add
+	bl AddObjectTileRange
 	ldr r0, [r5]
 	lsls r1, r6, 5
 	ldr r2, =0x06010000
@@ -3797,30 +3746,29 @@ gpu_tile_obj_alloc_tag_and_copy_to_vram: ; 80084F8
 	lsrs r2, 1
 	bl CpuSet
 	adds r0, r4, 0
-	b @08008536
-	.align 2, 0
+	b _08008536
 	.pool
-@08008534:
+_08008534:
 	movs r0, 0
-@08008536:
+_08008536:
 	pop {r4-r6}
 	pop {r1}
 	bx r1
-	thumb_func_end gpu_tile_obj_alloc_tag_and_copy_to_vram
+	thumb_func_end LoadObjectPic
 
-	thumb_func_start gpu_tile_obj_alloc_and_load_multiple
-; void gpu_tile_obj_alloc_and_load_multiple(struct obj_tiles[])
-gpu_tile_obj_alloc_and_load_multiple: ; 800853C
+	thumb_func_start LoadObjectPics
+; void LoadObjectPics(struct obj_tiles *pics)
+LoadObjectPics: ; 800853C
 	push {r4,r5,lr}
 	adds r5, r0, 0
 	movs r4, 0
 	ldr r0, [r5]
 	cmp r0, 0
-	beq @08008560
-@08008548:
+	beq _08008560
+_08008548:
 	lsls r0, r4, 3
 	adds r0, r5, r0
-	bl gpu_tile_obj_alloc_tag_and_copy_to_vram
+	bl LoadObjectPic
 	adds r0, r4, 0x1
 	lsls r0, 24
 	lsrs r4, r0, 24
@@ -3828,26 +3776,26 @@ gpu_tile_obj_alloc_and_load_multiple: ; 800853C
 	adds r0, r5
 	ldr r0, [r0]
 	cmp r0, 0
-	bne @08008548
-@08008560:
+	bne _08008548
+_08008560:
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	thumb_func_end gpu_tile_obj_alloc_and_load_multiple
+	thumb_func_end LoadObjectPics
 
-	thumb_func_start gpu_tile_obj_free_by_tag
-; void gpu_tile_obj_free_by_tag(int tag)
-gpu_tile_obj_free_by_tag: ; 8008568
+	thumb_func_start FreeObjectTilesByTag
+; void FreeObjectTilesByTag(u16 tag)
+FreeObjectTilesByTag: ; 8008568
 	push {r4-r7,lr}
 	mov r7, r8
 	push {r7}
 	lsls r0, 16
 	lsrs r0, 16
-	bl gpu_tile_obj_tag_index_of
+	bl IndexOfObjectTilesTag
 	lsls r0, 24
 	lsrs r4, r0, 24
 	cmp r4, 0xFF
-	beq @080085C6
+	beq _080085C6
 	ldr r0, =0x03000a70
 	lsls r1, r4, 2
 	adds r2, r1, r0
@@ -3860,13 +3808,13 @@ gpu_tile_obj_free_by_tag: ; 8008568
 	mov r8, r1
 	lsls r5, r4, 1
 	cmp r3, r0
-	bge @080085BE
+	bge _080085BE
 	ldr r1, =0x02021b3c
 	mov r12, r1
 	movs r6, 0x7
 	movs r7, 0x1
 	adds r4, r0, 0
-@080085A2:
+_080085A2:
 	lsrs r2, r3, 3
 	add r2, r12
 	adds r0, r3, 0
@@ -3880,25 +3828,24 @@ gpu_tile_obj_free_by_tag: ; 8008568
 	lsls r0, 16
 	lsrs r3, r0, 16
 	cmp r3, r4
-	blt @080085A2
-@080085BE:
+	blt _080085A2
+_080085BE:
 	mov r0, r8
 	adds r1, r5, r0
 	ldr r0, =0x0000ffff
 	strh r0, [r1]
-@080085C6:
+_080085C6:
 	pop {r3}
 	mov r8, r3
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end gpu_tile_obj_free_by_tag
+	thumb_func_end FreeObjectTilesByTag
 
-	thumb_func_start gpu_tile_obj_tags_reset
-; void gpu_tile_obj_tags_reset()
-gpu_tile_obj_tags_reset: ; 80085E0
+	thumb_func_start FreeAllObjectTiles
+; void FreeAllObjectTiles()
+FreeAllObjectTiles: ; 80085E0
 	push {r4-r7,lr}
 	movs r2, 0
 	ldr r7, =0x030009f0
@@ -3907,7 +3854,7 @@ gpu_tile_obj_tags_reset: ; 80085E0
 	ldr r4, =0x03000a70
 	movs r3, 0
 	adds r5, r4, 0x2
-@080085F0:
+_080085F0:
 	lsls r1, r2, 1
 	adds r1, r7
 	ldrh r0, [r1]
@@ -3922,72 +3869,70 @@ gpu_tile_obj_tags_reset: ; 80085E0
 	lsls r0, 24
 	lsrs r2, r0, 24
 	cmp r2, 0x3F
-	bls @080085F0
+	bls _080085F0
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end gpu_tile_obj_tags_reset
+	thumb_func_end FreeAllObjectTiles
 
-	thumb_func_start gpu_tile_obj_tag_get_range_start
-; int gpu_tile_obj_tag_get_range_start(int tag)
-gpu_tile_obj_tag_get_range_start: ; 8008620
+	thumb_func_start GetObjectTileRangeStartByTag
+; u16 GetObjectTileRangeStartByTag(u16 tag)
+GetObjectTileRangeStartByTag: ; 8008620
 	push {lr}
 	lsls r0, 16
 	lsrs r0, 16
-	bl gpu_tile_obj_tag_index_of
+	bl IndexOfObjectTilesTag
 	lsls r0, 24
 	lsrs r1, r0, 24
 	cmp r1, 0xFF
-	beq @08008640
+	beq _08008640
 	ldr r0, =0x03000a70
 	lsls r1, 2
 	adds r1, r0
 	ldrh r0, [r1]
-	b @08008642
-	.align 2, 0
+	b _08008642
 	.pool
-@08008640:
+_08008640:
 	ldr r0, =0x0000ffff
-@08008642:
+_08008642:
 	pop {r1}
 	bx r1
-	.align 2, 0
 	.pool
-	thumb_func_end gpu_tile_obj_tag_get_range_start
+	thumb_func_end GetObjectTileRangeStartByTag
 
-	thumb_func_start gpu_tile_obj_tag_index_of
-gpu_tile_obj_tag_index_of: ; 800864C
+	thumb_func_start IndexOfObjectTilesTag
+; u8 IndexOfObjectTilesTag(u16 tag)
+IndexOfObjectTilesTag: ; 800864C
 	push {lr}
 	lsls r0, 16
 	lsrs r2, r0, 16
 	movs r1, 0
 	ldr r3, =0x030009f0
-@08008656:
+_08008656:
 	lsls r0, r1, 1
 	adds r0, r3
 	ldrh r0, [r0]
 	cmp r0, r2
-	bne @08008668
+	bne _08008668
 	adds r0, r1, 0
-	b @08008674
-	.align 2, 0
+	b _08008674
 	.pool
-@08008668:
+_08008668:
 	adds r0, r1, 0x1
 	lsls r0, 24
 	lsrs r1, r0, 24
 	cmp r1, 0x3F
-	bls @08008656
+	bls _08008656
 	movs r0, 0xFF
-@08008674:
+_08008674:
 	pop {r1}
 	bx r1
-	thumb_func_end gpu_tile_obj_tag_index_of
+	thumb_func_end IndexOfObjectTilesTag
 
-	thumb_func_start gpu_tile_obj_tag_get_by_range_start
-gpu_tile_obj_tag_get_by_range_start: ; 8008678
+	thumb_func_start GetTagByObjectTileRangeStart
+; u16 GetTagByObjectTileRangeStart(u16 rangeStart)
+GetTagByObjectTileRangeStart: ; 8008678
 	push {r4-r6,lr}
 	lsls r0, 16
 	lsrs r3, r0, 16
@@ -3995,39 +3940,37 @@ gpu_tile_obj_tag_get_by_range_start: ; 8008678
 	ldr r6, =0x030009f0
 	ldr r5, =0x0000ffff
 	ldr r4, =0x03000a70
-@08008686:
+_08008686:
 	lsls r0, r2, 1
 	adds r1, r0, r6
 	ldrh r0, [r1]
 	cmp r0, r5
-	beq @080086AC
+	beq _080086AC
 	lsls r0, r2, 2
 	adds r0, r4
 	ldrh r0, [r0]
 	cmp r0, r3
-	bne @080086AC
+	bne _080086AC
 	ldrh r0, [r1]
-	b @080086B8
-	.align 2, 0
+	b _080086B8
 	.pool
-@080086AC:
+_080086AC:
 	adds r0, r2, 0x1
 	lsls r0, 24
 	lsrs r2, r0, 24
 	cmp r2, 0x3F
-	bls @08008686
+	bls _08008686
 	ldr r0, =0x0000ffff
-@080086B8:
+_080086B8:
 	pop {r4-r6}
 	pop {r1}
 	bx r1
-	.align 2, 0
 	.pool
-	thumb_func_end gpu_tile_obj_tag_get_by_range_start
+	thumb_func_end GetTagByObjectTileRangeStart
 
-	thumb_func_start gpu_tile_obj_tag_add
-; void gpu_tile_obj_tag_add(u16 tag, u16 start, u16 count)
-gpu_tile_obj_tag_add: ; 80086C4
+	thumb_func_start AddObjectTileRange
+; void AddObjectTileRange(u16 tag, u16 start, u16 count)
+AddObjectTileRange: ; 80086C4
 	push {r4-r6,lr}
 	adds r4, r0, 0
 	adds r5, r1, 0
@@ -4039,7 +3982,7 @@ gpu_tile_obj_tag_add: ; 80086C4
 	lsls r6, 16
 	lsrs r6, 16
 	ldr r0, =0x0000ffff
-	bl gpu_tile_obj_tag_index_of
+	bl IndexOfObjectTilesTag
 	lsls r0, 24
 	lsrs r0, 24
 	ldr r2, =0x030009f0
@@ -4056,12 +3999,12 @@ gpu_tile_obj_tag_add: ; 80086C4
 	pop {r4-r6}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end gpu_tile_obj_tag_add
+	thumb_func_end AddObjectTileRange
 
-	thumb_func_start gpu_pal_allocator_reset
-gpu_pal_allocator_reset: ; 800870C
+	thumb_func_start ResetObjectPaletteAllocator
+; void ResetObjectPaletteAllocator()
+ResetObjectPaletteAllocator: ; 800870C
 	push {r4,lr}
 	ldr r1, =0x0300301c
 	movs r0, 0
@@ -4070,7 +4013,7 @@ gpu_pal_allocator_reset: ; 800870C
 	ldr r4, =0x03000cf0
 	ldr r0, =0x0000ffff
 	adds r3, r0, 0
-@0800871C:
+_0800871C:
 	lsls r0, r2, 1
 	adds r0, r4
 	ldrh r1, [r0]
@@ -4080,34 +4023,33 @@ gpu_pal_allocator_reset: ; 800870C
 	lsls r0, 24
 	lsrs r2, r0, 24
 	cmp r2, 0xF
-	bls @0800871C
+	bls _0800871C
 	pop {r4}
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end gpu_pal_allocator_reset
+	thumb_func_end ResetObjectPaletteAllocator
 
-	thumb_func_start gpu_pal_obj_alloc_tag_and_apply
-; s8 gpu_pal_obj_alloc_tag_and_apply(struct rom_obj_pal_data *data)
-gpu_pal_obj_alloc_tag_and_apply: ; 8008744
+	thumb_func_start LoadTaggedObjectPalette
+; u8 LoadTaggedObjectPalette(struct TaggedObjectPalette *palette)
+LoadTaggedObjectPalette: ; 8008744
 	push {r4,r5,lr}
 	adds r5, r0, 0
 	ldrh r0, [r5, 0x4]
-	bl gpu_pal_tags_index_of
+	bl IndexOfObjectPaletteTag
 	lsls r0, 24
 	lsrs r4, r0, 24
 	cmp r4, 0xFF
-	beq @0800875A
+	beq _0800875A
 	adds r0, r4, 0
-	b @0800878A
-@0800875A:
+	b _0800878A
+_0800875A:
 	ldr r0, =0x0000ffff
-	bl gpu_pal_tags_index_of
+	bl IndexOfObjectPaletteTag
 	lsls r0, 24
 	lsrs r4, r0, 24
 	cmp r4, 0xFF
-	beq @08008788
+	beq _08008788
 	ldr r1, =0x03000cf0
 	lsls r0, r4, 1
 	adds r0, r1
@@ -4115,50 +4057,50 @@ gpu_pal_obj_alloc_tag_and_apply: ; 8008744
 	strh r1, [r0]
 	ldr r0, [r5]
 	lsls r1, r4, 4
-	bl gpu_pal_obj_load
+	bl LoadObjectPalette
 	adds r0, r4, 0
-	b @0800878A
-	.align 2, 0
+	b _0800878A
 	.pool
-@08008788:
+_08008788:
 	movs r0, 0xFF
-@0800878A:
+_0800878A:
 	pop {r4,r5}
 	pop {r1}
 	bx r1
-	thumb_func_end gpu_pal_obj_alloc_tag_and_apply
+	thumb_func_end LoadTaggedObjectPalette
 
-	thumb_func_start gpu_pal_obj_alloc_and_load_multiple
-gpu_pal_obj_alloc_and_load_multiple: ; 8008790
+	thumb_func_start LoadTaggedObjectPalettes
+; void LoadTaggedObjectPalettes(struct TaggedObjectPalette *palettes)
+LoadTaggedObjectPalettes: ; 8008790
 	push {r4,r5,lr}
 	adds r5, r0, 0
 	movs r4, 0
-	b @0800879E
-@08008798:
+	b _0800879E
+_08008798:
 	adds r0, r4, 0x1
 	lsls r0, 24
 	lsrs r4, r0, 24
-@0800879E:
+_0800879E:
 	lsls r0, r4, 3
 	adds r1, r0, r5
 	ldr r0, [r1]
 	cmp r0, 0
-	beq @080087B6
+	beq _080087B6
 	adds r0, r1, 0
-	bl gpu_pal_obj_alloc_tag_and_apply
+	bl LoadTaggedObjectPalette
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0xFF
-	bne @08008798
-@080087B6:
+	bne _08008798
+_080087B6:
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	thumb_func_end gpu_pal_obj_alloc_and_load_multiple
+	thumb_func_end LoadTaggedObjectPalettes
 
-	thumb_func_start gpu_pal_obj_load
-; void gpu_pal_obj_load(palette *pal, u16 offset)
-gpu_pal_obj_load: ; 80087BC
+	thumb_func_start LoadObjectPalette
+; void LoadObjectPalette(void *src, u16 destOffset)
+LoadObjectPalette: ; 80087BC
 	push {lr}
 	lsls r1, 16
 	movs r2, 0x80
@@ -4169,118 +4111,115 @@ gpu_pal_obj_load: ; 80087BC
 	bl gpu_pal_apply
 	pop {r0}
 	bx r0
-	thumb_func_end gpu_pal_obj_load
+	thumb_func_end LoadObjectPalette
 
-	thumb_func_start gpu_pal_alloc_new
-; int gpu_pal_alloc_new(u16 tag)
-gpu_pal_alloc_new: ; 80087D4
+	thumb_func_start AllocObjectPalette
+; u8 AllocObjectPalette(u16 tag)
+AllocObjectPalette: ; 80087D4
 	push {r4,lr}
 	lsls r0, 16
 	lsrs r4, r0, 16
 	ldr r0, =0x0000ffff
-	bl gpu_pal_tags_index_of
+	bl IndexOfObjectPaletteTag
 	lsls r0, 24
 	lsrs r2, r0, 24
 	cmp r2, 0xFF
-	beq @080087FC
+	beq _080087FC
 	ldr r1, =0x03000cf0
 	lsls r0, r2, 1
 	adds r0, r1
 	strh r4, [r0]
 	adds r0, r2, 0
-	b @080087FE
-	.align 2, 0
+	b _080087FE
 	.pool
-@080087FC:
+_080087FC:
 	movs r0, 0xFF
-@080087FE:
+_080087FE:
 	pop {r4}
 	pop {r1}
 	bx r1
-	thumb_func_end gpu_pal_alloc_new
+	thumb_func_end AllocObjectPalette
 
-	thumb_func_start gpu_pal_tags_index_of
-; int gpu_pal_tags_index_of(u16 a1)
-gpu_pal_tags_index_of: ; 8008804
+	thumb_func_start IndexOfObjectPaletteTag
+; u8 IndexOfObjectPaletteTag(u16 tag)
+IndexOfObjectPaletteTag: ; 8008804
 	push {lr}
 	lsls r0, 16
 	lsrs r2, r0, 16
 	ldr r0, =0x0300301c
 	ldrb r1, [r0]
 	cmp r1, 0xF
-	bhi @08008836
+	bhi _08008836
 	ldr r3, =0x03000cf0
-@08008814:
+_08008814:
 	lsls r0, r1, 1
 	adds r0, r3
 	ldrh r0, [r0]
 	cmp r0, r2
-	bne @0800882C
+	bne _0800882C
 	adds r0, r1, 0
-	b @08008838
-	.align 2, 0
+	b _08008838
 	.pool
-@0800882C:
+_0800882C:
 	adds r0, r1, 0x1
 	lsls r0, 24
 	lsrs r1, r0, 24
 	cmp r1, 0xF
-	bls @08008814
-@08008836:
+	bls _08008814
+_08008836:
 	movs r0, 0xFF
-@08008838:
+_08008838:
 	pop {r1}
 	bx r1
-	thumb_func_end gpu_pal_tags_index_of
+	thumb_func_end IndexOfObjectPaletteTag
 
-	thumb_func_start gpu_pal_tag_by_index
-gpu_pal_tag_by_index: ; 800883C
+	thumb_func_start GetObjectPaletteTagBySlot
+; u16 GetObjectPaletteTagBySlot(u8 paletteSlot)
+GetObjectPaletteTagBySlot: ; 800883C
 	lsls r0, 24
 	ldr r1, =0x03000cf0
 	lsrs r0, 23
 	adds r0, r1
 	ldrh r0, [r0]
 	bx lr
-	.align 2, 0
 	.pool
-	thumb_func_end gpu_pal_tag_by_index
+	thumb_func_end GetObjectPaletteTagBySlot
 
-	thumb_func_start gpu_pal_free_tag
-; void gpu_pal_free_tag(int tag)
-gpu_pal_free_tag: ; 800884C
+	thumb_func_start FreeObjectPaletteByTag
+; void FreeObjectPaletteByTag(int tag)
+FreeObjectPaletteByTag: ; 800884C
 	push {lr}
 	lsls r0, 16
 	lsrs r0, 16
-	bl gpu_pal_tags_index_of
+	bl IndexOfObjectPaletteTag
 	lsls r0, 24
 	lsrs r1, r0, 24
 	cmp r1, 0xFF
-	beq @08008868
+	beq _08008868
 	ldr r0, =0x03000cf0
 	lsls r1, 1
 	adds r1, r0
 	ldr r0, =0x0000ffff
 	strh r0, [r1]
-@08008868:
+_08008868:
 	pop {r0}
 	bx r0
-	.align 2, 0
 	.pool
-	thumb_func_end gpu_pal_free_tag
+	thumb_func_end FreeObjectPaletteByTag
 
-	thumb_func_start obj_set_f18_to_r0_f42_to_40
-; void obj_set_f18_to_r0_f42_to_40(struct obj *obj, int a2)
-obj_set_f18_to_r0_f42_to_40: ; 8008874
+	thumb_func_start SetSpriteOamTables_NoPriorityFromTable
+; void SetSpriteOamTables_NoPriorityFromTable(struct obj *object, u32 spriteOamTables)
+SetSpriteOamTables_NoPriorityFromTable: ; 8008874
 	str r1, [r0, 0x18]
 	adds r0, 0x42
 	movs r1, 0x40
 	strb r1, [r0]
 	bx lr
-	thumb_func_end obj_set_f18_to_r0_f42_to_40
+	thumb_func_end SetSpriteOamTables_NoPriorityFromTable
 
-	thumb_func_start super_sprite_add
-; int super_sprite_add(struct obj *obj, u8 *index)
-super_sprite_add: ; 8008880
+	thumb_func_start AddSprite
+; u8 AddSprite(struct obj *obj, u8 *spriteIndex)
+AddSprite: ; 8008880
 	push {r4,lr}
 	adds r4, r0, 0
 	adds r3, r1, 0
@@ -4288,23 +4227,22 @@ super_sprite_add: ; 8008880
 	ldrb r0, [r3]
 	ldrb r1, [r1]
 	cmp r0, r1
-	bcc @08008898
+	bcc _08008898
 	movs r0, 0x1
-	b @080088E0
-	.align 2, 0
+	b _080088E0
 	.pool
-@08008898:
+_08008898:
 	ldr r0, [r4, 0x18]
 	cmp r0, 0
-	beq @080088AC
+	beq _080088AC
 	adds r0, r4, 0
 	adds r0, 0x42
 	ldrb r1, [r0]
 	movs r0, 0xC0
 	ands r0, r1
 	cmp r0, 0
-	bne @080088CC
-@080088AC:
+	bne _080088CC
+_080088AC:
 	ldr r0, =0x030022c0
 	ldrb r2, [r3]
 	lsls r2, 3
@@ -4318,30 +4256,28 @@ super_sprite_add: ; 8008880
 	adds r0, 0x1
 	strb r0, [r3]
 	movs r0, 0
-	b @080088E0
-	.align 2, 0
+	b _080088E0
 	.pool
-@080088CC:
+_080088CC:
 	ldrb r1, [r3]
 	lsls r1, 3
 	ldr r0, =0x030022f8
 	adds r1, r0
 	adds r0, r4, 0
 	adds r2, r3, 0
-	bl sub_80088EC
+	bl AddSpritesFromSpriteOamTable
 	lsls r0, 24
 	lsrs r0, 24
-@080088E0:
+_080088E0:
 	pop {r4}
 	pop {r1}
 	bx r1
-	.align 2, 0
 	.pool
-	thumb_func_end super_sprite_add
+	thumb_func_end AddSprite
 
-	thumb_func_start sub_80088EC
-; int sub_80088EC(struct obj *obj, struct sprite *a2, int a3)
-sub_80088EC: ; 80088EC
+	thumb_func_start AddSpritesFromSpriteOamTable
+; u8 AddSpritesFromSpriteOamTable(struct obj *object, struct sprite *sprite, u8 *spriteIndex)
+AddSpritesFromSpriteOamTable: ; 80088EC
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -4355,13 +4291,12 @@ sub_80088EC: ; 80088EC
 	ldrb r1, [r2]
 	ldrb r0, [r0]
 	cmp r1, r0
-	bcc @08008910
-@08008908:
+	bcc _08008910
+_08008908:
 	movs r0, 0x1
-	b @08008AE6
-	.align 2, 0
+	b _08008AE6
 	.pool
-@08008910:
+_08008910:
 	adds r0, r3, 0
 	adds r0, 0x42
 	ldrb r1, [r0]
@@ -4372,11 +4307,11 @@ sub_80088EC: ; 80088EC
 	mov r12, r3
 	str r0, [sp, 0x18]
 	cmp r7, 0
-	beq @0800892C
+	beq _0800892C
 	ldr r0, [r7, 0x4]
 	cmp r0, 0
-	bne @08008942
-@0800892C:
+	bne _08008942
+_0800892C:
 	mov r2, r12
 	ldr r0, [r2]
 	ldr r1, [r2, 0x4]
@@ -4387,8 +4322,8 @@ sub_80088EC: ; 80088EC
 	ldrb r0, [r1]
 	adds r0, 0x1
 	strb r0, [r1]
-	b @08008AE4
-@08008942:
+	b _08008AE4
+_08008942:
 	mov r2, r12
 	ldrh r0, [r2, 0x4]
 	lsls r0, 22
@@ -4434,19 +4369,19 @@ sub_80088EC: ; 80088EC
 	mov r9, r0
 	ldr r1, [sp, 0xC]
 	cmp r9, r1
-	bcc @080089A0
-	b @08008AE4
-@080089A0:
+	bcc _080089A0
+	b _08008AE4
+_080089A0:
 	lsls r0, r2, 16
 	asrs r0, 16
 	str r0, [sp, 0x14]
-@080089A6:
+_080089A6:
 	mov r2, r8
 	ldrb r0, [r2]
 	ldr r1, =0x02021b38
 	ldrb r1, [r1]
 	cmp r0, r1
-	bcs @08008908
+	bcs _08008908
 	ldr r0, [r7, 0x4]
 	mov r2, r9
 	lsls r6, r2, 2
@@ -4461,7 +4396,7 @@ sub_80088EC: ; 80088EC
 	lsrs r5, r0, 16
 	ldr r0, [sp, 0x10]
 	cmp r0, 0
-	beq @080089FC
+	beq _080089FC
 	ldr r0, [r2]
 	lsls r1, r0, 12
 	lsrs r1, 30
@@ -4484,10 +4419,10 @@ sub_80088EC: ; 80088EC
 	adds r0, 0x1
 	lsls r0, 16
 	lsrs r4, r0, 16
-@080089FC:
+_080089FC:
 	mov r1, r10
 	cmp r1, 0
-	beq @08008A2E
+	beq _08008A2E
 	ldr r0, [r2]
 	lsls r1, r0, 12
 	lsrs r1, 30
@@ -4510,7 +4445,7 @@ sub_80088EC: ; 80088EC
 	adds r0, 0x1
 	lsls r0, 16
 	lsrs r5, r0, 16
-@08008A2E:
+_08008A2E:
 	mov r1, r9
 	lsls r0, r1, 3
 	ldr r2, [sp]
@@ -4577,7 +4512,7 @@ sub_80088EC: ; 80088EC
 	movs r0, 0xC0
 	ands r0, r1
 	cmp r0, 0x80
-	beq @08008ACA
+	beq _08008ACA
 	ldr r0, [r7, 0x4]
 	adds r0, r6, r0
 	ldr r1, [r0]
@@ -4589,7 +4524,7 @@ sub_80088EC: ; 80088EC
 	ands r0, r2
 	orrs r0, r1
 	strb r0, [r3, 0x5]
-@08008ACA:
+_08008ACA:
 	mov r0, r9
 	adds r0, 0x1
 	lsls r0, 24
@@ -4601,11 +4536,11 @@ sub_80088EC: ; 80088EC
 	strb r0, [r1]
 	ldr r2, [sp, 0xC]
 	cmp r9, r2
-	bcs @08008AE4
-	b @080089A6
-@08008AE4:
+	bcs _08008AE4
+	b _080089A6
+_08008AE4:
 	movs r0, 0
-@08008AE6:
+_08008AE6:
 	add sp, 0x1C
 	pop {r3-r5}
 	mov r8, r3
@@ -4614,6 +4549,5 @@ sub_80088EC: ; 80088EC
 	pop {r4-r7}
 	pop {r1}
 	bx r1
-	.align 2, 0
 	.pool
-	thumb_func_end sub_80088EC
+	thumb_func_end AddSpritesFromSpriteOamTable
