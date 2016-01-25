@@ -1,6 +1,5 @@
 gDewfordTown_MapScripts: ; 81E9507
-	.byte 3
-	.4byte gDewfordTown_MapScript1_1E950D
+	map_script 3, gDewfordTown_MapScript1_1E950D
 	.byte 0
 
 gDewfordTown_MapScript1_1E950D: ; 81E950D

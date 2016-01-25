@@ -1,6 +1,5 @@
 gRustboroCity_DevonCorp_2F_MapScripts: ; 8211857
-	.byte 3
-	.4byte gRustboroCity_DevonCorp_2F_MapScript1_21185D
+	map_script 3, gRustboroCity_DevonCorp_2F_MapScript1_21185D
 	.byte 0
 
 gRustboroCity_DevonCorp_2F_MapScript1_21185D: ; 821185D

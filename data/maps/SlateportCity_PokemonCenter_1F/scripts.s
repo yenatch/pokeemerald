@@ -1,8 +1,6 @@
 gSlateportCity_PokemonCenter_1F_MapScripts: ; 820DABF
-	.byte 3
-	.4byte gSlateportCity_PokemonCenter_1F_MapScript1_20DACA
-	.byte 5
-	.4byte gSlateportCity_PokemonCenter_1F_MapScript1_277C30
+	map_script 3, gSlateportCity_PokemonCenter_1F_MapScript1_20DACA
+	map_script 5, gSlateportCity_PokemonCenter_1F_MapScript1_277C30
 	.byte 0
 
 gSlateportCity_PokemonCenter_1F_MapScript1_20DACA: ; 820DACA

@@ -1,6 +1,6 @@
 gSkyPillar_Top_MapObjects: ; 8537170
-	object_event 1, 207, 0, 14, 0, 7, 0, 3, 8, 17, 0, 0, 0, 0, 0, 0x0, 773, 0, 0
-	object_event 2, 41, 0, 14, 0, 6, 0, 3, 8, 17, 0, 0, 0, 0, 0, gSkyPillar_Top_EventScript_239722, 80, 0, 0
+	object_event 1, FIELD_OBJ_GFX_RAYQUAZA_2, 0, 14, 0, 7, 0, 3, 8, 17, 0, 0, 0, 0, 0, 0x0, 773, 0, 0
+	object_event 2, FIELD_OBJ_GFX_RAYQUAZA_1, 0, 14, 0, 6, 0, 3, 8, 17, 0, 0, 0, 0, 0, gSkyPillar_Top_EventScript_239722, 80, 0, 0
 
 gSkyPillar_Top_MapWarps: ; 85371A0
 	warp_def 16, 14, 3, 1, SkyPillar_5F

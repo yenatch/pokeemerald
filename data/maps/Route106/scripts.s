@@ -7,19 +7,19 @@ gRoute106_EventScript_1EE48A: ; 81EE48A
 	end
 
 gRoute106_EventScript_1EE493: ; 81EE493
-	trainerbattle 0, 153, 0, gRoute106_Text_2965BB, gRoute106_Text_2965FD
+	trainerbattle 0, TRAINER_DOUGLAS, 0, gRoute106_Text_2965BB, gRoute106_Text_2965FD
 	loadptr 0, gRoute106_Text_296608
 	callstd 6
 	end
 
 gRoute106_EventScript_1EE4AA: ; 81EE4AA
-	trainerbattle 0, 443, 0, gRoute106_Text_296628, gRoute106_Text_296674
+	trainerbattle 0, TRAINER_KYLA, 0, gRoute106_Text_296628, gRoute106_Text_296674
 	loadptr 0, gRoute106_Text_29669E
 	callstd 6
 	end
 
 gRoute106_EventScript_1EE4C1: ; 81EE4C1
-	trainerbattle 2, 339, 0, gRoute106_Text_296327, gRoute106_Text_29635C, gRoute106_EventScript_1EE4ED
+	trainerbattle 2, TRAINER_ELLIOT_1, 0, gRoute106_Text_296327, gRoute106_Text_29635C, gRoute106_EventScript_1EE4ED
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gRoute106_EventScript_1EE50C
@@ -41,13 +41,13 @@ gRoute106_EventScript_1EE4ED: ; 81EE4ED
 	end
 
 gRoute106_EventScript_1EE50C: ; 81EE50C
-	trainerbattle 5, 339, 0, gRoute106_Text_29642E, gRoute106_Text_296477
+	trainerbattle 5, TRAINER_ELLIOT_1, 0, gRoute106_Text_29642E, gRoute106_Text_296477
 	loadptr 0, gRoute106_Text_296493
 	callstd 6
 	end
 
 gRoute106_EventScript_1EE523: ; 81EE523
-	trainerbattle 0, 340, 0, gRoute106_Text_2964D4, gRoute106_Text_296553
+	trainerbattle 0, TRAINER_NED, 0, gRoute106_Text_2964D4, gRoute106_Text_296553
 	loadptr 0, gRoute106_Text_296588
 	callstd 6
 	end

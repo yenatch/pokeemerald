@@ -1,5 +1,5 @@
 gScorchedSlab_MapObjects: ; 8536F88
-	object_event 1, 59, 0, 7, 0, 5, 0, 3, 1, 0, 0, 0, 0, 0, 0, gScorchedSlab_EventScript_2912AF, 1079, 0, 0
+	object_event 1, FIELD_OBJ_GFX_ITEM_BALL, 0, 7, 0, 5, 0, 3, 1, 0, 0, 0, 0, 0, 0, gScorchedSlab_EventScript_2912AF, 1079, 0, 0
 
 gScorchedSlab_MapWarps: ; 8536FA0
 	warp_def 7, 16, 1, 1, Route120

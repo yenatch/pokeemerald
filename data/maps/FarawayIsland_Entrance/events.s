@@ -1,6 +1,6 @@
 gFarawayIsland_Entrance_MapObjects: ; 853D710
-	object_event 1, 49, 0, 13, 0, 39, 0, 3, 7, 0, 0, 0, 0, 0, 0, gFarawayIsland_Entrance_EventScript_267CA2, 0, 0, 0
-	object_event 2, 140, 0, 13, 0, 41, 0, 1, 10, 0, 0, 0, 0, 0, 0, 0x0, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_SAILOR, 0, 13, 0, 39, 0, 3, 7, 0, 0, 0, 0, 0, 0, gFarawayIsland_Entrance_EventScript_267CA2, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_SS_TIDAL, 0, 13, 0, 41, 0, 1, 10, 0, 0, 0, 0, 0, 0, 0x0, 0, 0, 0
 
 gFarawayIsland_Entrance_MapWarps: ; 853D740
 	warp_def 22, 7, 3, 0, FarawayIsland_Interior

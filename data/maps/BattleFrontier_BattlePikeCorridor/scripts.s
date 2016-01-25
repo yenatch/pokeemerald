@@ -1,14 +1,10 @@
 gBattleFrontier_BattlePikeCorridor_MapScripts: ; 825C771
-	.byte 2
-	.4byte gBattleFrontier_BattlePikeCorridor_MapScript2_25C77C
-	.byte 4
-	.4byte gBattleFrontier_BattlePikeCorridor_MapScript2_25C7F7
+	map_script 2, gBattleFrontier_BattlePikeCorridor_MapScript2_25C77C
+	map_script 4, gBattleFrontier_BattlePikeCorridor_MapScript2_25C7F7
 	.byte 0
 
 gBattleFrontier_BattlePikeCorridor_MapScript2_25C77C: ; 825C77C
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattlePikeCorridor_EventScript_25C786
+	map_script_2 0x4000, 0, gBattleFrontier_BattlePikeCorridor_EventScript_25C786
 	.2byte 0
 
 gBattleFrontier_BattlePikeCorridor_EventScript_25C786: ; 825C786
@@ -42,9 +38,7 @@ gBattleFrontier_BattlePikeCorridor_EventScript_25C786: ; 825C786
 	end
 
 gBattleFrontier_BattlePikeCorridor_MapScript2_25C7F7: ; 825C7F7
-	.2byte 16385
-	.2byte 0
-	.4byte gBattleFrontier_BattlePikeCorridor_EventScript_25C801
+	map_script_2 0x4001, 0, gBattleFrontier_BattlePikeCorridor_EventScript_25C801
 	.2byte 0
 
 gBattleFrontier_BattlePikeCorridor_EventScript_25C801: ; 825C801

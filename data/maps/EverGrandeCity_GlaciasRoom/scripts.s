@@ -1,16 +1,11 @@
 gEverGrandeCity_GlaciasRoom_MapScripts: ; 8228412
-	.byte 2
-	.4byte gEverGrandeCity_GlaciasRoom_MapScript2_228431
-	.byte 1
-	.4byte gEverGrandeCity_GlaciasRoom_MapScript1_228448
-	.byte 4
-	.4byte gEverGrandeCity_GlaciasRoom_MapScript2_228422
+	map_script 2, gEverGrandeCity_GlaciasRoom_MapScript2_228431
+	map_script 1, gEverGrandeCity_GlaciasRoom_MapScript1_228448
+	map_script 4, gEverGrandeCity_GlaciasRoom_MapScript2_228422
 	.byte 0
 
 gEverGrandeCity_GlaciasRoom_MapScript2_228422: ; 8228422
-	.2byte 16385
-	.2byte 0
-	.4byte gEverGrandeCity_GlaciasRoom_EventScript_22842C
+	map_script_2 0x4001, 0, gEverGrandeCity_GlaciasRoom_EventScript_22842C
 	.2byte 0
 
 gEverGrandeCity_GlaciasRoom_EventScript_22842C: ; 822842C
@@ -18,9 +13,7 @@ gEverGrandeCity_GlaciasRoom_EventScript_22842C: ; 822842C
 	end
 
 gEverGrandeCity_GlaciasRoom_MapScript2_228431: ; 8228431
-	.2byte 16540
-	.2byte 2
-	.4byte gEverGrandeCity_GlaciasRoom_EventScript_22843B
+	map_script_2 0x409c, 2, gEverGrandeCity_GlaciasRoom_EventScript_22843B
 	.2byte 0
 
 gEverGrandeCity_GlaciasRoom_EventScript_22843B: ; 822843B
@@ -53,7 +46,7 @@ gEverGrandeCity_GlaciasRoom_EventScript_228469: ; 8228469
 	playmusic 450, 0
 	loadptr 0, gEverGrandeCity_GlaciasRoom_Text_2284AC
 	callstd 4
-	trainerbattle 3, 263, 0, gEverGrandeCity_GlaciasRoom_Text_2285B4
+	trainerbattle 3, TRAINER_GLACIA, 0, gEverGrandeCity_GlaciasRoom_Text_2285B4
 	jump gEverGrandeCity_GlaciasRoom_EventScript_22849A
 	end
 

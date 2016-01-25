@@ -1,5 +1,5 @@
 gTradeCenter_MapObjects: ; 8539DA0
-	object_event 1, 28, 0, 9, 0, 6, 0, 3, 9, 0, 0, 0, 0, 0, 0, gTradeCenter_EventScript_2774B6, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_WOMAN_6, 0, 9, 0, 6, 0, 3, 9, 0, 0, 0, 0, 0, 0, gTradeCenter_EventScript_2774B6, 0, 0, 0
 
 gTradeCenter_MapWarps: ; 8539DB8
 	warp_def 5, 8, 3, 127, 32639

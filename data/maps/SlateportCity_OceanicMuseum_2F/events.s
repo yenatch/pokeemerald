@@ -1,11 +1,11 @@
 gSlateportCity_OceanicMuseum_2F_MapObjects: ; 852F8A8
-	object_event 1, 46, 0, 13, 0, 6, 0, 3, 8, 0, 0, 0, 0, 0, 0, gSlateportCity_OceanicMuseum_2F_EventScript_20BB00, 887, 0, 0
-	object_event 2, 195, 0, 6, 0, 1, 0, 3, 8, 0, 0, 0, 0, 0, 0, 0x0, 886, 0, 0
-	object_event 3, 117, 0, 6, 0, 1, 0, 3, 8, 0, 0, 0, 0, 0, 0, 0x0, 884, 0, 0
-	object_event 4, 117, 0, 6, 0, 1, 0, 3, 8, 0, 0, 0, 0, 0, 0, 0x0, 885, 0, 0
-	object_event 5, 29, 0, 12, 0, 7, 0, 3, 10, 17, 0, 0, 0, 0, 0, gSlateportCity_OceanicMuseum_2F_EventScript_20BD64, 961, 0, 0
-	object_event 6, 18, 0, 9, 0, 6, 0, 3, 1, 17, 0, 0, 0, 0, 0, gSlateportCity_OceanicMuseum_2F_EventScript_20BD6D, 961, 0, 0
-	object_event 7, 5, 0, 1, 0, 3, 0, 3, 10, 17, 0, 0, 0, 0, 0, gSlateportCity_OceanicMuseum_2F_EventScript_20BD76, 961, 0, 0
+	object_event 1, FIELD_OBJ_GFX_SCIENTIST_1, 0, 13, 0, 6, 0, 3, 8, 0, 0, 0, 0, 0, 0, gSlateportCity_OceanicMuseum_2F_EventScript_20BB00, 887, 0, 0
+	object_event 2, FIELD_OBJ_GFX_ARCHIE, 0, 6, 0, 1, 0, 3, 8, 0, 0, 0, 0, 0, 0, 0x0, 886, 0, 0
+	object_event 3, FIELD_OBJ_GFX_AQUA_MEMBER_M, 0, 6, 0, 1, 0, 3, 8, 0, 0, 0, 0, 0, 0, 0x0, 884, 0, 0
+	object_event 4, FIELD_OBJ_GFX_AQUA_MEMBER_M, 0, 6, 0, 1, 0, 3, 8, 0, 0, 0, 0, 0, 0, 0x0, 885, 0, 0
+	object_event 5, FIELD_OBJ_GFX_OLD_MAN_2, 0, 12, 0, 7, 0, 3, 10, 17, 0, 0, 0, 0, 0, gSlateportCity_OceanicMuseum_2F_EventScript_20BD64, 961, 0, 0
+	object_event 6, FIELD_OBJ_GFX_WOMAN_2, 0, 9, 0, 6, 0, 3, 1, 17, 0, 0, 0, 0, 0, gSlateportCity_OceanicMuseum_2F_EventScript_20BD6D, 961, 0, 0
+	object_event 7, FIELD_OBJ_GFX_LITTLE_BOY_1, 0, 1, 0, 3, 0, 3, 10, 17, 0, 0, 0, 0, 0, gSlateportCity_OceanicMuseum_2F_EventScript_20BD76, 961, 0, 0
 
 gSlateportCity_OceanicMuseum_2F_MapWarps: ; 852F950
 	warp_def 6, 1, 0, 2, SlateportCity_OceanicMuseum_1F

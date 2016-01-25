@@ -1,8 +1,6 @@
 gPetalburgCity_MapScripts: ; 81DC2CC
-	.byte 3
-	.4byte gPetalburgCity_MapScript1_1DC2D7
-	.byte 2
-	.4byte gPetalburgCity_MapScript2_1DC31C
+	map_script 3, gPetalburgCity_MapScript1_1DC2D7
+	map_script 2, gPetalburgCity_MapScript2_1DC31C
 	.byte 0
 
 gPetalburgCity_MapScript1_1DC2D7: ; 81DC2D7
@@ -31,12 +29,8 @@ gPetalburgCity_EventScript_1DC316: ; 81DC316
 	return
 
 gPetalburgCity_MapScript2_1DC31C: ; 81DC31C
-	.2byte 16471
-	.2byte 2
-	.4byte gPetalburgCity_EventScript_1DC32E
-	.2byte 16471
-	.2byte 4
-	.4byte gPetalburgCity_EventScript_1DC390
+	map_script_2 0x4057, 2, gPetalburgCity_EventScript_1DC32E
+	map_script_2 0x4057, 4, gPetalburgCity_EventScript_1DC390
 	.2byte 0
 
 gPetalburgCity_EventScript_1DC32E: ; 81DC32E

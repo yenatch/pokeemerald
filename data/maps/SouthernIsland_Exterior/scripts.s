@@ -1,6 +1,5 @@
 gSouthernIsland_Exterior_MapScripts: ; 82429C8
-	.byte 3
-	.4byte gSouthernIsland_Exterior_MapScript1_2429CE
+	map_script 3, gSouthernIsland_Exterior_MapScript1_2429CE
 	.byte 0
 
 gSouthernIsland_Exterior_MapScript1_2429CE: ; 82429CE

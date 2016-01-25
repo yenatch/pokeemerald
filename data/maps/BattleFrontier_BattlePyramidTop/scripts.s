@@ -1,12 +1,8 @@
 gBattleFrontier_BattlePyramidTop_MapScripts: ; 82550A1
-	.byte 5
-	.4byte gBattleFrontier_BattlePyramidTop_MapScript1_2550F4
-	.byte 2
-	.4byte gBattleFrontier_BattlePyramidTop_MapScript2_25516E
-	.byte 3
-	.4byte gBattleFrontier_BattlePyramidTop_MapScript1_2550B6
-	.byte 4
-	.4byte gBattleFrontier_BattlePyramidTop_MapScript2_2550CE
+	map_script 5, gBattleFrontier_BattlePyramidTop_MapScript1_2550F4
+	map_script 2, gBattleFrontier_BattlePyramidTop_MapScript2_25516E
+	map_script 3, gBattleFrontier_BattlePyramidTop_MapScript1_2550B6
+	map_script 4, gBattleFrontier_BattlePyramidTop_MapScript2_2550CE
 	.byte 0
 
 gBattleFrontier_BattlePyramidTop_MapScript1_2550B6: ; 82550B6
@@ -18,9 +14,7 @@ gBattleFrontier_BattlePyramidTop_MapScript1_2550B6: ; 82550B6
 	end
 
 gBattleFrontier_BattlePyramidTop_MapScript2_2550CE: ; 82550CE
-	.2byte 16385
-	.2byte 0
-	.4byte gBattleFrontier_BattlePyramidTop_EventScript_2550D8
+	map_script_2 0x4001, 0, gBattleFrontier_BattlePyramidTop_EventScript_2550D8
 	.2byte 0
 
 gBattleFrontier_BattlePyramidTop_EventScript_2550D8: ; 82550D8
@@ -63,12 +57,8 @@ gBattleFrontier_BattlePyramidTop_EventScript_25510C: ; 825510C
 	end
 
 gBattleFrontier_BattlePyramidTop_MapScript2_25516E: ; 825516E
-	.2byte 16398
-	.2byte 0
-	.4byte gBattleFrontier_BattlePyramidTop_EventScript_255180
-	.2byte 16399
-	.2byte 1
-	.4byte gBattleFrontier_BattlePyramidTop_EventScript_25518A
+	map_script_2 0x400e, 0, gBattleFrontier_BattlePyramidTop_EventScript_255180
+	map_script_2 0x400f, 1, gBattleFrontier_BattlePyramidTop_EventScript_25518A
 	.2byte 0
 
 gBattleFrontier_BattlePyramidTop_EventScript_255180: ; 8255180

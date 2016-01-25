@@ -1,5 +1,5 @@
 gSingleBattleColosseum_MapObjects: ; 8539D44
-	object_event 1, 28, 0, 9, 0, 3, 0, 3, 9, 0, 0, 0, 0, 0, 0, gSingleBattleColosseum_EventScript_2774A6, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_WOMAN_6, 0, 9, 0, 3, 0, 3, 9, 0, 0, 0, 0, 0, 0, gSingleBattleColosseum_EventScript_2774A6, 0, 0, 0
 
 gSingleBattleColosseum_MapWarps: ; 8539D5C
 	warp_def 6, 8, 3, 127, 32639

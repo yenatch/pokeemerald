@@ -1,14 +1,10 @@
 gSafariZone_South_MapScripts: ; 823D279
-	.byte 3
-	.4byte gSafariZone_South_MapScript1_23D2B1
-	.byte 2
-	.4byte gSafariZone_South_MapScript2_23D284
+	map_script 3, gSafariZone_South_MapScript1_23D2B1
+	map_script 2, gSafariZone_South_MapScript2_23D284
 	.byte 0
 
 gSafariZone_South_MapScript2_23D284: ; 823D284
-	.2byte 16548
-	.2byte 2
-	.4byte gSafariZone_South_EventScript_23D28E
+	map_script_2 0x40a4, 2, gSafariZone_South_EventScript_23D28E
 	.2byte 0
 
 gSafariZone_South_EventScript_23D28E: ; 823D28E

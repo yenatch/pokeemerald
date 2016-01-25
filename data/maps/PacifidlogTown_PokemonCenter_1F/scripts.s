@@ -1,8 +1,6 @@
 gPacifidlogTown_PokemonCenter_1F_MapScripts: ; 82034A7
-	.byte 3
-	.4byte gPacifidlogTown_PokemonCenter_1F_MapScript1_2034B2
-	.byte 5
-	.4byte gPacifidlogTown_PokemonCenter_1F_MapScript1_277C30
+	map_script 3, gPacifidlogTown_PokemonCenter_1F_MapScript1_2034B2
+	map_script 5, gPacifidlogTown_PokemonCenter_1F_MapScript1_277C30
 	.byte 0
 
 gPacifidlogTown_PokemonCenter_1F_MapScript1_2034B2: ; 82034B2

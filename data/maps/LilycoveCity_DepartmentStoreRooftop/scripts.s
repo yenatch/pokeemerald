@@ -1,6 +1,5 @@
 gLilycoveCity_DepartmentStoreRooftop_MapScripts: ; 8220207
-	.byte 3
-	.4byte gLilycoveCity_DepartmentStoreRooftop_MapScript1_22020D
+	map_script 3, gLilycoveCity_DepartmentStoreRooftop_MapScript1_22020D
 	.byte 0
 
 gLilycoveCity_DepartmentStoreRooftop_MapScript1_22020D: ; 822020D

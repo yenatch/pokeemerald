@@ -1,6 +1,5 @@
 gRoute116_TunnelersRestHouse_MapScripts: ; 822B850
-	.byte 3
-	.4byte gRoute116_TunnelersRestHouse_MapScript1_22B856
+	map_script 3, gRoute116_TunnelersRestHouse_MapScript1_22B856
 	.byte 0
 
 gRoute116_TunnelersRestHouse_MapScript1_22B856: ; 822B856

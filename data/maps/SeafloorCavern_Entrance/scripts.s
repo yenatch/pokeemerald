@@ -1,6 +1,5 @@
 gSeafloorCavern_Entrance_MapScripts: ; 823446E
-	.byte 5
-	.4byte gSeafloorCavern_Entrance_MapScript1_234474
+	map_script 5, gSeafloorCavern_Entrance_MapScript1_234474
 	.byte 0
 
 gSeafloorCavern_Entrance_MapScript1_234474: ; 8234474

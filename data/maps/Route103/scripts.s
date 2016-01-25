@@ -1,8 +1,6 @@
 gRoute103_MapScripts: ; 81EC38E
-	.byte 3
-	.4byte gRoute103_MapScript1_1EC399
-	.byte 1
-	.4byte gRoute103_MapScript1_1EC3A4
+	map_script 3, gRoute103_MapScript1_1EC399
+	map_script 1, gRoute103_MapScript1_1EC3A4
 	.byte 0
 
 gRoute103_MapScript1_1EC399: ; 81EC399
@@ -74,32 +72,32 @@ gRoute103_EventScript_1EC434: ; 81EC434
 	end
 
 gRoute103_EventScript_1EC48E: ; 81EC48E
-	trainerbattle 3, 532, 0, gRoute103_Text_1EC881
+	trainerbattle 3, TRAINER_MAY_4, 0, gRoute103_Text_1EC881
 	jump gRoute103_EventScript_1EC4EE
 	end
 
 gRoute103_EventScript_1EC49E: ; 81EC49E
-	trainerbattle 3, 535, 0, gRoute103_Text_1EC881
+	trainerbattle 3, TRAINER_MAY_7, 0, gRoute103_Text_1EC881
 	jump gRoute103_EventScript_1EC4EE
 	end
 
 gRoute103_EventScript_1EC4AE: ; 81EC4AE
-	trainerbattle 3, 529, 0, gRoute103_Text_1EC881
+	trainerbattle 3, TRAINER_MAY_1, 0, gRoute103_Text_1EC881
 	jump gRoute103_EventScript_1EC4EE
 	end
 
 gRoute103_EventScript_1EC4BE: ; 81EC4BE
-	trainerbattle 3, 523, 0, gRoute103_Text_1ECA59
+	trainerbattle 3, TRAINER_BRENDAN_4, 0, gRoute103_Text_1ECA59
 	jump gRoute103_EventScript_1EC4FC
 	end
 
 gRoute103_EventScript_1EC4CE: ; 81EC4CE
-	trainerbattle 3, 526, 0, gRoute103_Text_1ECA59
+	trainerbattle 3, TRAINER_BRENDAN_7, 0, gRoute103_Text_1ECA59
 	jump gRoute103_EventScript_1EC4FC
 	end
 
 gRoute103_EventScript_1EC4DE: ; 81EC4DE
-	trainerbattle 3, 520, 0, gRoute103_Text_1ECA59
+	trainerbattle 3, TRAINER_BRENDAN_1, 0, gRoute103_Text_1ECA59
 	jump gRoute103_EventScript_1EC4FC
 	end
 
@@ -224,13 +222,13 @@ gRoute103_EventScript_1EC5EB: ; 81EC5EB
 	end
 
 gRoute103_EventScript_1EC5F4: ; 81EC5F4
-	trainerbattle 0, 36, 0, gRoute103_Text_29495A, gRoute103_Text_29498F
+	trainerbattle 0, TRAINER_DAISY, 0, gRoute103_Text_29495A, gRoute103_Text_29498F
 	loadptr 0, gRoute103_Text_2949B4
 	callstd 6
 	end
 
 gRoute103_EventScript_1EC60B: ; 81EC60B
-	trainerbattle 6, 481, 0, gRoute103_Text_2949F9, gRoute103_Text_294A3D, gRoute103_Text_294AAE, gRoute103_EventScript_1EC63A
+	trainerbattle 6, TRAINER_AMY_AND_LIV_1, 0, gRoute103_Text_2949F9, gRoute103_Text_294A3D, gRoute103_Text_294AAE, gRoute103_EventScript_1EC63A
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gRoute103_EventScript_1EC653
@@ -249,13 +247,13 @@ gRoute103_EventScript_1EC63A: ; 81EC63A
 	end
 
 gRoute103_EventScript_1EC653: ; 81EC653
-	trainerbattle 7, 481, 0, gRoute103_Text_294C29, gRoute103_Text_294C6D, gRoute103_Text_294CEF
+	trainerbattle 7, TRAINER_AMY_AND_LIV_1, 0, gRoute103_Text_294C29, gRoute103_Text_294C6D, gRoute103_Text_294CEF
 	loadptr 0, gRoute103_Text_294C93
 	callstd 6
 	end
 
 gRoute103_EventScript_1EC66E: ; 81EC66E
-	trainerbattle 6, 481, 0, gRoute103_Text_294AFD, gRoute103_Text_294B22, gRoute103_Text_294BD0, gRoute103_EventScript_1EC69D
+	trainerbattle 6, TRAINER_AMY_AND_LIV_1, 0, gRoute103_Text_294AFD, gRoute103_Text_294B22, gRoute103_Text_294BD0, gRoute103_EventScript_1EC69D
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gRoute103_EventScript_1EC6B6
@@ -274,19 +272,19 @@ gRoute103_EventScript_1EC69D: ; 81EC69D
 	end
 
 gRoute103_EventScript_1EC6B6: ; 81EC6B6
-	trainerbattle 7, 481, 0, gRoute103_Text_294D3E, gRoute103_Text_294D63, gRoute103_Text_294DDB
+	trainerbattle 7, TRAINER_AMY_AND_LIV_1, 0, gRoute103_Text_294D3E, gRoute103_Text_294D63, gRoute103_Text_294DDB
 	loadptr 0, gRoute103_Text_294D89
 	callstd 6
 	end
 
 gRoute103_EventScript_1EC6D1: ; 81EC6D1
-	trainerbattle 0, 336, 0, gRoute103_Text_294E34, gRoute103_Text_294E92
+	trainerbattle 0, TRAINER_ANDREW, 0, gRoute103_Text_294E34, gRoute103_Text_294E92
 	loadptr 0, gRoute103_Text_294EBB
 	callstd 6
 	end
 
 gRoute103_EventScript_1EC6E8: ; 81EC6E8
-	trainerbattle 2, 293, 0, gRoute103_Text_294EDF, gRoute103_Text_294F21, gRoute103_EventScript_1EC714
+	trainerbattle 2, TRAINER_MIGUEL_1, 0, gRoute103_Text_294EDF, gRoute103_Text_294F21, gRoute103_EventScript_1EC714
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gRoute103_EventScript_1EC733
@@ -308,31 +306,31 @@ gRoute103_EventScript_1EC714: ; 81EC714
 	end
 
 gRoute103_EventScript_1EC733: ; 81EC733
-	trainerbattle 5, 293, 0, gRoute103_Text_294FC3, gRoute103_Text_295006
+	trainerbattle 5, TRAINER_MIGUEL_1, 0, gRoute103_Text_294FC3, gRoute103_Text_295006
 	loadptr 0, gRoute103_Text_29501E
 	callstd 6
 	end
 
 gRoute103_EventScript_1EC74A: ; 81EC74A
-	trainerbattle 0, 702, 0, gRoute103_Text_295206, gRoute103_Text_29522B
+	trainerbattle 0, TRAINER_MARCOS, 0, gRoute103_Text_295206, gRoute103_Text_29522B
 	loadptr 0, gRoute103_Text_295246
 	callstd 6
 	end
 
 gRoute103_EventScript_1EC761: ; 81EC761
-	trainerbattle 0, 703, 0, gRoute103_Text_295199, gRoute103_Text_2951C6
+	trainerbattle 0, TRAINER_RHETT, 0, gRoute103_Text_295199, gRoute103_Text_2951C6
 	loadptr 0, gRoute103_Text_2951DE
 	callstd 6
 	end
 
 gRoute103_EventScript_1EC778: ; 81EC778
-	trainerbattle 0, 735, 0, gRoute103_Text_295063, gRoute103_Text_295093
+	trainerbattle 0, TRAINER_PETE, 0, gRoute103_Text_295063, gRoute103_Text_295093
 	loadptr 0, gRoute103_Text_2950AA
 	callstd 6
 	end
 
 gRoute103_EventScript_1EC78F: ; 81EC78F
-	trainerbattle 0, 736, 0, gRoute103_Text_295116, gRoute103_Text_295146
+	trainerbattle 0, TRAINER_ISABELLE, 0, gRoute103_Text_295116, gRoute103_Text_295146
 	loadptr 0, gRoute103_Text_29514D
 	callstd 6
 	end

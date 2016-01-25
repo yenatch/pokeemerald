@@ -1,6 +1,5 @@
 gRoute110_SeasideCyclingRoadEntrance2_MapScripts: ; 826EBA1
-	.byte 3
-	.4byte gRoute110_SeasideCyclingRoadEntrance2_MapScript1_26EBA7
+	map_script 3, gRoute110_SeasideCyclingRoadEntrance2_MapScript1_26EBA7
 	.byte 0
 
 gRoute110_SeasideCyclingRoadEntrance2_MapScript1_26EBA7: ; 826EBA7

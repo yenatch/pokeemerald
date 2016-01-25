@@ -1,8 +1,6 @@
 gMtChimney_CableCarStation_MapScripts: ; 822ABFA
-	.byte 3
-	.4byte gMtChimney_CableCarStation_MapScript1_22AC05
-	.byte 2
-	.4byte gMtChimney_CableCarStation_MapScript2_22AC1D
+	map_script 3, gMtChimney_CableCarStation_MapScript1_22AC05
+	map_script 2, gMtChimney_CableCarStation_MapScript2_22AC1D
 	.byte 0
 
 gMtChimney_CableCarStation_MapScript1_22AC05: ; 822AC05
@@ -16,9 +14,7 @@ gMtChimney_CableCarStation_EventScript_22AC11: ; 822AC11
 	return
 
 gMtChimney_CableCarStation_MapScript2_22AC1D: ; 822AC1D
-	.2byte 16547
-	.2byte 1
-	.4byte gMtChimney_CableCarStation_EventScript_22AC27
+	map_script_2 0x40a3, 1, gMtChimney_CableCarStation_EventScript_22AC27
 	.2byte 0
 
 gMtChimney_CableCarStation_EventScript_22AC27: ; 822AC27

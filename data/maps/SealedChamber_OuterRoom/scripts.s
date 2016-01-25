@@ -1,10 +1,7 @@
 gSealedChamber_OuterRoom_MapScripts: ; 8239106
-	.byte 5
-	.4byte gSealedChamber_OuterRoom_MapScript1_239116
-	.byte 3
-	.4byte gSealedChamber_OuterRoom_MapScript1_239127
-	.byte 1
-	.4byte gSealedChamber_OuterRoom_MapScript1_23912B
+	map_script 5, gSealedChamber_OuterRoom_MapScript1_239116
+	map_script 3, gSealedChamber_OuterRoom_MapScript1_239127
+	map_script 1, gSealedChamber_OuterRoom_MapScript1_23912B
 	.byte 0
 
 gSealedChamber_OuterRoom_MapScript1_239116: ; 8239116

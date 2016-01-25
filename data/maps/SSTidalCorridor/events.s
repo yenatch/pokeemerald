@@ -1,9 +1,9 @@
 gSSTidalCorridor_MapObjects: ; 853A158
-	object_event 1, 49, 0, 1, 0, 11, 0, 3, 7, 0, 0, 0, 0, 0, 0, gSSTidalCorridor_EventScript_23C119, 0, 0, 0
-	object_event 2, 49, 0, 16, 0, 7, 0, 3, 3, 32, 0, 0, 0, 0, 0, gSSTidalCorridor_EventScript_23C1A3, 0, 0, 0
-	object_event 3, 21, 0, 9, 0, 2, 0, 3, 8, 17, 0, 0, 0, 0, 0, gSSTidalCorridor_EventScript_23C0D9, 950, 0, 0
-	object_event 4, 211, 0, 7, 0, 2, 0, 3, 1, 17, 0, 0, 0, 0, 0, gSSTidalCorridor_EventScript_23C0E2, 950, 0, 0
-	object_event 5, 219, 0, 9, 0, 10, 0, 3, 9, 0, 0, 0, 0, 0, 0, 0x0, 810, 0, 0
+	object_event 1, FIELD_OBJ_GFX_SAILOR, 0, 1, 0, 11, 0, 3, 7, 0, 0, 0, 0, 0, 0, gSSTidalCorridor_EventScript_23C119, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_SAILOR, 0, 16, 0, 7, 0, 3, 3, 32, 0, 0, 0, 0, 0, gSSTidalCorridor_EventScript_23C1A3, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_OLD_MAN_1, 0, 9, 0, 2, 0, 3, 8, 17, 0, 0, 0, 0, 0, gSSTidalCorridor_EventScript_23C0D9, 950, 0, 0
+	object_event 4, FIELD_OBJ_GFX_WINGULL, 0, 7, 0, 2, 0, 3, 1, 17, 0, 0, 0, 0, 0, gSSTidalCorridor_EventScript_23C0E2, 950, 0, 0
+	object_event 5, FIELD_OBJ_GFX_SCOTT, 0, 9, 0, 10, 0, 3, 9, 0, 0, 0, 0, 0, 0, 0x0, 810, 0, 0
 
 gSSTidalCorridor_MapWarps: ; 853A1D0
 	warp_def 4, 9, 3, 0, SSTidalRooms

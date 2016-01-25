@@ -1,6 +1,5 @@
 gVictoryRoad_1F_MapScripts: ; 8235D7A
-	.byte 3
-	.4byte gVictoryRoad_1F_MapScript1_235D80
+	map_script 3, gVictoryRoad_1F_MapScript1_235D80
 	.byte 0
 
 gVictoryRoad_1F_MapScript1_235D80: ; 8235D80
@@ -43,7 +42,7 @@ gVictoryRoad_1F_EventScript_235DE1: ; 8235DE1
 	waitmove 0
 	loadptr 0, gVictoryRoad_1F_Text_235EE6
 	callstd 4
-	trainerbattle 3, 519, 0, gVictoryRoad_1F_Text_235FFC
+	trainerbattle 3, TRAINER_WALLY_1, 0, gVictoryRoad_1F_Text_235FFC
 	loadptr 0, gVictoryRoad_1F_Text_236020
 	callstd 4
 	clearflag 858
@@ -86,7 +85,7 @@ gVictoryRoad_1F_EventScript_235E2C: ; 8235E2C
 	end
 
 gVictoryRoad_1F_EventScript_235E35: ; 8235E35
-	trainerbattle 0, 657, 0, gVictoryRoad_1F_Text_236073, gVictoryRoad_1F_Text_2360DA
+	trainerbattle 0, TRAINER_WALLY_3, 0, gVictoryRoad_1F_Text_236073, gVictoryRoad_1F_Text_2360DA
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gVictoryRoad_1F_EventScript_235E5C
@@ -95,37 +94,37 @@ gVictoryRoad_1F_EventScript_235E35: ; 8235E35
 	end
 
 gVictoryRoad_1F_EventScript_235E5C: ; 8235E5C
-	trainerbattle 5, 657, 0, gVictoryRoad_1F_Text_236073, gVictoryRoad_1F_Text_2360DA
+	trainerbattle 5, TRAINER_WALLY_3, 0, gVictoryRoad_1F_Text_236073, gVictoryRoad_1F_Text_2360DA
 	loadptr 0, gVictoryRoad_1F_Text_2360FE
 	callstd 6
 	end
 
 gVictoryRoad_1F_EventScript_235E73: ; 8235E73
-	trainerbattle 0, 79, 0, gVictoryRoad_1F_Text_236184, gVictoryRoad_1F_Text_2361CB
+	trainerbattle 0, TRAINER_EDGAR, 0, gVictoryRoad_1F_Text_236184, gVictoryRoad_1F_Text_2361CB
 	loadptr 0, gVictoryRoad_1F_Text_2361E5
 	callstd 6
 	end
 
 gVictoryRoad_1F_EventScript_235E8A: ; 8235E8A
-	trainerbattle 0, 80, 0, gVictoryRoad_1F_Text_236248, gVictoryRoad_1F_Text_236290
+	trainerbattle 0, TRAINER_ALBERT, 0, gVictoryRoad_1F_Text_236248, gVictoryRoad_1F_Text_236290
 	loadptr 0, gVictoryRoad_1F_Text_2362A4
 	callstd 6
 	end
 
 gVictoryRoad_1F_EventScript_235EA1: ; 8235EA1
-	trainerbattle 0, 96, 0, gVictoryRoad_1F_Text_2362EE, gVictoryRoad_1F_Text_236336
+	trainerbattle 0, TRAINER_HOPE, 0, gVictoryRoad_1F_Text_2362EE, gVictoryRoad_1F_Text_236336
 	loadptr 0, gVictoryRoad_1F_Text_236356
 	callstd 6
 	end
 
 gVictoryRoad_1F_EventScript_235EB8: ; 8235EB8
-	trainerbattle 0, 324, 0, gVictoryRoad_1F_Text_236390, gVictoryRoad_1F_Text_2363C4
+	trainerbattle 0, TRAINER_QUINCY, 0, gVictoryRoad_1F_Text_236390, gVictoryRoad_1F_Text_2363C4
 	loadptr 0, gVictoryRoad_1F_Text_2363D5
 	callstd 6
 	end
 
 gVictoryRoad_1F_EventScript_235ECF: ; 8235ECF
-	trainerbattle 0, 325, 0, gVictoryRoad_1F_Text_236468, gVictoryRoad_1F_Text_2364A7
+	trainerbattle 0, TRAINER_KATELYNN, 0, gVictoryRoad_1F_Text_236468, gVictoryRoad_1F_Text_2364A7
 	loadptr 0, gVictoryRoad_1F_Text_2364BB
 	callstd 6
 	end

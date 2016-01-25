@@ -14,19 +14,19 @@ gRoute110_TrickHousePuzzle8_EventScript_26E814: ; 826E814
 	end
 
 gRoute110_TrickHousePuzzle8_EventScript_26E81F: ; 826E81F
-	trainerbattle 0, 76, 0, gRoute110_TrickHousePuzzle8_Text_26E8CD, gRoute110_TrickHousePuzzle8_Text_26E8F6
+	trainerbattle 0, TRAINER_VINCENT, 0, gRoute110_TrickHousePuzzle8_Text_26E8CD, gRoute110_TrickHousePuzzle8_Text_26E8F6
 	loadptr 0, gRoute110_TrickHousePuzzle8_Text_26E918
 	callstd 6
 	end
 
 gRoute110_TrickHousePuzzle8_EventScript_26E836: ; 826E836
-	trainerbattle 0, 93, 0, gRoute110_TrickHousePuzzle8_Text_26E954, gRoute110_TrickHousePuzzle8_Text_26E97F
+	trainerbattle 0, TRAINER_KEIRA, 0, gRoute110_TrickHousePuzzle8_Text_26E954, gRoute110_TrickHousePuzzle8_Text_26E97F
 	loadptr 0, gRoute110_TrickHousePuzzle8_Text_26E99F
 	callstd 6
 	end
 
 gRoute110_TrickHousePuzzle8_EventScript_26E84D: ; 826E84D
-	trainerbattle 0, 77, 0, gRoute110_TrickHousePuzzle8_Text_26E9D7, gRoute110_TrickHousePuzzle8_Text_26EA14
+	trainerbattle 0, TRAINER_LEROY, 0, gRoute110_TrickHousePuzzle8_Text_26E9D7, gRoute110_TrickHousePuzzle8_Text_26EA14
 	loadptr 0, gRoute110_TrickHousePuzzle8_Text_26EA3F
 	callstd 6
 	end

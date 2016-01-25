@@ -1,9 +1,9 @@
 gBattleFrontier_Lounge2_MapObjects: ; 853D11C
-	object_event 1, 39, 0, 8, 0, 4, 0, 0, 10, 17, 0, 0, 0, 0, 0, gBattleFrontier_Lounge2_EventScript_260643, 0, 0, 0
-	object_event 2, 39, 0, 10, 0, 4, 0, 0, 9, 17, 0, 0, 0, 0, 0, gBattleFrontier_Lounge2_EventScript_26073C, 0, 0, 0
-	object_event 3, 39, 0, 10, 0, 3, 0, 0, 9, 17, 0, 0, 0, 0, 0, gBattleFrontier_Lounge2_EventScript_260747, 0, 0, 0
-	object_event 4, 52, 0, 4, 0, 6, 0, 0, 2, 33, 0, 0, 0, 0, 0, gBattleFrontier_Lounge2_EventScript_26075D, 0, 0, 0
-	object_event 5, 39, 0, 10, 0, 5, 0, 0, 9, 17, 0, 0, 0, 0, 0, gBattleFrontier_Lounge2_EventScript_260752, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_MANIAC, 0, 8, 0, 4, 0, 0, 10, 17, 0, 0, 0, 0, 0, gBattleFrontier_Lounge2_EventScript_260643, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_MANIAC, 0, 10, 0, 4, 0, 0, 9, 17, 0, 0, 0, 0, 0, gBattleFrontier_Lounge2_EventScript_26073C, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_MANIAC, 0, 10, 0, 3, 0, 0, 9, 17, 0, 0, 0, 0, 0, gBattleFrontier_Lounge2_EventScript_260747, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_RUNNING_TRIATHLETE_F, 0, 4, 0, 6, 0, 0, 2, 33, 0, 0, 0, 0, 0, gBattleFrontier_Lounge2_EventScript_26075D, 0, 0, 0
+	object_event 5, FIELD_OBJ_GFX_MANIAC, 0, 10, 0, 5, 0, 0, 9, 17, 0, 0, 0, 0, 0, gBattleFrontier_Lounge2_EventScript_260752, 0, 0, 0
 
 gBattleFrontier_Lounge2_MapWarps: ; 853D194
 	warp_def 1, 7, 0, 3, BattleFrontier_OutsideWest

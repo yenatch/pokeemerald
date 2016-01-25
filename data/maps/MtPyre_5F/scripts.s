@@ -2,7 +2,7 @@ gMtPyre_5F_MapScripts: ; 8231C6D
 	.byte 0
 
 gMtPyre_4F_EventScript_231C6E: ; 8231C6E
-	trainerbattle 0, 109, 0, gMtPyre_4F_Text_231C85, gMtPyre_4F_Text_231CDB
+	trainerbattle 0, TRAINER_TASHA, 0, gMtPyre_4F_Text_231C85, gMtPyre_4F_Text_231CDB
 	loadptr 0, gMtPyre_4F_Text_231CEE
 	callstd 6
 	end

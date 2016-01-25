@@ -1,8 +1,6 @@
 gRoute114_FossilManiacsTunnel_MapScripts: ; 822AF28
-	.byte 3
-	.4byte gRoute114_FossilManiacsTunnel_MapScript1_22AF33
-	.byte 1
-	.4byte gRoute114_FossilManiacsTunnel_MapScript1_22AF49
+	map_script 3, gRoute114_FossilManiacsTunnel_MapScript1_22AF33
+	map_script 1, gRoute114_FossilManiacsTunnel_MapScript1_22AF49
 	.byte 0
 
 gRoute114_FossilManiacsTunnel_MapScript1_22AF33: ; 822AF33

@@ -1,6 +1,5 @@
 gRoute113_GlassWorkshop_MapScripts: ; 826ED03
-	.byte 3
-	.4byte gRoute113_GlassWorkshop_MapScript1_26ED09
+	map_script 3, gRoute113_GlassWorkshop_MapScript1_26ED09
 	.byte 0
 
 gRoute113_GlassWorkshop_MapScript1_26ED09: ; 826ED09

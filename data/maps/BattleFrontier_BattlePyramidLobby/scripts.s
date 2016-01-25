@@ -1,28 +1,16 @@
 gBattleFrontier_BattlePyramidLobby_MapScripts: ; 8250716
-	.byte 2
-	.4byte gBattleFrontier_BattlePyramidLobby_MapScript2_250735
-	.byte 4
-	.4byte gBattleFrontier_BattlePyramidLobby_MapScript2_2497FB
+	map_script 2, gBattleFrontier_BattlePyramidLobby_MapScript2_250735
+	map_script 4, gBattleFrontier_BattlePyramidLobby_MapScript2_2497FB
 	.byte 0
 
 	.incbin "base_emerald.gba", 0x250721, 0x14
 
 gBattleFrontier_BattlePyramidLobby_MapScript2_250735: ; 8250735
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattlePyramidLobby_EventScript_25075F
-	.2byte 16384
-	.2byte 1
-	.4byte gBattleFrontier_BattlePyramidLobby_EventScript_250768
-	.2byte 16384
-	.2byte 2
-	.4byte gBattleFrontier_BattlePyramidLobby_EventScript_2508AC
-	.2byte 16384
-	.2byte 3
-	.4byte gBattleFrontier_BattlePyramidLobby_EventScript_2507B1
-	.2byte 16384
-	.2byte 4
-	.4byte gBattleFrontier_BattlePyramidLobby_EventScript_250852
+	map_script_2 0x4000, 0, gBattleFrontier_BattlePyramidLobby_EventScript_25075F
+	map_script_2 0x4000, 1, gBattleFrontier_BattlePyramidLobby_EventScript_250768
+	map_script_2 0x4000, 2, gBattleFrontier_BattlePyramidLobby_EventScript_2508AC
+	map_script_2 0x4000, 3, gBattleFrontier_BattlePyramidLobby_EventScript_2507B1
+	map_script_2 0x4000, 4, gBattleFrontier_BattlePyramidLobby_EventScript_250852
 	.2byte 0
 
 gBattleFrontier_BattlePyramidLobby_EventScript_25075F: ; 825075F

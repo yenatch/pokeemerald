@@ -2,19 +2,19 @@ gMtPyre_3F_MapScripts: ; 8231752
 	.byte 0
 
 gMtPyre_3F_EventScript_231753: ; 8231753
-	trainerbattle 0, 236, 0, gMtPyre_3F_Text_2317E3, gMtPyre_3F_Text_231853
+	trainerbattle 0, TRAINER_WILLIAM, 0, gMtPyre_3F_Text_2317E3, gMtPyre_3F_Text_231853
 	loadptr 0, gMtPyre_3F_Text_231869
 	callstd 6
 	end
 
 gMtPyre_3F_EventScript_23176A: ; 823176A
-	trainerbattle 0, 247, 0, gMtPyre_3F_Text_2318A1, gMtPyre_3F_Text_2318DD
+	trainerbattle 0, TRAINER_KAYLA, 0, gMtPyre_3F_Text_2318A1, gMtPyre_3F_Text_2318DD
 	loadptr 0, gMtPyre_3F_Text_2318F2
 	callstd 6
 	end
 
 gMtPyre_3F_EventScript_231781: ; 8231781
-	trainerbattle 2, 9, 0, gMtPyre_3F_Text_231952, gMtPyre_3F_Text_23196A, gMtPyre_3F_EventScript_2317AD
+	trainerbattle 2, TRAINER_GABRIELLE_1, 0, gMtPyre_3F_Text_231952, gMtPyre_3F_Text_23196A, gMtPyre_3F_EventScript_2317AD
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gMtPyre_3F_EventScript_2317CC
@@ -36,7 +36,7 @@ gMtPyre_3F_EventScript_2317AD: ; 82317AD
 	end
 
 gMtPyre_3F_EventScript_2317CC: ; 82317CC
-	trainerbattle 5, 9, 0, gMtPyre_3F_Text_231AAB, gMtPyre_3F_Text_231AE6
+	trainerbattle 5, TRAINER_GABRIELLE_1, 0, gMtPyre_3F_Text_231AAB, gMtPyre_3F_Text_231AE6
 	loadptr 0, gMtPyre_3F_Text_231B0D
 	callstd 6
 	end

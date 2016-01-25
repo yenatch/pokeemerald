@@ -1,5 +1,5 @@
 gRoute124_DivingTreasureHuntersHouse_MapObjects: ; 853ED9C
-	object_event 1, 66, 0, 5, 0, 4, 0, 0, 9, 0, 0, 0, 0, 0, 0, gRoute124_DivingTreasureHuntersHouse_EventScript_270A32, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_MAN_6, 0, 5, 0, 4, 0, 0, 9, 0, 0, 0, 0, 0, 0, gRoute124_DivingTreasureHuntersHouse_EventScript_270A32, 0, 0, 0
 
 gRoute124_DivingTreasureHuntersHouse_MapWarps: ; 853EDB4
 	warp_def 3, 8, 0, 0, Route124

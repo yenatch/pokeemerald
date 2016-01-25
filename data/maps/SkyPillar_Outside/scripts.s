@@ -1,10 +1,7 @@
 gSkyPillar_Outside_MapScripts: ; 82392A8
-	.byte 3
-	.4byte gSkyPillar_Outside_MapScript1_2392B8
-	.byte 1
-	.4byte gSkyPillar_Outside_MapScript1_2392DD
-	.byte 2
-	.4byte gSkyPillar_Outside_MapScript2_2392FA
+	map_script 3, gSkyPillar_Outside_MapScript1_2392B8
+	map_script 1, gSkyPillar_Outside_MapScript1_2392DD
+	map_script 2, gSkyPillar_Outside_MapScript2_2392FA
 	.byte 0
 
 gSkyPillar_Outside_MapScript1_2392B8: ; 82392B8
@@ -34,9 +31,7 @@ gSkyPillar_Outside_EventScript_2392E7: ; 82392E7
 	return
 
 gSkyPillar_Outside_MapScript2_2392FA: ; 82392FA
-	.2byte 16478
-	.2byte 3
-	.4byte gSkyPillar_Outside_EventScript_239304
+	map_script_2 0x405e, 3, gSkyPillar_Outside_EventScript_239304
 	.2byte 0
 
 gSkyPillar_Outside_EventScript_239304: ; 8239304

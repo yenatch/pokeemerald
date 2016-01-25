@@ -1,8 +1,6 @@
 gEverGrandeCity_PokemonLeague_1F_MapScripts: ; 82295D2
-	.byte 3
-	.4byte gEverGrandeCity_PokemonLeague_1F_MapScript1_2295DD
-	.byte 5
-	.4byte gEverGrandeCity_PokemonLeague_1F_MapScript1_277C30
+	map_script 3, gEverGrandeCity_PokemonLeague_1F_MapScript1_2295DD
+	map_script 5, gEverGrandeCity_PokemonLeague_1F_MapScript1_277C30
 	.byte 0
 
 gEverGrandeCity_PokemonLeague_1F_MapScript1_2295DD: ; 82295DD

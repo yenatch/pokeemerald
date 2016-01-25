@@ -1,5 +1,5 @@
 gRoute117_PokemonDayCare_MapObjects: ; 8533EA0
-	object_event 1, 30, 0, 2, 0, 2, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRoute117_PokemonDayCare_EventScript_291D11, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_OLD_WOMAN_2, 0, 2, 0, 2, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRoute117_PokemonDayCare_EventScript_291D11, 0, 0, 0
 
 gRoute117_PokemonDayCare_MapWarps: ; 8533EB8
 	warp_def 2, 8, 0, 0, Route117

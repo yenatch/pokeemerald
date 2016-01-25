@@ -1,6 +1,5 @@
 gSlateportCity_Harbor_MapScripts: ; 820C97D
-	.byte 3
-	.4byte gSlateportCity_Harbor_MapScript1_20C983
+	map_script 3, gSlateportCity_Harbor_MapScript1_20C983
 	.byte 0
 
 gSlateportCity_Harbor_MapScript1_20C983: ; 820C983

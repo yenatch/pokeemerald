@@ -1,8 +1,6 @@
 gLavaridgeTown_PokemonCenter_1F_MapScripts: ; 81FFAFA
-	.byte 3
-	.4byte gLavaridgeTown_PokemonCenter_1F_MapScript1_1FFB05
-	.byte 5
-	.4byte gLavaridgeTown_PokemonCenter_1F_MapScript1_277C30
+	map_script 3, gLavaridgeTown_PokemonCenter_1F_MapScript1_1FFB05
+	map_script 5, gLavaridgeTown_PokemonCenter_1F_MapScript1_277C30
 	.byte 0
 
 gLavaridgeTown_PokemonCenter_1F_MapScript1_1FFB05: ; 81FFB05

@@ -1,6 +1,5 @@
 gAbandonedShip_Rooms_B1F_MapScripts: ; 8237FB7
-	.byte 5
-	.4byte gAbandonedShip_Rooms_B1F_MapScript1_237FBD
+	map_script 5, gAbandonedShip_Rooms_B1F_MapScript1_237FBD
 	.byte 0
 
 gAbandonedShip_Rooms_B1F_MapScript1_237FBD: ; 8237FBD

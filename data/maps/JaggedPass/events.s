@@ -1,11 +1,11 @@
 gJaggedPass_MapObjects: ; 8534AE4
-	object_event 1, 55, 0, 10, 0, 8, 0, 3, 10, 0, 0, 1, 0, 3, 0, gJaggedPass_EventScript_230785, 0, 0, 0
-	object_event 2, 31, 0, 16, 0, 35, 0, 3, 14, 0, 0, 1, 0, 4, 0, gJaggedPass_EventScript_2307FB, 0, 0, 0
-	object_event 3, 59, 0, 23, 0, 24, 0, 3, 1, 0, 0, 0, 0, 0, 0, gJaggedPass_EventScript_291184, 1070, 0, 0
-	object_event 4, 32, 0, 9, 0, 21, 0, 3, 16, 17, 0, 1, 0, 3, 0, gJaggedPass_EventScript_23079C, 0, 0, 0
-	object_event 5, 119, 0, 16, 0, 19, 0, 3, 7, 17, 0, 0, 0, 0, 0, gJaggedPass_EventScript_230718, 847, 0, 0
-	object_event 6, 32, 0, 14, 0, 25, 0, 3, 10, 17, 0, 1, 0, 3, 0, gJaggedPass_EventScript_230871, 0, 0, 0
-	object_event 7, 56, 0, 18, 0, 25, 0, 3, 9, 17, 0, 1, 0, 3, 0, gJaggedPass_EventScript_23085A, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_HIKER, 0, 10, 0, 8, 0, 3, 10, 0, 0, 1, 0, 3, 0, gJaggedPass_EventScript_230785, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_CAMPER, 0, 16, 0, 35, 0, 3, 14, 0, 0, 1, 0, 4, 0, gJaggedPass_EventScript_2307FB, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_ITEM_BALL, 0, 23, 0, 24, 0, 3, 1, 0, 0, 0, 0, 0, 0, gJaggedPass_EventScript_291184, 1070, 0, 0
+	object_event 4, FIELD_OBJ_GFX_PICNICKER, 0, 9, 0, 21, 0, 3, 16, 17, 0, 1, 0, 3, 0, gJaggedPass_EventScript_23079C, 0, 0, 0
+	object_event 5, FIELD_OBJ_GFX_MAGMA_MEMBER_M, 0, 16, 0, 19, 0, 3, 7, 17, 0, 0, 0, 0, 0, gJaggedPass_EventScript_230718, 847, 0, 0
+	object_event 6, FIELD_OBJ_GFX_PICNICKER, 0, 14, 0, 25, 0, 3, 10, 17, 0, 1, 0, 3, 0, gJaggedPass_EventScript_230871, 0, 0, 0
+	object_event 7, FIELD_OBJ_GFX_CYCLING_TRIATHLETE_M, 0, 18, 0, 25, 0, 3, 9, 17, 0, 1, 0, 3, 0, gJaggedPass_EventScript_23085A, 0, 0, 0
 
 gJaggedPass_MapWarps: ; 8534B8C
 	warp_def 14, 40, 3, 2, Route112

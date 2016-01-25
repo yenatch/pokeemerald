@@ -1,17 +1,11 @@
 gRusturfTunnel_MapScripts: ; 822CE27
-	.byte 3
-	.4byte gRusturfTunnel_MapScript1_22CE44
-	.byte 2
-	.4byte gRusturfTunnel_MapScript2_22CE32
+	map_script 3, gRusturfTunnel_MapScript1_22CE44
+	map_script 2, gRusturfTunnel_MapScript2_22CE32
 	.byte 0
 
 gRusturfTunnel_MapScript2_22CE32: ; 822CE32
-	.2byte 16538
-	.2byte 4
-	.4byte gRusturfTunnel_EventScript_22CEAE
-	.2byte 16538
-	.2byte 5
-	.4byte gRusturfTunnel_EventScript_22CEAE
+	map_script_2 0x409a, 4, gRusturfTunnel_EventScript_22CEAE
+	map_script_2 0x409a, 5, gRusturfTunnel_EventScript_22CEAE
 	.2byte 0
 
 gRusturfTunnel_MapScript1_22CE44: ; 822CE44
@@ -313,7 +307,7 @@ gRusturfTunnel_EventScript_22D0C2: ; 822D0C2
 	playmusic 419, 0
 	loadptr 0, gRusturfTunnel_Text_22D20A
 	callstd 4
-	trainerbattle 3, 16, 0, gRusturfTunnel_Text_22D2B0
+	trainerbattle 3, TRAINER_GRUNT_10, 0, gRusturfTunnel_Text_22D2B0
 	loadptr 0, gRusturfTunnel_Text_22D2E1
 	callstd 4
 	setorcopyvar 0x8000, 0x10d
@@ -430,7 +424,7 @@ gRusturfTunnel_Movement_22D1A7: ; 822D1A7
 	step_end
 
 gRusturfTunnel_EventScript_22D1B1: ; 822D1B1
-	trainerbattle 0, 635, 0, gRusturfTunnel_Text_22D84D, gRusturfTunnel_Text_22D8DB
+	trainerbattle 0, TRAINER_MIKE_2, 0, gRusturfTunnel_Text_22D84D, gRusturfTunnel_Text_22D8DB
 	loadptr 0, gRusturfTunnel_Text_22D8F9
 	callstd 6
 	end

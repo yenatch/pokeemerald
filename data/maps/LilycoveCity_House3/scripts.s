@@ -1,6 +1,5 @@
 gLilycoveCity_House3_MapScripts: ; 821EE3C
-	.byte 3
-	.4byte gLilycoveCity_House3_MapScript1_21EE42
+	map_script 3, gLilycoveCity_House3_MapScript1_21EE42
 	.byte 0
 
 gLilycoveCity_House3_MapScript1_21EE42: ; 821EE42

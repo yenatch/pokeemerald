@@ -1,18 +1,12 @@
 gBattleFrontier_BattlePikeRandomRoom1_MapScripts: ; 825D152
-	.byte 5
-	.4byte gBattleFrontier_BattlePikeRandomRoom1_MapScript1_2C423E
-	.byte 3
-	.4byte gBattleFrontier_BattlePikeRandomRoom1_MapScript1_2C3E25
-	.byte 2
-	.4byte gBattleFrontier_BattlePikeRandomRoom1_MapScript2_25D167
-	.byte 4
-	.4byte gBattleFrontier_BattlePikeRandomRoom1_MapScript2_2C3EDE
+	map_script 5, gBattleFrontier_BattlePikeRandomRoom1_MapScript1_2C423E
+	map_script 3, gBattleFrontier_BattlePikeRandomRoom1_MapScript1_2C3E25
+	map_script 2, gBattleFrontier_BattlePikeRandomRoom1_MapScript2_25D167
+	map_script 4, gBattleFrontier_BattlePikeRandomRoom1_MapScript2_2C3EDE
 	.byte 0
 
 gBattleFrontier_BattlePikeRandomRoom1_MapScript2_25D167: ; 825D167
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattlePikeRandomRoom1_EventScript_25D171
+	map_script_2 0x4000, 0, gBattleFrontier_BattlePikeRandomRoom1_EventScript_25D171
 	.2byte 0
 
 gBattleFrontier_BattlePikeRandomRoom1_EventScript_25D171: ; 825D171

@@ -1,10 +1,7 @@
 gLittlerootTown_MaysHouse_1F_MapScripts: ; 81F88A5
-	.byte 1
-	.4byte gLittlerootTown_MaysHouse_1F_MapScript1_1F88B5
-	.byte 3
-	.4byte gLittlerootTown_MaysHouse_1F_MapScript1_1F88F4
-	.byte 2
-	.4byte gLittlerootTown_MaysHouse_1F_MapScript2_1F893A
+	map_script 1, gLittlerootTown_MaysHouse_1F_MapScript1_1F88B5
+	map_script 3, gLittlerootTown_MaysHouse_1F_MapScript1_1F88F4
+	map_script 2, gLittlerootTown_MaysHouse_1F_MapScript2_1F893A
 	.byte 0
 
 gLittlerootTown_MaysHouse_1F_MapScript1_1F88B5: ; 81F88B5
@@ -54,21 +51,11 @@ gLittlerootTown_MaysHouse_1F_EventScript_1F892E: ; 81F892E
 	return
 
 gLittlerootTown_MaysHouse_1F_MapScript2_1F893A: ; 81F893A
-	.2byte 16530
-	.2byte 3
-	.4byte gLittlerootTown_MaysHouse_1F_EventScript_1F898C
-	.2byte 16530
-	.2byte 5
-	.4byte gLittlerootTown_MaysHouse_1F_EventScript_1F8964
-	.2byte 16530
-	.2byte 6
-	.4byte gLittlerootTown_MaysHouse_1F_EventScript_1F899D
-	.2byte 16524
-	.2byte 1
-	.4byte gLittlerootTown_MaysHouse_1F_EventScript_1F89AE
-	.2byte 16514
-	.2byte 3
-	.4byte gLittlerootTown_MaysHouse_1F_EventScript_292AF2
+	map_script_2 0x4092, 3, gLittlerootTown_MaysHouse_1F_EventScript_1F898C
+	map_script_2 0x4092, 5, gLittlerootTown_MaysHouse_1F_EventScript_1F8964
+	map_script_2 0x4092, 6, gLittlerootTown_MaysHouse_1F_EventScript_1F899D
+	map_script_2 0x408c, 1, gLittlerootTown_MaysHouse_1F_EventScript_1F89AE
+	map_script_2 0x4082, 3, gLittlerootTown_MaysHouse_1F_EventScript_292AF2
 	.2byte 0
 
 gLittlerootTown_MaysHouse_1F_EventScript_1F8964: ; 81F8964

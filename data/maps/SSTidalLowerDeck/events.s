@@ -1,6 +1,6 @@
 gSSTidalLowerDeck_MapObjects: ; 853A2BC
-	object_event 1, 49, 0, 10, 0, 4, 0, 3, 46, 68, 0, 1, 0, 3, 0, gSSTidalLowerDeck_EventScript_23C819, 0, 0, 0
-	object_event 2, 49, 0, 7, 0, 4, 0, 3, 50, 71, 0, 1, 0, 3, 0, gSSTidalLowerDeck_EventScript_23C830, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_SAILOR, 0, 10, 0, 4, 0, 3, 46, 68, 0, 1, 0, 3, 0, gSSTidalLowerDeck_EventScript_23C819, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_SAILOR, 0, 7, 0, 4, 0, 3, 50, 71, 0, 1, 0, 3, 0, gSSTidalLowerDeck_EventScript_23C830, 0, 0, 0
 
 gSSTidalLowerDeck_MapWarps: ; 853A2EC
 	warp_def 15, 2, 3, 8, SSTidalCorridor

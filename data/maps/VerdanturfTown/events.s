@@ -1,8 +1,8 @@
 gVerdanturfTown_MapObjects: ; 8527CDC
-	object_event 1, 23, 0, 4, 0, 17, 0, 3, 5, 1, 0, 0, 0, 0, 0, gVerdanturfTown_EventScript_1EB5A8, 0, 0, 0
-	object_event 2, 6, 0, 9, 0, 2, 0, 3, 9, 1, 0, 0, 0, 0, 0, gVerdanturfTown_EventScript_1EB575, 0, 0, 0
-	object_event 3, 7, 0, 7, 0, 11, 0, 3, 3, 16, 0, 0, 0, 0, 0, gVerdanturfTown_EventScript_1EB5BA, 0, 0, 0
-	object_event 4, 31, 0, 7, 0, 6, 0, 3, 5, 1, 0, 0, 0, 0, 0, gVerdanturfTown_EventScript_1EB5B1, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_MAN_2, 0, 4, 0, 17, 0, 3, 5, 1, 0, 0, 0, 0, 0, gVerdanturfTown_EventScript_1EB5A8, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_LITTLE_GIRL_1, 0, 9, 0, 2, 0, 3, 9, 1, 0, 0, 0, 0, 0, gVerdanturfTown_EventScript_1EB575, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_BOY_1, 0, 7, 0, 11, 0, 3, 3, 16, 0, 0, 0, 0, 0, gVerdanturfTown_EventScript_1EB5BA, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_CAMPER, 0, 7, 0, 6, 0, 3, 5, 1, 0, 0, 0, 0, 0, gVerdanturfTown_EventScript_1EB5B1, 0, 0, 0
 
 gVerdanturfTown_MapWarps: ; 8527D3C
 	warp_def 3, 7, 0, 0, VerdanturfTown_BattleTentLobby

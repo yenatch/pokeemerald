@@ -7,7 +7,7 @@ gAbandonedShip_Corridors_1F_EventScript_2379A5: ; 82379A5
 	end
 
 gAbandonedShip_Corridors_1F_EventScript_2379AE: ; 82379AE
-	trainerbattle 0, 66, 0, gAbandonedShip_Corridors_1F_Text_2379C5, gAbandonedShip_Corridors_1F_Text_237A01
+	trainerbattle 0, TRAINER_CHARLIE, 0, gAbandonedShip_Corridors_1F_Text_2379C5, gAbandonedShip_Corridors_1F_Text_237A01
 	loadptr 0, gAbandonedShip_Corridors_1F_Text_237A1B
 	callstd 6
 	end

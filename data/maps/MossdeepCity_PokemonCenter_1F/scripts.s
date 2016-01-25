@@ -1,8 +1,6 @@
 gMossdeepCity_PokemonCenter_1F_MapScripts: ; 822223F
-	.byte 3
-	.4byte gMossdeepCity_PokemonCenter_1F_MapScript1_22224A
-	.byte 5
-	.4byte gMossdeepCity_PokemonCenter_1F_MapScript1_277C30
+	map_script 3, gMossdeepCity_PokemonCenter_1F_MapScript1_22224A
+	map_script 5, gMossdeepCity_PokemonCenter_1F_MapScript1_277C30
 	.byte 0
 
 gMossdeepCity_PokemonCenter_1F_MapScript1_22224A: ; 822224A

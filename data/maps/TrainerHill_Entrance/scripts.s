@@ -1,14 +1,9 @@
 gTrainerHill_Entrance_MapScripts: ; 82680AC
-	.byte 5
-	.4byte gTrainerHill_Entrance_MapScript1_2680D0
-	.byte 7
-	.4byte gTrainerHill_Entrance_MapScript1_26811B
-	.byte 3
-	.4byte gTrainerHill_Entrance_MapScript1_2680C6
-	.byte 1
-	.4byte gTrainerHill_Entrance_MapScript1_268128
-	.byte 2
-	.4byte gTrainerHill_Entrance_MapScript2_26813E
+	map_script 5, gTrainerHill_Entrance_MapScript1_2680D0
+	map_script 7, gTrainerHill_Entrance_MapScript1_26811B
+	map_script 3, gTrainerHill_Entrance_MapScript1_2680C6
+	map_script 1, gTrainerHill_Entrance_MapScript1_268128
+	map_script 2, gTrainerHill_Entrance_MapScript2_26813E
 	.byte 0
 
 gTrainerHill_Entrance_MapScript1_2680C6: ; 82680C6
@@ -58,18 +53,10 @@ gTrainerHill_Entrance_EventScript_268134: ; 8268134
 	return
 
 gTrainerHill_Entrance_MapScript2_26813E: ; 826813E
-	.2byte 16384
-	.2byte 0
-	.4byte gTrainerHill_Entrance_EventScript_268182
-	.2byte 16397
-	.2byte 17
-	.4byte gTrainerHill_Entrance_EventScript_268160
-	.2byte 16389
-	.2byte 1
-	.4byte gTrainerHill_Entrance_EventScript_268229
-	.2byte 16385
-	.2byte 1
-	.4byte gTrainerHill_Entrance_EventScript_2C83DF
+	map_script_2 0x4000, 0, gTrainerHill_Entrance_EventScript_268182
+	map_script_2 0x400d, 17, gTrainerHill_Entrance_EventScript_268160
+	map_script_2 0x4005, 1, gTrainerHill_Entrance_EventScript_268229
+	map_script_2 0x4001, 1, gTrainerHill_Entrance_EventScript_2C83DF
 	.2byte 0
 
 gTrainerHill_Entrance_EventScript_268160: ; 8268160

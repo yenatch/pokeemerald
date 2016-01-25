@@ -1,5 +1,5 @@
 gSootopolisCity_House2_MapObjects: ; 853334C
-	object_event 1, 22, 0, 3, 0, 3, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSootopolisCity_House2_EventScript_226A77, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_OLD_WOMAN_1, 0, 3, 0, 3, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSootopolisCity_House2_EventScript_226A77, 0, 0, 0
 
 gSootopolisCity_House2_MapWarps: ; 8533364
 	warp_def 3, 6, 0, 5, SootopolisCity

@@ -1,8 +1,6 @@
 gLilycoveCity_LilycoveMuseum_2F_MapScripts: ; 821973A
-	.byte 1
-	.4byte gLilycoveCity_LilycoveMuseum_2F_MapScript1_219745
-	.byte 2
-	.4byte gLilycoveCity_LilycoveMuseum_2F_MapScript2_2197FE
+	map_script 1, gLilycoveCity_LilycoveMuseum_2F_MapScript1_219745
+	map_script 2, gLilycoveCity_LilycoveMuseum_2F_MapScript2_2197FE
 	.byte 0
 
 gLilycoveCity_LilycoveMuseum_2F_MapScript1_219745: ; 8219745
@@ -64,9 +62,7 @@ gLilycoveCity_LilycoveMuseum_2F_EventScript_2197EB: ; 82197EB
 	end
 
 gLilycoveCity_LilycoveMuseum_2F_MapScript2_2197FE: ; 82197FE
-	.2byte 16532
-	.2byte 0
-	.4byte gLilycoveCity_LilycoveMuseum_2F_EventScript_219808
+	map_script_2 0x4094, 0, gLilycoveCity_LilycoveMuseum_2F_EventScript_219808
 	.2byte 0
 
 gLilycoveCity_LilycoveMuseum_2F_EventScript_219808: ; 8219808

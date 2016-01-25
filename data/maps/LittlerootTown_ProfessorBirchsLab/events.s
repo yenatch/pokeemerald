@@ -1,10 +1,10 @@
 gLittlerootTown_ProfessorBirchsLab_MapObjects: ; 852D64C
-	object_event 1, 46, 0, 9, 0, 8, 0, 3, 2, 17, 0, 0, 0, 0, 0, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9F84, 0, 0, 0
-	object_event 2, 64, 0, 6, 0, 4, 0, 3, 8, 0, 0, 0, 0, 0, 0, gLittlerootTown_ProfessorBirchsLab_EventScript_1FA25A, 721, 0, 0
+	object_event 1, FIELD_OBJ_GFX_SCIENTIST_1, 0, 9, 0, 8, 0, 3, 2, 17, 0, 0, 0, 0, 0, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9F84, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_PROF_BIRCH, 0, 6, 0, 4, 0, 3, 8, 0, 0, 0, 0, 0, 0, gLittlerootTown_ProfessorBirchsLab_EventScript_1FA25A, 721, 0, 0
 	object_event 3, 240, 0, 7, 0, 4, 0, 3, 8, 17, 0, 0, 0, 0, 0, gLittlerootTown_ProfessorBirchsLab_EventScript_1FA3EC, 889, 0, 0
-	object_event 4, 59, 0, 6, 0, 8, 0, 3, 8, 17, 0, 0, 0, 0, 0, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9FBB, 811, 0, 0
-	object_event 5, 59, 0, 6, 0, 8, 0, 3, 8, 17, 0, 0, 0, 0, 0, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9FEF, 812, 0, 0
-	object_event 6, 59, 0, 6, 0, 8, 0, 3, 8, 17, 0, 0, 0, 0, 0, gLittlerootTown_ProfessorBirchsLab_EventScript_1FA023, 838, 0, 0
+	object_event 4, FIELD_OBJ_GFX_ITEM_BALL, 0, 6, 0, 8, 0, 3, 8, 17, 0, 0, 0, 0, 0, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9FBB, 811, 0, 0
+	object_event 5, FIELD_OBJ_GFX_ITEM_BALL, 0, 6, 0, 8, 0, 3, 8, 17, 0, 0, 0, 0, 0, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9FEF, 812, 0, 0
+	object_event 6, FIELD_OBJ_GFX_ITEM_BALL, 0, 6, 0, 8, 0, 3, 8, 17, 0, 0, 0, 0, 0, gLittlerootTown_ProfessorBirchsLab_EventScript_1FA023, 838, 0, 0
 
 gLittlerootTown_ProfessorBirchsLab_MapWarps: ; 852D6DC
 	warp_def 6, 12, 0, 2, LittlerootTown

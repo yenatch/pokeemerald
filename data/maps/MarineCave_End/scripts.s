@@ -1,8 +1,6 @@
 gMarineCave_End_MapScripts: ; 823AFDF
-	.byte 5
-	.4byte gMarineCave_End_MapScript1_23AFEA
-	.byte 3
-	.4byte gMarineCave_End_MapScript1_23B008
+	map_script 5, gMarineCave_End_MapScript1_23AFEA
+	map_script 3, gMarineCave_End_MapScript1_23B008
 	.byte 0
 
 gMarineCave_End_MapScript1_23AFEA: ; 823AFEA

@@ -1,6 +1,5 @@
 gRoute114_FossilManiacsHouse_MapScripts: ; 822AD30
-	.byte 3
-	.4byte gRoute114_FossilManiacsHouse_MapScript1_22AD36
+	map_script 3, gRoute114_FossilManiacsHouse_MapScript1_22AD36
 	.byte 0
 
 gRoute114_FossilManiacsHouse_MapScript1_22AD36: ; 822AD36

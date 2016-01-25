@@ -1,13 +1,13 @@
 gPetalburgCity_MapObjects: ; 8525FD0
-	object_event 1, 26, 0, 16, 0, 18, 0, 3, 2, 17, 0, 0, 0, 0, 0, gPetalburgCity_EventScript_1DC3FD, 728, 0, 0
-	object_event 2, 135, 0, 15, 0, 10, 0, 3, 7, 0, 0, 0, 0, 0, 0, 0x0, 726, 0, 0
-	object_event 3, 7, 0, 8, 0, 22, 0, 3, 8, 0, 0, 0, 0, 0, 0, gPetalburgCity_EventScript_1DC3E6, 0, 0, 0
-	object_event 4, 48, 0, 20, 0, 10, 0, 3, 3, 16, 0, 0, 0, 0, 0, gPetalburgCity_EventScript_1DC488, 0, 0, 0
-	object_event 5, 25, 0, 15, 0, 10, 0, 3, 7, 0, 0, 0, 0, 0, 0, 0x0, 830, 0, 0
-	object_event 6, 59, 0, 19, 0, 2, 0, 3, 1, 0, 0, 0, 0, 0, 0, gPetalburgCity_EventScript_2910B4, 1039, 0, 0
-	object_event 7, 59, 0, 3, 0, 28, 0, 3, 1, 0, 0, 0, 0, 0, 0, gPetalburgCity_EventScript_2910C1, 1040, 0, 0
-	object_event 8, 9, 0, 12, 0, 15, 0, 3, 1, 0, 0, 0, 0, 0, 0, gPetalburgCity_EventScript_1DC82E, 0, 0, 0
-	object_event 9, 219, 0, 13, 0, 12, 0, 3, 1, 17, 0, 0, 0, 0, 0, 0x0, 995, 0, 0
+	object_event 1, FIELD_OBJ_GFX_WOMAN_5, 0, 16, 0, 18, 0, 3, 2, 17, 0, 0, 0, 0, 0, gPetalburgCity_EventScript_1DC3FD, 728, 0, 0
+	object_event 2, FIELD_OBJ_GFX_WALLY, 0, 15, 0, 10, 0, 3, 7, 0, 0, 0, 0, 0, 0, 0x0, 726, 0, 0
+	object_event 3, FIELD_OBJ_GFX_BOY_1, 0, 8, 0, 22, 0, 3, 8, 0, 0, 0, 0, 0, 0, gPetalburgCity_EventScript_1DC3E6, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_GENTLEMAN, 0, 20, 0, 10, 0, 3, 3, 16, 0, 0, 0, 0, 0, gPetalburgCity_EventScript_1DC488, 0, 0, 0
+	object_event 5, FIELD_OBJ_GFX_MAN_3, 0, 15, 0, 10, 0, 3, 7, 0, 0, 0, 0, 0, 0, 0x0, 830, 0, 0
+	object_event 6, FIELD_OBJ_GFX_ITEM_BALL, 0, 19, 0, 2, 0, 3, 1, 0, 0, 0, 0, 0, 0, gPetalburgCity_EventScript_2910B4, 1039, 0, 0
+	object_event 7, FIELD_OBJ_GFX_ITEM_BALL, 0, 3, 0, 28, 0, 3, 1, 0, 0, 0, 0, 0, 0, gPetalburgCity_EventScript_2910C1, 1040, 0, 0
+	object_event 8, FIELD_OBJ_GFX_BOY_2, 0, 12, 0, 15, 0, 3, 1, 0, 0, 0, 0, 0, 0, gPetalburgCity_EventScript_1DC82E, 0, 0, 0
+	object_event 9, FIELD_OBJ_GFX_SCOTT, 0, 13, 0, 12, 0, 3, 1, 17, 0, 0, 0, 0, 0, 0x0, 995, 0, 0
 
 gPetalburgCity_MapWarps: ; 85260A8
 	warp_def 10, 19, 0, 0, PetalburgCity_House1

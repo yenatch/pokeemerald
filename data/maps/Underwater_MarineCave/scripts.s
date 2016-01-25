@@ -1,8 +1,6 @@
 gUnderwater_MarineCave_MapScripts: ; 823AFB8
-	.byte 5
-	.4byte gUnderwater_MarineCave_MapScript1_23AFC7
-	.byte 3
-	.4byte gUnderwater_MarineCave_MapScript1_23AFC3
+	map_script 5, gUnderwater_MarineCave_MapScript1_23AFC7
+	map_script 3, gUnderwater_MarineCave_MapScript1_23AFC3
 	.byte 0
 
 gUnderwater_MarineCave_MapScript1_23AFC3: ; 823AFC3

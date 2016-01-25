@@ -1,8 +1,6 @@
 gFortreeCity_PokemonCenter_1F_MapScripts: ; 82173D8
-	.byte 3
-	.4byte gFortreeCity_PokemonCenter_1F_MapScript1_2173E3
-	.byte 5
-	.4byte gFortreeCity_PokemonCenter_1F_MapScript1_277C30
+	map_script 3, gFortreeCity_PokemonCenter_1F_MapScript1_2173E3
+	map_script 5, gFortreeCity_PokemonCenter_1F_MapScript1_277C30
 	.byte 0
 
 gFortreeCity_PokemonCenter_1F_MapScript1_2173E3: ; 82173E3

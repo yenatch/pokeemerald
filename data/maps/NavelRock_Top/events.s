@@ -1,5 +1,5 @@
 gNavelRock_Top_MapObjects: ; 853DB74
-	object_event 1, 238, 0, 12, 0, 4, 0, 0, 8, 17, 0, 0, 0, 0, 0, 0x0, 801, 0, 0
+	object_event 1, FIELD_OBJ_GFX_HO_OH, 0, 12, 0, 4, 0, 0, 8, 17, 0, 0, 0, 0, 0, 0x0, 801, 0, 0
 
 gNavelRock_Top_MapWarps: ; 853DB8C
 	warp_def 13, 20, 3, 1, NavelRock_Up4

@@ -1,6 +1,5 @@
 gEverGrandeCity_MapScripts: ; 81E7D1B
-	.byte 3
-	.4byte gEverGrandeCity_MapScript1_1E7D21
+	map_script 3, gEverGrandeCity_MapScript1_1E7D21
 	.byte 0
 
 gEverGrandeCity_MapScript1_1E7D21: ; 81E7D21

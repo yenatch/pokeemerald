@@ -1,7 +1,7 @@
 gRustboroCity_DevonCorp_1F_MapObjects: ; 853037C
-	object_event 1, 116, 0, 2, 0, 6, 0, 3, 2, 17, 0, 0, 0, 0, 0, gRustboroCity_DevonCorp_1F_EventScript_211261, 0, 0, 0
-	object_event 2, 116, 0, 15, 0, 5, 0, 3, 2, 18, 0, 0, 0, 0, 0, gRustboroCity_DevonCorp_1F_EventScript_211293, 0, 0, 0
-	object_event 3, 24, 0, 5, 0, 3, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRustboroCity_DevonCorp_1F_EventScript_2112CE, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_MAN_7, 0, 2, 0, 6, 0, 3, 2, 17, 0, 0, 0, 0, 0, gRustboroCity_DevonCorp_1F_EventScript_211261, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_MAN_7, 0, 15, 0, 5, 0, 3, 2, 18, 0, 0, 0, 0, 0, gRustboroCity_DevonCorp_1F_EventScript_211293, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_WOMAN_4, 0, 5, 0, 3, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRustboroCity_DevonCorp_1F_EventScript_2112CE, 0, 0, 0
 
 gRustboroCity_DevonCorp_1F_MapWarps: ; 85303C4
 	warp_def 5, 8, 0, 5, RustboroCity

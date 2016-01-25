@@ -1,12 +1,8 @@
 gSootopolisCity_Gym_1F_MapScripts: ; 8224E4C
-	.byte 2
-	.4byte gSootopolisCity_Gym_1F_MapScript2_224ECB
-	.byte 5
-	.4byte gSootopolisCity_Gym_1F_MapScript1_224E67
-	.byte 1
-	.4byte gSootopolisCity_Gym_1F_MapScript1_224E6A
-	.byte 3
-	.4byte gSootopolisCity_Gym_1F_MapScript1_224E61
+	map_script 2, gSootopolisCity_Gym_1F_MapScript2_224ECB
+	map_script 5, gSootopolisCity_Gym_1F_MapScript1_224E67
+	map_script 1, gSootopolisCity_Gym_1F_MapScript1_224E6A
+	map_script 3, gSootopolisCity_Gym_1F_MapScript1_224E61
 	.byte 0
 
 gSootopolisCity_Gym_1F_MapScript1_224E61: ; 8224E61
@@ -44,18 +40,10 @@ gSootopolisCity_Gym_1F_EventScript_224ECA: ; 8224ECA
 	return
 
 gSootopolisCity_Gym_1F_MapScript2_224ECB: ; 8224ECB
-	.2byte 16418
-	.2byte 8
-	.4byte gSootopolisCity_Gym_1F_EventScript_224EED
-	.2byte 16418
-	.2byte 28
-	.4byte gSootopolisCity_Gym_1F_EventScript_224F01
-	.2byte 16418
-	.2byte 67
-	.4byte gSootopolisCity_Gym_1F_EventScript_224F15
-	.2byte 16418
-	.2byte 0
-	.4byte gSootopolisCity_Gym_1F_EventScript_224F29
+	map_script_2 0x4022, 8, gSootopolisCity_Gym_1F_EventScript_224EED
+	map_script_2 0x4022, 28, gSootopolisCity_Gym_1F_EventScript_224F01
+	map_script_2 0x4022, 67, gSootopolisCity_Gym_1F_EventScript_224F15
+	map_script_2 0x4022, 0, gSootopolisCity_Gym_1F_EventScript_224F29
 	.2byte 0
 
 gSootopolisCity_Gym_1F_EventScript_224EED: ; 8224EED
@@ -98,7 +86,7 @@ gSootopolisCity_Gym_1F_Movement_224F42: ; 8224F42
 	step_end
 
 gSootopolisCity_Gym_1F_EventScript_224F44: ; 8224F44
-	trainerbattle 1, 272, 0, gSootopolisCity_Gym_1F_Text_225268, gSootopolisCity_Gym_1F_Text_225432, gSootopolisCity_Gym_1F_EventScript_224F82
+	trainerbattle 1, TRAINER_JUAN_1, 0, gSootopolisCity_Gym_1F_Text_225268, gSootopolisCity_Gym_1F_Text_225432, gSootopolisCity_Gym_1F_EventScript_224F82
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gSootopolisCity_Gym_1F_EventScript_225025
@@ -169,7 +157,7 @@ gSootopolisCity_Gym_1F_EventScript_22501B: ; 822501B
 	end
 
 gSootopolisCity_Gym_1F_EventScript_225025: ; 8225025
-	trainerbattle 7, 272, 0, gSootopolisCity_Gym_1F_Text_225950, gSootopolisCity_Gym_1F_Text_225A2E, gSootopolisCity_Gym_1F_Text_225B48
+	trainerbattle 7, TRAINER_JUAN_1, 0, gSootopolisCity_Gym_1F_Text_225950, gSootopolisCity_Gym_1F_Text_225A2E, gSootopolisCity_Gym_1F_Text_225B48
 	loadptr 0, gSootopolisCity_Gym_1F_Text_225A67
 	callstd 6
 	end

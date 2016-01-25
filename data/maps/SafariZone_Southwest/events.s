@@ -1,6 +1,6 @@
 gSafariZone_Southwest_MapObjects: ; 853B24C
-	object_event 1, 20, 0, 22, 0, 9, 0, 3, 8, 0, 0, 0, 0, 0, 0, gSafariZone_Southwest_EventScript_23D267, 0, 0, 0
-	object_event 2, 59, 0, 0, 0, 37, 0, 3, 1, 17, 0, 0, 0, 0, 0, gSafariZone_Southwest_EventScript_2912D6, 1131, 0, 0
+	object_event 1, FIELD_OBJ_GFX_WOMAN_3, 0, 22, 0, 9, 0, 3, 8, 0, 0, 0, 0, 0, 0, gSafariZone_Southwest_EventScript_23D267, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_ITEM_BALL, 0, 0, 0, 37, 0, 3, 1, 17, 0, 0, 0, 0, 0, gSafariZone_Southwest_EventScript_2912D6, 1131, 0, 0
 
 gSafariZone_Southwest_MapWarps: ; 853B27C
 	warp_def 29, 7, 3, 0, SafariZone_RestHouse

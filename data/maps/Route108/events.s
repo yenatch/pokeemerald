@@ -1,11 +1,11 @@
 gRoute108_MapObjects: ; 8528964
-	object_event 1, 42, 0, 52, 0, 13, 0, 1, 45, 51, 0, 1, 0, 3, 0, gRoute108_EventScript_1EE68A, 0, 0, 0
-	object_event 2, 43, 0, 35, 0, 12, 0, 1, 13, 17, 0, 1, 0, 3, 0, gRoute108_EventScript_1EE6B8, 0, 0, 0
-	object_event 3, 42, 0, 13, 0, 13, 0, 1, 24, 0, 0, 1, 0, 3, 0, gRoute108_EventScript_1EE6A1, 0, 0, 0
-	object_event 4, 43, 0, 8, 0, 7, 0, 1, 20, 6, 0, 1, 0, 3, 0, gRoute108_EventScript_1EE6CF, 0, 0, 0
-	object_event 5, 34, 0, 41, 0, 5, 0, 3, 10, 17, 0, 1, 0, 1, 0, gRoute108_EventScript_1EE6E6, 0, 0, 0
-	object_event 6, 49, 0, 43, 0, 5, 0, 3, 9, 17, 0, 1, 0, 1, 0, gRoute108_EventScript_1EE6FD, 0, 0, 0
-	object_event 7, 59, 0, 42, 0, 4, 0, 3, 1, 17, 0, 0, 0, 0, 0, gRoute108_EventScript_290D4D, 1139, 0, 0
+	object_event 1, FIELD_OBJ_GFX_SWIMMER_M, 0, 52, 0, 13, 0, 1, 45, 51, 0, 1, 0, 3, 0, gRoute108_EventScript_1EE68A, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_SWIMMER_F, 0, 35, 0, 12, 0, 1, 13, 17, 0, 1, 0, 3, 0, gRoute108_EventScript_1EE6B8, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_SWIMMER_M, 0, 13, 0, 13, 0, 1, 24, 0, 0, 1, 0, 3, 0, gRoute108_EventScript_1EE6A1, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_SWIMMER_F, 0, 8, 0, 7, 0, 1, 20, 6, 0, 1, 0, 3, 0, gRoute108_EventScript_1EE6CF, 0, 0, 0
+	object_event 5, FIELD_OBJ_GFX_WOMAN_7, 0, 41, 0, 5, 0, 3, 10, 17, 0, 1, 0, 1, 0, gRoute108_EventScript_1EE6E6, 0, 0, 0
+	object_event 6, FIELD_OBJ_GFX_SAILOR, 0, 43, 0, 5, 0, 3, 9, 17, 0, 1, 0, 1, 0, gRoute108_EventScript_1EE6FD, 0, 0, 0
+	object_event 7, FIELD_OBJ_GFX_ITEM_BALL, 0, 42, 0, 4, 0, 3, 1, 17, 0, 0, 0, 0, 0, gRoute108_EventScript_290D4D, 1139, 0, 0
 
 gRoute108_MapWarps: ; 8528A0C
 	warp_def 29, 6, 3, 0, AbandonedShip_Deck

@@ -1,10 +1,7 @@
 gSkyPillar_4F_MapScripts: ; 8239671
-	.byte 2
-	.4byte gSkyPillar_4F_MapScript2_2A8327
-	.byte 3
-	.4byte gSkyPillar_4F_MapScript1_239681
-	.byte 5
-	.4byte gSkyPillar_4F_MapScript1_239696
+	map_script 2, gSkyPillar_4F_MapScript2_2A8327
+	map_script 3, gSkyPillar_4F_MapScript1_239681
+	map_script 5, gSkyPillar_4F_MapScript1_239696
 	.byte 0
 
 gSkyPillar_4F_MapScript1_239681: ; 8239681

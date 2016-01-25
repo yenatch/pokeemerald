@@ -1,14 +1,10 @@
 gBattleFrontier_BattlePalaceLobby_MapScripts: ; 824D77E
-	.byte 2
-	.4byte gBattleFrontier_BattlePalaceLobby_MapScript2_24D79D
-	.byte 4
-	.4byte gBattleFrontier_BattlePalaceLobby_MapScript2_24D789
+	map_script 2, gBattleFrontier_BattlePalaceLobby_MapScript2_24D79D
+	map_script 4, gBattleFrontier_BattlePalaceLobby_MapScript2_24D789
 	.byte 0
 
 gBattleFrontier_BattlePalaceLobby_MapScript2_24D789: ; 824D789
-	.2byte 16385
-	.2byte 0
-	.4byte gBattleFrontier_BattlePalaceLobby_EventScript_24D793
+	map_script_2 0x4001, 0, gBattleFrontier_BattlePalaceLobby_EventScript_24D793
 	.2byte 0
 
 gBattleFrontier_BattlePalaceLobby_EventScript_24D793: ; 824D793
@@ -17,21 +13,11 @@ gBattleFrontier_BattlePalaceLobby_EventScript_24D793: ; 824D793
 	end
 
 gBattleFrontier_BattlePalaceLobby_MapScript2_24D79D: ; 824D79D
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattlePalaceLobby_EventScript_24D7C7
-	.2byte 16384
-	.2byte 1
-	.4byte gBattleFrontier_BattlePalaceLobby_EventScript_24D7D0
-	.2byte 16384
-	.2byte 2
-	.4byte gBattleFrontier_BattlePalaceLobby_EventScript_24D908
-	.2byte 16384
-	.2byte 3
-	.4byte gBattleFrontier_BattlePalaceLobby_EventScript_24D817
-	.2byte 16384
-	.2byte 4
-	.4byte gBattleFrontier_BattlePalaceLobby_EventScript_24D873
+	map_script_2 0x4000, 0, gBattleFrontier_BattlePalaceLobby_EventScript_24D7C7
+	map_script_2 0x4000, 1, gBattleFrontier_BattlePalaceLobby_EventScript_24D7D0
+	map_script_2 0x4000, 2, gBattleFrontier_BattlePalaceLobby_EventScript_24D908
+	map_script_2 0x4000, 3, gBattleFrontier_BattlePalaceLobby_EventScript_24D817
+	map_script_2 0x4000, 4, gBattleFrontier_BattlePalaceLobby_EventScript_24D873
 	.2byte 0
 
 gBattleFrontier_BattlePalaceLobby_EventScript_24D7C7: ; 824D7C7

@@ -1,6 +1,5 @@
 gMossdeepCity_MapScripts: ; 81E4A96
-	.byte 3
-	.4byte gMossdeepCity_MapScript1_1E4A9C
+	map_script 3, gMossdeepCity_MapScript1_1E4A9C
 	.byte 0
 
 gMossdeepCity_MapScript1_1E4A9C: ; 81E4A9C

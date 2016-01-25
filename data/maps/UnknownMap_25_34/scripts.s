@@ -1,14 +1,9 @@
 gUnknownMap_25_34_MapScripts: ; 823B781
-	.byte 4
-	.4byte gLinkContestRoom1_MapScript2_23B81F
-	.byte 2
-	.4byte gLinkContestRoom1_MapScript2_23B815
-	.byte 3
-	.4byte gLinkContestRoom1_MapScript1_23B79F
-	.byte 5
-	.4byte gLinkContestRoom1_MapScript1_23B803
-	.byte 7
-	.4byte gLinkContestRoom1_MapScript1_23B79B
+	map_script 4, gLinkContestRoom1_MapScript2_23B81F
+	map_script 2, gLinkContestRoom1_MapScript2_23B815
+	map_script 3, gLinkContestRoom1_MapScript1_23B79F
+	map_script 5, gLinkContestRoom1_MapScript1_23B803
+	map_script 7, gLinkContestRoom1_MapScript1_23B79B
 	.byte 0
 
 gLinkContestRoom1_MapScript1_23B79B: ; 823B79B
@@ -66,15 +61,11 @@ gLinkContestRoom1_EventScript_23B80F: ; 823B80F
 	return
 
 gLinkContestRoom1_MapScript2_23B815: ; 823B815
-	.2byte 16518
-	.2byte 1
-	.4byte gLinkContestRoom1_EventScript_23B829
+	map_script_2 0x4086, 1, gLinkContestRoom1_EventScript_23B829
 	.2byte 0
 
 gLinkContestRoom1_MapScript2_23B81F: ; 823B81F
-	.2byte 16518
-	.2byte 1
-	.4byte gLinkContestRoom1_EventScript_23B834
+	map_script_2 0x4086, 1, gLinkContestRoom1_EventScript_23B834
 	.2byte 0
 
 gLinkContestRoom1_EventScript_23B829: ; 823B829

@@ -1,5 +1,5 @@
 gMarineCave_End_MapObjects: ; 85377E8
-	object_event 1, 197, 0, 9, 0, 22, 0, 1, 8, 17, 0, 0, 0, 0, 0, 0x0, 782, 0, 0
+	object_event 1, FIELD_OBJ_GFX_KYOGRE_1, 0, 9, 0, 22, 0, 1, 8, 17, 0, 0, 0, 0, 0, 0x0, 782, 0, 0
 
 gMarineCave_End_MapWarps: ; 8537800
 	warp_def 20, 4, 0, 0, MarineCave_Entrance

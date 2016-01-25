@@ -36,7 +36,7 @@ gSlateportCity_OceanicMuseum_2F_EventScript_20BB00: ; 820BB00
 	callif 1, gSlateportCity_OceanicMuseum_2F_EventScript_20BCA8
 	compare 0x800c, 3
 	callif 1, gSlateportCity_OceanicMuseum_2F_EventScript_20BCB3
-	trainerbattle 3, 20, 0, gSlateportCity_OceanicMuseum_2F_Text_20BEE2
+	trainerbattle 3, TRAINER_GRUNT_14, 0, gSlateportCity_OceanicMuseum_2F_Text_20BEE2
 	loadptr 0, gSlateportCity_OceanicMuseum_2F_Text_20BEFA
 	callstd 4
 	closebutton
@@ -46,7 +46,7 @@ gSlateportCity_OceanicMuseum_2F_EventScript_20BB00: ; 820BB00
 	waitmove 0
 	loadptr 0, gSlateportCity_OceanicMuseum_2F_Text_20BF35
 	callstd 4
-	trainerbattle 3, 21, 0, gSlateportCity_OceanicMuseum_2F_Text_20BF66
+	trainerbattle 3, TRAINER_GRUNT_15, 0, gSlateportCity_OceanicMuseum_2F_Text_20BF66
 	move 3, gSlateportCity_OceanicMuseum_2F_Movement_20BCEF
 	waitmove 0
 	move 3, gSlateportCity_OceanicMuseum_2F_Movement_2725AA

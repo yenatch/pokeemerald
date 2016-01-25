@@ -7,13 +7,13 @@ gAbandonedShip_Rooms_1F_EventScript_237A93: ; 8237A93
 	end
 
 gAbandonedShip_Rooms_1F_EventScript_237A9C: ; 8237A9C
-	trainerbattle 0, 375, 0, gAbandonedShip_Rooms_1F_Text_237D0C, gAbandonedShip_Rooms_1F_Text_237D2A
+	trainerbattle 0, TRAINER_DEMETRIUS, 0, gAbandonedShip_Rooms_1F_Text_237D0C, gAbandonedShip_Rooms_1F_Text_237D2A
 	loadptr 0, gAbandonedShip_Rooms_1F_Text_237D41
 	callstd 6
 	end
 
 gAbandonedShip_Rooms_1F_EventScript_237AB3: ; 8237AB3
-	trainerbattle 2, 144, 0, gAbandonedShip_Rooms_1F_Text_237B76, gAbandonedShip_Rooms_1F_Text_237BB8, gAbandonedShip_Rooms_1F_EventScript_237ADF
+	trainerbattle 2, TRAINER_THALIA_1, 0, gAbandonedShip_Rooms_1F_Text_237B76, gAbandonedShip_Rooms_1F_Text_237BB8, gAbandonedShip_Rooms_1F_EventScript_237ADF
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gAbandonedShip_Rooms_1F_EventScript_237AFE
@@ -35,7 +35,7 @@ gAbandonedShip_Rooms_1F_EventScript_237ADF: ; 8237ADF
 	end
 
 gAbandonedShip_Rooms_1F_EventScript_237AFE: ; 8237AFE
-	trainerbattle 5, 144, 0, gAbandonedShip_Rooms_1F_Text_237C69, gAbandonedShip_Rooms_1F_Text_237CB2
+	trainerbattle 5, TRAINER_THALIA_1, 0, gAbandonedShip_Rooms_1F_Text_237C69, gAbandonedShip_Rooms_1F_Text_237CB2
 	loadptr 0, gAbandonedShip_Rooms_1F_Text_237CC9
 	callstd 6
 	end

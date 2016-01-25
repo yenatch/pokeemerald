@@ -1,8 +1,6 @@
 gRoute101_MapScripts: ; 81EBCBA
-	.byte 3
-	.4byte gRoute101_MapScript1_1EBCC5
-	.byte 2
-	.4byte gRoute101_MapScript2_1EBCCB
+	map_script 3, gRoute101_MapScript1_1EBCC5
+	map_script 2, gRoute101_MapScript2_1EBCCB
 	.byte 0
 
 gRoute101_MapScript1_1EBCC5: ; 81EBCC5
@@ -10,9 +8,7 @@ gRoute101_MapScript1_1EBCC5: ; 81EBCC5
 	end
 
 gRoute101_MapScript2_1EBCCB: ; 81EBCCB
-	.2byte 16480
-	.2byte 0
-	.4byte gRoute101_EventScript_1EBCD5
+	map_script_2 0x4060, 0, gRoute101_EventScript_1EBCD5
 	.2byte 0
 
 gRoute101_EventScript_1EBCD5: ; 81EBCD5

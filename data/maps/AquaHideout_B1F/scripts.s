@@ -1,8 +1,6 @@
 gAquaHideout_B1F_MapScripts: ; 82339A7
-	.byte 5
-	.4byte gAquaHideout_B1F_MapScript1_2339B2
-	.byte 3
-	.4byte gAquaHideout_B1F_MapScript1_2339D0
+	map_script 5, gAquaHideout_B1F_MapScript1_2339B2
+	map_script 3, gAquaHideout_B1F_MapScript1_2339D0
 	.byte 0
 
 gAquaHideout_B1F_MapScript1_2339B2: ; 82339B2
@@ -87,7 +85,7 @@ gAquaHideout_B1F_EventScript_233A7C: ; 8233A7C
 	end
 
 gAquaHideout_B1F_EventScript_233A85: ; 8233A85
-	trainerbattle 2, 3, 0, gAquaHideout_B1F_Text_233B03, gAquaHideout_B1F_Text_233B4A, gAquaHideout_B1F_EventScript_233AA0
+	trainerbattle 2, TRAINER_GRUNT_2, 0, gAquaHideout_B1F_Text_233B03, gAquaHideout_B1F_Text_233B4A, gAquaHideout_B1F_EventScript_233AA0
 	loadptr 0, gAquaHideout_B1F_Text_233B5E
 	callstd 6
 	end
@@ -101,7 +99,7 @@ gAquaHideout_B1F_EventScript_233AA0: ; 8233AA0
 	end
 
 gAquaHideout_B1F_EventScript_233AB0: ; 8233AB0
-	trainerbattle 2, 4, 0, gAquaHideout_B1F_Text_233BC5, gAquaHideout_B1F_Text_233C27, gAquaHideout_B1F_EventScript_233ACB
+	trainerbattle 2, TRAINER_GRUNT_3, 0, gAquaHideout_B1F_Text_233BC5, gAquaHideout_B1F_Text_233C27, gAquaHideout_B1F_EventScript_233ACB
 	loadptr 0, gAquaHideout_B1F_Text_233C41
 	callstd 6
 	end
@@ -113,13 +111,13 @@ gAquaHideout_B1F_EventScript_233ACB: ; 8233ACB
 	end
 
 gAquaHideout_B1F_EventScript_233AD5: ; 8233AD5
-	trainerbattle 0, 27, 0, gAquaHideout_B1F_Text_233C89, gAquaHideout_B1F_Text_233CCA
+	trainerbattle 0, TRAINER_GRUNT_21, 0, gAquaHideout_B1F_Text_233C89, gAquaHideout_B1F_Text_233CCA
 	loadptr 0, gAquaHideout_B1F_Text_233CDC
 	callstd 6
 	end
 
 gAquaHideout_B1F_EventScript_233AEC: ; 8233AEC
-	trainerbattle 0, 192, 0, gAquaHideout_B1F_Text_233D1B, gAquaHideout_B1F_Text_233D6E
+	trainerbattle 0, TRAINER_GRUNT_25, 0, gAquaHideout_B1F_Text_233D1B, gAquaHideout_B1F_Text_233D6E
 	loadptr 0, gAquaHideout_B1F_Text_233D84
 	callstd 6
 	end

@@ -36,43 +36,43 @@ gSSTidalRooms_EventScript_23CA33: ; 823CA33
 	end
 
 gSSTidalRooms_EventScript_23CA49: ; 823CA49
-	trainerbattle 0, 294, 0, gSSTidalRooms_Text_23CB14, gSSTidalRooms_Text_23CB58
+	trainerbattle 0, TRAINER_COLTON, 0, gSSTidalRooms_Text_23CB14, gSSTidalRooms_Text_23CB58
 	loadptr 0, gSSTidalRooms_Text_23CB75
 	callstd 6
 	end
 
 gSSTidalRooms_EventScript_23CA60: ; 823CA60
-	trainerbattle 0, 255, 0, gSSTidalRooms_Text_23CBEB, gSSTidalRooms_Text_23CC04
+	trainerbattle 0, TRAINER_MICAH, 0, gSSTidalRooms_Text_23CBEB, gSSTidalRooms_Text_23CC04
 	loadptr 0, gSSTidalRooms_Text_23CC26
 	callstd 6
 	end
 
 gSSTidalRooms_EventScript_23CA77: ; 823CA77
-	trainerbattle 0, 256, 0, gSSTidalRooms_Text_23CC68, gSSTidalRooms_Text_23CC8A
+	trainerbattle 0, TRAINER_THOMAS, 0, gSSTidalRooms_Text_23CC68, gSSTidalRooms_Text_23CC8A
 	loadptr 0, gSSTidalRooms_Text_23CCBB
 	callstd 6
 	end
 
 gSSTidalRooms_EventScript_23CA8E: ; 823CA8E
-	trainerbattle 4, 641, 0, gSSTidalRooms_Text_23CD04, gSSTidalRooms_Text_23CD54, gSSTidalRooms_Text_23CDC6
+	trainerbattle 4, TRAINER_LEA_AND_JED, 0, gSSTidalRooms_Text_23CD04, gSSTidalRooms_Text_23CD54, gSSTidalRooms_Text_23CDC6
 	loadptr 0, gSSTidalRooms_Text_23CD5F
 	callstd 6
 	end
 
 gSSTidalRooms_EventScript_23CAA9: ; 823CAA9
-	trainerbattle 4, 641, 0, gSSTidalRooms_Text_23CE04, gSSTidalRooms_Text_23CE4B, gSSTidalRooms_Text_23CEB0
+	trainerbattle 4, TRAINER_LEA_AND_JED, 0, gSSTidalRooms_Text_23CE04, gSSTidalRooms_Text_23CE4B, gSSTidalRooms_Text_23CEB0
 	loadptr 0, gSSTidalRooms_Text_23CE59
 	callstd 6
 	end
 
 gSSTidalRooms_EventScript_23CAC4: ; 823CAC4
-	trainerbattle 0, 138, 0, gSSTidalRooms_Text_23CEEE, gSSTidalRooms_Text_23CF36
+	trainerbattle 0, TRAINER_GARRET, 0, gSSTidalRooms_Text_23CEEE, gSSTidalRooms_Text_23CF36
 	loadptr 0, gSSTidalRooms_Text_23CF45
 	callstd 6
 	end
 
 gSSTidalRooms_EventScript_23CADB: ; 823CADB
-	trainerbattle 0, 119, 0, gSSTidalRooms_Text_23CF97, gSSTidalRooms_Text_23CFF4
+	trainerbattle 0, TRAINER_NAOMI, 0, gSSTidalRooms_Text_23CF97, gSSTidalRooms_Text_23CFF4
 	loadptr 0, gSSTidalRooms_Text_23D013
 	callstd 6
 	end

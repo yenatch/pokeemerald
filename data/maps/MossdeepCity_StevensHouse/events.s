@@ -1,7 +1,7 @@
 gMossdeepCity_StevensHouse_MapObjects: ; 8532C10
-	object_event 1, 134, 0, 9, 0, 6, 0, 3, 10, 0, 0, 0, 0, 0, 0, gMossdeepCity_StevensHouse_EventScript_222912, 967, 0, 0
-	object_event 2, 59, 0, 4, 0, 3, 0, 3, 1, 17, 0, 0, 0, 0, 0, gMossdeepCity_StevensHouse_EventScript_222841, 968, 0, 0
-	object_event 3, 5, 0, 6, 0, 4, 0, 3, 76, 17, 0, 0, 0, 0, 0, gMossdeepCity_StevensHouse_EventScript_22291B, 727, 0, 0
+	object_event 1, FIELD_OBJ_GFX_STEVEN, 0, 9, 0, 6, 0, 3, 10, 0, 0, 0, 0, 0, 0, gMossdeepCity_StevensHouse_EventScript_222912, 967, 0, 0
+	object_event 2, FIELD_OBJ_GFX_ITEM_BALL, 0, 4, 0, 3, 0, 3, 1, 17, 0, 0, 0, 0, 0, gMossdeepCity_StevensHouse_EventScript_222841, 968, 0, 0
+	object_event 3, FIELD_OBJ_GFX_LITTLE_BOY_1, 0, 6, 0, 4, 0, 3, 76, 17, 0, 0, 0, 0, 0, gMossdeepCity_StevensHouse_EventScript_22291B, 727, 0, 0
 
 gMossdeepCity_StevensHouse_MapWarps: ; 8532C58
 	warp_def 3, 7, 0, 6, MossdeepCity

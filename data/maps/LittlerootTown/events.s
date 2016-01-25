@@ -1,12 +1,12 @@
 gLittlerootTown_MapObjects: ; 85276A8
-	object_event 1, 6, 0, 16, 0, 10, 0, 3, 2, 33, 0, 0, 0, 0, 0, gLittlerootTown_EventScript_1E8034, 0, 0, 0
-	object_event 2, 17, 0, 12, 0, 13, 0, 3, 2, 18, 0, 0, 0, 0, 0, gLittlerootTown_EventScript_1E8022, 868, 0, 0
-	object_event 3, 9, 0, 14, 0, 17, 0, 3, 2, 18, 0, 0, 0, 0, 0, gLittlerootTown_EventScript_1E802B, 0, 0, 0
-	object_event 4, 215, 0, 5, 0, 8, 0, 3, 7, 0, 0, 0, 0, 0, 0, gLittlerootTown_EventScript_1E863D, 752, 0, 0
-	object_event 5, 94, 0, 2, 0, 10, 0, 4, 10, 0, 0, 0, 0, 0, 0, 0x0, 761, 0, 0
-	object_event 6, 94, 0, 11, 0, 10, 0, 4, 10, 0, 0, 0, 0, 0, 0, 0x0, 762, 0, 0
+	object_event 1, FIELD_OBJ_GFX_LITTLE_GIRL_1, 0, 16, 0, 10, 0, 3, 2, 33, 0, 0, 0, 0, 0, gLittlerootTown_EventScript_1E8034, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_FAT_MAN, 0, 12, 0, 13, 0, 3, 2, 18, 0, 0, 0, 0, 0, gLittlerootTown_EventScript_1E8022, 868, 0, 0
+	object_event 3, FIELD_OBJ_GFX_BOY_2, 0, 14, 0, 17, 0, 3, 2, 18, 0, 0, 0, 0, 0, gLittlerootTown_EventScript_1E802B, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_MOM, 0, 5, 0, 8, 0, 3, 7, 0, 0, 0, 0, 0, 0, gLittlerootTown_EventScript_1E863D, 752, 0, 0
+	object_event 5, FIELD_OBJ_GFX_TRUCK, 0, 2, 0, 10, 0, 4, 10, 0, 0, 0, 0, 0, 0, 0x0, 761, 0, 0
+	object_event 6, FIELD_OBJ_GFX_TRUCK, 0, 11, 0, 10, 0, 4, 10, 0, 0, 0, 0, 0, 0, 0x0, 762, 0, 0
 	object_event 7, 240, 0, 13, 0, 10, 0, 3, 7, 17, 0, 0, 0, 0, 0, 0x0, 794, 0, 0
-	object_event 8, 64, 0, 14, 0, 10, 0, 3, 7, 17, 0, 0, 0, 0, 0, 0x0, 795, 0, 0
+	object_event 8, FIELD_OBJ_GFX_PROF_BIRCH, 0, 14, 0, 10, 0, 3, 7, 17, 0, 0, 0, 0, 0, 0x0, 795, 0, 0
 
 gLittlerootTown_MapWarps: ; 8527768
 	warp_def 14, 8, 0, 1, LittlerootTown_MaysHouse_1F

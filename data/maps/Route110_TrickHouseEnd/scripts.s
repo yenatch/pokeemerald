@@ -1,12 +1,8 @@
 gRoute110_TrickHouseEnd_MapScripts: ; 826ACAF
-	.byte 5
-	.4byte gRoute110_TrickHouseEnd_MapScript1_26ACC4
-	.byte 3
-	.4byte gRoute110_TrickHouseEnd_MapScript1_26ACD0
-	.byte 2
-	.4byte gRoute110_TrickHouseEnd_MapScript2_26ACF5
-	.byte 4
-	.4byte gRoute110_TrickHouseEnd_MapScript2_26ACDE
+	map_script 5, gRoute110_TrickHouseEnd_MapScript1_26ACC4
+	map_script 3, gRoute110_TrickHouseEnd_MapScript1_26ACD0
+	map_script 2, gRoute110_TrickHouseEnd_MapScript2_26ACF5
+	map_script 4, gRoute110_TrickHouseEnd_MapScript2_26ACDE
 	.byte 0
 
 gRoute110_TrickHouseEnd_MapScript1_26ACC4: ; 826ACC4
@@ -21,9 +17,7 @@ gRoute110_TrickHouseEnd_MapScript1_26ACD0: ; 826ACD0
 	end
 
 gRoute110_TrickHouseEnd_MapScript2_26ACDE: ; 826ACDE
-	.2byte 16386
-	.2byte 0
-	.4byte gRoute110_TrickHouseEnd_EventScript_26ACE8
+	map_script_2 0x4002, 0, gRoute110_TrickHouseEnd_EventScript_26ACE8
 	.2byte 0
 
 gRoute110_TrickHouseEnd_EventScript_26ACE8: ; 826ACE8
@@ -33,9 +27,7 @@ gRoute110_TrickHouseEnd_EventScript_26ACE8: ; 826ACE8
 	end
 
 gRoute110_TrickHouseEnd_MapScript2_26ACF5: ; 826ACF5
-	.2byte 16385
-	.2byte 0
-	.4byte gRoute110_TrickHouseEnd_EventScript_26ACFF
+	map_script_2 0x4001, 0, gRoute110_TrickHouseEnd_EventScript_26ACFF
 	.2byte 0
 
 gRoute110_TrickHouseEnd_EventScript_26ACFF: ; 826ACFF

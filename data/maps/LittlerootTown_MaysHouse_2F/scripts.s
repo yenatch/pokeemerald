@@ -1,8 +1,6 @@
 gLittlerootTown_MaysHouse_2F_MapScripts: ; 81F9296
-	.byte 3
-	.4byte gLittlerootTown_MaysHouse_2F_MapScript1_1F92A1
-	.byte 4
-	.4byte gLittlerootTown_MaysHouse_2F_MapScript2_1F931D
+	map_script 3, gLittlerootTown_MaysHouse_2F_MapScript1_1F92A1
+	map_script 4, gLittlerootTown_MaysHouse_2F_MapScript2_1F931D
 	.byte 0
 
 gLittlerootTown_MaysHouse_2F_MapScript1_1F92A1: ; 81F92A1
@@ -48,9 +46,7 @@ gLittlerootTown_MaysHouse_2F_EventScript_1F9317: ; 81F9317
 	return
 
 gLittlerootTown_MaysHouse_2F_MapScript2_1F931D: ; 81F931D
-	.2byte 16521
-	.2byte 0
-	.4byte gLittlerootTown_MaysHouse_2F_EventScript_1F9327
+	map_script_2 0x4089, 0, gLittlerootTown_MaysHouse_2F_EventScript_1F9327
 	.2byte 0
 
 gLittlerootTown_MaysHouse_2F_EventScript_1F9327: ; 81F9327

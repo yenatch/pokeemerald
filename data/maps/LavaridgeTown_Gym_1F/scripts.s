@@ -1,6 +1,5 @@
 gLavaridgeTown_Gym_1F_MapScripts: ; 81FE6F4
-	.byte 3
-	.4byte gLavaridgeTown_Gym_1F_MapScript1_1FE6FA
+	map_script 3, gLavaridgeTown_Gym_1F_MapScript1_1FE6FA
 	.byte 0
 
 gLavaridgeTown_Gym_1F_MapScript1_1FE6FA: ; 81FE6FA
@@ -60,7 +59,7 @@ gLavaridgeTown_Gym_1F_EventScript_1FE78B: ; 81FE78B
 	return
 
 gLavaridgeTown_Gym_1F_EventScript_1FE78C: ; 81FE78C
-	trainerbattle 1, 268, 0, gLavaridgeTown_Gym_1F_Text_1FF0DC, gLavaridgeTown_Gym_1F_Text_1FF233, gLavaridgeTown_Gym_1F_EventScript_1FE7C1
+	trainerbattle 1, TRAINER_FLANNERY_1, 0, gLavaridgeTown_Gym_1F_Text_1FF0DC, gLavaridgeTown_Gym_1F_Text_1FF233, gLavaridgeTown_Gym_1F_EventScript_1FE7C1
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gLavaridgeTown_Gym_1F_EventScript_1FE864
@@ -124,13 +123,13 @@ gLavaridgeTown_Gym_1F_EventScript_1FE841: ; 81FE841
 	return
 
 gLavaridgeTown_Gym_1F_EventScript_1FE864: ; 81FE864
-	trainerbattle 7, 268, 0, gLavaridgeTown_Gym_1F_Text_1FF601, gLavaridgeTown_Gym_1F_Text_1FF69F, gLavaridgeTown_Gym_1F_Text_1FF75E
+	trainerbattle 7, TRAINER_FLANNERY_1, 0, gLavaridgeTown_Gym_1F_Text_1FF601, gLavaridgeTown_Gym_1F_Text_1FF69F, gLavaridgeTown_Gym_1F_Text_1FF75E
 	loadptr 0, gLavaridgeTown_Gym_1F_Text_1FF6BF
 	callstd 6
 	end
 
 gLavaridgeTown_Gym_1F_EventScript_1FE87F: ; 81FE87F
-	trainerbattle 2, 201, 2, gLavaridgeTown_Gym_1F_Text_1FEADE, gLavaridgeTown_Gym_1F_Text_1FEAFB, gLavaridgeTown_Gym_1F_EventScript_1FE89A
+	trainerbattle 2, TRAINER_COLE, 2, gLavaridgeTown_Gym_1F_Text_1FEADE, gLavaridgeTown_Gym_1F_Text_1FEAFB, gLavaridgeTown_Gym_1F_EventScript_1FE89A
 	loadptr 0, gLavaridgeTown_Gym_1F_Text_1FEB1C
 	callstd 6
 	end
@@ -145,43 +144,43 @@ gLavaridgeTown_Gym_B1F_EventScript_1FE89A: ; 81FE89A
 	end
 
 gLavaridgeTown_Gym_1F_EventScript_1FE8AF: ; 81FE8AF
-	trainerbattle 2, 203, 4, gLavaridgeTown_Gym_1F_Text_1FEB7B, gLavaridgeTown_Gym_1F_Text_1FEBC0, gLavaridgeTown_Gym_1F_EventScript_1FE89A
+	trainerbattle 2, TRAINER_AXLE, 4, gLavaridgeTown_Gym_1F_Text_1FEB7B, gLavaridgeTown_Gym_1F_Text_1FEBC0, gLavaridgeTown_Gym_1F_EventScript_1FE89A
 	loadptr 0, gLavaridgeTown_Gym_1F_Text_1FEBE1
 	callstd 6
 	end
 
 gLavaridgeTown_Gym_B1F_EventScript_1FE8CA: ; 81FE8CA
-	trainerbattle 2, 205, 2, gLavaridgeTown_Gym_B1F_Text_1FEC31, gLavaridgeTown_Gym_B1F_Text_1FECE3, gLavaridgeTown_Gym_B1F_EventScript_1FE89A
+	trainerbattle 2, TRAINER_KEEGAN, 2, gLavaridgeTown_Gym_B1F_Text_1FEC31, gLavaridgeTown_Gym_B1F_Text_1FECE3, gLavaridgeTown_Gym_B1F_EventScript_1FE89A
 	loadptr 0, gLavaridgeTown_Gym_B1F_Text_1FED02
 	callstd 6
 	end
 
 gLavaridgeTown_Gym_1F_EventScript_1FE8E5: ; 81FE8E5
-	trainerbattle 2, 650, 5, gLavaridgeTown_Gym_1F_Text_1FEE22, gLavaridgeTown_Gym_1F_Text_1FEE42, gLavaridgeTown_Gym_1F_EventScript_1FE89A
+	trainerbattle 2, TRAINER_DANIELLE, 5, gLavaridgeTown_Gym_1F_Text_1FEE22, gLavaridgeTown_Gym_1F_Text_1FEE42, gLavaridgeTown_Gym_1F_EventScript_1FE89A
 	loadptr 0, gLavaridgeTown_Gym_1F_Text_1FEE5D
 	callstd 6
 	end
 
 gLavaridgeTown_Gym_1F_EventScript_1FE900: ; 81FE900
-	trainerbattle 2, 648, 3, gLavaridgeTown_Gym_1F_Text_1FED72, gLavaridgeTown_Gym_1F_Text_1FED9E, gLavaridgeTown_Gym_1F_EventScript_1FE89A
+	trainerbattle 2, TRAINER_GERALD, 3, gLavaridgeTown_Gym_1F_Text_1FED72, gLavaridgeTown_Gym_1F_Text_1FED9E, gLavaridgeTown_Gym_1F_EventScript_1FE89A
 	loadptr 0, gLavaridgeTown_Gym_1F_Text_1FEDBB
 	callstd 6
 	end
 
 gLavaridgeTown_Gym_B1F_EventScript_1FE91B: ; 81FE91B
-	trainerbattle 2, 204, 1, gLavaridgeTown_Gym_B1F_Text_1FEE9D, gLavaridgeTown_Gym_B1F_Text_1FEED5, gLavaridgeTown_Gym_B1F_EventScript_1FE89A
+	trainerbattle 2, TRAINER_JACE, 1, gLavaridgeTown_Gym_B1F_Text_1FEE9D, gLavaridgeTown_Gym_B1F_Text_1FEED5, gLavaridgeTown_Gym_B1F_EventScript_1FE89A
 	loadptr 0, gLavaridgeTown_Gym_B1F_Text_1FEF07
 	callstd 6
 	end
 
 gLavaridgeTown_Gym_B1F_EventScript_1FE936: ; 81FE936
-	trainerbattle 2, 202, 3, gLavaridgeTown_Gym_B1F_Text_1FEF60, gLavaridgeTown_Gym_B1F_Text_1FEFA7, gLavaridgeTown_Gym_B1F_EventScript_1FE89A
+	trainerbattle 2, TRAINER_JEFF, 3, gLavaridgeTown_Gym_B1F_Text_1FEF60, gLavaridgeTown_Gym_B1F_Text_1FEFA7, gLavaridgeTown_Gym_B1F_EventScript_1FE89A
 	loadptr 0, gLavaridgeTown_Gym_B1F_Text_1FEFC2
 	callstd 6
 	end
 
 gLavaridgeTown_Gym_B1F_EventScript_1FE951: ; 81FE951
-	trainerbattle 2, 501, 4, gLavaridgeTown_Gym_B1F_Text_1FF025, gLavaridgeTown_Gym_B1F_Text_1FF05F, gLavaridgeTown_Gym_B1F_EventScript_1FE89A
+	trainerbattle 2, TRAINER_ELI, 4, gLavaridgeTown_Gym_B1F_Text_1FF025, gLavaridgeTown_Gym_B1F_Text_1FF05F, gLavaridgeTown_Gym_B1F_EventScript_1FE89A
 	loadptr 0, gLavaridgeTown_Gym_B1F_Text_1FF09A
 	callstd 6
 	end

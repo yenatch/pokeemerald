@@ -1,5 +1,5 @@
 gDesertRuins_MapObjects: ; 8534354
-	object_event 1, 200, 0, 8, 0, 7, 0, 3, 8, 0, 0, 0, 0, 0, 0, gDesertRuins_EventScript_22DA02, 935, 0, 0
+	object_event 1, FIELD_OBJ_GFX_REGIROCK, 0, 8, 0, 7, 0, 3, 8, 0, 0, 0, 0, 0, 0, gDesertRuins_EventScript_22DA02, 935, 0, 0
 
 gDesertRuins_MapWarps: ; 853436C
 	warp_def 8, 29, 3, 1, Route111

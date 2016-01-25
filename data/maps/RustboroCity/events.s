@@ -1,20 +1,20 @@
 gRustboroCity_MapObjects: ; 85267E0
-	object_event 1, 34, 0, 22, 0, 34, 0, 3, 3, 16, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E088A, 0, 0, 0
-	object_event 2, 17, 0, 19, 0, 13, 0, 3, 1, 17, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E085F, 0, 0, 0
-	object_event 3, 5, 0, 25, 0, 37, 0, 3, 7, 0, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E08DA, 0, 0, 0
-	object_event 4, 6, 0, 21, 0, 46, 0, 3, 3, 16, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E08D1, 0, 0, 0
-	object_event 5, 9, 0, 12, 0, 45, 0, 3, 1, 0, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E08B2, 0, 0, 0
-	object_event 6, 33, 0, 26, 0, 23, 0, 3, 1, 17, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E0893, 0, 0, 0
-	object_event 7, 11, 0, 24, 0, 51, 0, 3, 10, 0, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E0922, 0, 0, 0
-	object_event 8, 12, 0, 25, 0, 51, 0, 3, 9, 0, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E0938, 0, 0, 0
-	object_event 9, 23, 0, 30, 0, 10, 0, 3, 10, 17, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E0ADD, 732, 0, 0
-	object_event 10, 117, 0, 13, 0, 21, 0, 3, 10, 0, 0, 0, 0, 0, 0, 0x0, 731, 0, 0
-	object_event 11, 116, 0, 13, 0, 34, 0, 3, 2, 17, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E087E, 0, 0, 0
-	object_event 12, 59, 0, 36, 0, 51, 0, 3, 1, 0, 0, 0, 0, 0, 0, gRustboroCity_EventScript_2910DB, 1041, 0, 0
-	object_event 13, 65, 0, 19, 0, 27, 0, 3, 8, 16, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E094E, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_WOMAN_7, 0, 22, 0, 34, 0, 3, 3, 16, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E088A, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_FAT_MAN, 0, 19, 0, 13, 0, 3, 1, 17, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E085F, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_LITTLE_BOY_1, 0, 25, 0, 37, 0, 3, 7, 0, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E08DA, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_LITTLE_GIRL_1, 0, 21, 0, 46, 0, 3, 3, 16, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E08D1, 0, 0, 0
+	object_event 5, FIELD_OBJ_GFX_BOY_2, 0, 12, 0, 45, 0, 3, 1, 0, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E08B2, 0, 0, 0
+	object_event 6, FIELD_OBJ_GFX_MAN_4, 0, 26, 0, 23, 0, 3, 1, 17, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E0893, 0, 0, 0
+	object_event 7, FIELD_OBJ_GFX_LITTLE_BOY_2, 0, 24, 0, 51, 0, 3, 10, 0, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E0922, 0, 0, 0
+	object_event 8, FIELD_OBJ_GFX_LITTLE_GIRL_2, 0, 25, 0, 51, 0, 3, 9, 0, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E0938, 0, 0, 0
+	object_event 9, FIELD_OBJ_GFX_MAN_2, 0, 30, 0, 10, 0, 3, 10, 17, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E0ADD, 732, 0, 0
+	object_event 10, FIELD_OBJ_GFX_AQUA_MEMBER_M, 0, 13, 0, 21, 0, 3, 10, 0, 0, 0, 0, 0, 0, 0x0, 731, 0, 0
+	object_event 11, FIELD_OBJ_GFX_MAN_7, 0, 13, 0, 34, 0, 3, 2, 17, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E087E, 0, 0, 0
+	object_event 12, FIELD_OBJ_GFX_ITEM_BALL, 0, 36, 0, 51, 0, 3, 1, 0, 0, 0, 0, 0, 0, gRustboroCity_EventScript_2910DB, 1041, 0, 0
+	object_event 13, FIELD_OBJ_GFX_MAN_5, 0, 19, 0, 27, 0, 3, 8, 16, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E094E, 0, 0, 0
 	object_event 14, 240, 0, 16, 0, 50, 0, 3, 1, 17, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E0DB8, 814, 0, 0
-	object_event 15, 46, 0, 11, 0, 15, 0, 0, 1, 17, 0, 0, 0, 0, 0, 0x0, 844, 0, 0
-	object_event 16, 7, 0, 31, 0, 36, 0, 3, 1, 16, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E1236, 0, 0, 0
+	object_event 15, FIELD_OBJ_GFX_SCIENTIST_1, 0, 11, 0, 15, 0, 0, 1, 17, 0, 0, 0, 0, 0, 0x0, 844, 0, 0
+	object_event 16, FIELD_OBJ_GFX_BOY_1, 0, 31, 0, 36, 0, 3, 1, 16, 0, 0, 0, 0, 0, gRustboroCity_EventScript_1E1236, 0, 0, 0
 
 gRustboroCity_MapWarps: ; 8526960
 	warp_def 27, 19, 0, 0, RustboroCity_Gym

@@ -1,10 +1,7 @@
 gSkyPillar_Top_MapScripts: ; 82396B8
-	.byte 5
-	.4byte gSkyPillar_Top_MapScript1_2396C8
-	.byte 3
-	.4byte gSkyPillar_Top_MapScript1_2396E6
-	.byte 4
-	.4byte gSkyPillar_Top_MapScript2_239713
+	map_script 5, gSkyPillar_Top_MapScript1_2396C8
+	map_script 3, gSkyPillar_Top_MapScript1_2396E6
+	map_script 4, gSkyPillar_Top_MapScript2_239713
 	.byte 0
 
 gSkyPillar_Top_MapScript1_2396C8: ; 82396C8
@@ -41,9 +38,7 @@ gSkyPillar_Top_EventScript_23970F: ; 823970F
 	return
 
 gSkyPillar_Top_MapScript2_239713: ; 8239713
-	.2byte 16586
-	.2byte 0
-	.4byte gSkyPillar_Top_EventScript_23971D
+	map_script_2 0x40ca, 0, gSkyPillar_Top_EventScript_23971D
 	.2byte 0
 
 gSkyPillar_Top_EventScript_23971D: ; 823971D

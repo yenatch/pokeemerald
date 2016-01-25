@@ -1,8 +1,6 @@
 gNavelRock_Top_MapScripts: ; 8269113
-	.byte 3
-	.4byte gNavelRock_Top_MapScript1_26911E
-	.byte 5
-	.4byte gNavelRock_Top_MapScript1_269151
+	map_script 3, gNavelRock_Top_MapScript1_26911E
+	map_script 5, gNavelRock_Top_MapScript1_269151
 	.byte 0
 
 gNavelRock_Top_MapScript1_26911E: ; 826911E

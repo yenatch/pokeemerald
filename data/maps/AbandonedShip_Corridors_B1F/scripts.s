@@ -1,8 +1,6 @@
 gAbandonedShip_Corridors_B1F_MapScripts: ; 8237D84
-	.byte 5
-	.4byte gAbandonedShip_Corridors_B1F_MapScript1_237D8F
-	.byte 1
-	.4byte gAbandonedShip_Corridors_B1F_MapScript1_237D98
+	map_script 5, gAbandonedShip_Corridors_B1F_MapScript1_237D8F
+	map_script 1, gAbandonedShip_Corridors_B1F_MapScript1_237D98
 	.byte 0
 
 gAbandonedShip_Corridors_B1F_MapScript1_237D8F: ; 8237D8F
@@ -59,7 +57,7 @@ gAbandonedShip_Corridors_B1F_EventScript_237E09: ; 8237E09
 	end
 
 gAbandonedShip_Corridors_B1F_EventScript_237E13: ; 8237E13
-	trainerbattle 0, 496, 0, gAbandonedShip_Corridors_B1F_Text_237E2A, gAbandonedShip_Corridors_B1F_Text_237E80
+	trainerbattle 0, TRAINER_DUNCAN, 0, gAbandonedShip_Corridors_B1F_Text_237E2A, gAbandonedShip_Corridors_B1F_Text_237E80
 	loadptr 0, gAbandonedShip_Corridors_B1F_Text_237E92
 	callstd 6
 	end

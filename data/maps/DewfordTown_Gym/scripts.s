@@ -1,6 +1,5 @@
 gDewfordTown_Gym_MapScripts: ; 81FC63C
-	.byte 3
-	.4byte gDewfordTown_Gym_MapScript1_1FC642
+	map_script 3, gDewfordTown_Gym_MapScript1_1FC642
 	.byte 0
 
 gDewfordTown_Gym_MapScript1_1FC642: ; 81FC642
@@ -157,7 +156,7 @@ gDewfordTown_Gym_EventScript_1FC7C1: ; 81FC7C1
 	return
 
 gDewfordTown_Gym_EventScript_1FC7C2: ; 81FC7C2
-	trainerbattle 1, 266, 0, gDewfordTown_Gym_Text_1FCF44, gDewfordTown_Gym_Text_1FD008, gDewfordTown_Gym_EventScript_1FC7F7
+	trainerbattle 1, TRAINER_BRAWLY_1, 0, gDewfordTown_Gym_Text_1FCF44, gDewfordTown_Gym_Text_1FD008, gDewfordTown_Gym_EventScript_1FC7F7
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gDewfordTown_Gym_EventScript_1FC89C
@@ -221,13 +220,13 @@ gDewfordTown_Gym_EventScript_1FC878: ; 81FC878
 	end
 
 gDewfordTown_Gym_EventScript_1FC89C: ; 81FC89C
-	trainerbattle 7, 266, 0, gDewfordTown_Gym_Text_1FD2C4, gDewfordTown_Gym_Text_1FD367, gDewfordTown_Gym_Text_1FD3DE
+	trainerbattle 7, TRAINER_BRAWLY_1, 0, gDewfordTown_Gym_Text_1FD2C4, gDewfordTown_Gym_Text_1FD367, gDewfordTown_Gym_Text_1FD3DE
 	loadptr 0, gDewfordTown_Gym_Text_1FD37B
 	callstd 6
 	end
 
 gDewfordTown_Gym_EventScript_1FC8B7: ; 81FC8B7
-	trainerbattle 2, 179, 0, gDewfordTown_Gym_Text_1FCB9F, gDewfordTown_Gym_Text_1FCBB8, gDewfordTown_Gym_EventScript_1FC8D2
+	trainerbattle 2, TRAINER_TAKAO, 0, gDewfordTown_Gym_Text_1FCB9F, gDewfordTown_Gym_Text_1FCBB8, gDewfordTown_Gym_EventScript_1FC8D2
 	loadptr 0, gDewfordTown_Gym_Text_1FCBCA
 	callstd 6
 	end
@@ -238,7 +237,7 @@ gDewfordTown_Gym_EventScript_1FC8D2: ; 81FC8D2
 	end
 
 gDewfordTown_Gym_EventScript_1FC8D9: ; 81FC8D9
-	trainerbattle 2, 425, 0, gDewfordTown_Gym_Text_1FCC0A, gDewfordTown_Gym_Text_1FCC45, gDewfordTown_Gym_EventScript_1FC8F4
+	trainerbattle 2, TRAINER_JOCELYN, 0, gDewfordTown_Gym_Text_1FCC0A, gDewfordTown_Gym_Text_1FCC45, gDewfordTown_Gym_EventScript_1FC8F4
 	loadptr 0, gDewfordTown_Gym_Text_1FCC6B
 	callstd 6
 	end
@@ -249,7 +248,7 @@ gDewfordTown_Gym_EventScript_1FC8F4: ; 81FC8F4
 	end
 
 gDewfordTown_Gym_EventScript_1FC8FB: ; 81FC8FB
-	trainerbattle 2, 426, 0, gDewfordTown_Gym_Text_1FCD01, gDewfordTown_Gym_Text_1FCD3C, gDewfordTown_Gym_EventScript_1FC916
+	trainerbattle 2, TRAINER_LAURA, 0, gDewfordTown_Gym_Text_1FCD01, gDewfordTown_Gym_Text_1FCD3C, gDewfordTown_Gym_EventScript_1FC916
 	loadptr 0, gDewfordTown_Gym_Text_1FCD4F
 	callstd 6
 	end
@@ -260,7 +259,7 @@ gDewfordTown_Gym_EventScript_1FC916: ; 81FC916
 	end
 
 gDewfordTown_Gym_EventScript_1FC91D: ; 81FC91D
-	trainerbattle 2, 572, 0, gDewfordTown_Gym_Text_1FCE48, gDewfordTown_Gym_Text_1FCE75, gDewfordTown_Gym_EventScript_1FC938
+	trainerbattle 2, TRAINER_BRENDEN, 0, gDewfordTown_Gym_Text_1FCE48, gDewfordTown_Gym_Text_1FCE75, gDewfordTown_Gym_EventScript_1FC938
 	loadptr 0, gDewfordTown_Gym_Text_1FCEAB
 	callstd 6
 	end
@@ -271,7 +270,7 @@ gDewfordTown_Gym_EventScript_1FC938: ; 81FC938
 	end
 
 gDewfordTown_Gym_EventScript_1FC93F: ; 81FC93F
-	trainerbattle 2, 574, 0, gDewfordTown_Gym_Text_1FCEDC, gDewfordTown_Gym_Text_1FCF0A, gDewfordTown_Gym_EventScript_1FC95A
+	trainerbattle 2, TRAINER_CRISTIAN, 0, gDewfordTown_Gym_Text_1FCEDC, gDewfordTown_Gym_Text_1FCF0A, gDewfordTown_Gym_EventScript_1FC95A
 	loadptr 0, gDewfordTown_Gym_Text_1FCF26
 	callstd 6
 	end
@@ -282,7 +281,7 @@ gDewfordTown_Gym_EventScript_1FC95A: ; 81FC95A
 	end
 
 gDewfordTown_Gym_EventScript_1FC961: ; 81FC961
-	trainerbattle 2, 573, 0, gDewfordTown_Gym_Text_1FCDB8, gDewfordTown_Gym_Text_1FCDE5, gDewfordTown_Gym_EventScript_1FC97C
+	trainerbattle 2, TRAINER_LILITH, 0, gDewfordTown_Gym_Text_1FCDB8, gDewfordTown_Gym_Text_1FCDE5, gDewfordTown_Gym_EventScript_1FC97C
 	loadptr 0, gDewfordTown_Gym_Text_1FCE08
 	callstd 6
 	end

@@ -1,6 +1,5 @@
 gRoute110_TrickHousePuzzle5_MapScripts: ; 826CAF0
-	.byte 3
-	.4byte gRoute110_TrickHousePuzzle5_MapScript1_26CAF6
+	map_script 3, gRoute110_TrickHousePuzzle5_MapScript1_26CAF6
 	.byte 0
 
 gRoute110_TrickHousePuzzle5_MapScript1_26CAF6: ; 826CAF6

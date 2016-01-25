@@ -1,6 +1,5 @@
 gMagmaHideout_1F_MapScripts: ; 8239880
-	.byte 3
-	.4byte gMagmaHideout_1F_MapScript1_239886
+	map_script 3, gMagmaHideout_1F_MapScript1_239886
 	.byte 0
 
 gMagmaHideout_1F_MapScript1_239886: ; 8239886
@@ -8,13 +7,13 @@ gMagmaHideout_1F_MapScript1_239886: ; 8239886
 	end
 
 gMagmaHideout_1F_EventScript_23988C: ; 823988C
-	trainerbattle 0, 716, 0, gMagmaHideout_1F_Text_2398BA, gMagmaHideout_1F_Text_239964
+	trainerbattle 0, TRAINER_GRUNT_38, 0, gMagmaHideout_1F_Text_2398BA, gMagmaHideout_1F_Text_239964
 	loadptr 0, gMagmaHideout_1F_Text_2399B1
 	callstd 6
 	end
 
 gMagmaHideout_1F_EventScript_2398A3: ; 82398A3
-	trainerbattle 0, 717, 0, gMagmaHideout_1F_Text_2399F5, gMagmaHideout_1F_Text_239ABA
+	trainerbattle 0, TRAINER_GRUNT_39, 0, gMagmaHideout_1F_Text_2399F5, gMagmaHideout_1F_Text_239ABA
 	loadptr 0, gMagmaHideout_1F_Text_239ACD
 	callstd 6
 	end

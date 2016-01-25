@@ -1,12 +1,8 @@
 gEverGrandeCity_SidneysRoom_MapScripts: ; 8227F01
-	.byte 1
-	.4byte gEverGrandeCity_SidneysRoom_MapScript1_227F1D
-	.byte 4
-	.4byte gEverGrandeCity_SidneysRoom_MapScript2_227F3E
-	.byte 3
-	.4byte gEverGrandeCity_SidneysRoom_MapScript1_227F16
-	.byte 2
-	.4byte gEverGrandeCity_SidneysRoom_MapScript2_227F4D
+	map_script 1, gEverGrandeCity_SidneysRoom_MapScript1_227F1D
+	map_script 4, gEverGrandeCity_SidneysRoom_MapScript2_227F3E
+	map_script 3, gEverGrandeCity_SidneysRoom_MapScript1_227F16
+	map_script 2, gEverGrandeCity_SidneysRoom_MapScript2_227F4D
 	.byte 0
 
 gEverGrandeCity_SidneysRoom_MapScript1_227F16: ; 8227F16
@@ -31,9 +27,7 @@ gEverGrandeCity_SidneysRoom_EventScript_227F38: ; 8227F38
 
 gEverGrandeCity_DrakesRoom_MapScript2_227F3E: ; 8227F3E
 gEverGrandeCity_SidneysRoom_MapScript2_227F3E: ; 8227F3E
-	.2byte 16385
-	.2byte 0
-	.4byte gEverGrandeCity_SidneysRoom_EventScript_227F48
+	map_script_2 0x4001, 0, gEverGrandeCity_SidneysRoom_EventScript_227F48
 	.2byte 0
 
 gEverGrandeCity_SidneysRoom_EventScript_227F48: ; 8227F48
@@ -41,9 +35,7 @@ gEverGrandeCity_SidneysRoom_EventScript_227F48: ; 8227F48
 	end
 
 gEverGrandeCity_SidneysRoom_MapScript2_227F4D: ; 8227F4D
-	.2byte 16540
-	.2byte 0
-	.4byte gEverGrandeCity_SidneysRoom_EventScript_227F57
+	map_script_2 0x409c, 0, gEverGrandeCity_SidneysRoom_EventScript_227F57
 	.2byte 0
 
 gEverGrandeCity_SidneysRoom_EventScript_227F57: ; 8227F57
@@ -61,7 +53,7 @@ gEverGrandeCity_SidneysRoom_EventScript_227F64: ; 8227F64
 	playmusic 450, 0
 	loadptr 0, gEverGrandeCity_SidneysRoom_Text_227FA7
 	callstd 4
-	trainerbattle 3, 261, 0, gEverGrandeCity_SidneysRoom_Text_2280A2
+	trainerbattle 3, TRAINER_SIDNEY, 0, gEverGrandeCity_SidneysRoom_Text_2280A2
 	jump gEverGrandeCity_SidneysRoom_EventScript_227F95
 	end
 

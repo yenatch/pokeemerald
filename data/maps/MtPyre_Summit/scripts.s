@@ -1,6 +1,5 @@
 gMtPyre_Summit_MapScripts: ; 8231FF7
-	.byte 3
-	.4byte gMtPyre_Summit_MapScript1_231FFD
+	map_script 3, gMtPyre_Summit_MapScript1_231FFD
 	.byte 0
 
 gMtPyre_Summit_MapScript1_231FFD: ; 8231FFD
@@ -440,25 +439,25 @@ gMtPyre_Summit_Movement_2323F8: ; 82323F8
 	step_end
 
 gMtPyre_Summit_EventScript_2323FD: ; 82323FD
-	trainerbattle 0, 23, 0, gMtPyre_Summit_Text_232459, gMtPyre_Summit_Text_2324A0
+	trainerbattle 0, TRAINER_GRUNT_17, 0, gMtPyre_Summit_Text_232459, gMtPyre_Summit_Text_2324A0
 	loadptr 0, gMtPyre_Summit_Text_2324E0
 	callstd 6
 	end
 
 gMtPyre_Summit_EventScript_232414: ; 8232414
-	trainerbattle 0, 24, 0, gMtPyre_Summit_Text_232513, gMtPyre_Summit_Text_2325B0
+	trainerbattle 0, TRAINER_GRUNT_18, 0, gMtPyre_Summit_Text_232513, gMtPyre_Summit_Text_2325B0
 	loadptr 0, gMtPyre_Summit_Text_2325E4
 	callstd 6
 	end
 
 gMtPyre_Summit_EventScript_23242B: ; 823242B
-	trainerbattle 0, 25, 0, gMtPyre_Summit_Text_23261D, gMtPyre_Summit_Text_232678
+	trainerbattle 0, TRAINER_GRUNT_19, 0, gMtPyre_Summit_Text_23261D, gMtPyre_Summit_Text_232678
 	loadptr 0, gMtPyre_Summit_Text_2326B3
 	callstd 6
 	end
 
 gMtPyre_Summit_EventScript_232442: ; 8232442
-	trainerbattle 0, 569, 0, gMtPyre_Summit_Text_23271B, gMtPyre_Summit_Text_23279A
+	trainerbattle 0, TRAINER_GRUNT_29, 0, gMtPyre_Summit_Text_23271B, gMtPyre_Summit_Text_23279A
 	loadptr 0, gMtPyre_Summit_Text_2327D8
 	callstd 6
 	end

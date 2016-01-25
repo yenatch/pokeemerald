@@ -1,8 +1,6 @@
 gBattleFrontier_OutsideEast_MapScripts: ; 8242C04
-	.byte 5
-	.4byte gBattleFrontier_OutsideEast_MapScript1_242C0F
-	.byte 3
-	.4byte gBattleFrontier_OutsideEast_MapScript1_242C2D
+	map_script 5, gBattleFrontier_OutsideEast_MapScript1_242C0F
+	map_script 3, gBattleFrontier_OutsideEast_MapScript1_242C2D
 	.byte 0
 
 gBattleFrontier_OutsideEast_MapScript1_242C0F: ; 8242C0F

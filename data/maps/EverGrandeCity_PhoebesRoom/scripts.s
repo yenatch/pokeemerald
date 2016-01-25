@@ -1,16 +1,11 @@
 gEverGrandeCity_PhoebesRoom_MapScripts: ; 8228174
-	.byte 1
-	.4byte gEverGrandeCity_PhoebesRoom_MapScript1_2281AA
-	.byte 4
-	.4byte gEverGrandeCity_PhoebesRoom_MapScript2_228184
-	.byte 2
-	.4byte gEverGrandeCity_PhoebesRoom_MapScript2_228193
+	map_script 1, gEverGrandeCity_PhoebesRoom_MapScript1_2281AA
+	map_script 4, gEverGrandeCity_PhoebesRoom_MapScript2_228184
+	map_script 2, gEverGrandeCity_PhoebesRoom_MapScript2_228193
 	.byte 0
 
 gEverGrandeCity_PhoebesRoom_MapScript2_228184: ; 8228184
-	.2byte 16385
-	.2byte 0
-	.4byte gEverGrandeCity_PhoebesRoom_EventScript_22818E
+	map_script_2 0x4001, 0, gEverGrandeCity_PhoebesRoom_EventScript_22818E
 	.2byte 0
 
 gEverGrandeCity_PhoebesRoom_EventScript_22818E: ; 822818E
@@ -18,9 +13,7 @@ gEverGrandeCity_PhoebesRoom_EventScript_22818E: ; 822818E
 	end
 
 gEverGrandeCity_PhoebesRoom_MapScript2_228193: ; 8228193
-	.2byte 16540
-	.2byte 1
-	.4byte gEverGrandeCity_PhoebesRoom_EventScript_22819D
+	map_script_2 0x409c, 1, gEverGrandeCity_PhoebesRoom_EventScript_22819D
 	.2byte 0
 
 gEverGrandeCity_PhoebesRoom_EventScript_22819D: ; 822819D
@@ -53,7 +46,7 @@ gEverGrandeCity_PhoebesRoom_EventScript_2281CB: ; 82281CB
 	playmusic 450, 0
 	loadptr 0, gEverGrandeCity_PhoebesRoom_Text_22820E
 	callstd 4
-	trainerbattle 3, 262, 0, gEverGrandeCity_PhoebesRoom_Text_228325
+	trainerbattle 3, TRAINER_PHOEBE, 0, gEverGrandeCity_PhoebesRoom_Text_228325
 	jump gEverGrandeCity_PhoebesRoom_EventScript_2281FC
 	end
 

@@ -1,12 +1,8 @@
 gFarawayIsland_Interior_MapScripts: ; 8267CFA
-	.byte 5
-	.4byte gFarawayIsland_Interior_MapScript1_267D54
-	.byte 3
-	.4byte gFarawayIsland_Interior_MapScript1_267D72
-	.byte 2
-	.4byte gFarawayIsland_Interior_MapScript2_267D98
-	.byte 7
-	.4byte gFarawayIsland_Interior_MapScript1_267D0F
+	map_script 5, gFarawayIsland_Interior_MapScript1_267D54
+	map_script 3, gFarawayIsland_Interior_MapScript1_267D72
+	map_script 2, gFarawayIsland_Interior_MapScript2_267D98
+	map_script 7, gFarawayIsland_Interior_MapScript1_267D0F
 	.byte 0
 
 gFarawayIsland_Interior_MapScript1_267D0F: ; 8267D0F
@@ -58,9 +54,7 @@ gFarawayIsland_Interior_EventScript_267D86: ; 8267D86
 	return
 
 gFarawayIsland_Interior_MapScript2_267D98: ; 8267D98
-	.2byte 16385
-	.2byte 0
-	.4byte gFarawayIsland_Interior_EventScript_267DA2
+	map_script_2 0x4001, 0, gFarawayIsland_Interior_EventScript_267DA2
 	.2byte 0
 
 gFarawayIsland_Interior_EventScript_267DA2: ; 8267DA2

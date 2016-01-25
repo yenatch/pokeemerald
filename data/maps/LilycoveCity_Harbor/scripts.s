@@ -1,6 +1,5 @@
 gLilycoveCity_Harbor_MapScripts: ; 821E000
-	.byte 3
-	.4byte gLilycoveCity_Harbor_MapScript1_21E006
+	map_script 3, gLilycoveCity_Harbor_MapScript1_21E006
 	.byte 0
 
 gLilycoveCity_Harbor_MapScript1_21E006: ; 821E006

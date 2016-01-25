@@ -1,7 +1,7 @@
 gRoute121_SafariZoneEntrance_MapObjects: ; 8533EDC
-	object_event 1, 32, 0, 17, 0, 9, 0, 3, 9, 0, 0, 0, 0, 0, 0, gRoute121_SafariZoneEntrance_EventScript_22BBE6, 0, 0, 0
-	object_event 2, 31, 0, 10, 0, 2, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRoute121_SafariZoneEntrance_EventScript_22BBEF, 0, 0, 0
-	object_event 3, 31, 0, 8, 0, 2, 0, 3, 8, 0, 0, 0, 0, 0, 0, 0x0, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_PICNICKER, 0, 17, 0, 9, 0, 3, 9, 0, 0, 0, 0, 0, 0, gRoute121_SafariZoneEntrance_EventScript_22BBE6, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_CAMPER, 0, 10, 0, 2, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRoute121_SafariZoneEntrance_EventScript_22BBEF, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_CAMPER, 0, 8, 0, 2, 0, 3, 8, 0, 0, 0, 0, 0, 0, 0x0, 0, 0, 0
 
 gRoute121_SafariZoneEntrance_MapWarps: ; 8533F24
 	warp_def 2, 5, 0, 0, SafariZone_South

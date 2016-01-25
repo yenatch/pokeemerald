@@ -1,10 +1,7 @@
 gBirthIsland_Exterior_MapScripts: ; 8267F15
-	.byte 3
-	.4byte gBirthIsland_Exterior_MapScript1_267F29
-	.byte 5
-	.4byte gBirthIsland_Exterior_MapScript1_267F65
-	.byte 7
-	.4byte gBirthIsland_Exterior_MapScript1_267F25
+	map_script 3, gBirthIsland_Exterior_MapScript1_267F29
+	map_script 5, gBirthIsland_Exterior_MapScript1_267F65
+	map_script 7, gBirthIsland_Exterior_MapScript1_267F25
 	.byte 0
 
 gBirthIsland_Exterior_MapScript1_267F25: ; 8267F25

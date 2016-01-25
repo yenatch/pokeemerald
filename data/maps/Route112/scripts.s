@@ -1,6 +1,5 @@
 gRoute112_MapScripts: ; 81F1DA8
-	.byte 3
-	.4byte gRoute112_MapScript1_1F1DAE
+	map_script 3, gRoute112_MapScript1_1F1DAE
 	.byte 0
 
 gRoute112_MapScript1_1F1DAE: ; 81F1DAE
@@ -70,13 +69,13 @@ gRoute112_EventScript_1F1E61: ; 81F1E61
 	end
 
 gRoute112_EventScript_1F1E6A: ; 81F1E6A
-	trainerbattle 0, 626, 0, gRoute112_Text_29978E, gRoute112_Text_2997CA
+	trainerbattle 0, TRAINER_BRICE, 0, gRoute112_Text_29978E, gRoute112_Text_2997CA
 	loadptr 0, gRoute112_Text_2997DC
 	callstd 6
 	end
 
 gRoute112_EventScript_1F1E81: ; 81F1E81
-	trainerbattle 2, 627, 0, gRoute112_Text_299815, gRoute112_Text_29987C, gRoute112_EventScript_1F1EAD
+	trainerbattle 2, TRAINER_TRENT_1, 0, gRoute112_Text_299815, gRoute112_Text_29987C, gRoute112_EventScript_1F1EAD
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gRoute112_EventScript_1F1ECC
@@ -98,31 +97,31 @@ gRoute112_EventScript_1F1EAD: ; 81F1EAD
 	end
 
 gRoute112_EventScript_1F1ECC: ; 81F1ECC
-	trainerbattle 5, 627, 0, gRoute112_Text_2999BD, gRoute112_Text_2999F7
+	trainerbattle 5, TRAINER_TRENT_1, 0, gRoute112_Text_2999BD, gRoute112_Text_2999F7
 	loadptr 0, gRoute112_Text_299A0F
 	callstd 6
 	end
 
 gRoute112_EventScript_1F1EE3: ; 81F1EE3
-	trainerbattle 0, 213, 0, gRoute112_Text_299A89, gRoute112_Text_299AAC
+	trainerbattle 0, TRAINER_LARRY, 0, gRoute112_Text_299A89, gRoute112_Text_299AAC
 	loadptr 0, gRoute112_Text_299AB4
 	callstd 6
 	end
 
 gRoute112_EventScript_1F1EFA: ; 81F1EFA
-	trainerbattle 0, 471, 0, gRoute112_Text_299AE4, gRoute112_Text_299B36
+	trainerbattle 0, TRAINER_CAROL, 0, gRoute112_Text_299AE4, gRoute112_Text_299B36
 	loadptr 0, gRoute112_Text_299B4C
 	callstd 6
 	end
 
 gRoute112_EventScript_1F1F11: ; 81F1F11
-	trainerbattle 0, 746, 0, gRoute112_Text_299BAE, gRoute112_Text_299BDF
+	trainerbattle 0, TRAINER_BRYANT, 0, gRoute112_Text_299BAE, gRoute112_Text_299BDF
 	loadptr 0, gRoute112_Text_299BFB
 	callstd 6
 	end
 
 gRoute112_EventScript_1F1F28: ; 81F1F28
-	trainerbattle 0, 747, 0, gRoute112_Text_299C34, gRoute112_Text_299C8F
+	trainerbattle 0, TRAINER_SHAYLA, 0, gRoute112_Text_299C34, gRoute112_Text_299C8F
 	loadptr 0, gRoute112_Text_299CC6
 	callstd 6
 	end

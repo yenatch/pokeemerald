@@ -1,10 +1,7 @@
 gEverGrandeCity_ChampionsRoom_MapScripts: ; 82289EF
-	.byte 3
-	.4byte gEverGrandeCity_ChampionsRoom_MapScript1_2289FF
-	.byte 4
-	.4byte gEverGrandeCity_ChampionsRoom_MapScript2_228A05
-	.byte 2
-	.4byte gEverGrandeCity_ChampionsRoom_MapScript2_228A14
+	map_script 3, gEverGrandeCity_ChampionsRoom_MapScript1_2289FF
+	map_script 4, gEverGrandeCity_ChampionsRoom_MapScript2_228A05
+	map_script 2, gEverGrandeCity_ChampionsRoom_MapScript2_228A14
 	.byte 0
 
 gEverGrandeCity_ChampionsRoom_MapScript1_2289FF: ; 82289FF
@@ -12,9 +9,7 @@ gEverGrandeCity_ChampionsRoom_MapScript1_2289FF: ; 82289FF
 	end
 
 gEverGrandeCity_ChampionsRoom_MapScript2_228A05: ; 8228A05
-	.2byte 16385
-	.2byte 0
-	.4byte gEverGrandeCity_ChampionsRoom_EventScript_228A0F
+	map_script_2 0x4001, 0, gEverGrandeCity_ChampionsRoom_EventScript_228A0F
 	.2byte 0
 
 gEverGrandeCity_ChampionsRoom_EventScript_228A0F: ; 8228A0F
@@ -22,9 +17,7 @@ gEverGrandeCity_ChampionsRoom_EventScript_228A0F: ; 8228A0F
 	end
 
 gEverGrandeCity_ChampionsRoom_MapScript2_228A14: ; 8228A14
-	.2byte 16385
-	.2byte 0
-	.4byte gEverGrandeCity_ChampionsRoom_EventScript_228A1E
+	map_script_2 0x4001, 0, gEverGrandeCity_ChampionsRoom_EventScript_228A1E
 	.2byte 0
 
 gEverGrandeCity_ChampionsRoom_EventScript_228A1E: ; 8228A1E
@@ -48,7 +41,7 @@ gEverGrandeCity_ChampionsRoom_EventScript_228A45: ; 8228A45
 	playmusic 454, 0
 	loadptr 0, gEverGrandeCity_ChampionsRoom_Text_228C4C
 	callstd 4
-	trainerbattle 3, 335, 0, gEverGrandeCity_ChampionsRoom_Text_228EAC
+	trainerbattle 3, TRAINER_WALLACE, 0, gEverGrandeCity_ChampionsRoom_Text_228EAC
 	jump gEverGrandeCity_ChampionsRoom_EventScript_228A61
 	end
 

@@ -1,10 +1,7 @@
 gJaggedPass_MapScripts: ; 8230656
-	.byte 5
-	.4byte gJaggedPass_MapScript1_230666
-	.byte 3
-	.4byte gJaggedPass_MapScript1_23068B
-	.byte 1
-	.4byte gJaggedPass_MapScript1_23069C
+	map_script 5, gJaggedPass_MapScript1_230666
+	map_script 3, gJaggedPass_MapScript1_23068B
+	map_script 1, gJaggedPass_MapScript1_23069C
 	.byte 0
 
 gJaggedPass_MapScript1_230666: ; 8230666
@@ -85,7 +82,7 @@ gJaggedPass_EventScript_230718: ; 8230718
 	loadptr 0, gJaggedPass_Text_230CCB
 	callstd 4
 	closebutton
-	trainerbattle 3, 570, 0, gJaggedPass_Text_230D2D
+	trainerbattle 3, TRAINER_GRUNT_30, 0, gJaggedPass_Text_230D2D
 	setflag 313
 	move 5, gJaggedPass_Movement_2725A2
 	waitmove 0
@@ -104,13 +101,13 @@ gJaggedPass_EventScript_230766: ; 8230766
 	end
 
 gJaggedPass_EventScript_230785: ; 8230785
-	trainerbattle 0, 632, 0, gJaggedPass_Text_230888, gJaggedPass_Text_2308FF
+	trainerbattle 0, TRAINER_ERIC, 0, gJaggedPass_Text_230888, gJaggedPass_Text_2308FF
 	loadptr 0, gJaggedPass_Text_230916
 	callstd 6
 	end
 
 gJaggedPass_EventScript_23079C: ; 823079C
-	trainerbattle 2, 474, 0, gJaggedPass_Text_230974, gJaggedPass_Text_2309B5, gJaggedPass_EventScript_2307C8
+	trainerbattle 2, TRAINER_DIANA_1, 0, gJaggedPass_Text_230974, gJaggedPass_Text_2309B5, gJaggedPass_EventScript_2307C8
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gJaggedPass_EventScript_2307E4
@@ -131,13 +128,13 @@ gJaggedPass_EventScript_2307C8: ; 82307C8
 	end
 
 gJaggedPass_EventScript_2307E4: ; 82307E4
-	trainerbattle 5, 474, 0, gJaggedPass_Text_230A76, gJaggedPass_Text_230AAA
+	trainerbattle 5, TRAINER_DIANA_1, 0, gJaggedPass_Text_230A76, gJaggedPass_Text_230AAA
 	loadptr 0, gJaggedPass_Text_230AD7
 	callstd 6
 	end
 
 gJaggedPass_EventScript_2307FB: ; 82307FB
-	trainerbattle 2, 216, 0, gJaggedPass_Text_230B10, gJaggedPass_Text_230B50, gJaggedPass_EventScript_230827
+	trainerbattle 2, TRAINER_ETHAN_1, 0, gJaggedPass_Text_230B10, gJaggedPass_Text_230B50, gJaggedPass_EventScript_230827
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gJaggedPass_EventScript_230843
@@ -158,19 +155,19 @@ gJaggedPass_EventScript_230827: ; 8230827
 	end
 
 gJaggedPass_EventScript_230843: ; 8230843
-	trainerbattle 5, 216, 0, gJaggedPass_Text_230C28, gJaggedPass_Text_230C60
+	trainerbattle 5, TRAINER_ETHAN_1, 0, gJaggedPass_Text_230C28, gJaggedPass_Text_230C60
 	loadptr 0, gJaggedPass_Text_230C94
 	callstd 6
 	end
 
 gJaggedPass_EventScript_23085A: ; 823085A
-	trainerbattle 0, 566, 0, gJaggedPass_Text_230DF7, gJaggedPass_Text_230E38
+	trainerbattle 0, TRAINER_JULIO, 0, gJaggedPass_Text_230DF7, gJaggedPass_Text_230E38
 	loadptr 0, gJaggedPass_Text_230E57
 	callstd 6
 	end
 
 gJaggedPass_EventScript_230871: ; 8230871
-	trainerbattle 0, 217, 0, gJaggedPass_Text_230E8E, gJaggedPass_Text_230ECD
+	trainerbattle 0, TRAINER_AUTUMN, 0, gJaggedPass_Text_230E8E, gJaggedPass_Text_230ECD
 	loadptr 0, gJaggedPass_Text_230EE3
 	callstd 6
 	end

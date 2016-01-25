@@ -1,6 +1,5 @@
 gLavaridgeTown_Gym_B1F_MapScripts: ; 81FF87E
-	.byte 3
-	.4byte gLavaridgeTown_Gym_B1F_MapScript1_1FF884
+	map_script 3, gLavaridgeTown_Gym_B1F_MapScript1_1FF884
 	.byte 0
 
 gLavaridgeTown_Gym_B1F_MapScript1_1FF884: ; 81FF884

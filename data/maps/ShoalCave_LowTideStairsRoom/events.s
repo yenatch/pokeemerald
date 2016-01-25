@@ -1,5 +1,5 @@
 gShoalCave_LowTideStairsRoom_MapObjects: ; 8536394
-	object_event 1, 59, 0, 13, 0, 12, 0, 3, 1, 17, 0, 0, 0, 0, 0, gShoalCave_LowTideStairsRoom_EventScript_2913DA, 1083, 0, 0
+	object_event 1, FIELD_OBJ_GFX_ITEM_BALL, 0, 13, 0, 12, 0, 3, 1, 17, 0, 0, 0, 0, 0, gShoalCave_LowTideStairsRoom_EventScript_2913DA, 1083, 0, 0
 
 gShoalCave_LowTideStairsRoom_MapWarps: ; 85363AC
 	warp_def 3, 12, 3, 1, ShoalCave_LowTideInnerRoom

@@ -1,26 +1,26 @@
 gLilycoveCity_MapObjects: ; 8526CE8
-	object_event 1, 49, 0, 32, 0, 20, 0, 3, 3, 16, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2C53, 0, 0, 0
-	object_event 2, 8, 0, 15, 0, 18, 0, 3, 2, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2C2B, 0, 0, 0
-	object_event 3, 19, 0, 28, 0, 28, 0, 3, 1, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2C22, 0, 0, 0
-	object_event 4, 15, 0, 21, 0, 15, 0, 3, 2, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2C4A, 0, 0, 0
-	object_event 5, 23, 0, 16, 0, 9, 0, 5, 5, 1, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2C91, 0, 0, 0
-	object_event 6, 20, 0, 35, 0, 27, 0, 3, 2, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2C72, 0, 0, 0
-	object_event 7, 21, 0, 35, 0, 37, 0, 5, 8, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2C9A, 0, 0, 0
-	object_event 8, 22, 0, 34, 0, 37, 0, 5, 8, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2CA3, 0, 0, 0
-	object_event 9, 21, 0, 57, 0, 17, 0, 3, 1, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2CAC, 0, 0, 0
-	object_event 10, 117, 0, 73, 0, 15, 0, 3, 10, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2D7D, 852, 0, 0
-	object_event 11, 59, 0, 61, 0, 36, 0, 5, 1, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_2910E8, 1042, 0, 0
-	object_event 12, 117, 0, 43, 0, 18, 0, 3, 5, 1, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2DD5, 852, 0, 0
-	object_event 13, 117, 0, 46, 0, 12, 0, 3, 9, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2DBA, 852, 0, 0
-	object_event 14, 117, 0, 45, 0, 12, 0, 3, 10, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2DC3, 852, 0, 0
-	object_event 15, 117, 0, 38, 0, 9, 0, 5, 9, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2DCC, 852, 0, 0
-	object_event 16, 48, 0, 50, 0, 7, 0, 5, 2, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2BD8, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_SAILOR, 0, 32, 0, 20, 0, 3, 3, 16, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2C53, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_GIRL_1, 0, 15, 0, 18, 0, 3, 2, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2C2B, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_MAN_1, 0, 28, 0, 28, 0, 3, 1, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2C22, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_BOY_4, 0, 21, 0, 15, 0, 3, 2, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2C4A, 0, 0, 0
+	object_event 5, FIELD_OBJ_GFX_MAN_2, 0, 16, 0, 9, 0, 5, 5, 1, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2C91, 0, 0, 0
+	object_event 6, FIELD_OBJ_GFX_WOMAN_3, 0, 35, 0, 27, 0, 3, 2, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2C72, 0, 0, 0
+	object_event 7, FIELD_OBJ_GFX_OLD_MAN_1, 0, 35, 0, 37, 0, 5, 8, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2C9A, 0, 0, 0
+	object_event 8, FIELD_OBJ_GFX_OLD_WOMAN_1, 0, 34, 0, 37, 0, 5, 8, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2CA3, 0, 0, 0
+	object_event 9, FIELD_OBJ_GFX_OLD_MAN_1, 0, 57, 0, 17, 0, 3, 1, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2CAC, 0, 0, 0
+	object_event 10, FIELD_OBJ_GFX_AQUA_MEMBER_M, 0, 73, 0, 15, 0, 3, 10, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2D7D, 852, 0, 0
+	object_event 11, FIELD_OBJ_GFX_ITEM_BALL, 0, 61, 0, 36, 0, 5, 1, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_2910E8, 1042, 0, 0
+	object_event 12, FIELD_OBJ_GFX_AQUA_MEMBER_M, 0, 43, 0, 18, 0, 3, 5, 1, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2DD5, 852, 0, 0
+	object_event 13, FIELD_OBJ_GFX_AQUA_MEMBER_M, 0, 46, 0, 12, 0, 3, 9, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2DBA, 852, 0, 0
+	object_event 14, FIELD_OBJ_GFX_AQUA_MEMBER_M, 0, 45, 0, 12, 0, 3, 10, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2DC3, 852, 0, 0
+	object_event 15, FIELD_OBJ_GFX_AQUA_MEMBER_M, 0, 38, 0, 9, 0, 5, 9, 0, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2DCC, 852, 0, 0
+	object_event 16, FIELD_OBJ_GFX_GENTLEMAN, 0, 50, 0, 7, 0, 5, 2, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2BD8, 0, 0, 0
 	object_event 17, 240, 0, 27, 0, 7, 0, 5, 8, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2DDE, 971, 0, 0
-	object_event 18, 38, 0, 16, 0, 23, 0, 3, 10, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E302D, 0, 0, 0
-	object_event 19, 24, 0, 41, 0, 25, 0, 3, 9, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2CEE, 0, 0, 0
-	object_event 20, 23, 0, 40, 0, 25, 0, 3, 10, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2CDD, 0, 0, 0
-	object_event 21, 49, 0, 16, 0, 34, 0, 3, 8, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2CCB, 0, 0, 0
-	object_event 22, 17, 0, 16, 0, 35, 0, 3, 7, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2CD4, 0, 0, 0
+	object_event 18, FIELD_OBJ_GFX_SCHOOL_KID_M, 0, 16, 0, 23, 0, 3, 10, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E302D, 0, 0, 0
+	object_event 19, FIELD_OBJ_GFX_WOMAN_4, 0, 41, 0, 25, 0, 3, 9, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2CEE, 0, 0, 0
+	object_event 20, FIELD_OBJ_GFX_MAN_2, 0, 40, 0, 25, 0, 3, 10, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2CDD, 0, 0, 0
+	object_event 21, FIELD_OBJ_GFX_SAILOR, 0, 16, 0, 34, 0, 3, 8, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2CCB, 0, 0, 0
+	object_event 22, FIELD_OBJ_GFX_FAT_MAN, 0, 16, 0, 35, 0, 3, 7, 17, 0, 0, 0, 0, 0, gLilycoveCity_EventScript_1E2CD4, 0, 0, 0
 
 gLilycoveCity_MapWarps: ; 8526EF8
 	warp_def 27, 6, 0, 0, LilycoveCity_DepartmentStore_1F

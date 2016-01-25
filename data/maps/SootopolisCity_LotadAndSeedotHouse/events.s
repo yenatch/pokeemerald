@@ -1,6 +1,6 @@
 gSootopolisCity_LotadAndSeedotHouse_MapObjects: ; 853352C
-	object_event 1, 50, 0, 2, 0, 4, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSootopolisCity_LotadAndSeedotHouse_EventScript_2272BC, 0, 0, 0
-	object_event 2, 55, 0, 5, 0, 4, 0, 3, 9, 0, 0, 0, 0, 0, 0, gSootopolisCity_LotadAndSeedotHouse_EventScript_22722B, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_FISHERMAN, 0, 2, 0, 4, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSootopolisCity_LotadAndSeedotHouse_EventScript_2272BC, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_HIKER, 0, 5, 0, 4, 0, 3, 9, 0, 0, 0, 0, 0, 0, gSootopolisCity_LotadAndSeedotHouse_EventScript_22722B, 0, 0, 0
 
 gSootopolisCity_LotadAndSeedotHouse_MapWarps: ; 853355C
 	warp_def 3, 6, 0, 11, SootopolisCity

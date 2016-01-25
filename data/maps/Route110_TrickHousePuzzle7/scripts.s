@@ -1,12 +1,8 @@
 gRoute110_TrickHousePuzzle7_MapScripts: ; 826E091
-	.byte 5
-	.4byte gRoute110_TrickHousePuzzle7_MapScript1_26E0A6
-	.byte 3
-	.4byte gRoute110_TrickHousePuzzle7_MapScript1_26E198
-	.byte 1
-	.4byte gRoute110_TrickHousePuzzle7_MapScript1_26E1B4
-	.byte 2
-	.4byte gRoute110_TrickHousePuzzle7_MapScript2_26E1C0
+	map_script 5, gRoute110_TrickHousePuzzle7_MapScript1_26E0A6
+	map_script 3, gRoute110_TrickHousePuzzle7_MapScript1_26E198
+	map_script 1, gRoute110_TrickHousePuzzle7_MapScript1_26E1B4
+	map_script 2, gRoute110_TrickHousePuzzle7_MapScript2_26E1C0
 	.byte 0
 
 gRoute110_TrickHousePuzzle7_MapScript1_26E0A6: ; 826E0A6
@@ -72,9 +68,7 @@ gRoute110_TrickHousePuzzle7_MapScript1_26E1B4: ; 826E1B4
 	end
 
 gRoute110_TrickHousePuzzle7_MapScript2_26E1C0: ; 826E1C0
-	.2byte 16566
-	.2byte 1
-	.4byte gRoute110_TrickHousePuzzle7_EventScript_26E1CA
+	map_script_2 0x40b6, 1, gRoute110_TrickHousePuzzle7_EventScript_26E1CA
 	.2byte 0
 
 gRoute110_TrickHousePuzzle7_EventScript_26E1CA: ; 826E1CA
@@ -146,37 +140,37 @@ gRoute110_TrickHousePuzzle7_EventScript_26E35D: ; 826E35D
 	.incbin "base_emerald.gba", 0x26e373, 0x16
 
 gRoute110_TrickHousePuzzle7_EventScript_26E389: ; 826E389
-	trainerbattle 0, 237, 0, gRoute110_TrickHousePuzzle7_Text_26E481, gRoute110_TrickHousePuzzle7_Text_26E4C1
+	trainerbattle 0, TRAINER_JOSHUA, 0, gRoute110_TrickHousePuzzle7_Text_26E481, gRoute110_TrickHousePuzzle7_Text_26E4C1
 	loadptr 0, gRoute110_TrickHousePuzzle7_Text_26E4F4
 	callstd 6
 	end
 
 gRoute110_TrickHousePuzzle7_EventScript_26E3A0: ; 826E3A0
-	trainerbattle 0, 105, 0, gRoute110_TrickHousePuzzle7_Text_26E531, gRoute110_TrickHousePuzzle7_Text_26E564
+	trainerbattle 0, TRAINER_PATRICIA, 0, gRoute110_TrickHousePuzzle7_Text_26E531, gRoute110_TrickHousePuzzle7_Text_26E564
 	loadptr 0, gRoute110_TrickHousePuzzle7_Text_26E57F
 	callstd 6
 	end
 
 gRoute110_TrickHousePuzzle7_EventScript_26E3B7: ; 826E3B7
-	trainerbattle 0, 248, 0, gRoute110_TrickHousePuzzle7_Text_26E5C0, gRoute110_TrickHousePuzzle7_Text_26E604
+	trainerbattle 0, TRAINER_ALEXIS, 0, gRoute110_TrickHousePuzzle7_Text_26E5C0, gRoute110_TrickHousePuzzle7_Text_26E604
 	loadptr 0, gRoute110_TrickHousePuzzle7_Text_26E61E
 	callstd 6
 	end
 
 gRoute110_TrickHousePuzzle7_EventScript_26E3CE: ; 826E3CE
-	trainerbattle 0, 848, 0, gRoute110_TrickHousePuzzle7_Text_26E66B, gRoute110_TrickHousePuzzle7_Text_26E69C
+	trainerbattle 0, TRAINER_MARIELA, 0, gRoute110_TrickHousePuzzle7_Text_26E66B, gRoute110_TrickHousePuzzle7_Text_26E69C
 	loadptr 0, gRoute110_TrickHousePuzzle7_Text_26E6BC
 	callstd 6
 	end
 
 gRoute110_TrickHousePuzzle7_EventScript_26E3E5: ; 826E3E5
-	trainerbattle 0, 849, 0, gRoute110_TrickHousePuzzle7_Text_26E6DA, gRoute110_TrickHousePuzzle7_Text_26E700
+	trainerbattle 0, TRAINER_ALVARO, 0, gRoute110_TrickHousePuzzle7_Text_26E6DA, gRoute110_TrickHousePuzzle7_Text_26E700
 	loadptr 0, gRoute110_TrickHousePuzzle7_Text_26E722
 	callstd 6
 	end
 
 gRoute110_TrickHousePuzzle7_EventScript_26E3FC: ; 826E3FC
-	trainerbattle 0, 850, 0, gRoute110_TrickHousePuzzle7_Text_26E78D, gRoute110_TrickHousePuzzle7_Text_26E7AB
+	trainerbattle 0, TRAINER_EVERETT, 0, gRoute110_TrickHousePuzzle7_Text_26E78D, gRoute110_TrickHousePuzzle7_Text_26E7AB
 	loadptr 0, gRoute110_TrickHousePuzzle7_Text_26E7C4
 	callstd 6
 	end

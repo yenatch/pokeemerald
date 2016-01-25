@@ -1,22 +1,15 @@
 gMossdeepCity_GameCorner_1F_MapScripts: ; 8224B27
-	.byte 2
-	.4byte gMossdeepCity_GameCorner_1F_MapScript2_224B41
-	.byte 4
-	.4byte gMossdeepCity_GameCorner_1F_MapScript2_224B37
-	.byte 1
-	.4byte gMossdeepCity_GameCorner_1F_MapScript1_276BBE
+	map_script 2, gMossdeepCity_GameCorner_1F_MapScript2_224B41
+	map_script 4, gMossdeepCity_GameCorner_1F_MapScript2_224B37
+	map_script 1, gMossdeepCity_GameCorner_1F_MapScript1_276BBE
 	.byte 0
 
 gMossdeepCity_GameCorner_1F_MapScript2_224B37: ; 8224B37
-	.2byte 16519
-	.2byte 8
-	.4byte gMossdeepCity_GameCorner_1F_EventScript_276BAE
+	map_script_2 0x4087, 8, gMossdeepCity_GameCorner_1F_EventScript_276BAE
 	.2byte 0
 
 gMossdeepCity_GameCorner_1F_MapScript2_224B41: ; 8224B41
-	.2byte 16519
-	.2byte 8
-	.4byte gMossdeepCity_GameCorner_1F_EventScript_276C9D
+	map_script_2 0x4087, 8, gMossdeepCity_GameCorner_1F_EventScript_276C9D
 	.2byte 0
 
 gMossdeepCity_GameCorner_1F_EventScript_224B4B: ; 8224B4B

@@ -1,10 +1,7 @@
 gUnderwater_SeafloorCavern_MapScripts: ; 823433B
-	.byte 5
-	.4byte gUnderwater_SeafloorCavern_MapScript1_2343D3
-	.byte 3
-	.4byte gUnderwater_SeafloorCavern_MapScript1_23434B
-	.byte 1
-	.4byte gUnderwater_SeafloorCavern_MapScript1_23435C
+	map_script 5, gUnderwater_SeafloorCavern_MapScript1_2343D3
+	map_script 3, gUnderwater_SeafloorCavern_MapScript1_23434B
+	map_script 1, gUnderwater_SeafloorCavern_MapScript1_23435C
 	.byte 0
 
 gUnderwater_SeafloorCavern_MapScript1_23434B: ; 823434B

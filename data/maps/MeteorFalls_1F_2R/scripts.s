@@ -2,7 +2,7 @@ gMeteorFalls_1F_2R_MapScripts: ; 822C4DD
 	.byte 0
 
 gMeteorFalls_1F_2R_EventScript_22C4DE: ; 822C4DE
-	trainerbattle 2, 392, 0, gMeteorFalls_1F_2R_Text_22C608, gMeteorFalls_1F_2R_Text_22C678, gMeteorFalls_1F_2R_EventScript_22C50A
+	trainerbattle 2, TRAINER_NICOLAS_1, 0, gMeteorFalls_1F_2R_Text_22C608, gMeteorFalls_1F_2R_Text_22C678, gMeteorFalls_1F_2R_EventScript_22C50A
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gMeteorFalls_1F_2R_EventScript_22C529
@@ -24,13 +24,13 @@ gMeteorFalls_1F_2R_EventScript_22C50A: ; 822C50A
 	end
 
 gMeteorFalls_1F_2R_EventScript_22C529: ; 822C529
-	trainerbattle 5, 392, 0, gMeteorFalls_1F_2R_Text_22C73F, gMeteorFalls_1F_2R_Text_22C7AD
+	trainerbattle 5, TRAINER_NICOLAS_1, 0, gMeteorFalls_1F_2R_Text_22C73F, gMeteorFalls_1F_2R_Text_22C7AD
 	loadptr 0, gMeteorFalls_1F_2R_Text_22C7D8
 	callstd 6
 	end
 
 gMeteorFalls_1F_2R_EventScript_22C540: ; 822C540
-	trainerbattle 6, 681, 0, gMeteorFalls_1F_2R_Text_22C843, gMeteorFalls_1F_2R_Text_22C89C, gMeteorFalls_1F_2R_Text_22C92B, gMeteorFalls_1F_2R_EventScript_22C570
+	trainerbattle 6, TRAINER_JOHN_AND_JAY_1, 0, gMeteorFalls_1F_2R_Text_22C843, gMeteorFalls_1F_2R_Text_22C89C, gMeteorFalls_1F_2R_Text_22C92B, gMeteorFalls_1F_2R_EventScript_22C570
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gMeteorFalls_1F_2R_EventScript_22C589
@@ -50,13 +50,13 @@ gMeteorFalls_1F_2R_EventScript_22C570: ; 822C570
 	end
 
 gMeteorFalls_1F_2R_EventScript_22C589: ; 822C589
-	trainerbattle 7, 681, 0, gMeteorFalls_1F_2R_Text_22CB47, gMeteorFalls_1F_2R_Text_22CBA0, gMeteorFalls_1F_2R_Text_22CC27
+	trainerbattle 7, TRAINER_JOHN_AND_JAY_1, 0, gMeteorFalls_1F_2R_Text_22CB47, gMeteorFalls_1F_2R_Text_22CBA0, gMeteorFalls_1F_2R_Text_22CC27
 	loadptr 0, gMeteorFalls_1F_2R_Text_22CBC5
 	callstd 6
 	end
 
 gMeteorFalls_1F_2R_EventScript_22C5A4: ; 822C5A4
-	trainerbattle 6, 681, 0, gMeteorFalls_1F_2R_Text_22C9E6, gMeteorFalls_1F_2R_Text_22CA44, gMeteorFalls_1F_2R_Text_22CACD, gMeteorFalls_1F_2R_EventScript_22C5D4
+	trainerbattle 6, TRAINER_JOHN_AND_JAY_1, 0, gMeteorFalls_1F_2R_Text_22C9E6, gMeteorFalls_1F_2R_Text_22CA44, gMeteorFalls_1F_2R_Text_22CACD, gMeteorFalls_1F_2R_EventScript_22C5D4
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gMeteorFalls_1F_2R_EventScript_22C5ED
@@ -76,7 +76,7 @@ gMeteorFalls_1F_2R_EventScript_22C5D4: ; 822C5D4
 	end
 
 gMeteorFalls_1F_2R_EventScript_22C5ED: ; 822C5ED
-	trainerbattle 7, 681, 0, gMeteorFalls_1F_2R_Text_22CC98, gMeteorFalls_1F_2R_Text_22CD08, gMeteorFalls_1F_2R_Text_22CDAB
+	trainerbattle 7, TRAINER_JOHN_AND_JAY_1, 0, gMeteorFalls_1F_2R_Text_22CC98, gMeteorFalls_1F_2R_Text_22CD08, gMeteorFalls_1F_2R_Text_22CDAB
 	loadptr 0, gMeteorFalls_1F_2R_Text_22CD34
 	callstd 6
 	end

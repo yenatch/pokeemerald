@@ -1,8 +1,6 @@
 gTrainerHill_Roof_MapScripts: ; 8268FA7
-	.byte 5
-	.4byte gTrainerHill_Roof_MapScript1_2C8336
-	.byte 2
-	.4byte gTrainerHill_Roof_MapScript2_2C8381
+	map_script 5, gTrainerHill_Roof_MapScript1_2C8336
+	map_script 2, gTrainerHill_Roof_MapScript2_2C8381
 	.byte 0
 
 gTrainerHill_Roof_EventScript_268FB2: ; 8268FB2

@@ -1,8 +1,6 @@
 gLavaridgeTown_MapScripts: ; 81EA4D3
-	.byte 3
-	.4byte gLavaridgeTown_MapScript1_1EA4DE
-	.byte 2
-	.4byte gLavaridgeTown_MapScript2_1EA547
+	map_script 3, gLavaridgeTown_MapScript1_1EA4DE
+	map_script 2, gLavaridgeTown_MapScript2_1EA547
 	.byte 0
 
 gLavaridgeTown_MapScript1_1EA4DE: ; 81EA4DE
@@ -45,9 +43,7 @@ gLavaridgeTown_EventScript_1EA543: ; 81EA543
 	return
 
 gLavaridgeTown_MapScript2_1EA547: ; 81EA547
-	.2byte 16467
-	.2byte 1
-	.4byte gLavaridgeTown_EventScript_1EA551
+	map_script_2 0x4053, 1, gLavaridgeTown_EventScript_1EA551
 	.2byte 0
 
 gLavaridgeTown_EventScript_1EA551: ; 81EA551

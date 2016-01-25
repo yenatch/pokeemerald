@@ -1,6 +1,5 @@
 gVerdanturfTown_MapScripts: ; 81EB566
-	.byte 3
-	.4byte gVerdanturfTown_MapScript1_1EB56C
+	map_script 3, gVerdanturfTown_MapScript1_1EB56C
 	.byte 0
 
 gVerdanturfTown_MapScript1_1EB56C: ; 81EB56C

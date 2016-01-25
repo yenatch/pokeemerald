@@ -1,9 +1,9 @@
 gRoute110_TrickHousePuzzle2_MapObjects: ; 853E128
-	object_event 1, 38, 0, 13, 0, 10, 0, 3, 10, 0, 0, 1, 0, 1, 0, gRoute110_TrickHousePuzzle2_EventScript_26BC75, 0, 0, 0
-	object_event 2, 38, 0, 10, 0, 17, 0, 3, 8, 0, 0, 1, 0, 4, 0, gRoute110_TrickHousePuzzle2_EventScript_26BC8C, 0, 0, 0
-	object_event 3, 14, 0, 11, 0, 9, 0, 3, 9, 0, 0, 1, 0, 2, 0, gRoute110_TrickHousePuzzle2_EventScript_26BCA3, 0, 0, 0
-	object_event 4, 59, 0, 8, 0, 17, 0, 3, 1, 0, 0, 0, 0, 0, 0, gRoute110_TrickHousePuzzle2_EventScript_291428, 1062, 0, 0
-	object_event 5, 59, 0, 3, 0, 13, 0, 3, 1, 0, 0, 0, 0, 0, 0, gRoute110_TrickHousePuzzle2_EventScript_29141B, 1061, 0, 0
+	object_event 1, FIELD_OBJ_GFX_SCHOOL_KID_M, 0, 13, 0, 10, 0, 3, 10, 0, 0, 1, 0, 1, 0, gRoute110_TrickHousePuzzle2_EventScript_26BC75, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_SCHOOL_KID_M, 0, 10, 0, 17, 0, 3, 8, 0, 0, 1, 0, 4, 0, gRoute110_TrickHousePuzzle2_EventScript_26BC8C, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_GIRL_3, 0, 11, 0, 9, 0, 3, 9, 0, 0, 1, 0, 2, 0, gRoute110_TrickHousePuzzle2_EventScript_26BCA3, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_ITEM_BALL, 0, 8, 0, 17, 0, 3, 1, 0, 0, 0, 0, 0, 0, gRoute110_TrickHousePuzzle2_EventScript_291428, 1062, 0, 0
+	object_event 5, FIELD_OBJ_GFX_ITEM_BALL, 0, 3, 0, 13, 0, 3, 1, 0, 0, 0, 0, 0, 0, gRoute110_TrickHousePuzzle2_EventScript_29141B, 1061, 0, 0
 
 gRoute110_TrickHousePuzzle2_MapWarps: ; 853E1A0
 	warp_def 0, 21, 3, 2, Route110_TrickHouseEntrance

@@ -1,18 +1,13 @@
 gEverGrandeCity_DrakesRoom_MapScripts: ; 822869C
-	.byte 2
-	.4byte gEverGrandeCity_DrakesRoom_MapScript2_2286BB
-	.byte 1
-	.4byte gEverGrandeCity_DrakesRoom_MapScript1_2286D2
-	.byte 4
-	.4byte gEverGrandeCity_DrakesRoom_MapScript2_227F3E
+	map_script 2, gEverGrandeCity_DrakesRoom_MapScript2_2286BB
+	map_script 1, gEverGrandeCity_DrakesRoom_MapScript1_2286D2
+	map_script 4, gEverGrandeCity_DrakesRoom_MapScript2_227F3E
 	.byte 0
 
 	.incbin "base_emerald.gba", 0x2286ac, 0xf
 
 gEverGrandeCity_DrakesRoom_MapScript2_2286BB: ; 82286BB
-	.2byte 16540
-	.2byte 3
-	.4byte gEverGrandeCity_DrakesRoom_EventScript_2286C5
+	map_script_2 0x409c, 3, gEverGrandeCity_DrakesRoom_EventScript_2286C5
 	.2byte 0
 
 gEverGrandeCity_DrakesRoom_EventScript_2286C5: ; 82286C5
@@ -45,7 +40,7 @@ gEverGrandeCity_DrakesRoom_EventScript_2286F3: ; 82286F3
 	playmusic 450, 0
 	loadptr 0, gEverGrandeCity_DrakesRoom_Text_22873E
 	callstd 4
-	trainerbattle 3, 264, 0, gEverGrandeCity_DrakesRoom_Text_228895
+	trainerbattle 3, TRAINER_DRAKE, 0, gEverGrandeCity_DrakesRoom_Text_228895
 	jump gEverGrandeCity_DrakesRoom_EventScript_228724
 	end
 

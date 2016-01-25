@@ -1,18 +1,11 @@
 gLilycoveCity_DepartmentStore_5F_MapScripts: ; 821FF7A
-	.byte 4
-	.4byte gLilycoveCity_DepartmentStore_5F_MapScript2_21FF80
+	map_script 4, gLilycoveCity_DepartmentStore_5F_MapScript2_21FF80
 	.byte 0
 
 gLilycoveCity_DepartmentStore_5F_MapScript2_21FF80: ; 821FF80
-	.2byte 16478
-	.2byte 1
-	.4byte gLilycoveCity_DepartmentStore_5F_EventScript_21FF9A
-	.2byte 16478
-	.2byte 2
-	.4byte gLilycoveCity_DepartmentStore_5F_EventScript_21FF9A
-	.2byte 16478
-	.2byte 3
-	.4byte gLilycoveCity_DepartmentStore_5F_EventScript_21FF9A
+	map_script_2 0x405e, 1, gLilycoveCity_DepartmentStore_5F_EventScript_21FF9A
+	map_script_2 0x405e, 2, gLilycoveCity_DepartmentStore_5F_EventScript_21FF9A
+	map_script_2 0x405e, 3, gLilycoveCity_DepartmentStore_5F_EventScript_21FF9A
 	.2byte 0
 
 gLilycoveCity_DepartmentStore_5F_EventScript_21FF9A: ; 821FF9A

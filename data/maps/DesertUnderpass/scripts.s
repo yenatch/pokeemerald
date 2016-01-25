@@ -1,6 +1,5 @@
 gDesertUnderpass_MapScripts: ; 823AF37
-	.byte 3
-	.4byte gDesertUnderpass_MapScript1_23AF3D
+	map_script 3, gDesertUnderpass_MapScript1_23AF3D
 	.byte 0
 
 gDesertUnderpass_MapScript1_23AF3D: ; 823AF3D

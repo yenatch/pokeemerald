@@ -1,12 +1,12 @@
 gSlateportCity_Harbor_MapObjects: ; 852FA68
-	object_event 1, 45, 0, 8, 0, 10, 0, 3, 8, 0, 0, 0, 0, 0, 0, gSlateportCity_Harbor_EventScript_20CAF1, 905, 0, 0
-	object_event 2, 49, 0, 4, 0, 12, 0, 3, 9, 0, 0, 0, 0, 0, 0, gSlateportCity_Harbor_EventScript_20CC52, 905, 0, 0
-	object_event 3, 17, 0, 1, 0, 12, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSlateportCity_Harbor_EventScript_20CC99, 905, 0, 0
-	object_event 4, 46, 0, 6, 0, 13, 0, 3, 1, 0, 0, 0, 0, 0, 0, gSlateportCity_Harbor_EventScript_20CCA2, 841, 0, 0
-	object_event 5, 140, 0, 8, 0, 9, 0, 1, 10, 0, 0, 0, 0, 0, 0, 0x0, 860, 0, 0
-	object_event 6, 117, 0, 7, 0, 10, 0, 3, 10, 0, 0, 0, 0, 0, 0, 0x0, 845, 0, 0
-	object_event 7, 195, 0, 8, 0, 10, 0, 3, 9, 0, 0, 0, 0, 0, 0, 0x0, 846, 0, 0
-	object_event 8, 141, 0, 7, 0, 9, 0, 1, 10, 0, 0, 0, 0, 0, 0, 0x0, 848, 0, 0
+	object_event 1, FIELD_OBJ_GFX_BEAUTY, 0, 8, 0, 10, 0, 3, 8, 0, 0, 0, 0, 0, 0, gSlateportCity_Harbor_EventScript_20CAF1, 905, 0, 0
+	object_event 2, FIELD_OBJ_GFX_SAILOR, 0, 4, 0, 12, 0, 3, 9, 0, 0, 0, 0, 0, 0, gSlateportCity_Harbor_EventScript_20CC52, 905, 0, 0
+	object_event 3, FIELD_OBJ_GFX_FAT_MAN, 0, 1, 0, 12, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSlateportCity_Harbor_EventScript_20CC99, 905, 0, 0
+	object_event 4, FIELD_OBJ_GFX_SCIENTIST_1, 0, 6, 0, 13, 0, 3, 1, 0, 0, 0, 0, 0, 0, gSlateportCity_Harbor_EventScript_20CCA2, 841, 0, 0
+	object_event 5, FIELD_OBJ_GFX_SS_TIDAL, 0, 8, 0, 9, 0, 1, 10, 0, 0, 0, 0, 0, 0, 0x0, 860, 0, 0
+	object_event 6, FIELD_OBJ_GFX_AQUA_MEMBER_M, 0, 7, 0, 10, 0, 3, 10, 0, 0, 0, 0, 0, 0, 0x0, 845, 0, 0
+	object_event 7, FIELD_OBJ_GFX_ARCHIE, 0, 8, 0, 10, 0, 3, 9, 0, 0, 0, 0, 0, 0, 0x0, 846, 0, 0
+	object_event 8, FIELD_OBJ_GFX_SUBMARINE_SHADOW, 0, 7, 0, 9, 0, 1, 10, 0, 0, 0, 0, 0, 0, 0x0, 848, 0, 0
 
 gSlateportCity_Harbor_MapWarps: ; 852FB28
 	warp_def 11, 14, 0, 8, SlateportCity

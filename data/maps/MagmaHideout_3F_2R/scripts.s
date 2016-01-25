@@ -2,7 +2,7 @@ gMagmaHideout_3F_2R_MapScripts: ; 823A3D4
 	.byte 0
 
 gMagmaHideout_3F_2R_EventScript_23A3D5: ; 823A3D5
-	trainerbattle 0, 725, 0, gMagmaHideout_3F_2R_Text_23A3EC, gMagmaHideout_3F_2R_Text_23A4BB
+	trainerbattle 0, TRAINER_GRUNT_47, 0, gMagmaHideout_3F_2R_Text_23A3EC, gMagmaHideout_3F_2R_Text_23A4BB
 	loadptr 0, gMagmaHideout_3F_2R_Text_23A4EF
 	callstd 6
 	end

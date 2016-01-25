@@ -1,14 +1,10 @@
 gFallarborTown_BattleTentLobby_MapScripts: ; 81FFE66
-	.byte 2
-	.4byte gFallarborTown_BattleTentLobby_MapScript2_1FFE85
-	.byte 4
-	.4byte gFallarborTown_BattleTentLobby_MapScript2_1FFE71
+	map_script 2, gFallarborTown_BattleTentLobby_MapScript2_1FFE85
+	map_script 4, gFallarborTown_BattleTentLobby_MapScript2_1FFE71
 	.byte 0
 
 gFallarborTown_BattleTentLobby_MapScript2_1FFE71: ; 81FFE71
-	.2byte 16385
-	.2byte 0
-	.4byte gFallarborTown_BattleTentLobby_EventScript_1FFE7B
+	map_script_2 0x4001, 0, gFallarborTown_BattleTentLobby_EventScript_1FFE7B
 	.2byte 0
 
 gFallarborTown_BattleTentLobby_EventScript_1FFE7B: ; 81FFE7B
@@ -17,21 +13,11 @@ gFallarborTown_BattleTentLobby_EventScript_1FFE7B: ; 81FFE7B
 	end
 
 gFallarborTown_BattleTentLobby_MapScript2_1FFE85: ; 81FFE85
-	.2byte 16384
-	.2byte 0
-	.4byte gFallarborTown_BattleTentLobby_EventScript_1FFEAF
-	.2byte 16384
-	.2byte 1
-	.4byte gFallarborTown_BattleTentLobby_EventScript_1FFEB8
-	.2byte 16384
-	.2byte 2
-	.4byte gFallarborTown_BattleTentLobby_EventScript_1FFFCD
-	.2byte 16384
-	.2byte 3
-	.4byte gFallarborTown_BattleTentLobby_EventScript_1FFEED
-	.2byte 16384
-	.2byte 4
-	.4byte gFallarborTown_BattleTentLobby_EventScript_1FFF93
+	map_script_2 0x4000, 0, gFallarborTown_BattleTentLobby_EventScript_1FFEAF
+	map_script_2 0x4000, 1, gFallarborTown_BattleTentLobby_EventScript_1FFEB8
+	map_script_2 0x4000, 2, gFallarborTown_BattleTentLobby_EventScript_1FFFCD
+	map_script_2 0x4000, 3, gFallarborTown_BattleTentLobby_EventScript_1FFEED
+	map_script_2 0x4000, 4, gFallarborTown_BattleTentLobby_EventScript_1FFF93
 	.2byte 0
 
 gFallarborTown_BattleTentLobby_EventScript_1FFEAF: ; 81FFEAF

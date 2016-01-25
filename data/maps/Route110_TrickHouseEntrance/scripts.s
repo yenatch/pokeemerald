@@ -1,10 +1,7 @@
 gRoute110_TrickHouseEntrance_MapScripts: ; 8269A50
-	.byte 3
-	.4byte gRoute110_TrickHouseEntrance_MapScript1_269A60
-	.byte 2
-	.4byte gRoute110_TrickHouseEntrance_MapScript2_269CEE
-	.byte 4
-	.4byte gRoute110_TrickHouseEntrance_MapScript2_269BD3
+	map_script 3, gRoute110_TrickHouseEntrance_MapScript1_269A60
+	map_script 2, gRoute110_TrickHouseEntrance_MapScript2_269CEE
+	map_script 4, gRoute110_TrickHouseEntrance_MapScript2_269BD3
 	.byte 0
 
 gRoute110_TrickHouseEntrance_MapScript1_269A60: ; 8269A60
@@ -133,30 +130,14 @@ gRoute110_TrickHouseEntrance_EventScript_269BCD: ; 8269BCD
 	end
 
 gRoute110_TrickHouseEntrance_MapScript2_269BD3: ; 8269BD3
-	.2byte 16550
-	.2byte 1
-	.4byte gRoute110_TrickHouseEntrance_EventScript_269C15
-	.2byte 16551
-	.2byte 0
-	.4byte gRoute110_TrickHouseEntrance_EventScript_269C26
-	.2byte 16551
-	.2byte 1
-	.4byte gRoute110_TrickHouseEntrance_EventScript_269CCC
-	.2byte 16551
-	.2byte 2
-	.4byte gRoute110_TrickHouseEntrance_EventScript_269CD0
-	.2byte 16551
-	.2byte 3
-	.4byte gRoute110_TrickHouseEntrance_EventScript_269CD0
-	.2byte 16551
-	.2byte 4
-	.4byte gRoute110_TrickHouseEntrance_EventScript_269CCC
-	.2byte 16551
-	.2byte 5
-	.4byte gRoute110_TrickHouseEntrance_EventScript_269CCC
-	.2byte 16551
-	.2byte 6
-	.4byte gRoute110_TrickHouseEntrance_EventScript_269CDF
+	map_script_2 0x40a6, 1, gRoute110_TrickHouseEntrance_EventScript_269C15
+	map_script_2 0x40a7, 0, gRoute110_TrickHouseEntrance_EventScript_269C26
+	map_script_2 0x40a7, 1, gRoute110_TrickHouseEntrance_EventScript_269CCC
+	map_script_2 0x40a7, 2, gRoute110_TrickHouseEntrance_EventScript_269CD0
+	map_script_2 0x40a7, 3, gRoute110_TrickHouseEntrance_EventScript_269CD0
+	map_script_2 0x40a7, 4, gRoute110_TrickHouseEntrance_EventScript_269CCC
+	map_script_2 0x40a7, 5, gRoute110_TrickHouseEntrance_EventScript_269CCC
+	map_script_2 0x40a7, 6, gRoute110_TrickHouseEntrance_EventScript_269CDF
 	.2byte 0
 
 gRoute110_TrickHouseEntrance_EventScript_269C15: ; 8269C15
@@ -237,9 +218,7 @@ gRoute110_TrickHouseEntrance_EventScript_269CDF: ; 8269CDF
 	end
 
 gRoute110_TrickHouseEntrance_MapScript2_269CEE: ; 8269CEE
-	.2byte 16550
-	.2byte 1
-	.4byte gRoute110_TrickHouseEntrance_EventScript_269CF8
+	map_script_2 0x40a6, 1, gRoute110_TrickHouseEntrance_EventScript_269CF8
 	.2byte 0
 
 gRoute110_TrickHouseEntrance_EventScript_269CF8: ; 8269CF8

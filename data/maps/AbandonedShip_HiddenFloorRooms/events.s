@@ -1,8 +1,8 @@
 gAbandonedShip_HiddenFloorRooms_MapObjects: ; 8536B40
-	object_event 1, 59, 0, 41, 0, 4, 0, 3, 1, 0, 0, 0, 0, 0, 0, gAbandonedShip_HiddenFloorRooms_EventScript_29127B, 1077, 0, 0
-	object_event 2, 59, 0, 16, 0, 10, 0, 3, 1, 0, 0, 0, 0, 0, 0, gAbandonedShip_HiddenFloorRooms_EventScript_291288, 1078, 0, 0
-	object_event 3, 59, 0, 5, 0, 11, 0, 3, 1, 17, 0, 0, 0, 0, 0, gAbandonedShip_HiddenFloorRooms_EventScript_2912A2, 1102, 0, 0
-	object_event 4, 59, 0, 31, 0, 11, 0, 3, 1, 17, 0, 0, 0, 0, 0, gAbandonedShip_HiddenFloorRooms_EventScript_291295, 1101, 0, 0
+	object_event 1, FIELD_OBJ_GFX_ITEM_BALL, 0, 41, 0, 4, 0, 3, 1, 0, 0, 0, 0, 0, 0, gAbandonedShip_HiddenFloorRooms_EventScript_29127B, 1077, 0, 0
+	object_event 2, FIELD_OBJ_GFX_ITEM_BALL, 0, 16, 0, 10, 0, 3, 1, 0, 0, 0, 0, 0, 0, gAbandonedShip_HiddenFloorRooms_EventScript_291288, 1078, 0, 0
+	object_event 3, FIELD_OBJ_GFX_ITEM_BALL, 0, 5, 0, 11, 0, 3, 1, 17, 0, 0, 0, 0, 0, gAbandonedShip_HiddenFloorRooms_EventScript_2912A2, 1102, 0, 0
+	object_event 4, FIELD_OBJ_GFX_ITEM_BALL, 0, 31, 0, 11, 0, 3, 1, 17, 0, 0, 0, 0, 0, gAbandonedShip_HiddenFloorRooms_EventScript_291295, 1101, 0, 0
 
 gAbandonedShip_HiddenFloorRooms_MapWarps: ; 8536BA0
 	warp_def 6, 14, 3, 0, AbandonedShip_HiddenFloorCorridors

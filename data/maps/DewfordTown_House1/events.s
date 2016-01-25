@@ -1,7 +1,7 @@
 gDewfordTown_House1_MapObjects: ; 852D9C8
-	object_event 1, 24, 0, 6, 0, 3, 0, 3, 9, 0, 0, 0, 0, 0, 0, gDewfordTown_House1_EventScript_1FC3D7, 0, 0, 0
-	object_event 2, 19, 0, 3, 0, 3, 0, 3, 10, 0, 0, 0, 0, 0, 0, gDewfordTown_House1_EventScript_1FC3CE, 0, 0, 0
-	object_event 3, 208, 0, 4, 0, 2, 0, 3, 8, 19, 0, 0, 0, 0, 0, gDewfordTown_House1_EventScript_1FC3E0, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_WOMAN_4, 0, 6, 0, 3, 0, 3, 9, 0, 0, 0, 0, 0, 0, gDewfordTown_House1_EventScript_1FC3D7, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_MAN_1, 0, 3, 0, 3, 0, 3, 10, 0, 0, 0, 0, 0, 0, gDewfordTown_House1_EventScript_1FC3CE, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_ZIGZAGOON, 0, 4, 0, 2, 0, 3, 8, 19, 0, 0, 0, 0, 0, gDewfordTown_House1_EventScript_1FC3E0, 0, 0, 0
 
 gDewfordTown_House1_MapWarps: ; 852DA10
 	warp_def 3, 7, 0, 3, DewfordTown

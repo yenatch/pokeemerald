@@ -1,18 +1,12 @@
 gSecretBase_YellowCave4_MapScripts: ; 823B483
-	.byte 4
-	.4byte gSecretBase_RedCave1_MapScript2_23B498
-	.byte 3
-	.4byte gSecretBase_RedCave1_MapScript1_23B4A2
-	.byte 2
-	.4byte gSecretBase_RedCave1_MapScript2_23B4AE
-	.byte 5
-	.4byte gSecretBase_RedCave1_MapScript1_23B4B8
+	map_script 4, gSecretBase_RedCave1_MapScript2_23B498
+	map_script 3, gSecretBase_RedCave1_MapScript1_23B4A2
+	map_script 2, gSecretBase_RedCave1_MapScript2_23B4AE
+	map_script 5, gSecretBase_RedCave1_MapScript1_23B4B8
 	.byte 0
 
 gSecretBase_RedCave1_MapScript2_23B498: ; 823B498
-	.2byte 16521
-	.2byte 0
-	.4byte gSecretBase_RedCave1_EventScript_275D0C
+	map_script_2 0x4089, 0, gSecretBase_RedCave1_EventScript_275D0C
 	.2byte 0
 
 gSecretBase_RedCave1_MapScript1_23B4A2: ; 823B4A2
@@ -22,9 +16,7 @@ gSecretBase_RedCave1_MapScript1_23B4A2: ; 823B4A2
 	end
 
 gSecretBase_RedCave1_MapScript2_23B4AE: ; 823B4AE
-	.2byte 16535
-	.2byte 0
-	.4byte gSecretBase_RedCave1_EventScript_275B81
+	map_script_2 0x4097, 0, gSecretBase_RedCave1_EventScript_275B81
 	.2byte 0
 
 gSecretBase_RedCave1_MapScript1_23B4B8: ; 823B4B8

@@ -1,12 +1,9 @@
 gTrainerHill_Elevator_MapScripts: ; 826934F
-	.byte 2
-	.4byte gTrainerHill_Elevator_MapScript2_269355
+	map_script 2, gTrainerHill_Elevator_MapScript2_269355
 	.byte 0
 
 gTrainerHill_Elevator_MapScript2_269355: ; 8269355
-	.2byte 16388
-	.2byte 0
-	.4byte gTrainerHill_Elevator_EventScript_269375
+	map_script_2 0x4004, 0, gTrainerHill_Elevator_EventScript_269375
 	.2byte 0
 
 gTrainerHill_Elevator_EventScript_26935F: ; 826935F

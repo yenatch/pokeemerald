@@ -1,6 +1,5 @@
 gOldaleTown_MapScripts: ; 81E8EA2
-	.byte 3
-	.4byte gOldaleTown_MapScript1_1E8EA8
+	map_script 3, gOldaleTown_MapScript1_1E8EA8
 	.byte 0
 
 gOldaleTown_MapScript1_1E8EA8: ; 81E8EA8

@@ -1,10 +1,7 @@
 gSkyPillar_2F_MapScripts: ; 823962B
-	.byte 2
-	.4byte gSkyPillar_2F_MapScript2_2A8327
-	.byte 3
-	.4byte gSkyPillar_2F_MapScript1_23963B
-	.byte 5
-	.4byte gSkyPillar_2F_MapScript1_239650
+	map_script 2, gSkyPillar_2F_MapScript2_2A8327
+	map_script 3, gSkyPillar_2F_MapScript1_23963B
+	map_script 5, gSkyPillar_2F_MapScript1_239650
 	.byte 0
 
 gSkyPillar_2F_MapScript1_23963B: ; 823963B

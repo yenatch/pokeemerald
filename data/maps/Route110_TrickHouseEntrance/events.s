@@ -1,5 +1,5 @@
 gRoute110_TrickHouseEntrance_MapObjects: ; 853DE6C
-	object_event 1, 19, 0, 6, 0, 2, 0, 3, 9, 0, 0, 0, 0, 0, 0, gRoute110_TrickHouseEntrance_EventScript_269D3B, 872, 0, 0
+	object_event 1, FIELD_OBJ_GFX_MAN_1, 0, 6, 0, 2, 0, 3, 9, 0, 0, 0, 0, 0, 0, gRoute110_TrickHouseEntrance_EventScript_269D3B, 872, 0, 0
 
 gRoute110_TrickHouseEntrance_MapWarps: ; 853DE84
 	warp_def 5, 7, 3, 1, Route110

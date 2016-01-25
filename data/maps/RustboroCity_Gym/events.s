@@ -1,9 +1,9 @@
 gRustboroCity_Gym_MapObjects: ; 8530538
-	object_event 1, 125, 0, 5, 0, 2, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRustboroCity_Gym_EventScript_212F31, 0, 0, 0
-	object_event 2, 35, 0, 5, 0, 13, 0, 3, 8, 0, 0, 1, 0, 2, 0, gRustboroCity_Gym_EventScript_212FE3, 0, 0, 0
-	object_event 3, 35, 0, 3, 0, 9, 0, 3, 9, 0, 0, 1, 0, 3, 0, gRustboroCity_Gym_EventScript_212FFA, 0, 0, 0
-	object_event 4, 23, 0, 3, 0, 18, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRustboroCity_Gym_EventScript_213028, 0, 0, 0
-	object_event 5, 55, 0, 1, 0, 6, 0, 3, 8, 17, 0, 1, 0, 3, 0, gRustboroCity_Gym_EventScript_213011, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_ROXANNE, 0, 5, 0, 2, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRustboroCity_Gym_EventScript_212F31, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_YOUNGSTER, 0, 5, 0, 13, 0, 3, 8, 0, 0, 1, 0, 2, 0, gRustboroCity_Gym_EventScript_212FE3, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_YOUNGSTER, 0, 3, 0, 9, 0, 3, 9, 0, 0, 1, 0, 3, 0, gRustboroCity_Gym_EventScript_212FFA, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_MAN_2, 0, 3, 0, 18, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRustboroCity_Gym_EventScript_213028, 0, 0, 0
+	object_event 5, FIELD_OBJ_GFX_HIKER, 0, 1, 0, 6, 0, 3, 8, 17, 0, 1, 0, 3, 0, gRustboroCity_Gym_EventScript_213011, 0, 0, 0
 
 gRustboroCity_Gym_MapWarps: ; 85305B0
 	warp_def 5, 19, 0, 0, RustboroCity

@@ -1,8 +1,6 @@
 gUnionRoom_MapScripts: ; 823D1A6
-	.byte 5
-	.4byte gUnionRoom_MapScript1_23D1B1
-	.byte 3
-	.4byte gUnionRoom_MapScript1_23D1E5
+	map_script 5, gUnionRoom_MapScript1_23D1B1
+	map_script 3, gUnionRoom_MapScript1_23D1E5
 	.byte 0
 
 gUnionRoom_MapScript1_23D1B1: ; 823D1B1

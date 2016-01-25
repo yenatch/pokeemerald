@@ -1,8 +1,6 @@
 gBattleFrontier_PokemonCenter_1F_MapScripts: ; 82678F9
-	.byte 3
-	.4byte gBattleFrontier_PokemonCenter_1F_MapScript1_267904
-	.byte 5
-	.4byte gBattleFrontier_PokemonCenter_1F_MapScript1_277C30
+	map_script 3, gBattleFrontier_PokemonCenter_1F_MapScript1_267904
+	map_script 5, gBattleFrontier_PokemonCenter_1F_MapScript1_277C30
 	.byte 0
 
 gBattleFrontier_PokemonCenter_1F_MapScript1_267904: ; 8267904

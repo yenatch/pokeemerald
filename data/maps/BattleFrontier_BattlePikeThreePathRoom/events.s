@@ -1,6 +1,6 @@
 gBattleFrontier_BattlePikeThreePathRoom_MapObjects: ; 853CC80
-	object_event 1, 28, 0, 4, 0, 10, 0, 3, 10, 0, 0, 0, 0, 0, 0, gBattleFrontier_BattlePikeThreePathRoom_EventScript_25C908, 0, 0, 0
-	object_event 2, 28, 0, 8, 0, 5, 0, 3, 8, 0, 0, 0, 0, 0, 0, gBattleFrontier_BattlePikeThreePathRoom_EventScript_25CABB, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_WOMAN_6, 0, 4, 0, 10, 0, 3, 10, 0, 0, 0, 0, 0, 0, gBattleFrontier_BattlePikeThreePathRoom_EventScript_25C908, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_WOMAN_6, 0, 8, 0, 5, 0, 3, 8, 0, 0, 0, 0, 0, 0, gBattleFrontier_BattlePikeThreePathRoom_EventScript_25CABB, 0, 0, 0
 
 gBattleFrontier_BattlePikeThreePathRoom_MapCoordEvents: ; 853CCB0
 	coord_event 2, 3, 3, 0, 0x4001, 0, 0, gBattleFrontier_BattlePikeThreePathRoom_EventScript_2C3F4E

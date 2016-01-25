@@ -1,7 +1,7 @@
 gLavaridgeTown_Mart_MapObjects: ; 852E148
-	object_event 1, 83, 0, 1, 0, 3, 0, 3, 10, 0, 0, 0, 0, 0, 0, gLavaridgeTown_Mart_EventScript_1FF9CE, 0, 0, 0
-	object_event 2, 21, 0, 4, 0, 2, 0, 3, 8, 0, 0, 0, 0, 0, 0, gLavaridgeTown_Mart_EventScript_1FF9FE, 0, 0, 0
-	object_event 3, 30, 0, 9, 0, 5, 0, 3, 10, 0, 0, 0, 0, 0, 0, gLavaridgeTown_Mart_EventScript_1FFA07, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_MART_EMPLOYEE, 0, 1, 0, 3, 0, 3, 10, 0, 0, 0, 0, 0, 0, gLavaridgeTown_Mart_EventScript_1FF9CE, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_OLD_MAN_1, 0, 4, 0, 2, 0, 3, 8, 0, 0, 0, 0, 0, 0, gLavaridgeTown_Mart_EventScript_1FF9FE, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_OLD_WOMAN_2, 0, 9, 0, 5, 0, 3, 10, 0, 0, 0, 0, 0, 0, gLavaridgeTown_Mart_EventScript_1FFA07, 0, 0, 0
 
 gLavaridgeTown_Mart_MapWarps: ; 852E190
 	warp_def 3, 7, 0, 2, LavaridgeTown

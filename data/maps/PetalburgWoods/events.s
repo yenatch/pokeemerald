@@ -1,17 +1,17 @@
 gPetalburgWoods_MapObjects: ; 85345E4
-	object_event 1, 82, 0, 19, 0, 10, 0, 3, 1, 0, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_2906BB, 17, 0, 0
-	object_event 2, 82, 0, 19, 0, 11, 0, 3, 1, 0, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_2906BB, 18, 0, 0
-	object_event 3, 117, 0, 26, 0, 17, 0, 3, 10, 0, 0, 0, 0, 0, 0, 0x0, 725, 0, 0
-	object_event 4, 23, 0, 26, 0, 20, 0, 3, 1, 0, 0, 0, 0, 0, 0, 0x0, 724, 0, 0
-	object_event 5, 59, 0, 45, 0, 7, 0, 3, 8, 0, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_29110F, 1056, 0, 0
-	object_event 6, 59, 0, 35, 0, 20, 0, 3, 8, 0, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_291102, 1055, 0, 0
-	object_event 7, 59, 0, 4, 0, 8, 0, 3, 1, 0, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_29111C, 1058, 0, 0
-	object_event 8, 9, 0, 15, 0, 19, 0, 3, 3, 33, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_22E210, 0, 0, 0
-	object_event 9, 36, 0, 7, 0, 32, 0, 3, 22, 0, 0, 1, 0, 3, 0, gPetalburgWoods_EventScript_22E26D, 0, 0, 0
-	object_event 10, 36, 0, 4, 0, 14, 0, 3, 20, 0, 0, 1, 0, 3, 0, gPetalburgWoods_EventScript_22E284, 0, 0, 0
-	object_event 11, 13, 0, 30, 0, 34, 0, 3, 2, 18, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_22E219, 0, 0, 0
-	object_event 12, 59, 0, 4, 0, 26, 0, 3, 1, 17, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_291129, 1117, 0, 0
-	object_event 13, 10, 0, 33, 0, 5, 0, 3, 1, 17, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_22E222, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_CUTTABLE_TREE, 0, 19, 0, 10, 0, 3, 1, 0, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_2906BB, 17, 0, 0
+	object_event 2, FIELD_OBJ_GFX_CUTTABLE_TREE, 0, 19, 0, 11, 0, 3, 1, 0, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_2906BB, 18, 0, 0
+	object_event 3, FIELD_OBJ_GFX_AQUA_MEMBER_M, 0, 26, 0, 17, 0, 3, 10, 0, 0, 0, 0, 0, 0, 0x0, 725, 0, 0
+	object_event 4, FIELD_OBJ_GFX_MAN_2, 0, 26, 0, 20, 0, 3, 1, 0, 0, 0, 0, 0, 0, 0x0, 724, 0, 0
+	object_event 5, FIELD_OBJ_GFX_ITEM_BALL, 0, 45, 0, 7, 0, 3, 8, 0, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_29110F, 1056, 0, 0
+	object_event 6, FIELD_OBJ_GFX_ITEM_BALL, 0, 35, 0, 20, 0, 3, 8, 0, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_291102, 1055, 0, 0
+	object_event 7, FIELD_OBJ_GFX_ITEM_BALL, 0, 4, 0, 8, 0, 3, 1, 0, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_29111C, 1058, 0, 0
+	object_event 8, FIELD_OBJ_GFX_BOY_2, 0, 15, 0, 19, 0, 3, 3, 33, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_22E210, 0, 0, 0
+	object_event 9, FIELD_OBJ_GFX_BUG_CATCHER, 0, 7, 0, 32, 0, 3, 22, 0, 0, 1, 0, 3, 0, gPetalburgWoods_EventScript_22E26D, 0, 0, 0
+	object_event 10, FIELD_OBJ_GFX_BUG_CATCHER, 0, 4, 0, 14, 0, 3, 20, 0, 0, 1, 0, 3, 0, gPetalburgWoods_EventScript_22E284, 0, 0, 0
+	object_event 11, FIELD_OBJ_GFX_BOY_3, 0, 30, 0, 34, 0, 3, 2, 18, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_22E219, 0, 0, 0
+	object_event 12, FIELD_OBJ_GFX_ITEM_BALL, 0, 4, 0, 26, 0, 3, 1, 17, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_291129, 1117, 0, 0
+	object_event 13, FIELD_OBJ_GFX_GIRL_2, 0, 33, 0, 5, 0, 3, 1, 17, 0, 0, 0, 0, 0, gPetalburgWoods_EventScript_22E222, 0, 0, 0
 
 gPetalburgWoods_MapWarps: ; 853471C
 	warp_def 14, 5, 0, 2, Route104

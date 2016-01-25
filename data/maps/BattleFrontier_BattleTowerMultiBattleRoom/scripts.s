@@ -1,12 +1,8 @@
 gBattleFrontier_BattleTowerMultiBattleRoom_MapScripts: ; 8243D92
-	.byte 5
-	.4byte gBattleFrontier_BattleTowerMultiBattleRoom_MapScript1_243DA7
-	.byte 3
-	.4byte gBattleFrontier_BattleTowerMultiBattleRoom_MapScript1_243DB0
-	.byte 4
-	.4byte gBattleFrontier_BattleTowerMultiBattleRoom_MapScript2_243E14
-	.byte 2
-	.4byte gBattleFrontier_BattleTowerMultiBattleRoom_MapScript2_243E23
+	map_script 5, gBattleFrontier_BattleTowerMultiBattleRoom_MapScript1_243DA7
+	map_script 3, gBattleFrontier_BattleTowerMultiBattleRoom_MapScript1_243DB0
+	map_script 4, gBattleFrontier_BattleTowerMultiBattleRoom_MapScript2_243E14
+	map_script 2, gBattleFrontier_BattleTowerMultiBattleRoom_MapScript2_243E23
 	.byte 0
 
 gBattleFrontier_BattleTowerMultiBattleRoom_MapScript1_243DA7: ; 8243DA7
@@ -44,9 +40,7 @@ gBattleFrontier_BattleTowerMultiBattleRoom_EventScript_243DDA: ; 8243DDA
 	end
 
 gBattleFrontier_BattleTowerMultiBattleRoom_MapScript2_243E14: ; 8243E14
-	.2byte 16387
-	.2byte 1
-	.4byte gBattleFrontier_BattleTowerMultiBattleRoom_EventScript_243E1E
+	map_script_2 0x4003, 1, gBattleFrontier_BattleTowerMultiBattleRoom_EventScript_243E1E
 	.2byte 0
 
 gBattleFrontier_BattleTowerMultiBattleRoom_EventScript_243E1E: ; 8243E1E
@@ -54,12 +48,8 @@ gBattleFrontier_BattleTowerMultiBattleRoom_EventScript_243E1E: ; 8243E1E
 	end
 
 gBattleFrontier_BattleTowerMultiBattleRoom_MapScript2_243E23: ; 8243E23
-	.2byte 16385
-	.2byte 0
-	.4byte gBattleFrontier_BattleTowerMultiBattleRoom_EventScript_243E41
-	.2byte 16387
-	.2byte 1
-	.4byte gBattleFrontier_BattleTowerMultiBattleRoom_EventScript_243E35
+	map_script_2 0x4001, 0, gBattleFrontier_BattleTowerMultiBattleRoom_EventScript_243E41
+	map_script_2 0x4003, 1, gBattleFrontier_BattleTowerMultiBattleRoom_EventScript_243E35
 	.2byte 0
 
 gBattleFrontier_BattleTowerMultiBattleRoom_EventScript_243E35: ; 8243E35

@@ -60,7 +60,7 @@ gMagmaHideout_4F_EventScript_23A560: ; 823A560
 	loadptr 0, gMagmaHideout_4F_Text_23AB33
 	callstd 4
 	closebutton
-	trainerbattle 3, 601, 0, gMagmaHideout_4F_Text_23ABB5
+	trainerbattle 3, TRAINER_MAXIE_1, 0, gMagmaHideout_4F_Text_23ABB5
 	loadptr 0, gMagmaHideout_4F_Text_23ABE2
 	callstd 4
 	closebutton
@@ -113,25 +113,25 @@ gMagmaHideout_4F_Movement_23A680: ; 823A680
 	step_end
 
 gMagmaHideout_4F_EventScript_23A68C: ; 823A68C
-	trainerbattle 0, 726, 0, gMagmaHideout_4F_Text_23A6E8, gMagmaHideout_4F_Text_23A775
+	trainerbattle 0, TRAINER_GRUNT_48, 0, gMagmaHideout_4F_Text_23A6E8, gMagmaHideout_4F_Text_23A775
 	loadptr 0, gMagmaHideout_4F_Text_23A7B5
 	callstd 6
 	end
 
 gMagmaHideout_4F_EventScript_23A6A3: ; 823A6A3
-	trainerbattle 0, 727, 0, gMagmaHideout_4F_Text_23A7DA, gMagmaHideout_4F_Text_23A81B
+	trainerbattle 0, TRAINER_GRUNT_49, 0, gMagmaHideout_4F_Text_23A7DA, gMagmaHideout_4F_Text_23A81B
 	loadptr 0, gMagmaHideout_4F_Text_23A841
 	callstd 6
 	end
 
 gMagmaHideout_4F_EventScript_23A6BA: ; 823A6BA
-	trainerbattle 0, 728, 0, gMagmaHideout_4F_Text_23A86D, gMagmaHideout_4F_Text_23A8A7
+	trainerbattle 0, TRAINER_GRUNT_50, 0, gMagmaHideout_4F_Text_23A86D, gMagmaHideout_4F_Text_23A8A7
 	loadptr 0, gMagmaHideout_4F_Text_23A8C6
 	callstd 6
 	end
 
 gMagmaHideout_4F_EventScript_23A6D1: ; 823A6D1
-	trainerbattle 0, 732, 0, gMagmaHideout_4F_Text_23A8E1, gMagmaHideout_4F_Text_23A994
+	trainerbattle 0, TRAINER_TABITHA_3, 0, gMagmaHideout_4F_Text_23A8E1, gMagmaHideout_4F_Text_23A994
 	loadptr 0, gMagmaHideout_4F_Text_23A9AC
 	callstd 6
 	end

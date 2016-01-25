@@ -1,8 +1,6 @@
 gShoalCave_LowTideInnerRoom_MapScripts: ; 8236EF5
-	.byte 1
-	.4byte gShoalCave_LowTideInnerRoom_MapScript1_236F16
-	.byte 3
-	.4byte gShoalCave_LowTideInnerRoom_MapScript1_236F00
+	map_script 1, gShoalCave_LowTideInnerRoom_MapScript1_236F16
+	map_script 3, gShoalCave_LowTideInnerRoom_MapScript1_236F00
 	.byte 0
 
 gShoalCave_LowTideInnerRoom_MapScript1_236F00: ; 8236F00

@@ -1,12 +1,9 @@
 gFallarborTown_BattleTentCorridor_MapScripts: ; 82006A7
-	.byte 2
-	.4byte gFallarborTown_BattleTentCorridor_MapScript2_2006AD
+	map_script 2, gFallarborTown_BattleTentCorridor_MapScript2_2006AD
 	.byte 0
 
 gFallarborTown_BattleTentCorridor_MapScript2_2006AD: ; 82006AD
-	.2byte 16384
-	.2byte 0
-	.4byte gFallarborTown_BattleTentCorridor_EventScript_2006B7
+	map_script_2 0x4000, 0, gFallarborTown_BattleTentCorridor_EventScript_2006B7
 	.2byte 0
 
 gFallarborTown_BattleTentCorridor_EventScript_2006B7: ; 82006B7

@@ -1,6 +1,5 @@
 gMauvilleCity_Gym_MapScripts: ; 820DD6E
-	.byte 1
-	.4byte gMauvilleCity_Gym_MapScript1_20DD74
+	map_script 1, gMauvilleCity_Gym_MapScript1_20DD74
 	.byte 0
 
 gMauvilleCity_Gym_MapScript1_20DD74: ; 820DD74
@@ -82,7 +81,7 @@ gMauvilleCity_Gym_EventScript_20DEE7: ; 820DEE7
 	end
 
 gMauvilleCity_Gym_EventScript_20DEEB: ; 820DEEB
-	trainerbattle 1, 267, 0, gMauvilleCity_Gym_Text_20E602, gMauvilleCity_Gym_Text_20E734, gMauvilleCity_Gym_EventScript_20DF2B
+	trainerbattle 1, TRAINER_WATTSON_1, 0, gMauvilleCity_Gym_Text_20E602, gMauvilleCity_Gym_Text_20E734, gMauvilleCity_Gym_EventScript_20DF2B
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gMauvilleCity_Gym_EventScript_20DFDE
@@ -156,7 +155,7 @@ gMauvilleCity_Gym_EventScript_20DFD4: ; 820DFD4
 	end
 
 gMauvilleCity_Gym_EventScript_20DFDE: ; 820DFDE
-	trainerbattle 7, 267, 0, gMauvilleCity_Gym_Text_20E9A7, gMauvilleCity_Gym_Text_20EA42, gMauvilleCity_Gym_Text_20EAFD
+	trainerbattle 7, TRAINER_WATTSON_1, 0, gMauvilleCity_Gym_Text_20E9A7, gMauvilleCity_Gym_Text_20EA42, gMauvilleCity_Gym_Text_20EAFD
 	loadptr 0, gMauvilleCity_Gym_Text_20EA5E
 	callstd 6
 	end
@@ -232,31 +231,31 @@ gMauvilleCity_Gym_EventScript_20E0B4: ; 820E0B4
 	end
 
 gMauvilleCity_Gym_EventScript_20E0B9: ; 820E0B9
-	trainerbattle 0, 191, 0, gMauvilleCity_Gym_Text_20E2BC, gMauvilleCity_Gym_Text_20E2FC
+	trainerbattle 0, TRAINER_KIRK, 0, gMauvilleCity_Gym_Text_20E2BC, gMauvilleCity_Gym_Text_20E2FC
 	loadptr 0, gMauvilleCity_Gym_Text_20E336
 	callstd 6
 	end
 
 gMauvilleCity_Gym_EventScript_20E0D0: ; 820E0D0
-	trainerbattle 0, 194, 0, gMauvilleCity_Gym_Text_20E369, gMauvilleCity_Gym_Text_20E3A7
+	trainerbattle 0, TRAINER_SHAWN, 0, gMauvilleCity_Gym_Text_20E369, gMauvilleCity_Gym_Text_20E3A7
 	loadptr 0, gMauvilleCity_Gym_Text_20E3C1
 	callstd 6
 	end
 
 gMauvilleCity_Gym_EventScript_20E0E7: ; 820E0E7
-	trainerbattle 0, 323, 0, gMauvilleCity_Gym_Text_20E443, gMauvilleCity_Gym_Text_20E469
+	trainerbattle 0, TRAINER_BEN, 0, gMauvilleCity_Gym_Text_20E443, gMauvilleCity_Gym_Text_20E469
 	loadptr 0, gMauvilleCity_Gym_Text_20E47E
 	callstd 6
 	end
 
 gMauvilleCity_Gym_EventScript_20E0FE: ; 820E0FE
-	trainerbattle 0, 649, 0, gMauvilleCity_Gym_Text_20E4BB, gMauvilleCity_Gym_Text_20E4F4
+	trainerbattle 0, TRAINER_VIVIAN, 0, gMauvilleCity_Gym_Text_20E4BB, gMauvilleCity_Gym_Text_20E4F4
 	loadptr 0, gMauvilleCity_Gym_Text_20E50F
 	callstd 6
 	end
 
 gMauvilleCity_Gym_EventScript_20E115: ; 820E115
-	trainerbattle 0, 802, 0, gMauvilleCity_Gym_Text_20E593, gMauvilleCity_Gym_Text_20E5A8
+	trainerbattle 0, TRAINER_ANGELO, 0, gMauvilleCity_Gym_Text_20E593, gMauvilleCity_Gym_Text_20E5A8
 	loadptr 0, gMauvilleCity_Gym_Text_20E5C2
 	callstd 6
 	end

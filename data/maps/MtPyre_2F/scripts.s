@@ -1,10 +1,7 @@
 gMtPyre_2F_MapScripts: ; 82310FB
-	.byte 2
-	.4byte gMtPyre_2F_MapScript2_2A8327
-	.byte 3
-	.4byte gMtPyre_2F_MapScript1_2A8331
-	.byte 5
-	.4byte gMtPyre_2F_MapScript1_23110B
+	map_script 2, gMtPyre_2F_MapScript2_2A8327
+	map_script 3, gMtPyre_2F_MapScript1_2A8331
+	map_script 5, gMtPyre_2F_MapScript1_23110B
 	.byte 0
 
 gMtPyre_2F_MapScript1_23110B: ; 823110B
@@ -23,31 +20,31 @@ gMtPyre_2F_EventScript_23111F: ; 823111F
 	end
 
 gMtPyre_2F_EventScript_231128: ; 8231128
-	trainerbattle 0, 145, 0, gMtPyre_2F_Text_231258, gMtPyre_2F_Text_2312A2
+	trainerbattle 0, TRAINER_MARK, 0, gMtPyre_2F_Text_231258, gMtPyre_2F_Text_2312A2
 	loadptr 0, gMtPyre_2F_Text_2312CB
 	callstd 6
 	end
 
 gMtPyre_2F_EventScript_23113F: ; 823113F
-	trainerbattle 4, 640, 0, gMtPyre_2F_Text_23130F, gMtPyre_2F_Text_2313A1, gMtPyre_2F_Text_231414
+	trainerbattle 4, TRAINER_DEZ_AND_LUKE, 0, gMtPyre_2F_Text_23130F, gMtPyre_2F_Text_2313A1, gMtPyre_2F_Text_231414
 	loadptr 0, gMtPyre_2F_Text_2313B1
 	callstd 6
 	end
 
 gMtPyre_2F_EventScript_23115A: ; 823115A
-	trainerbattle 4, 640, 0, gMtPyre_2F_Text_231492, gMtPyre_2F_Text_231534, gMtPyre_2F_Text_231582
+	trainerbattle 4, TRAINER_DEZ_AND_LUKE, 0, gMtPyre_2F_Text_231492, gMtPyre_2F_Text_231534, gMtPyre_2F_Text_231582
 	loadptr 0, gMtPyre_2F_Text_23154D
 	callstd 6
 	end
 
 gMtPyre_2F_EventScript_231175: ; 8231175
-	trainerbattle 0, 35, 0, gMtPyre_2F_Text_231604, gMtPyre_2F_Text_231645
+	trainerbattle 0, TRAINER_LEAH, 0, gMtPyre_2F_Text_231604, gMtPyre_2F_Text_231645
 	loadptr 0, gMtPyre_2F_Text_23165A
 	callstd 6
 	end
 
 gMtPyre_2F_EventScript_23118C: ; 823118C
-	trainerbattle 0, 31, 0, gMtPyre_2F_Text_2316C7, gMtPyre_2F_Text_2316E1
+	trainerbattle 0, TRAINER_ZANDER, 0, gMtPyre_2F_Text_2316C7, gMtPyre_2F_Text_2316E1
 	loadptr 0, gMtPyre_2F_Text_2316FB
 	callstd 6
 	end

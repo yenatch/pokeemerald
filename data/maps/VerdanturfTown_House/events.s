@@ -1,6 +1,6 @@
 gVerdanturfTown_House_MapObjects: ; 852EA1C
-	object_event 1, 34, 0, 4, 0, 5, 0, 3, 7, 0, 0, 0, 0, 0, 0, gVerdanturfTown_House_EventScript_20335F, 0, 0, 0
-	object_event 2, 34, 0, 4, 0, 4, 0, 3, 8, 0, 0, 0, 0, 0, 0, gVerdanturfTown_House_EventScript_203368, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_WOMAN_7, 0, 4, 0, 5, 0, 3, 7, 0, 0, 0, 0, 0, 0, gVerdanturfTown_House_EventScript_20335F, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_WOMAN_7, 0, 4, 0, 4, 0, 3, 8, 0, 0, 0, 0, 0, 0, gVerdanturfTown_House_EventScript_203368, 0, 0, 0
 
 gVerdanturfTown_House_MapWarps: ; 852EA4C
 	warp_def 3, 8, 0, 6, VerdanturfTown

@@ -1,10 +1,7 @@
 gLittlerootTown_MapScripts: ; 81E7DCB
-	.byte 3
-	.4byte gLittlerootTown_MapScript1_1E7DDB
-	.byte 2
-	.4byte gLittlerootTown_MapScript2_1E7EC1
-	.byte 4
-	.4byte gLittlerootTown_MapScript2_1E7FE2
+	map_script 3, gLittlerootTown_MapScript1_1E7DDB
+	map_script 2, gLittlerootTown_MapScript2_1E7EC1
+	map_script 4, gLittlerootTown_MapScript2_1E7FE2
 	.byte 0
 
 gLittlerootTown_MapScript1_1E7DDB: ; 81E7DDB
@@ -87,15 +84,9 @@ gLittlerootTown_EventScript_1E7EB9: ; 81E7EB9
 	return
 
 gLittlerootTown_MapScript2_1E7EC1: ; 81E7EC1
-	.2byte 16530
-	.2byte 1
-	.4byte gLittlerootTown_EventScript_1E7EDB
-	.2byte 16530
-	.2byte 2
-	.4byte gLittlerootTown_EventScript_1E7EF9
-	.2byte 16595
-	.2byte 1
-	.4byte gLittlerootTown_EventScript_1E7FB1
+	map_script_2 0x4092, 1, gLittlerootTown_EventScript_1E7EDB
+	map_script_2 0x4092, 2, gLittlerootTown_EventScript_1E7EF9
+	map_script_2 0x40d3, 1, gLittlerootTown_EventScript_1E7FB1
 	.2byte 0
 
 gLittlerootTown_EventScript_1E7EDB: ; 81E7EDB
@@ -213,9 +204,7 @@ gLittlerootTown_EventScript_1E7FB1: ; 81E7FB1
 	end
 
 gLittlerootTown_MapScript2_1E7FE2: ; 81E7FE2
-	.2byte 16595
-	.2byte 1
-	.4byte gLittlerootTown_EventScript_1E7FEC
+	map_script_2 0x40d3, 1, gLittlerootTown_EventScript_1E7FEC
 	.2byte 0
 
 gLittlerootTown_EventScript_1E7FEC: ; 81E7FEC

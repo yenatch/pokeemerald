@@ -1,8 +1,6 @@
 gMauvilleCity_PokemonCenter_1F_MapScripts: ; 8210E5B
-	.byte 3
-	.4byte gMauvilleCity_PokemonCenter_1F_MapScript1_210E66
-	.byte 5
-	.4byte gMauvilleCity_PokemonCenter_1F_MapScript1_277C30
+	map_script 3, gMauvilleCity_PokemonCenter_1F_MapScript1_210E66
+	map_script 5, gMauvilleCity_PokemonCenter_1F_MapScript1_277C30
 	.byte 0
 
 gMauvilleCity_PokemonCenter_1F_MapScript1_210E66: ; 8210E66

@@ -1,14 +1,10 @@
 gBattleFrontier_BattleTowerBattleRoom_MapScripts: ; 8241B40
-	.byte 2
-	.4byte gBattleFrontier_BattleTowerBattleRoom_MapScript2_241B62
-	.byte 4
-	.4byte gBattleFrontier_BattleTowerBattleRoom_MapScript2_241B4B
+	map_script 2, gBattleFrontier_BattleTowerBattleRoom_MapScript2_241B62
+	map_script 4, gBattleFrontier_BattleTowerBattleRoom_MapScript2_241B4B
 	.byte 0
 
 gBattleFrontier_BattleTowerBattleRoom_MapScript2_241B4B: ; 8241B4B
-	.2byte 16385
-	.2byte 0
-	.4byte gBattleFrontier_BattleTowerBattleRoom_EventScript_241B55
+	map_script_2 0x4001, 0, gBattleFrontier_BattleTowerBattleRoom_EventScript_241B55
 	.2byte 0
 
 gBattleFrontier_BattleTowerBattleRoom_EventScript_241B55: ; 8241B55
@@ -17,9 +13,7 @@ gBattleFrontier_BattleTowerBattleRoom_EventScript_241B55: ; 8241B55
 	end
 
 gBattleFrontier_BattleTowerBattleRoom_MapScript2_241B62: ; 8241B62
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattleTowerBattleRoom_EventScript_241B6C
+	map_script_2 0x4000, 0, gBattleFrontier_BattleTowerBattleRoom_EventScript_241B6C
 	.2byte 0
 
 gBattleFrontier_BattleTowerBattleRoom_EventScript_241B6C: ; 8241B6C

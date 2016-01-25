@@ -1,5 +1,5 @@
 gRoute110_TrickHouseEnd_MapObjects: ; 853DEFC
-	object_event 1, 19, 0, 4, 0, 5, 0, 3, 10, 0, 0, 0, 0, 0, 0, gRoute110_TrickHouseEnd_EventScript_26AD17, 899, 0, 0
+	object_event 1, FIELD_OBJ_GFX_MAN_1, 0, 4, 0, 5, 0, 3, 10, 0, 0, 0, 0, 0, 0, gRoute110_TrickHouseEnd_EventScript_26AD17, 899, 0, 0
 
 gRoute110_TrickHouseEnd_MapWarps: ; 853DF14
 	warp_def 10, 1, 3, 2, Route110_TrickHousePuzzle1

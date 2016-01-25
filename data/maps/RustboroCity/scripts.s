@@ -1,8 +1,6 @@
 gRustboroCity_MapScripts: ; 81E06BD
-	.byte 3
-	.4byte gRustboroCity_MapScript1_1E06C8
-	.byte 2
-	.4byte gRustboroCity_MapScript2_1E070B
+	map_script 3, gRustboroCity_MapScript1_1E06C8
+	map_script 2, gRustboroCity_MapScript2_1E070B
 	.byte 0
 
 gRustboroCity_MapScript1_1E06C8: ; 81E06C8
@@ -30,9 +28,7 @@ gRustboroCity_EventScript_1E0707: ; 81E0707
 	return
 
 gRustboroCity_MapScript2_1E070B: ; 81E070B
-	.2byte 16474
-	.2byte 6
-	.4byte gRustboroCity_EventScript_1E0715
+	map_script_2 0x405a, 6, gRustboroCity_EventScript_1E0715
 	.2byte 0
 
 gRustboroCity_EventScript_1E0715: ; 81E0715
@@ -844,19 +840,19 @@ gRustboroCity_EventScript_1E10D6: ; 81E10D6
 	return
 
 gRustboroCity_EventScript_1E10DB: ; 81E10DB
-	trainerbattle 3, 768, 0, gRustboroCity_Text_1E1CC1
+	trainerbattle 3, TRAINER_MAY_14, 0, gRustboroCity_Text_1E1CC1
 	setflag 211
 	jump gRustboroCity_EventScript_1E10C1
 	end
 
 gRustboroCity_EventScript_1E10EE: ; 81E10EE
-	trainerbattle 3, 769, 0, gRustboroCity_Text_1E1CC1
+	trainerbattle 3, TRAINER_MAY_15, 0, gRustboroCity_Text_1E1CC1
 	setflag 211
 	jump gRustboroCity_EventScript_1E10C1
 	end
 
 gRustboroCity_EventScript_1E1101: ; 81E1101
-	trainerbattle 3, 600, 0, gRustboroCity_Text_1E1CC1
+	trainerbattle 3, TRAINER_MAY_10, 0, gRustboroCity_Text_1E1CC1
 	setflag 211
 	jump gRustboroCity_EventScript_1E10C1
 	end
@@ -921,19 +917,19 @@ gRustboroCity_EventScript_1E11C0: ; 81E11C0
 	end
 
 gRustboroCity_EventScript_1E11D5: ; 81E11D5
-	trainerbattle 3, 592, 0, gRustboroCity_Text_1E1FE9
+	trainerbattle 3, TRAINER_BRENDAN_10, 0, gRustboroCity_Text_1E1FE9
 	setflag 211
 	jump gRustboroCity_EventScript_1E11C0
 	end
 
 gRustboroCity_EventScript_1E11E8: ; 81E11E8
-	trainerbattle 3, 599, 0, gRustboroCity_Text_1E1FE9
+	trainerbattle 3, TRAINER_BRENDAN_12, 0, gRustboroCity_Text_1E1FE9
 	setflag 211
 	jump gRustboroCity_EventScript_1E11C0
 	end
 
 gRustboroCity_EventScript_1E11FB: ; 81E11FB
-	trainerbattle 3, 593, 0, gRustboroCity_Text_1E1FE9
+	trainerbattle 3, TRAINER_BRENDAN_11, 0, gRustboroCity_Text_1E1FE9
 	setflag 211
 	jump gRustboroCity_EventScript_1E11C0
 	end

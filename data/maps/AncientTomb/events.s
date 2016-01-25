@@ -1,5 +1,5 @@
 gAncientTomb_MapObjects: ; 8536CDC
-	object_event 1, 202, 0, 8, 0, 7, 0, 3, 8, 0, 0, 0, 0, 0, 0, gAncientTomb_EventScript_23905A, 937, 0, 0
+	object_event 1, FIELD_OBJ_GFX_REGISTEEL, 0, 8, 0, 7, 0, 3, 8, 0, 0, 0, 0, 0, 0, gAncientTomb_EventScript_23905A, 937, 0, 0
 
 gAncientTomb_MapWarps: ; 8536CF4
 	warp_def 8, 29, 3, 0, Route120

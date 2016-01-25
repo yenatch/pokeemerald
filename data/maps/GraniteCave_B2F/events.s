@@ -1,13 +1,13 @@
 gGraniteCave_B2F_MapObjects: ; 8534484
-	object_event 1, 59, 0, 4, 0, 4, 0, 3, 1, 0, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_29116A, 1053, 0, 0
-	object_event 2, 59, 0, 29, 0, 4, 0, 3, 1, 0, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_291177, 1054, 0, 0
-	object_event 3, 86, 0, 5, 0, 14, 0, 3, 1, 17, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_2907A6, 17, 0, 0
-	object_event 4, 86, 0, 3, 0, 14, 0, 3, 1, 17, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_2907A6, 18, 0, 0
-	object_event 5, 86, 0, 2, 0, 16, 0, 3, 1, 17, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_2907A6, 19, 0, 0
-	object_event 6, 86, 0, 7, 0, 12, 0, 3, 1, 17, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_2907A6, 20, 0, 0
-	object_event 7, 86, 0, 4, 0, 22, 0, 3, 1, 17, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_2907A6, 21, 0, 0
-	object_event 8, 86, 0, 6, 0, 22, 0, 3, 1, 17, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_2907A6, 22, 0, 0
-	object_event 9, 86, 0, 3, 0, 21, 0, 3, 1, 17, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_2907A6, 23, 0, 0
+	object_event 1, FIELD_OBJ_GFX_ITEM_BALL, 0, 4, 0, 4, 0, 3, 1, 0, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_29116A, 1053, 0, 0
+	object_event 2, FIELD_OBJ_GFX_ITEM_BALL, 0, 29, 0, 4, 0, 3, 1, 0, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_291177, 1054, 0, 0
+	object_event 3, FIELD_OBJ_GFX_BREAKABLE_ROCK, 0, 5, 0, 14, 0, 3, 1, 17, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_2907A6, 17, 0, 0
+	object_event 4, FIELD_OBJ_GFX_BREAKABLE_ROCK, 0, 3, 0, 14, 0, 3, 1, 17, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_2907A6, 18, 0, 0
+	object_event 5, FIELD_OBJ_GFX_BREAKABLE_ROCK, 0, 2, 0, 16, 0, 3, 1, 17, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_2907A6, 19, 0, 0
+	object_event 6, FIELD_OBJ_GFX_BREAKABLE_ROCK, 0, 7, 0, 12, 0, 3, 1, 17, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_2907A6, 20, 0, 0
+	object_event 7, FIELD_OBJ_GFX_BREAKABLE_ROCK, 0, 4, 0, 22, 0, 3, 1, 17, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_2907A6, 21, 0, 0
+	object_event 8, FIELD_OBJ_GFX_BREAKABLE_ROCK, 0, 6, 0, 22, 0, 3, 1, 17, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_2907A6, 22, 0, 0
+	object_event 9, FIELD_OBJ_GFX_BREAKABLE_ROCK, 0, 3, 0, 21, 0, 3, 1, 17, 0, 0, 0, 0, 0, gGraniteCave_B2F_EventScript_2907A6, 23, 0, 0
 
 gGraniteCave_B2F_MapWarps: ; 853455C
 	warp_def 29, 13, 3, 2, GraniteCave_B1F

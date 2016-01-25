@@ -1,7 +1,7 @@
 gSootopolisCity_Mart_MapObjects: ; 853328C
-	object_event 1, 83, 0, 1, 0, 3, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSootopolisCity_Mart_EventScript_226795, 0, 0, 0
-	object_event 2, 17, 0, 5, 0, 5, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSootopolisCity_Mart_EventScript_2267C2, 0, 0, 0
-	object_event 3, 48, 0, 9, 0, 5, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSootopolisCity_Mart_EventScript_2267EC, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_MART_EMPLOYEE, 0, 1, 0, 3, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSootopolisCity_Mart_EventScript_226795, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_FAT_MAN, 0, 5, 0, 5, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSootopolisCity_Mart_EventScript_2267C2, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_GENTLEMAN, 0, 9, 0, 5, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSootopolisCity_Mart_EventScript_2267EC, 0, 0, 0
 
 gSootopolisCity_Mart_MapWarps: ; 85332D4
 	warp_def 3, 7, 0, 1, SootopolisCity

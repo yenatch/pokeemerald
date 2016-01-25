@@ -1,8 +1,6 @@
 gPacifidlogTown_MapScripts: ; 81EBAB1
-	.byte 3
-	.4byte gPacifidlogTown_MapScript1_1EBABC
-	.byte 5
-	.4byte gPacifidlogTown_MapScript1_1EBAC0
+	map_script 3, gPacifidlogTown_MapScript1_1EBABC
+	map_script 5, gPacifidlogTown_MapScript1_1EBAC0
 	.byte 0
 
 gPacifidlogTown_MapScript1_1EBABC: ; 81EBABC

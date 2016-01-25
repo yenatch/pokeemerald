@@ -1,8 +1,6 @@
 gFallarborTown_PokemonCenter_1F_MapScripts: ; 8200BCD
-	.byte 3
-	.4byte gFallarborTown_PokemonCenter_1F_MapScript1_200BD8
-	.byte 5
-	.4byte gFallarborTown_PokemonCenter_1F_MapScript1_277C30
+	map_script 3, gFallarborTown_PokemonCenter_1F_MapScript1_200BD8
+	map_script 5, gFallarborTown_PokemonCenter_1F_MapScript1_277C30
 	.byte 0
 
 gFallarborTown_PokemonCenter_1F_MapScript1_200BD8: ; 8200BD8

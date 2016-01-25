@@ -1,6 +1,5 @@
 gRoute104_MrBrineysHouse_MapScripts: ; 8229D2E
-	.byte 3
-	.4byte gRoute104_MrBrineysHouse_MapScript1_229D34
+	map_script 3, gRoute104_MrBrineysHouse_MapScript1_229D34
 	.byte 0
 
 gRoute104_MrBrineysHouse_MapScript1_229D34: ; 8229D34

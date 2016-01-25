@@ -2,13 +2,13 @@ gSeafloorCavern_Room1_MapScripts: ; 82347EB
 	.byte 0
 
 gSeafloorCavern_Room1_EventScript_2347EC: ; 82347EC
-	trainerbattle 0, 6, 0, gSeafloorCavern_Room1_Text_23481A, gSeafloorCavern_Room1_Text_23484A
+	trainerbattle 0, TRAINER_GRUNT_5, 0, gSeafloorCavern_Room1_Text_23481A, gSeafloorCavern_Room1_Text_23484A
 	loadptr 0, gSeafloorCavern_Room1_Text_23485D
 	callstd 6
 	end
 
 gSeafloorCavern_Room1_EventScript_234803: ; 8234803
-	trainerbattle 0, 7, 0, gSeafloorCavern_Room1_Text_234898, gSeafloorCavern_Room1_Text_2348CD
+	trainerbattle 0, TRAINER_GRUNT_6, 0, gSeafloorCavern_Room1_Text_234898, gSeafloorCavern_Room1_Text_2348CD
 	loadptr 0, gSeafloorCavern_Room1_Text_2348E3
 	callstd 6
 	end

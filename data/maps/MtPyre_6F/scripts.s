@@ -2,7 +2,7 @@ gMtPyre_6F_MapScripts: ; 8231D3A
 	.byte 0
 
 gMtPyre_6F_EventScript_231D3B: ; 8231D3B
-	trainerbattle 2, 108, 0, gMtPyre_6F_Text_231DB4, gMtPyre_6F_Text_231DE2, gMtPyre_6F_EventScript_231D67
+	trainerbattle 2, TRAINER_VALERIE_1, 0, gMtPyre_6F_Text_231DB4, gMtPyre_6F_Text_231DE2, gMtPyre_6F_EventScript_231D67
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gMtPyre_6F_EventScript_231D86
@@ -24,13 +24,13 @@ gMtPyre_6F_EventScript_231D67: ; 8231D67
 	end
 
 gMtPyre_6F_EventScript_231D86: ; 8231D86
-	trainerbattle 5, 108, 0, gMtPyre_6F_Text_231EB3, gMtPyre_6F_Text_231ECB
+	trainerbattle 5, TRAINER_VALERIE_1, 0, gMtPyre_6F_Text_231EB3, gMtPyre_6F_Text_231ECB
 	loadptr 0, gMtPyre_6F_Text_231EE1
 	callstd 6
 	end
 
 gMtPyre_6F_EventScript_231D9D: ; 8231D9D
-	trainerbattle 0, 475, 0, gMtPyre_6F_Text_231F11, gMtPyre_6F_Text_231F4A
+	trainerbattle 0, TRAINER_CEDRIC, 0, gMtPyre_6F_Text_231F11, gMtPyre_6F_Text_231F4A
 	loadptr 0, gMtPyre_6F_Text_231F5C
 	callstd 6
 	end

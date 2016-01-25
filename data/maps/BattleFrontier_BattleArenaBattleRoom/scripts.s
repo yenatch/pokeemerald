@@ -1,12 +1,8 @@
 gBattleFrontier_BattleArenaBattleRoom_MapScripts: ; 8257487
-	.byte 3
-	.4byte gBattleFrontier_BattleArenaBattleRoom_MapScript1_2574A0
-	.byte 2
-	.4byte gBattleFrontier_BattleArenaBattleRoom_MapScript2_2574D2
-	.byte 4
-	.4byte gBattleFrontier_BattleArenaBattleRoom_MapScript2_257C0C
-	.byte 5
-	.4byte gBattleFrontier_BattleArenaBattleRoom_MapScript1_25749C
+	map_script 3, gBattleFrontier_BattleArenaBattleRoom_MapScript1_2574A0
+	map_script 2, gBattleFrontier_BattleArenaBattleRoom_MapScript2_2574D2
+	map_script 4, gBattleFrontier_BattleArenaBattleRoom_MapScript2_257C0C
+	map_script 5, gBattleFrontier_BattleArenaBattleRoom_MapScript1_25749C
 	.byte 0
 
 gBattleFrontier_BattleArenaBattleRoom_MapScript1_25749C: ; 825749C
@@ -36,9 +32,7 @@ gBattleFrontier_BattleArenaBattleRoom_EventScript_2574CC: ; 82574CC
 	return
 
 gBattleFrontier_BattleArenaBattleRoom_MapScript2_2574D2: ; 82574D2
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattleArenaBattleRoom_EventScript_2574DC
+	map_script_2 0x4000, 0, gBattleFrontier_BattleArenaBattleRoom_EventScript_2574DC
 	.2byte 0
 
 gBattleFrontier_BattleArenaBattleRoom_EventScript_2574DC: ; 82574DC
@@ -590,9 +584,7 @@ gBattleFrontier_BattleArenaBattleRoom_Movement_257C08: ; 8257C08
 	.incbin "base_emerald.gba", 0x257c0a, 0x2
 
 gBattleFrontier_BattleArenaBattleRoom_MapScript2_257C0C: ; 8257C0C
-	.2byte 16385
-	.2byte 0
-	.4byte gBattleFrontier_BattleArenaBattleRoom_EventScript_257C16
+	map_script_2 0x4001, 0, gBattleFrontier_BattleArenaBattleRoom_EventScript_257C16
 	.2byte 0
 
 gBattleFrontier_BattleArenaBattleRoom_EventScript_257C16: ; 8257C16

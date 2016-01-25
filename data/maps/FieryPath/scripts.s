@@ -1,6 +1,5 @@
 gFieryPath_MapScripts: ; 8230F24
-	.byte 3
-	.4byte gFieryPath_MapScript1_230F2A
+	map_script 3, gFieryPath_MapScript1_230F2A
 	.byte 0
 
 gFieryPath_MapScript1_230F2A: ; 8230F2A

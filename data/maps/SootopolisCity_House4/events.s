@@ -1,7 +1,7 @@
 gSootopolisCity_House4_MapObjects: ; 85333DC
-	object_event 1, 19, 0, 2, 0, 4, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSootopolisCity_House4_EventScript_226D16, 0, 0, 0
-	object_event 2, 26, 0, 5, 0, 2, 0, 3, 7, 33, 0, 0, 0, 0, 0, gSootopolisCity_House4_EventScript_226D1F, 0, 0, 0
-	object_event 3, 210, 0, 2, 0, 3, 0, 3, 1, 17, 0, 0, 0, 0, 0, gSootopolisCity_House4_EventScript_226D28, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_MAN_1, 0, 2, 0, 4, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSootopolisCity_House4_EventScript_226D16, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_WOMAN_5, 0, 5, 0, 2, 0, 3, 7, 33, 0, 0, 0, 0, 0, gSootopolisCity_House4_EventScript_226D1F, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_AZUMARILL, 0, 2, 0, 3, 0, 3, 1, 17, 0, 0, 0, 0, 0, gSootopolisCity_House4_EventScript_226D28, 0, 0, 0
 
 gSootopolisCity_House4_MapWarps: ; 8533424
 	warp_def 3, 6, 0, 7, SootopolisCity

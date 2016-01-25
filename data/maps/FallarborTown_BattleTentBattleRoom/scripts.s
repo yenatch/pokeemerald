@@ -1,10 +1,7 @@
 gFallarborTown_BattleTentBattleRoom_MapScripts: ; 8200899
-	.byte 3
-	.4byte gFallarborTown_BattleTentBattleRoom_MapScript1_2008A9
-	.byte 2
-	.4byte gFallarborTown_BattleTentBattleRoom_MapScript2_2008DD
-	.byte 4
-	.4byte gFallarborTown_BattleTentBattleRoom_MapScript2_200BB0
+	map_script 3, gFallarborTown_BattleTentBattleRoom_MapScript1_2008A9
+	map_script 2, gFallarborTown_BattleTentBattleRoom_MapScript2_2008DD
+	map_script 4, gFallarborTown_BattleTentBattleRoom_MapScript2_200BB0
 	.byte 0
 
 gFallarborTown_BattleTentBattleRoom_MapScript1_2008A9: ; 82008A9
@@ -30,9 +27,7 @@ gFallarborTown_BattleTentBattleRoom_EventScript_2008D2: ; 82008D2
 	return
 
 gFallarborTown_BattleTentBattleRoom_MapScript2_2008DD: ; 82008DD
-	.2byte 16384
-	.2byte 0
-	.4byte gFallarborTown_BattleTentBattleRoom_EventScript_2008E7
+	map_script_2 0x4000, 0, gFallarborTown_BattleTentBattleRoom_EventScript_2008E7
 	.2byte 0
 
 gFallarborTown_BattleTentBattleRoom_EventScript_2008E7: ; 82008E7
@@ -277,9 +272,7 @@ gFallarborTown_BattleTentBattleRoom_Movement_200BAB: ; 8200BAB
 	step_end
 
 gFallarborTown_BattleTentBattleRoom_MapScript2_200BB0: ; 8200BB0
-	.2byte 16385
-	.2byte 0
-	.4byte gFallarborTown_BattleTentBattleRoom_EventScript_200BBA
+	map_script_2 0x4001, 0, gFallarborTown_BattleTentBattleRoom_EventScript_200BBA
 	.2byte 0
 
 gFallarborTown_BattleTentBattleRoom_EventScript_200BBA: ; 8200BBA

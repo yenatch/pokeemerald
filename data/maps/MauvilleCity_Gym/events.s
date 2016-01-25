@@ -1,11 +1,11 @@
 gMauvilleCity_Gym_MapObjects: ; 852FD5C
-	object_event 1, 127, 0, 5, 0, 2, 0, 0, 8, 0, 0, 0, 0, 0, 0, gMauvilleCity_Gym_EventScript_20DEEB, 913, 0, 0
-	object_event 2, 66, 0, 7, 0, 8, 0, 3, 8, 0, 0, 1, 0, 1, 0, gMauvilleCity_Gym_EventScript_20E0D0, 0, 0, 0
-	object_event 3, 14, 0, 1, 0, 16, 0, 0, 7, 0, 0, 1, 0, 2, 0, gMauvilleCity_Gym_EventScript_20E0FE, 0, 0, 0
-	object_event 4, 35, 0, 5, 0, 10, 0, 0, 9, 0, 0, 1, 0, 2, 0, gMauvilleCity_Gym_EventScript_20E0E7, 0, 0, 0
-	object_event 5, 66, 0, 1, 0, 13, 0, 0, 8, 0, 0, 1, 0, 2, 0, gMauvilleCity_Gym_EventScript_20E0B9, 0, 0, 0
-	object_event 6, 23, 0, 7, 0, 20, 0, 0, 9, 0, 0, 0, 0, 0, 0, gMauvilleCity_Gym_EventScript_20E12C, 0, 0, 0
-	object_event 7, 39, 0, 7, 0, 10, 0, 3, 7, 17, 0, 1, 0, 1, 0, gMauvilleCity_Gym_EventScript_20E115, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_WATTSON, 0, 5, 0, 2, 0, 0, 8, 0, 0, 0, 0, 0, 0, gMauvilleCity_Gym_EventScript_20DEEB, 913, 0, 0
+	object_event 2, FIELD_OBJ_GFX_MAN_6, 0, 7, 0, 8, 0, 3, 8, 0, 0, 1, 0, 1, 0, gMauvilleCity_Gym_EventScript_20E0D0, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_GIRL_3, 0, 1, 0, 16, 0, 0, 7, 0, 0, 1, 0, 2, 0, gMauvilleCity_Gym_EventScript_20E0FE, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_YOUNGSTER, 0, 5, 0, 10, 0, 0, 9, 0, 0, 1, 0, 2, 0, gMauvilleCity_Gym_EventScript_20E0E7, 0, 0, 0
+	object_event 5, FIELD_OBJ_GFX_MAN_6, 0, 1, 0, 13, 0, 0, 8, 0, 0, 1, 0, 2, 0, gMauvilleCity_Gym_EventScript_20E0B9, 0, 0, 0
+	object_event 6, FIELD_OBJ_GFX_MAN_2, 0, 7, 0, 20, 0, 0, 9, 0, 0, 0, 0, 0, 0, gMauvilleCity_Gym_EventScript_20E12C, 0, 0, 0
+	object_event 7, FIELD_OBJ_GFX_MANIAC, 0, 7, 0, 10, 0, 3, 7, 17, 0, 1, 0, 1, 0, gMauvilleCity_Gym_EventScript_20E115, 0, 0, 0
 
 gMauvilleCity_Gym_MapWarps: ; 852FE04
 	warp_def 4, 20, 0, 0, MauvilleCity

@@ -1,8 +1,6 @@
 gNavelRock_Bottom_MapScripts: ; 8269255
-	.byte 3
-	.4byte gNavelRock_Bottom_MapScript1_269260
-	.byte 5
-	.4byte gNavelRock_Bottom_MapScript1_269284
+	map_script 3, gNavelRock_Bottom_MapScript1_269260
+	map_script 5, gNavelRock_Bottom_MapScript1_269284
 	.byte 0
 
 gNavelRock_Bottom_MapScript1_269260: ; 8269260

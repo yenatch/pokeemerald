@@ -1,6 +1,5 @@
 gShoalCave_LowTideLowerRoom_MapScripts: ; 8237156
-	.byte 1
-	.4byte gShoalCave_LowTideLowerRoom_MapScript1_23715C
+	map_script 1, gShoalCave_LowTideLowerRoom_MapScript1_23715C
 	.byte 0
 
 gShoalCave_LowTideLowerRoom_MapScript1_23715C: ; 823715C

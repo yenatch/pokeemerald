@@ -1,6 +1,5 @@
 gRoute109_SeashoreHouse_MapScripts: ; 82693F4
-	.byte 3
-	.4byte gRoute109_SeashoreHouse_MapScript1_2693FA
+	map_script 3, gRoute109_SeashoreHouse_MapScript1_2693FA
 	.byte 0
 
 gRoute109_SeashoreHouse_MapScript1_2693FA: ; 82693FA
@@ -93,19 +92,19 @@ gRoute109_SeashoreHouse_EventScript_2694D5: ; 82694D5
 	end
 
 gRoute109_SeashoreHouse_EventScript_2694E2: ; 82694E2
-	trainerbattle 2, 493, 0, gRoute109_SeashoreHouse_Text_269803, gRoute109_SeashoreHouse_Text_269867, gRoute109_SeashoreHouse_EventScript_269533
+	trainerbattle 2, TRAINER_DWAYNE, 0, gRoute109_SeashoreHouse_Text_269803, gRoute109_SeashoreHouse_Text_269867, gRoute109_SeashoreHouse_EventScript_269533
 	loadptr 0, gRoute109_SeashoreHouse_Text_26989D
 	callstd 6
 	end
 
 gRoute109_SeashoreHouse_EventScript_2694FD: ; 82694FD
-	trainerbattle 2, 647, 0, gRoute109_SeashoreHouse_Text_2698E3, gRoute109_SeashoreHouse_Text_269947, gRoute109_SeashoreHouse_EventScript_269533
+	trainerbattle 2, TRAINER_JOHANNA, 0, gRoute109_SeashoreHouse_Text_2698E3, gRoute109_SeashoreHouse_Text_269947, gRoute109_SeashoreHouse_EventScript_269533
 	loadptr 0, gRoute109_SeashoreHouse_Text_269953
 	callstd 6
 	end
 
 gRoute109_SeashoreHouse_EventScript_269518: ; 8269518
-	trainerbattle 2, 65, 0, gRoute109_SeashoreHouse_Text_269986, gRoute109_SeashoreHouse_Text_2699C5, gRoute109_SeashoreHouse_EventScript_269533
+	trainerbattle 2, TRAINER_SIMON, 0, gRoute109_SeashoreHouse_Text_269986, gRoute109_SeashoreHouse_Text_2699C5, gRoute109_SeashoreHouse_EventScript_269533
 	loadptr 0, gRoute109_SeashoreHouse_Text_2699DF
 	callstd 6
 	end

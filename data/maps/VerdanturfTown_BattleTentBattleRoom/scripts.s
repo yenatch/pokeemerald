@@ -1,10 +1,7 @@
 gVerdanturfTown_BattleTentBattleRoom_MapScripts: ; 82022FA
-	.byte 3
-	.4byte gVerdanturfTown_BattleTentBattleRoom_MapScript1_20230A
-	.byte 2
-	.4byte gVerdanturfTown_BattleTentBattleRoom_MapScript2_20233E
-	.byte 4
-	.4byte gVerdanturfTown_BattleTentBattleRoom_MapScript2_202541
+	map_script 3, gVerdanturfTown_BattleTentBattleRoom_MapScript1_20230A
+	map_script 2, gVerdanturfTown_BattleTentBattleRoom_MapScript2_20233E
+	map_script 4, gVerdanturfTown_BattleTentBattleRoom_MapScript2_202541
 	.byte 0
 
 gVerdanturfTown_BattleTentBattleRoom_MapScript1_20230A: ; 820230A
@@ -30,9 +27,7 @@ gVerdanturfTown_BattleTentBattleRoom_EventScript_202333: ; 8202333
 	return
 
 gVerdanturfTown_BattleTentBattleRoom_MapScript2_20233E: ; 820233E
-	.2byte 16384
-	.2byte 0
-	.4byte gVerdanturfTown_BattleTentBattleRoom_EventScript_202348
+	map_script_2 0x4000, 0, gVerdanturfTown_BattleTentBattleRoom_EventScript_202348
 	.2byte 0
 
 gVerdanturfTown_BattleTentBattleRoom_EventScript_202348: ; 8202348
@@ -169,9 +164,7 @@ gVerdanturfTown_BattleTentBattleRoom_EventScript_20251F: ; 820251F
 	end
 
 gVerdanturfTown_BattleTentBattleRoom_MapScript2_202541: ; 8202541
-	.2byte 16385
-	.2byte 0
-	.4byte gVerdanturfTown_BattleTentBattleRoom_EventScript_20254B
+	map_script_2 0x4001, 0, gVerdanturfTown_BattleTentBattleRoom_EventScript_20254B
 	.2byte 0
 
 gVerdanturfTown_BattleTentBattleRoom_EventScript_20254B: ; 820254B

@@ -2,7 +2,7 @@ gAbandonedShip_Rooms2_1F_MapScripts: ; 82380A6
 	.byte 0
 
 gAbandonedShip_Rooms2_1F_EventScript_2380A7: ; 82380A7
-	trainerbattle 6, 642, 0, gAbandonedShip_Rooms2_1F_Text_23819D, gAbandonedShip_Rooms2_1F_Text_2381DA, gAbandonedShip_Rooms2_1F_Text_238257, gAbandonedShip_Rooms2_1F_EventScript_2380D7
+	trainerbattle 6, TRAINER_KIRA_AND_DAN_1, 0, gAbandonedShip_Rooms2_1F_Text_23819D, gAbandonedShip_Rooms2_1F_Text_2381DA, gAbandonedShip_Rooms2_1F_Text_238257, gAbandonedShip_Rooms2_1F_EventScript_2380D7
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gAbandonedShip_Rooms2_1F_EventScript_2380F0
@@ -22,13 +22,13 @@ gAbandonedShip_Rooms2_1F_EventScript_2380D7: ; 82380D7
 	end
 
 gAbandonedShip_Rooms2_1F_EventScript_2380F0: ; 82380F0
-	trainerbattle 7, 642, 0, gAbandonedShip_Rooms2_1F_Text_2383FF, gAbandonedShip_Rooms2_1F_Text_238473, gAbandonedShip_Rooms2_1F_Text_238509
+	trainerbattle 7, TRAINER_KIRA_AND_DAN_1, 0, gAbandonedShip_Rooms2_1F_Text_2383FF, gAbandonedShip_Rooms2_1F_Text_238473, gAbandonedShip_Rooms2_1F_Text_238509
 	loadptr 0, gAbandonedShip_Rooms2_1F_Text_238491
 	callstd 6
 	end
 
 gAbandonedShip_Rooms2_1F_EventScript_23810B: ; 823810B
-	trainerbattle 6, 642, 0, gAbandonedShip_Rooms2_1F_Text_2382A4, gAbandonedShip_Rooms2_1F_Text_2382F4, gAbandonedShip_Rooms2_1F_Text_23836F, gAbandonedShip_Rooms2_1F_EventScript_23813B
+	trainerbattle 6, TRAINER_KIRA_AND_DAN_1, 0, gAbandonedShip_Rooms2_1F_Text_2382A4, gAbandonedShip_Rooms2_1F_Text_2382F4, gAbandonedShip_Rooms2_1F_Text_23836F, gAbandonedShip_Rooms2_1F_EventScript_23813B
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gAbandonedShip_Rooms2_1F_EventScript_238154
@@ -48,19 +48,19 @@ gAbandonedShip_Rooms2_1F_EventScript_23813B: ; 823813B
 	end
 
 gAbandonedShip_Rooms2_1F_EventScript_238154: ; 8238154
-	trainerbattle 7, 642, 0, gAbandonedShip_Rooms2_1F_Text_238556, gAbandonedShip_Rooms2_1F_Text_2385F2, gAbandonedShip_Rooms2_1F_Text_238668
+	trainerbattle 7, TRAINER_KIRA_AND_DAN_1, 0, gAbandonedShip_Rooms2_1F_Text_238556, gAbandonedShip_Rooms2_1F_Text_2385F2, gAbandonedShip_Rooms2_1F_Text_238668
 	loadptr 0, gAbandonedShip_Rooms2_1F_Text_23860B
 	callstd 6
 	end
 
 gAbandonedShip_Rooms2_1F_EventScript_23816F: ; 823816F
-	trainerbattle 0, 418, 0, gAbandonedShip_Rooms2_1F_Text_2386B4, gAbandonedShip_Rooms2_1F_Text_2386E8
+	trainerbattle 0, TRAINER_JANI, 0, gAbandonedShip_Rooms2_1F_Text_2386B4, gAbandonedShip_Rooms2_1F_Text_2386E8
 	loadptr 0, gAbandonedShip_Rooms2_1F_Text_238708
 	callstd 6
 	end
 
 gAbandonedShip_Rooms2_1F_EventScript_238186: ; 8238186
-	trainerbattle 0, 547, 0, gAbandonedShip_Rooms2_1F_Text_23873F, gAbandonedShip_Rooms2_1F_Text_238779
+	trainerbattle 0, TRAINER_GARRISON, 0, gAbandonedShip_Rooms2_1F_Text_23873F, gAbandonedShip_Rooms2_1F_Text_238779
 	loadptr 0, gAbandonedShip_Rooms2_1F_Text_2387A9
 	callstd 6
 	end

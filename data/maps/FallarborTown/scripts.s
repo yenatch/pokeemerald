@@ -1,6 +1,5 @@
 gFallarborTown_MapScripts: ; 81EB1FA
-	.byte 3
-	.4byte gFallarborTown_MapScript1_1EB200
+	map_script 3, gFallarborTown_MapScript1_1EB200
 	.byte 0
 
 gFallarborTown_MapScript1_1EB200: ; 81EB200

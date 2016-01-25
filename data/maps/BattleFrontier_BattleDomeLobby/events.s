@@ -1,10 +1,10 @@
 gBattleFrontier_BattleDomeLobby_MapObjects: ; 853C068
-	object_event 1, 85, 0, 5, 0, 10, 0, 0, 8, 17, 0, 0, 0, 0, 0, gBattleFrontier_BattleDomeLobby_EventScript_249A35, 0, 0, 0
-	object_event 2, 33, 0, 1, 0, 11, 0, 0, 2, 17, 0, 0, 0, 0, 0, gBattleFrontier_BattleDomeLobby_EventScript_249E10, 0, 0, 0
-	object_event 3, 47, 0, 14, 0, 14, 0, 0, 2, 17, 0, 0, 0, 0, 0, gBattleFrontier_BattleDomeLobby_EventScript_249DFE, 0, 0, 0
-	object_event 4, 17, 0, 18, 0, 14, 0, 0, 2, 17, 0, 0, 0, 0, 0, gBattleFrontier_BattleDomeLobby_EventScript_249E07, 0, 0, 0
-	object_event 5, 39, 0, 8, 0, 14, 0, 0, 2, 17, 0, 0, 0, 0, 0, gBattleFrontier_BattleDomeLobby_EventScript_249DED, 0, 0, 0
-	object_event 6, 85, 0, 17, 0, 10, 0, 0, 8, 17, 0, 0, 0, 0, 0, gBattleFrontier_BattleDomeLobby_EventScript_249A47, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_TEALA, 0, 5, 0, 10, 0, 0, 8, 17, 0, 0, 0, 0, 0, gBattleFrontier_BattleDomeLobby_EventScript_249A35, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_MAN_4, 0, 1, 0, 11, 0, 0, 2, 17, 0, 0, 0, 0, 0, gBattleFrontier_BattleDomeLobby_EventScript_249E10, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_LASS, 0, 14, 0, 14, 0, 0, 2, 17, 0, 0, 0, 0, 0, gBattleFrontier_BattleDomeLobby_EventScript_249DFE, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_FAT_MAN, 0, 18, 0, 14, 0, 0, 2, 17, 0, 0, 0, 0, 0, gBattleFrontier_BattleDomeLobby_EventScript_249E07, 0, 0, 0
+	object_event 5, FIELD_OBJ_GFX_MANIAC, 0, 8, 0, 14, 0, 0, 2, 17, 0, 0, 0, 0, 0, gBattleFrontier_BattleDomeLobby_EventScript_249DED, 0, 0, 0
+	object_event 6, FIELD_OBJ_GFX_TEALA, 0, 17, 0, 10, 0, 0, 8, 17, 0, 0, 0, 0, 0, gBattleFrontier_BattleDomeLobby_EventScript_249A47, 0, 0, 0
 
 gBattleFrontier_BattleDomeLobby_MapWarps: ; 853C0F8
 	warp_def 11, 16, 0, 1, BattleFrontier_OutsideWest

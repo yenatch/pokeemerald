@@ -1,6 +1,5 @@
 gRoute119_WeatherInstitute_1F_MapScripts: ; 826FA86
-	.byte 3
-	.4byte gRoute119_WeatherInstitute_1F_MapScript1_26FA8C
+	map_script 3, gRoute119_WeatherInstitute_1F_MapScript1_26FA8C
 	.byte 0
 
 gRoute119_WeatherInstitute_1F_MapScript1_26FA8C: ; 826FA8C
@@ -72,13 +71,13 @@ gRoute119_WeatherInstitute_1F_EventScript_26FB18: ; 826FB18
 	end
 
 gRoute119_WeatherInstitute_1F_EventScript_26FB29: ; 826FB29
-	trainerbattle 0, 17, 0, gRoute119_WeatherInstitute_1F_Text_26FB57, gRoute119_WeatherInstitute_1F_Text_26FBBB
+	trainerbattle 0, TRAINER_GRUNT_11, 0, gRoute119_WeatherInstitute_1F_Text_26FB57, gRoute119_WeatherInstitute_1F_Text_26FBBB
 	loadptr 0, gRoute119_WeatherInstitute_1F_Text_26FBD7
 	callstd 6
 	end
 
 gRoute119_WeatherInstitute_1F_EventScript_26FB40: ; 826FB40
-	trainerbattle 0, 26, 0, gRoute119_WeatherInstitute_1F_Text_26FC34, gRoute119_WeatherInstitute_1F_Text_26FC52
+	trainerbattle 0, TRAINER_GRUNT_20, 0, gRoute119_WeatherInstitute_1F_Text_26FC34, gRoute119_WeatherInstitute_1F_Text_26FC52
 	loadptr 0, gRoute119_WeatherInstitute_1F_Text_26FC60
 	callstd 6
 	end

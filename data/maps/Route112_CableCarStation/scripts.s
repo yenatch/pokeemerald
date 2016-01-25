@@ -1,8 +1,6 @@
 gRoute112_CableCarStation_MapScripts: ; 822AABE
-	.byte 3
-	.4byte gRoute112_CableCarStation_MapScript1_22AAC9
-	.byte 2
-	.4byte gRoute112_CableCarStation_MapScript2_22AAE9
+	map_script 3, gRoute112_CableCarStation_MapScript1_22AAC9
+	map_script 2, gRoute112_CableCarStation_MapScript2_22AAE9
 	.byte 0
 
 gRoute112_CableCarStation_MapScript1_22AAC9: ; 822AAC9
@@ -17,9 +15,7 @@ gRoute112_CableCarStation_EventScript_22AADD: ; 822AADD
 	return
 
 gRoute112_CableCarStation_MapScript2_22AAE9: ; 822AAE9
-	.2byte 16547
-	.2byte 2
-	.4byte gRoute112_CableCarStation_EventScript_22AAF3
+	map_script_2 0x40a3, 2, gRoute112_CableCarStation_EventScript_22AAF3
 	.2byte 0
 
 gRoute112_CableCarStation_EventScript_22AAF3: ; 822AAF3

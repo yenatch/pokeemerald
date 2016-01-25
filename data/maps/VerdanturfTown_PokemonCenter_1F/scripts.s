@@ -1,8 +1,6 @@
 gVerdanturfTown_PokemonCenter_1F_MapScripts: ; 8202726
-	.byte 3
-	.4byte gVerdanturfTown_PokemonCenter_1F_MapScript1_202731
-	.byte 5
-	.4byte gVerdanturfTown_PokemonCenter_1F_MapScript1_277C30
+	map_script 3, gVerdanturfTown_PokemonCenter_1F_MapScript1_202731
+	map_script 5, gVerdanturfTown_PokemonCenter_1F_MapScript1_277C30
 	.byte 0
 
 gVerdanturfTown_PokemonCenter_1F_MapScript1_202731: ; 8202731

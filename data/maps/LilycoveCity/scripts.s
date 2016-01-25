@@ -1,8 +1,6 @@
 gLilycoveCity_MapScripts: ; 81E2B3C
-	.byte 3
-	.4byte gLilycoveCity_MapScript1_1E2B47
-	.byte 1
-	.4byte gLilycoveCity_MapScript1_1E2B61
+	map_script 3, gLilycoveCity_MapScript1_1E2B47
+	map_script 1, gLilycoveCity_MapScript1_1E2B61
 	.byte 0
 
 gLilycoveCity_MapScript1_1E2B47: ; 81E2B47
@@ -365,32 +363,32 @@ gLilycoveCity_EventScript_1E2ECD: ; 81E2ECD
 	end
 
 gLilycoveCity_EventScript_1E2EDE: ; 81E2EDE
-	trainerbattle 3, 665, 0, gLilycoveCity_Text_1E3275
+	trainerbattle 3, TRAINER_MAY_12, 0, gLilycoveCity_Text_1E3275
 	jump gLilycoveCity_EventScript_1E2F3E
 	end
 
 gLilycoveCity_EventScript_1E2EEE: ; 81E2EEE
-	trainerbattle 3, 666, 0, gLilycoveCity_Text_1E3275
+	trainerbattle 3, TRAINER_MAY_13, 0, gLilycoveCity_Text_1E3275
 	jump gLilycoveCity_EventScript_1E2F3E
 	end
 
 gLilycoveCity_EventScript_1E2EFE: ; 81E2EFE
-	trainerbattle 3, 664, 0, gLilycoveCity_Text_1E3275
+	trainerbattle 3, TRAINER_MAY_11, 0, gLilycoveCity_Text_1E3275
 	jump gLilycoveCity_EventScript_1E2F3E
 	end
 
 gLilycoveCity_EventScript_1E2F0E: ; 81E2F0E
-	trainerbattle 3, 662, 0, gLilycoveCity_Text_1E3777
+	trainerbattle 3, TRAINER_BRENDAN_14, 0, gLilycoveCity_Text_1E3777
 	jump gLilycoveCity_EventScript_1E2FAA
 	end
 
 gLilycoveCity_EventScript_1E2F1E: ; 81E2F1E
-	trainerbattle 3, 663, 0, gLilycoveCity_Text_1E3777
+	trainerbattle 3, TRAINER_BRENDAN_15, 0, gLilycoveCity_Text_1E3777
 	jump gLilycoveCity_EventScript_1E2FAA
 	end
 
 gLilycoveCity_EventScript_1E2F2E: ; 81E2F2E
-	trainerbattle 3, 661, 0, gLilycoveCity_Text_1E3777
+	trainerbattle 3, TRAINER_BRENDAN_13, 0, gLilycoveCity_Text_1E3777
 	jump gLilycoveCity_EventScript_1E2FAA
 	end
 

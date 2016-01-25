@@ -1,6 +1,5 @@
 gMarineCave_Entrance_MapScripts: ; 823AFD0
-	.byte 5
-	.4byte gMarineCave_Entrance_MapScript1_23AFD6
+	map_script 5, gMarineCave_Entrance_MapScript1_23AFD6
 	.byte 0
 
 gMarineCave_Entrance_MapScript1_23AFD6: ; 823AFD6

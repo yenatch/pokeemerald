@@ -1,7 +1,7 @@
 gRustboroCity_House3_MapObjects: ; 8530BC0
-	object_event 1, 29, 0, 4, 0, 5, 0, 3, 10, 0, 0, 0, 0, 0, 0, gRustboroCity_House3_EventScript_216191, 0, 0, 0
-	object_event 2, 30, 0, 7, 0, 5, 0, 3, 9, 0, 0, 0, 0, 0, 0, gRustboroCity_House3_EventScript_21619A, 0, 0, 0
-	object_event 3, 209, 0, 4, 0, 4, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRustboroCity_House3_EventScript_2161A3, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_OLD_MAN_2, 0, 4, 0, 5, 0, 3, 10, 0, 0, 0, 0, 0, 0, gRustboroCity_House3_EventScript_216191, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_OLD_WOMAN_2, 0, 7, 0, 5, 0, 3, 9, 0, 0, 0, 0, 0, 0, gRustboroCity_House3_EventScript_21619A, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_PIKACHU, 0, 4, 0, 4, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRustboroCity_House3_EventScript_2161A3, 0, 0, 0
 
 gRustboroCity_House3_MapWarps: ; 8530C08
 	warp_def 5, 8, 0, 11, RustboroCity

@@ -1,8 +1,6 @@
 gLilycoveCity_PokemonCenter_1F_MapScripts: ; 821C5B2
-	.byte 3
-	.4byte gLilycoveCity_PokemonCenter_1F_MapScript1_21C5BD
-	.byte 5
-	.4byte gLilycoveCity_PokemonCenter_1F_MapScript1_277C30
+	map_script 3, gLilycoveCity_PokemonCenter_1F_MapScript1_21C5BD
+	map_script 5, gLilycoveCity_PokemonCenter_1F_MapScript1_277C30
 	.byte 0
 
 gLilycoveCity_PokemonCenter_1F_MapScript1_21C5BD: ; 821C5BD

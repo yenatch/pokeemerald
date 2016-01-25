@@ -1,8 +1,6 @@
 gRoute113_MapScripts: ; 81F2153
-	.byte 5
-	.4byte gRoute113_MapScript1_1F215E
-	.byte 3
-	.4byte gRoute113_MapScript1_1F2161
+	map_script 5, gRoute113_MapScript1_1F215E
+	map_script 3, gRoute113_MapScript1_1F2161
 	.byte 0
 
 gRoute113_MapScript1_1F215E: ; 81F215E
@@ -57,19 +55,19 @@ gRoute113_EventScript_1F21B7: ; 81F21B7
 	end
 
 gRoute113_EventScript_1F21C0: ; 81F21C0
-	trainerbattle 0, 326, 0, gRoute113_Text_299D3C, gRoute113_Text_299D68
+	trainerbattle 0, TRAINER_JAYLEN, 0, gRoute113_Text_299D3C, gRoute113_Text_299D68
 	loadptr 0, gRoute113_Text_299D7D
 	callstd 6
 	end
 
 gRoute113_EventScript_1F21D7: ; 81F21D7
-	trainerbattle 0, 327, 0, gRoute113_Text_299DE3, gRoute113_Text_299E1C
+	trainerbattle 0, TRAINER_DILLON, 0, gRoute113_Text_299DE3, gRoute113_Text_299E1C
 	loadptr 0, gRoute113_Text_299E38
 	callstd 6
 	end
 
 gRoute113_EventScript_1F21EE: ; 81F21EE
-	trainerbattle 2, 434, 0, gRoute113_Text_299EA6, gRoute113_Text_299EF9, gRoute113_EventScript_1F221A
+	trainerbattle 2, TRAINER_MADELINE_1, 0, gRoute113_Text_299EA6, gRoute113_Text_299EF9, gRoute113_EventScript_1F221A
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gRoute113_EventScript_1F2239
@@ -91,13 +89,13 @@ gRoute113_EventScript_1F221A: ; 81F221A
 	end
 
 gRoute113_EventScript_1F2239: ; 81F2239
-	trainerbattle 5, 434, 0, gRoute113_Text_299F8A, gRoute113_Text_299FC9
+	trainerbattle 5, TRAINER_MADELINE_1, 0, gRoute113_Text_299F8A, gRoute113_Text_299FC9
 	loadptr 0, gRoute113_Text_299FD8
 	callstd 6
 	end
 
 gRoute113_EventScript_1F2250: ; 81F2250
-	trainerbattle 2, 419, 0, gRoute113_Text_29A015, gRoute113_Text_29A04C, gRoute113_EventScript_1F227C
+	trainerbattle 2, TRAINER_LAO_1, 0, gRoute113_Text_29A015, gRoute113_Text_29A04C, gRoute113_EventScript_1F227C
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gRoute113_EventScript_1F229B
@@ -119,49 +117,49 @@ gRoute113_EventScript_1F227C: ; 81F227C
 	end
 
 gRoute113_EventScript_1F229B: ; 81F229B
-	trainerbattle 5, 419, 0, gRoute113_Text_29A0E8, gRoute113_Text_29A11F
+	trainerbattle 5, TRAINER_LAO_1, 0, gRoute113_Text_29A0E8, gRoute113_Text_29A11F
 	loadptr 0, gRoute113_Text_29A13A
 	callstd 6
 	end
 
 gRoute113_EventScript_1F22B2: ; 81F22B2
-	trainerbattle 0, 420, 0, gRoute113_Text_29A192, gRoute113_Text_29A1C6
+	trainerbattle 0, TRAINER_LUNG, 0, gRoute113_Text_29A192, gRoute113_Text_29A1C6
 	loadptr 0, gRoute113_Text_29A219
 	callstd 6
 	end
 
 gRoute113_EventScript_1F22C9: ; 81F22C9
-	trainerbattle 4, 677, 0, gRoute113_Text_29A261, gRoute113_Text_29A29D, gRoute113_Text_29A31F
+	trainerbattle 4, TRAINER_TORI_AND_TIA, 0, gRoute113_Text_29A261, gRoute113_Text_29A29D, gRoute113_Text_29A31F
 	loadptr 0, gRoute113_Text_29A2DE
 	callstd 6
 	end
 
 gRoute113_EventScript_1F22E4: ; 81F22E4
-	trainerbattle 4, 677, 0, gRoute113_Text_29A35C, gRoute113_Text_29A397, gRoute113_Text_29A419
+	trainerbattle 4, TRAINER_TORI_AND_TIA, 0, gRoute113_Text_29A35C, gRoute113_Text_29A397, gRoute113_Text_29A419
 	loadptr 0, gRoute113_Text_29A3DA
 	callstd 6
 	end
 
 gRoute113_EventScript_1F22FF: ; 81F22FF
-	trainerbattle 0, 708, 0, gRoute113_Text_29A4BF, gRoute113_Text_29A508
+	trainerbattle 0, TRAINER_SOPHIE, 0, gRoute113_Text_29A4BF, gRoute113_Text_29A508
 	loadptr 0, gRoute113_Text_29A529
 	callstd 6
 	end
 
 gRoute113_EventScript_1F2316: ; 81F2316
-	trainerbattle 0, 709, 0, gRoute113_Text_29A453, gRoute113_Text_29A480
+	trainerbattle 0, TRAINER_COBY, 0, gRoute113_Text_29A453, gRoute113_Text_29A480
 	loadptr 0, gRoute113_Text_29A489
 	callstd 6
 	end
 
 gRoute113_EventScript_1F232D: ; 81F232D
-	trainerbattle 0, 710, 0, gRoute113_Text_29A566, gRoute113_Text_29A5A0
+	trainerbattle 0, TRAINER_LAWRENCE, 0, gRoute113_Text_29A566, gRoute113_Text_29A5A0
 	loadptr 0, gRoute113_Text_29A5BE
 	callstd 6
 	end
 
 gRoute113_EventScript_1F2344: ; 81F2344
-	trainerbattle 0, 711, 0, gRoute113_Text_29A5E4, gRoute113_Text_29A628
+	trainerbattle 0, TRAINER_WYATT, 0, gRoute113_Text_29A5E4, gRoute113_Text_29A628
 	loadptr 0, gRoute113_Text_29A65D
 	callstd 6
 	end

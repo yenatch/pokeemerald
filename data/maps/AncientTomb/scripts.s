@@ -1,10 +1,7 @@
 gAncientTomb_MapScripts: ; 8238FB3
-	.byte 5
-	.4byte gAncientTomb_MapScript1_238FC3
-	.byte 1
-	.4byte gAncientTomb_MapScript1_238FF2
-	.byte 3
-	.4byte gAncientTomb_MapScript1_238FE1
+	map_script 5, gAncientTomb_MapScript1_238FC3
+	map_script 1, gAncientTomb_MapScript1_238FF2
+	map_script 3, gAncientTomb_MapScript1_238FE1
 	.byte 0
 
 gAncientTomb_MapScript1_238FC3: ; 8238FC3

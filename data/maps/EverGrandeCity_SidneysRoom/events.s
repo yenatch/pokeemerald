@@ -1,5 +1,5 @@
 gEverGrandeCity_SidneysRoom_MapObjects: ; 8533610
-	object_event 1, 121, 0, 6, 0, 5, 0, 3, 8, 0, 0, 0, 0, 0, 0, gEverGrandeCity_SidneysRoom_EventScript_227F64, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_SIDNEY, 0, 6, 0, 5, 0, 3, 8, 0, 0, 0, 0, 0, 0, gEverGrandeCity_SidneysRoom_EventScript_227F64, 0, 0, 0
 
 gEverGrandeCity_SidneysRoom_MapWarps: ; 8533628
 	warp_def 6, 13, 3, 1, EverGrandeCity_Hall5

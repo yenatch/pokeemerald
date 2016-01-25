@@ -1,14 +1,10 @@
 gSlateportCity_BattleTentLobby_MapScripts: ; 8208730
-	.byte 2
-	.4byte gSlateportCity_BattleTentLobby_MapScript2_20874F
-	.byte 4
-	.4byte gSlateportCity_BattleTentLobby_MapScript2_20873B
+	map_script 2, gSlateportCity_BattleTentLobby_MapScript2_20874F
+	map_script 4, gSlateportCity_BattleTentLobby_MapScript2_20873B
 	.byte 0
 
 gSlateportCity_BattleTentLobby_MapScript2_20873B: ; 820873B
-	.2byte 16385
-	.2byte 0
-	.4byte gSlateportCity_BattleTentLobby_EventScript_208745
+	map_script_2 0x4001, 0, gSlateportCity_BattleTentLobby_EventScript_208745
 	.2byte 0
 
 gSlateportCity_BattleTentLobby_EventScript_208745: ; 8208745
@@ -17,21 +13,11 @@ gSlateportCity_BattleTentLobby_EventScript_208745: ; 8208745
 	end
 
 gSlateportCity_BattleTentLobby_MapScript2_20874F: ; 820874F
-	.2byte 16384
-	.2byte 0
-	.4byte gSlateportCity_BattleTentLobby_EventScript_208779
-	.2byte 16384
-	.2byte 1
-	.4byte gSlateportCity_BattleTentLobby_EventScript_208782
-	.2byte 16384
-	.2byte 2
-	.4byte gSlateportCity_BattleTentLobby_EventScript_208871
-	.2byte 16384
-	.2byte 3
-	.4byte gSlateportCity_BattleTentLobby_EventScript_2087B7
-	.2byte 16384
-	.2byte 4
-	.4byte gSlateportCity_BattleTentLobby_EventScript_208837
+	map_script_2 0x4000, 0, gSlateportCity_BattleTentLobby_EventScript_208779
+	map_script_2 0x4000, 1, gSlateportCity_BattleTentLobby_EventScript_208782
+	map_script_2 0x4000, 2, gSlateportCity_BattleTentLobby_EventScript_208871
+	map_script_2 0x4000, 3, gSlateportCity_BattleTentLobby_EventScript_2087B7
+	map_script_2 0x4000, 4, gSlateportCity_BattleTentLobby_EventScript_208837
 	.2byte 0
 
 gSlateportCity_BattleTentLobby_EventScript_208779: ; 8208779

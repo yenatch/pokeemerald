@@ -1,8 +1,6 @@
 gLittlerootTown_BrendansHouse_2F_MapScripts: ; 81F83E3
-	.byte 3
-	.4byte gLittlerootTown_BrendansHouse_2F_MapScript1_1F83EE
-	.byte 4
-	.4byte gLittlerootTown_BrendansHouse_2F_MapScript2_1F846A
+	map_script 3, gLittlerootTown_BrendansHouse_2F_MapScript1_1F83EE
+	map_script 4, gLittlerootTown_BrendansHouse_2F_MapScript2_1F846A
 	.byte 0
 
 gLittlerootTown_BrendansHouse_2F_MapScript1_1F83EE: ; 81F83EE
@@ -47,9 +45,7 @@ gLittlerootTown_BrendansHouse_2F_EventScript_1F8464: ; 81F8464
 	return
 
 gLittlerootTown_BrendansHouse_2F_MapScript2_1F846A: ; 81F846A
-	.2byte 16521
-	.2byte 0
-	.4byte gLittlerootTown_BrendansHouse_2F_EventScript_1F8474
+	map_script_2 0x4089, 0, gLittlerootTown_BrendansHouse_2F_EventScript_1F8474
 	.2byte 0
 
 gLittlerootTown_BrendansHouse_2F_EventScript_1F8474: ; 81F8474

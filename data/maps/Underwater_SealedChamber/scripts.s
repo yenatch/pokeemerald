@@ -1,6 +1,5 @@
 gUnderwater_SealedChamber_MapScripts: ; 82390C4
-	.byte 6
-	.4byte gUnderwater_SealedChamber_MapScript1_2390CA
+	map_script 6, gUnderwater_SealedChamber_MapScript1_2390CA
 	.byte 0
 
 gUnderwater_SealedChamber_MapScript1_2390CA: ; 82390CA

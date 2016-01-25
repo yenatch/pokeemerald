@@ -1,12 +1,12 @@
 gNewMauville_Inside_MapObjects: ; 85364A8
-	object_event 1, 59, 0, 32, 0, 25, 0, 3, 1, 0, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_2911EC, 1075, 0, 0
-	object_event 2, 59, 0, 16, 0, 22, 0, 3, 1, 0, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_2911F9, 1076, 0, 0
-	object_event 3, 59, 0, 39, 0, 4, 0, 3, 1, 17, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_291206, 1110, 0, 0
-	object_event 4, 59, 0, 17, 0, 10, 0, 3, 1, 17, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_291213, 1122, 0, 0
-	object_event 5, 59, 0, 2, 0, 11, 0, 3, 1, 17, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_291220, 1123, 0, 0
-	object_event 6, 59, 0, 25, 0, 18, 0, 3, 1, 17, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_2377AF, 974, 0, 0
-	object_event 7, 59, 0, 6, 0, 11, 0, 3, 1, 17, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_2377FC, 975, 0, 0
-	object_event 8, 59, 0, 13, 0, 10, 0, 3, 1, 17, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_237849, 976, 0, 0
+	object_event 1, FIELD_OBJ_GFX_ITEM_BALL, 0, 32, 0, 25, 0, 3, 1, 0, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_2911EC, 1075, 0, 0
+	object_event 2, FIELD_OBJ_GFX_ITEM_BALL, 0, 16, 0, 22, 0, 3, 1, 0, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_2911F9, 1076, 0, 0
+	object_event 3, FIELD_OBJ_GFX_ITEM_BALL, 0, 39, 0, 4, 0, 3, 1, 17, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_291206, 1110, 0, 0
+	object_event 4, FIELD_OBJ_GFX_ITEM_BALL, 0, 17, 0, 10, 0, 3, 1, 17, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_291213, 1122, 0, 0
+	object_event 5, FIELD_OBJ_GFX_ITEM_BALL, 0, 2, 0, 11, 0, 3, 1, 17, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_291220, 1123, 0, 0
+	object_event 6, FIELD_OBJ_GFX_ITEM_BALL, 0, 25, 0, 18, 0, 3, 1, 17, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_2377AF, 974, 0, 0
+	object_event 7, FIELD_OBJ_GFX_ITEM_BALL, 0, 6, 0, 11, 0, 3, 1, 17, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_2377FC, 975, 0, 0
+	object_event 8, FIELD_OBJ_GFX_ITEM_BALL, 0, 13, 0, 10, 0, 3, 1, 17, 0, 0, 0, 0, 0, gNewMauville_Inside_EventScript_237849, 976, 0, 0
 
 gNewMauville_Inside_MapWarps: ; 8536568
 	warp_def 32, 33, 3, 1, NewMauville_Entrance

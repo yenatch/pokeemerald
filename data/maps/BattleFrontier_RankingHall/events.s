@@ -1,7 +1,7 @@
 gBattleFrontier_RankingHall_MapObjects: ; 853CEB8
-	object_event 1, 85, 0, 24, 0, 13, 0, 3, 8, 17, 0, 0, 0, 0, 0, gBattleFrontier_RankingHall_EventScript_25E52F, 0, 0, 0
-	object_event 2, 5, 0, 4, 0, 10, 0, 3, 2, 17, 0, 0, 0, 0, 0, gBattleFrontier_RankingHall_EventScript_25E54A, 0, 0, 0
-	object_event 3, 13, 0, 44, 0, 11, 0, 3, 2, 17, 0, 0, 0, 0, 0, gBattleFrontier_RankingHall_EventScript_25E573, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_TEALA, 0, 24, 0, 13, 0, 3, 8, 17, 0, 0, 0, 0, 0, gBattleFrontier_RankingHall_EventScript_25E52F, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_LITTLE_BOY_1, 0, 4, 0, 10, 0, 3, 2, 17, 0, 0, 0, 0, 0, gBattleFrontier_RankingHall_EventScript_25E54A, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_BOY_3, 0, 44, 0, 11, 0, 3, 2, 17, 0, 0, 0, 0, 0, gBattleFrontier_RankingHall_EventScript_25E573, 0, 0, 0
 
 gBattleFrontier_RankingHall_MapWarps: ; 853CF00
 	warp_def 26, 14, 3, 4, BattleFrontier_OutsideEast

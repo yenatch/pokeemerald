@@ -1,6 +1,6 @@
 gSootopolisCity_House1_MapObjects: ; 85332F8
-	object_event 1, 44, 0, 2, 0, 4, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSootopolisCity_House1_EventScript_22694D, 0, 0, 0
-	object_event 2, 204, 0, 2, 0, 3, 0, 3, 8, 0, 0, 0, 0, 0, 0, gSootopolisCity_House1_EventScript_22698E, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_BLACK_BELT, 0, 2, 0, 4, 0, 3, 10, 0, 0, 0, 0, 0, 0, gSootopolisCity_House1_EventScript_22694D, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_KECLEON_1, 0, 2, 0, 3, 0, 3, 8, 0, 0, 0, 0, 0, 0, gSootopolisCity_House1_EventScript_22698E, 0, 0, 0
 
 gSootopolisCity_House1_MapWarps: ; 8533328
 	warp_def 3, 6, 0, 4, SootopolisCity

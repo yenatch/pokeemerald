@@ -2,61 +2,61 @@ gSootopolisCity_Gym_B1F_MapScripts: ; 8225C8A
 	.byte 0
 
 gSootopolisCity_Gym_B1F_EventScript_225C8B: ; 8225C8B
-	trainerbattle 0, 613, 0, gSootopolisCity_Gym_B1F_Text_225D71, gSootopolisCity_Gym_B1F_Text_225DB6
+	trainerbattle 0, TRAINER_ANDREA, 0, gSootopolisCity_Gym_B1F_Text_225D71, gSootopolisCity_Gym_B1F_Text_225DB6
 	loadptr 0, gSootopolisCity_Gym_B1F_Text_225DCF
 	callstd 6
 	end
 
 gSootopolisCity_Gym_B1F_EventScript_225CA2: ; 8225CA2
-	trainerbattle 0, 614, 0, gSootopolisCity_Gym_B1F_Text_225E04, gSootopolisCity_Gym_B1F_Text_225E60
+	trainerbattle 0, TRAINER_CRISSY, 0, gSootopolisCity_Gym_B1F_Text_225E04, gSootopolisCity_Gym_B1F_Text_225E60
 	loadptr 0, gSootopolisCity_Gym_B1F_Text_225E90
 	callstd 6
 	end
 
 gSootopolisCity_Gym_B1F_EventScript_225CB9: ; 8225CB9
-	trainerbattle 0, 118, 0, gSootopolisCity_Gym_B1F_Text_22646E, gSootopolisCity_Gym_B1F_Text_226495
+	trainerbattle 0, TRAINER_BRIANNA, 0, gSootopolisCity_Gym_B1F_Text_22646E, gSootopolisCity_Gym_B1F_Text_226495
 	loadptr 0, gSootopolisCity_Gym_B1F_Text_2264BC
 	callstd 6
 	end
 
 gSootopolisCity_Gym_B1F_EventScript_225CD0: ; 8225CD0
-	trainerbattle 0, 128, 0, gSootopolisCity_Gym_B1F_Text_225FBE, gSootopolisCity_Gym_B1F_Text_225FEB
+	trainerbattle 0, TRAINER_CONNIE, 0, gSootopolisCity_Gym_B1F_Text_225FBE, gSootopolisCity_Gym_B1F_Text_225FEB
 	loadptr 0, gSootopolisCity_Gym_B1F_Text_225FFE
 	callstd 6
 	end
 
 gSootopolisCity_Gym_B1F_EventScript_225CE7: ; 8225CE7
-	trainerbattle 0, 129, 0, gSootopolisCity_Gym_B1F_Text_226061, gSootopolisCity_Gym_B1F_Text_2260B6
+	trainerbattle 0, TRAINER_BRIDGET, 0, gSootopolisCity_Gym_B1F_Text_226061, gSootopolisCity_Gym_B1F_Text_2260B6
 	loadptr 0, gSootopolisCity_Gym_B1F_Text_2260D1
 	callstd 6
 	end
 
 gSootopolisCity_Gym_B1F_EventScript_225CFE: ; 8225CFE
-	trainerbattle 0, 130, 0, gSootopolisCity_Gym_B1F_Text_226164, gSootopolisCity_Gym_B1F_Text_2261A7
+	trainerbattle 0, TRAINER_OLIVIA, 0, gSootopolisCity_Gym_B1F_Text_226164, gSootopolisCity_Gym_B1F_Text_2261A7
 	loadptr 0, gSootopolisCity_Gym_B1F_Text_2261B5
 	callstd 6
 	end
 
 gSootopolisCity_Gym_B1F_EventScript_225D15: ; 8225D15
-	trainerbattle 0, 131, 0, gSootopolisCity_Gym_B1F_Text_2261F7, gSootopolisCity_Gym_B1F_Text_226274
+	trainerbattle 0, TRAINER_TIFFANY, 0, gSootopolisCity_Gym_B1F_Text_2261F7, gSootopolisCity_Gym_B1F_Text_226274
 	loadptr 0, gSootopolisCity_Gym_B1F_Text_226286
 	callstd 6
 	end
 
 gSootopolisCity_Gym_B1F_EventScript_225D2C: ; 8225D2C
-	trainerbattle 0, 301, 0, gSootopolisCity_Gym_B1F_Text_2262F3, gSootopolisCity_Gym_B1F_Text_22633B
+	trainerbattle 0, TRAINER_BETHANY, 0, gSootopolisCity_Gym_B1F_Text_2262F3, gSootopolisCity_Gym_B1F_Text_22633B
 	loadptr 0, gSootopolisCity_Gym_B1F_Text_226341
 	callstd 6
 	end
 
 gSootopolisCity_Gym_B1F_EventScript_225D43: ; 8225D43
-	trainerbattle 0, 502, 0, gSootopolisCity_Gym_B1F_Text_226388, gSootopolisCity_Gym_B1F_Text_2263BD
+	trainerbattle 0, TRAINER_ANNIKA, 0, gSootopolisCity_Gym_B1F_Text_226388, gSootopolisCity_Gym_B1F_Text_2263BD
 	loadptr 0, gSootopolisCity_Gym_B1F_Text_2263F4
 	callstd 6
 	end
 
 gSootopolisCity_Gym_B1F_EventScript_225D5A: ; 8225D5A
-	trainerbattle 0, 115, 0, gSootopolisCity_Gym_B1F_Text_225ED6, gSootopolisCity_Gym_B1F_Text_225F35
+	trainerbattle 0, TRAINER_DAPHNE, 0, gSootopolisCity_Gym_B1F_Text_225ED6, gSootopolisCity_Gym_B1F_Text_225F35
 	loadptr 0, gSootopolisCity_Gym_B1F_Text_225F67
 	callstd 6
 	end

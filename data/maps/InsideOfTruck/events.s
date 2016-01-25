@@ -1,7 +1,7 @@
 gInsideOfTruck_MapObjects: ; 853A078
-	object_event 1, 113, 0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, gInsideOfTruck_EventScript_23BF6C, 0, 0, 0
-	object_event 2, 113, 0, 0, 0, 3, 0, 8, 8, 0, 0, 0, 0, 0, 0, gInsideOfTruck_EventScript_23BF6C, 0, 0, 0
-	object_event 3, 113, 0, 2, 0, 3, 0, 8, 8, 0, 0, 0, 0, 0, 0, gInsideOfTruck_EventScript_23BF6C, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_MOVING_BOX, 0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, gInsideOfTruck_EventScript_23BF6C, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_MOVING_BOX, 0, 0, 0, 3, 0, 8, 8, 0, 0, 0, 0, 0, 0, gInsideOfTruck_EventScript_23BF6C, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_MOVING_BOX, 0, 2, 0, 3, 0, 8, 8, 0, 0, 0, 0, 0, 0, gInsideOfTruck_EventScript_23BF6C, 0, 0, 0
 
 gInsideOfTruck_MapWarps: ; 853A0C0
 	warp_def 4, 1, 0, 127, 32639

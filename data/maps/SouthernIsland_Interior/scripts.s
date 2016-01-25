@@ -1,8 +1,6 @@
 gSouthernIsland_Interior_MapScripts: ; 8242A45
-	.byte 5
-	.4byte gSouthernIsland_Interior_MapScript1_242A50
-	.byte 3
-	.4byte gSouthernIsland_Interior_MapScript1_242A6E
+	map_script 5, gSouthernIsland_Interior_MapScript1_242A50
+	map_script 3, gSouthernIsland_Interior_MapScript1_242A6E
 	.byte 0
 
 gSouthernIsland_Interior_MapScript1_242A50: ; 8242A50

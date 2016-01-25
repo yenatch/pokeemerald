@@ -1,5 +1,5 @@
 gUnionRoom_MapObjects: ; 853B020
-	object_event 1, 227, 0, 3, 0, 2, 0, 3, 8, 0, 0, 0, 0, 0, 0, gUnionRoom_EventScript_23D236, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_UNION_ROOM_ATTENDANT, 0, 3, 0, 2, 0, 3, 8, 0, 0, 0, 0, 0, 0, gUnionRoom_EventScript_23D236, 0, 0, 0
 	object_event 2, 243, 0, 1, 0, 8, 0, 3, 2, 17, 0, 0, 0, 0, 0, gUnionRoom_EventScript_23D204, 706, 0, 0
 	object_event 3, 247, 0, 7, 0, 8, 0, 3, 2, 17, 0, 0, 0, 0, 0, gUnionRoom_EventScript_23D22C, 710, 0, 0
 	object_event 4, 246, 0, 1, 0, 4, 0, 3, 2, 17, 0, 0, 0, 0, 0, gUnionRoom_EventScript_23D222, 709, 0, 0

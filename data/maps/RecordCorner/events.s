@@ -1,5 +1,5 @@
 gRecordCorner_MapObjects: ; 8539DFC
-	object_event 1, 28, 0, 10, 0, 5, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRecordCorner_EventScript_2774C6, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_WOMAN_6, 0, 10, 0, 5, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRecordCorner_EventScript_2774C6, 0, 0, 0
 
 gRecordCorner_MapWarps: ; 8539E14
 	warp_def 8, 9, 3, 127, 32639

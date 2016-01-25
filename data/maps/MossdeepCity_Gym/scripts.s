@@ -1,6 +1,5 @@
 gMossdeepCity_Gym_MapScripts: ; 8220800
-	.byte 1
-	.4byte gMossdeepCity_Gym_MapScript1_220806
+	map_script 1, gMossdeepCity_Gym_MapScript1_220806
 	.byte 0
 
 gMossdeepCity_Gym_MapScript1_220806: ; 8220806
@@ -50,7 +49,7 @@ gMossdeepCity_Gym_EventScript_220885: ; 8220885
 	end
 
 gMossdeepCity_Gym_EventScript_220898: ; 8220898
-	trainerbattle 8, 271, 0, gMossdeepCity_Gym_Text_221783, gMossdeepCity_Gym_Text_2218EC, gMossdeepCity_Gym_Text_221BCE, gMossdeepCity_Gym_EventScript_2208D1
+	trainerbattle 8, TRAINER_TATE_AND_LIZA_1, 0, gMossdeepCity_Gym_Text_221783, gMossdeepCity_Gym_Text_2218EC, gMossdeepCity_Gym_Text_221BCE, gMossdeepCity_Gym_EventScript_2208D1
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gMossdeepCity_Gym_EventScript_22097E
@@ -119,7 +118,7 @@ gMossdeepCity_Gym_EventScript_22095B: ; 822095B
 	return
 
 gMossdeepCity_Gym_EventScript_22097E: ; 822097E
-	trainerbattle 7, 271, 0, gMossdeepCity_Gym_Text_221D0B, gMossdeepCity_Gym_Text_221E05, gMossdeepCity_Gym_Text_221EB8
+	trainerbattle 7, TRAINER_TATE_AND_LIZA_1, 0, gMossdeepCity_Gym_Text_221D0B, gMossdeepCity_Gym_Text_221E05, gMossdeepCity_Gym_Text_221EB8
 	loadptr 0, gMossdeepCity_Gym_Text_221E45
 	callstd 6
 	end
@@ -134,73 +133,73 @@ gMossdeepCity_Gym_EventScript_220AF1: ; 8220AF1
 	end
 
 gMossdeepCity_Gym_EventScript_220AFD: ; 8220AFD
-	trainerbattle 0, 233, 0, gMossdeepCity_Gym_Text_220E5C, gMossdeepCity_Gym_Text_220EAC
+	trainerbattle 0, TRAINER_PRESTON, 0, gMossdeepCity_Gym_Text_220E5C, gMossdeepCity_Gym_Text_220EAC
 	loadptr 0, gMossdeepCity_Gym_Text_220ED3
 	callstd 6
 	end
 
 gMossdeepCity_Gym_EventScript_220B14: ; 8220B14
-	trainerbattle 0, 234, 0, gMossdeepCity_Gym_Text_220F02, gMossdeepCity_Gym_Text_220F1A
+	trainerbattle 0, TRAINER_VIRGIL, 0, gMossdeepCity_Gym_Text_220F02, gMossdeepCity_Gym_Text_220F1A
 	loadptr 0, gMossdeepCity_Gym_Text_220F3A
 	callstd 6
 	end
 
 gMossdeepCity_Gym_EventScript_220B2B: ; 8220B2B
-	trainerbattle 0, 235, 0, gMossdeepCity_Gym_Text_220FB0, gMossdeepCity_Gym_Text_221024
+	trainerbattle 0, TRAINER_BLAKE, 0, gMossdeepCity_Gym_Text_220FB0, gMossdeepCity_Gym_Text_221024
 	loadptr 0, gMossdeepCity_Gym_Text_221055
 	callstd 6
 	end
 
 gMossdeepCity_Gym_EventScript_220B42: ; 8220B42
-	trainerbattle 0, 244, 0, gMossdeepCity_Gym_Text_2210EE, gMossdeepCity_Gym_Text_221152
+	trainerbattle 0, TRAINER_HANNAH, 0, gMossdeepCity_Gym_Text_2210EE, gMossdeepCity_Gym_Text_221152
 	loadptr 0, gMossdeepCity_Gym_Text_22116A
 	callstd 6
 	end
 
 gMossdeepCity_Gym_EventScript_220B59: ; 8220B59
-	trainerbattle 0, 245, 0, gMossdeepCity_Gym_Text_2211E2, gMossdeepCity_Gym_Text_221230
+	trainerbattle 0, TRAINER_SAMANTHA, 0, gMossdeepCity_Gym_Text_2211E2, gMossdeepCity_Gym_Text_221230
 	loadptr 0, gMossdeepCity_Gym_Text_22123D
 	callstd 6
 	end
 
 gMossdeepCity_Gym_EventScript_220B70: ; 8220B70
-	trainerbattle 0, 246, 0, gMossdeepCity_Gym_Text_2212A6, gMossdeepCity_Gym_Text_221309
+	trainerbattle 0, TRAINER_MAURA, 0, gMossdeepCity_Gym_Text_2212A6, gMossdeepCity_Gym_Text_221309
 	loadptr 0, gMossdeepCity_Gym_Text_22132E
 	callstd 6
 	end
 
 gMossdeepCity_Gym_EventScript_220B87: ; 8220B87
-	trainerbattle 0, 575, 0, gMossdeepCity_Gym_Text_2213C2, gMossdeepCity_Gym_Text_2213F4
+	trainerbattle 0, TRAINER_SYLVIA, 0, gMossdeepCity_Gym_Text_2213C2, gMossdeepCity_Gym_Text_2213F4
 	loadptr 0, gMossdeepCity_Gym_Text_221412
 	callstd 6
 	end
 
 gMossdeepCity_Gym_EventScript_220B9E: ; 8220B9E
-	trainerbattle 0, 582, 0, gMossdeepCity_Gym_Text_221460, gMossdeepCity_Gym_Text_2214A7
+	trainerbattle 0, TRAINER_NATE, 0, gMossdeepCity_Gym_Text_221460, gMossdeepCity_Gym_Text_2214A7
 	loadptr 0, gMossdeepCity_Gym_Text_2214D3
 	callstd 6
 	end
 
 gMossdeepCity_Gym_EventScript_220BB5: ; 8220BB5
-	trainerbattle 0, 591, 0, gMossdeepCity_Gym_Text_22161B, gMossdeepCity_Gym_Text_221658
+	trainerbattle 0, TRAINER_MACEY, 0, gMossdeepCity_Gym_Text_22161B, gMossdeepCity_Gym_Text_221658
 	loadptr 0, gMossdeepCity_Gym_Text_221680
 	callstd 6
 	end
 
 gMossdeepCity_Gym_EventScript_220BCC: ; 8220BCC
-	trainerbattle 0, 584, 0, gMossdeepCity_Gym_Text_22157C, gMossdeepCity_Gym_Text_2215B8
+	trainerbattle 0, TRAINER_CLIFFORD, 0, gMossdeepCity_Gym_Text_22157C, gMossdeepCity_Gym_Text_2215B8
 	loadptr 0, gMossdeepCity_Gym_Text_2215E2
 	callstd 6
 	end
 
 gMossdeepCity_Gym_EventScript_220BE3: ; 8220BE3
-	trainerbattle 0, 585, 0, gMossdeepCity_Gym_Text_2216EE, gMossdeepCity_Gym_Text_22172D
+	trainerbattle 0, TRAINER_NICHOLAS, 0, gMossdeepCity_Gym_Text_2216EE, gMossdeepCity_Gym_Text_22172D
 	loadptr 0, gMossdeepCity_Gym_Text_22173A
 	callstd 6
 	end
 
 gMossdeepCity_Gym_EventScript_220BFA: ; 8220BFA
-	trainerbattle 0, 583, 0, gMossdeepCity_Gym_Text_221507, gMossdeepCity_Gym_Text_22153B
+	trainerbattle 0, TRAINER_KATHLEEN, 0, gMossdeepCity_Gym_Text_221507, gMossdeepCity_Gym_Text_22153B
 	loadptr 0, gMossdeepCity_Gym_Text_221545
 	callstd 6
 	end

@@ -1,14 +1,10 @@
 gVerdanturfTown_BattleTentLobby_MapScripts: ; 82016D0
-	.byte 2
-	.4byte gVerdanturfTown_BattleTentLobby_MapScript2_2016EF
-	.byte 4
-	.4byte gVerdanturfTown_BattleTentLobby_MapScript2_2016DB
+	map_script 2, gVerdanturfTown_BattleTentLobby_MapScript2_2016EF
+	map_script 4, gVerdanturfTown_BattleTentLobby_MapScript2_2016DB
 	.byte 0
 
 gVerdanturfTown_BattleTentLobby_MapScript2_2016DB: ; 82016DB
-	.2byte 16385
-	.2byte 0
-	.4byte gVerdanturfTown_BattleTentLobby_EventScript_2016E5
+	map_script_2 0x4001, 0, gVerdanturfTown_BattleTentLobby_EventScript_2016E5
 	.2byte 0
 
 gVerdanturfTown_BattleTentLobby_EventScript_2016E5: ; 82016E5
@@ -17,21 +13,11 @@ gVerdanturfTown_BattleTentLobby_EventScript_2016E5: ; 82016E5
 	end
 
 gVerdanturfTown_BattleTentLobby_MapScript2_2016EF: ; 82016EF
-	.2byte 16384
-	.2byte 0
-	.4byte gVerdanturfTown_BattleTentLobby_EventScript_201719
-	.2byte 16384
-	.2byte 1
-	.4byte gVerdanturfTown_BattleTentLobby_EventScript_201722
-	.2byte 16384
-	.2byte 2
-	.4byte gVerdanturfTown_BattleTentLobby_EventScript_201837
-	.2byte 16384
-	.2byte 3
-	.4byte gVerdanturfTown_BattleTentLobby_EventScript_201757
-	.2byte 16384
-	.2byte 4
-	.4byte gVerdanturfTown_BattleTentLobby_EventScript_2017FD
+	map_script_2 0x4000, 0, gVerdanturfTown_BattleTentLobby_EventScript_201719
+	map_script_2 0x4000, 1, gVerdanturfTown_BattleTentLobby_EventScript_201722
+	map_script_2 0x4000, 2, gVerdanturfTown_BattleTentLobby_EventScript_201837
+	map_script_2 0x4000, 3, gVerdanturfTown_BattleTentLobby_EventScript_201757
+	map_script_2 0x4000, 4, gVerdanturfTown_BattleTentLobby_EventScript_2017FD
 	.2byte 0
 
 gVerdanturfTown_BattleTentLobby_EventScript_201719: ; 8201719

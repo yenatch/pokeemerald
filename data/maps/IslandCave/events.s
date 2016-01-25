@@ -1,5 +1,5 @@
 gIslandCave_MapObjects: ; 8536C74
-	object_event 1, 201, 0, 8, 0, 7, 0, 3, 8, 0, 0, 0, 0, 0, 0, gIslandCave_EventScript_238F58, 936, 0, 0
+	object_event 1, FIELD_OBJ_GFX_REGICE, 0, 8, 0, 7, 0, 3, 8, 0, 0, 0, 0, 0, 0, gIslandCave_EventScript_238F58, 936, 0, 0
 
 gIslandCave_MapWarps: ; 8536C8C
 	warp_def 8, 29, 3, 0, Route105

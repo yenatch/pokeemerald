@@ -1,8 +1,8 @@
 gMtPyre_3F_MapObjects: ; 8534EEC
-	object_event 1, 37, 0, 1, 0, 4, 0, 3, 18, 17, 0, 1, 0, 4, 0, gMtPyre_3F_EventScript_231753, 0, 0, 0
-	object_event 2, 47, 0, 11, 0, 4, 0, 3, 17, 17, 0, 1, 0, 4, 0, gMtPyre_3F_EventScript_23176A, 0, 0, 0
-	object_event 3, 59, 0, 0, 0, 7, 0, 3, 1, 17, 0, 0, 0, 0, 0, gMtPyre_3F_EventScript_29130A, 1120, 0, 0
-	object_event 4, 20, 0, 6, 0, 4, 0, 3, 14, 17, 0, 1, 0, 4, 0, gMtPyre_3F_EventScript_231781, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_PSYCHIC_M, 0, 1, 0, 4, 0, 3, 18, 17, 0, 1, 0, 4, 0, gMtPyre_3F_EventScript_231753, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_LASS, 0, 11, 0, 4, 0, 3, 17, 17, 0, 1, 0, 4, 0, gMtPyre_3F_EventScript_23176A, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_ITEM_BALL, 0, 0, 0, 7, 0, 3, 1, 17, 0, 0, 0, 0, 0, gMtPyre_3F_EventScript_29130A, 1120, 0, 0
+	object_event 4, FIELD_OBJ_GFX_WOMAN_3, 0, 6, 0, 4, 0, 3, 14, 17, 0, 1, 0, 4, 0, gMtPyre_3F_EventScript_231781, 0, 0, 0
 
 gMtPyre_3F_MapWarps: ; 8534F4C
 	warp_def 10, 1, 3, 1, MtPyre_2F

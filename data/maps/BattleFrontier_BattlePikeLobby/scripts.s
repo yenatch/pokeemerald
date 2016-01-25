@@ -1,29 +1,17 @@
 gBattleFrontier_BattlePikeLobby_MapScripts: ; 825B6C6
-	.byte 2
-	.4byte gBattleFrontier_BattlePikeLobby_MapScript2_25B6D1
-	.byte 4
-	.4byte gBattleFrontier_BattlePikeLobby_MapScript2_25B6F3
+	map_script 2, gBattleFrontier_BattlePikeLobby_MapScript2_25B6D1
+	map_script 4, gBattleFrontier_BattlePikeLobby_MapScript2_25B6F3
 	.byte 0
 
 gBattleFrontier_BattlePikeLobby_MapScript2_25B6D1: ; 825B6D1
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattlePikeLobby_EventScript_25B707
-	.2byte 16384
-	.2byte 1
-	.4byte gBattleFrontier_BattlePikeLobby_EventScript_25B710
-	.2byte 16384
-	.2byte 3
-	.4byte gBattleFrontier_BattlePikeLobby_EventScript_25B762
-	.2byte 16384
-	.2byte 4
-	.4byte gBattleFrontier_BattlePikeLobby_EventScript_25B806
+	map_script_2 0x4000, 0, gBattleFrontier_BattlePikeLobby_EventScript_25B707
+	map_script_2 0x4000, 1, gBattleFrontier_BattlePikeLobby_EventScript_25B710
+	map_script_2 0x4000, 3, gBattleFrontier_BattlePikeLobby_EventScript_25B762
+	map_script_2 0x4000, 4, gBattleFrontier_BattlePikeLobby_EventScript_25B806
 	.2byte 0
 
 gBattleFrontier_BattlePikeLobby_MapScript2_25B6F3: ; 825B6F3
-	.2byte 16385
-	.2byte 0
-	.4byte gBattleFrontier_BattlePikeLobby_EventScript_25B6FD
+	map_script_2 0x4001, 0, gBattleFrontier_BattlePikeLobby_EventScript_25B6FD
 	.2byte 0
 
 gBattleFrontier_BattlePikeLobby_EventScript_25B6FD: ; 825B6FD

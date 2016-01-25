@@ -1,6 +1,5 @@
 gBattleFrontier_OutsideWest_MapScripts: ; 823D3E1
-	.byte 3
-	.4byte gBattleFrontier_OutsideWest_MapScript1_23D3E7
+	map_script 3, gBattleFrontier_OutsideWest_MapScript1_23D3E7
 	.byte 0
 
 gBattleFrontier_OutsideWest_MapScript1_23D3E7: ; 823D3E7

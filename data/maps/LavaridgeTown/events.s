@@ -1,13 +1,13 @@
 gLavaridgeTown_MapObjects: ; 8527A54
-	object_event 1, 22, 0, 8, 0, 7, 0, 3, 8, 0, 0, 0, 0, 0, 0, gLavaridgeTown_EventScript_1EA73B, 0, 0, 0
-	object_event 2, 21, 0, 5, 0, 1, 0, 3, 8, 0, 0, 0, 0, 0, 0, gLavaridgeTown_EventScript_1EA70E, 0, 0, 0
-	object_event 3, 29, 0, 5, 0, 8, 0, 3, 8, 0, 0, 0, 0, 0, 0, gLavaridgeTown_EventScript_1EA717, 0, 0, 0
-	object_event 4, 6, 0, 10, 0, 13, 0, 3, 3, 32, 0, 0, 0, 0, 0, gLavaridgeTown_EventScript_1EA720, 0, 0, 0
-	object_event 5, 139, 0, 4, 0, 4, 0, 3, 18, 0, 0, 0, 0, 0, 0, gLavaridgeTown_EventScript_1EA729, 0, 0, 0
-	object_event 6, 139, 0, 5, 0, 4, 0, 3, 17, 0, 0, 0, 0, 0, 0, gLavaridgeTown_EventScript_1EA732, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_OLD_WOMAN_1, 0, 8, 0, 7, 0, 3, 8, 0, 0, 0, 0, 0, 0, gLavaridgeTown_EventScript_1EA73B, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_OLD_MAN_1, 0, 5, 0, 1, 0, 3, 8, 0, 0, 0, 0, 0, 0, gLavaridgeTown_EventScript_1EA70E, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_OLD_MAN_2, 0, 5, 0, 8, 0, 3, 8, 0, 0, 0, 0, 0, 0, gLavaridgeTown_EventScript_1EA717, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_LITTLE_GIRL_1, 0, 10, 0, 13, 0, 3, 3, 32, 0, 0, 0, 0, 0, gLavaridgeTown_EventScript_1EA720, 0, 0, 0
+	object_event 5, FIELD_OBJ_GFX_HOT_SPRINGS_OLD_WOMAN, 0, 4, 0, 4, 0, 3, 18, 0, 0, 0, 0, 0, 0, gLavaridgeTown_EventScript_1EA729, 0, 0, 0
+	object_event 6, FIELD_OBJ_GFX_HOT_SPRINGS_OLD_WOMAN, 0, 5, 0, 4, 0, 3, 17, 0, 0, 0, 0, 0, 0, gLavaridgeTown_EventScript_1EA732, 0, 0, 0
 	object_event 7, 243, 0, 6, 0, 16, 0, 3, 9, 0, 0, 0, 0, 0, 0, 0x0, 930, 0, 0
 	object_event 8, 240, 0, 12, 0, 15, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0x0, 929, 0, 0
-	object_event 9, 22, 0, 4, 0, 7, 0, 3, 8, 17, 0, 0, 0, 0, 0, gLavaridgeTown_EventScript_1EA744, 0, 0, 0
+	object_event 9, FIELD_OBJ_GFX_OLD_WOMAN_1, 0, 4, 0, 7, 0, 3, 8, 17, 0, 0, 0, 0, 0, gLavaridgeTown_EventScript_1EA744, 0, 0, 0
 
 gLavaridgeTown_MapWarps: ; 8527B2C
 	warp_def 12, 15, 0, 0, LavaridgeTown_HerbShop

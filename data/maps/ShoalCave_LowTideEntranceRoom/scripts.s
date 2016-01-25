@@ -1,6 +1,5 @@
 gShoalCave_LowTideEntranceRoom_MapScripts: ; 8236DBA
-	.byte 3
-	.4byte gShoalCave_LowTideEntranceRoom_MapScript1_236DC0
+	map_script 3, gShoalCave_LowTideEntranceRoom_MapScript1_236DC0
 	.byte 0
 
 gShoalCave_LowTideEntranceRoom_MapScript1_236DC0: ; 8236DC0

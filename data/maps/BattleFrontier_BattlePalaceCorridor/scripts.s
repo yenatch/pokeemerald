@@ -1,12 +1,9 @@
 gBattleFrontier_BattlePalaceCorridor_MapScripts: ; 824F4A3
-	.byte 2
-	.4byte gBattleFrontier_BattlePalaceCorridor_MapScript2_24F4A9
+	map_script 2, gBattleFrontier_BattlePalaceCorridor_MapScript2_24F4A9
 	.byte 0
 
 gBattleFrontier_BattlePalaceCorridor_MapScript2_24F4A9: ; 824F4A9
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattlePalaceCorridor_EventScript_24F4B3
+	map_script_2 0x4000, 0, gBattleFrontier_BattlePalaceCorridor_EventScript_24F4B3
 	.2byte 0
 
 gBattleFrontier_BattlePalaceCorridor_EventScript_24F4B3: ; 824F4B3

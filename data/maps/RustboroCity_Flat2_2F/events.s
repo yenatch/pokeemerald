@@ -1,6 +1,6 @@
 gRustboroCity_Flat2_2F_MapObjects: ; 8530B20
-	object_event 1, 29, 0, 11, 0, 4, 0, 3, 10, 0, 0, 0, 0, 0, 0, gRustboroCity_Flat2_2F_EventScript_215FD8, 0, 0, 0
-	object_event 2, 5, 0, 7, 0, 3, 0, 3, 5, 2, 0, 0, 0, 0, 0, gRustboroCity_Flat2_2F_EventScript_215FE1, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_OLD_MAN_2, 0, 11, 0, 4, 0, 3, 10, 0, 0, 0, 0, 0, 0, gRustboroCity_Flat2_2F_EventScript_215FD8, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_LITTLE_BOY_1, 0, 7, 0, 3, 0, 3, 5, 2, 0, 0, 0, 0, 0, gRustboroCity_Flat2_2F_EventScript_215FE1, 0, 0, 0
 
 gRustboroCity_Flat2_2F_MapWarps: ; 8530B50
 	warp_def 3, 1, 0, 2, RustboroCity_Flat2_1F

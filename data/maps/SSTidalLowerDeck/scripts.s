@@ -2,13 +2,13 @@ gSSTidalLowerDeck_MapScripts: ; 823C818
 	.byte 0
 
 gSSTidalLowerDeck_EventScript_23C819: ; 823C819
-	trainerbattle 0, 494, 0, gSSTidalLowerDeck_Text_23C847, gSSTidalLowerDeck_Text_23C8A0
+	trainerbattle 0, TRAINER_PHILLIP, 0, gSSTidalLowerDeck_Text_23C847, gSSTidalLowerDeck_Text_23C8A0
 	loadptr 0, gSSTidalLowerDeck_Text_23C8B4
 	callstd 6
 	end
 
 gSSTidalLowerDeck_EventScript_23C830: ; 823C830
-	trainerbattle 0, 495, 0, gSSTidalLowerDeck_Text_23C917, gSSTidalLowerDeck_Text_23C97D
+	trainerbattle 0, TRAINER_LEONARD, 0, gSSTidalLowerDeck_Text_23C917, gSSTidalLowerDeck_Text_23C97D
 	loadptr 0, gSSTidalLowerDeck_Text_23C98E
 	callstd 6
 	end

@@ -1,14 +1,10 @@
 gLilycoveCity_PokemonTrainerFanClub_MapScripts: ; 821C785
-	.byte 2
-	.4byte gLilycoveCity_PokemonTrainerFanClub_MapScript2_21C790
-	.byte 3
-	.4byte gLilycoveCity_PokemonTrainerFanClub_MapScript1_21C80D
+	map_script 2, gLilycoveCity_PokemonTrainerFanClub_MapScript2_21C790
+	map_script 3, gLilycoveCity_PokemonTrainerFanClub_MapScript1_21C80D
 	.byte 0
 
 gLilycoveCity_PokemonTrainerFanClub_MapScript2_21C790: ; 821C790
-	.2byte 16533
-	.2byte 1
-	.4byte gLilycoveCity_PokemonTrainerFanClub_EventScript_21C79A
+	map_script_2 0x4095, 1, gLilycoveCity_PokemonTrainerFanClub_EventScript_21C79A
 	.2byte 0
 
 gLilycoveCity_PokemonTrainerFanClub_EventScript_21C79A: ; 821C79A

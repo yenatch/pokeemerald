@@ -1,5 +1,5 @@
 gMauvilleCity_House1_MapObjects: ; 852FEEC
-	object_event 1, 46, 0, 4, 0, 4, 0, 3, 10, 0, 0, 0, 0, 0, 0, gMauvilleCity_House1_EventScript_20F976, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_SCIENTIST_1, 0, 4, 0, 4, 0, 3, 10, 0, 0, 0, 0, 0, 0, gMauvilleCity_House1_EventScript_20F976, 0, 0, 0
 
 gMauvilleCity_House1_MapWarps: ; 852FF04
 	warp_def 3, 7, 0, 4, MauvilleCity

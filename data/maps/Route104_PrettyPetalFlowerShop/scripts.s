@@ -1,6 +1,5 @@
 gRoute104_PrettyPetalFlowerShop_MapScripts: ; 822A34C
-	.byte 3
-	.4byte gRoute104_PrettyPetalFlowerShop_MapScript1_22A352
+	map_script 3, gRoute104_PrettyPetalFlowerShop_MapScript1_22A352
 	.byte 0
 
 gRoute104_PrettyPetalFlowerShop_MapScript1_22A352: ; 822A352

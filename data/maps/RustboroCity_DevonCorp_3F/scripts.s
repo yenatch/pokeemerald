@@ -1,10 +1,7 @@
 gRustboroCity_DevonCorp_3F_MapScripts: ; 821242D
-	.byte 3
-	.4byte gRustboroCity_DevonCorp_3F_MapScript1_21243D
-	.byte 4
-	.4byte gRustboroCity_DevonCorp_3F_MapScript2_212455
-	.byte 2
-	.4byte gRustboroCity_DevonCorp_3F_MapScript2_212464
+	map_script 3, gRustboroCity_DevonCorp_3F_MapScript1_21243D
+	map_script 4, gRustboroCity_DevonCorp_3F_MapScript2_212455
+	map_script 2, gRustboroCity_DevonCorp_3F_MapScript2_212464
 	.byte 0
 
 gRustboroCity_DevonCorp_3F_MapScript1_21243D: ; 821243D
@@ -18,9 +15,7 @@ gRustboroCity_DevonCorp_3F_EventScript_212449: ; 8212449
 	return
 
 gRustboroCity_DevonCorp_3F_MapScript2_212455: ; 8212455
-	.2byte 16527
-	.2byte 0
-	.4byte gRustboroCity_DevonCorp_3F_EventScript_21245F
+	map_script_2 0x408f, 0, gRustboroCity_DevonCorp_3F_EventScript_21245F
 	.2byte 0
 
 gRustboroCity_DevonCorp_3F_EventScript_21245F: ; 821245F
@@ -28,9 +23,7 @@ gRustboroCity_DevonCorp_3F_EventScript_21245F: ; 821245F
 	end
 
 gRustboroCity_DevonCorp_3F_MapScript2_212464: ; 8212464
-	.2byte 16527
-	.2byte 0
-	.4byte gRustboroCity_DevonCorp_3F_EventScript_21246E
+	map_script_2 0x408f, 0, gRustboroCity_DevonCorp_3F_EventScript_21246E
 	.2byte 0
 
 gRustboroCity_DevonCorp_3F_EventScript_21246E: ; 821246E

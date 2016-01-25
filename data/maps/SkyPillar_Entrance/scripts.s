@@ -1,6 +1,5 @@
 gSkyPillar_Entrance_MapScripts: ; 823929E
-	.byte 3
-	.4byte gSkyPillar_Entrance_MapScript1_2392A4
+	map_script 3, gSkyPillar_Entrance_MapScript1_2392A4
 	.byte 0
 
 gSkyPillar_Entrance_MapScript1_2392A4: ; 82392A4

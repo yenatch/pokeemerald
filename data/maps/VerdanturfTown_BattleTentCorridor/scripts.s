@@ -1,12 +1,9 @@
 gVerdanturfTown_BattleTentCorridor_MapScripts: ; 820208A
-	.byte 2
-	.4byte gVerdanturfTown_BattleTentCorridor_MapScript2_202090
+	map_script 2, gVerdanturfTown_BattleTentCorridor_MapScript2_202090
 	.byte 0
 
 gVerdanturfTown_BattleTentCorridor_MapScript2_202090: ; 8202090
-	.2byte 16384
-	.2byte 0
-	.4byte gVerdanturfTown_BattleTentCorridor_EventScript_20209A
+	map_script_2 0x4000, 0, gVerdanturfTown_BattleTentCorridor_EventScript_20209A
 	.2byte 0
 
 gVerdanturfTown_BattleTentCorridor_EventScript_20209A: ; 820209A

@@ -1,6 +1,5 @@
 gRoute130_MapScripts: ; 81F735F
-	.byte 3
-	.4byte gRoute130_MapScript1_1F7365
+	map_script 3, gRoute130_MapScript1_1F7365
 	.byte 0
 
 gRoute130_MapScript1_1F7365: ; 81F7365
@@ -37,19 +36,19 @@ gRoute130_EventScript_1F73B5: ; 81F73B5
 	return
 
 gRoute130_EventScript_1F73BF: ; 81F73BF
-	trainerbattle 0, 165, 0, gRoute130_Text_2A328A, gRoute130_Text_2A32E6
+	trainerbattle 0, TRAINER_RODNEY, 0, gRoute130_Text_2A328A, gRoute130_Text_2A32E6
 	loadptr 0, gRoute130_Text_2A3300
 	callstd 6
 	end
 
 gRoute130_EventScript_1F73D6: ; 81F73D6
-	trainerbattle 0, 455, 0, gRoute130_Text_2A3363, gRoute130_Text_2A33AC
+	trainerbattle 0, TRAINER_KATIE, 0, gRoute130_Text_2A3363, gRoute130_Text_2A33AC
 	loadptr 0, gRoute130_Text_2A33F5
 	callstd 6
 	end
 
 gRoute130_EventScript_1F73ED: ; 81F73ED
-	trainerbattle 0, 168, 0, gRoute130_Text_2A343A, gRoute130_Text_2A346D
+	trainerbattle 0, TRAINER_SANTIAGO, 0, gRoute130_Text_2A343A, gRoute130_Text_2A346D
 	loadptr 0, gRoute130_Text_2A3494
 	callstd 6
 	end

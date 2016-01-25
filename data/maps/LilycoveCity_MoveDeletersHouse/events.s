@@ -1,5 +1,5 @@
 gLilycoveCity_MoveDeletersHouse_MapObjects: ; 8531EB8
-	object_event 1, 21, 0, 4, 0, 4, 0, 3, 8, 0, 0, 0, 0, 0, 0, gLilycoveCity_MoveDeletersHouse_EventScript_21EA0B, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_OLD_MAN_1, 0, 4, 0, 4, 0, 3, 8, 0, 0, 0, 0, 0, 0, gLilycoveCity_MoveDeletersHouse_EventScript_21EA0B, 0, 0, 0
 
 gLilycoveCity_MoveDeletersHouse_MapWarps: ; 8531ED0
 	warp_def 3, 7, 0, 7, LilycoveCity

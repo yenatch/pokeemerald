@@ -1,10 +1,7 @@
 gNewMauville_Inside_MapScripts: ; 82373D7
-	.byte 5
-	.4byte gNewMauville_Inside_MapScript1_2373E7
-	.byte 3
-	.4byte gNewMauville_Inside_MapScript1_23741B
-	.byte 1
-	.4byte gNewMauville_Inside_MapScript1_23744D
+	map_script 5, gNewMauville_Inside_MapScript1_2373E7
+	map_script 3, gNewMauville_Inside_MapScript1_23741B
+	map_script 1, gNewMauville_Inside_MapScript1_23744D
 	.byte 0
 
 gNewMauville_Inside_MapScript1_2373E7: ; 82373E7

@@ -1,6 +1,5 @@
 gRoute124_DivingTreasureHuntersHouse_MapScripts: ; 8270A28
-	.byte 3
-	.4byte gRoute124_DivingTreasureHuntersHouse_MapScript1_270A2E
+	map_script 3, gRoute124_DivingTreasureHuntersHouse_MapScript1_270A2E
 	.byte 0
 
 gRoute124_DivingTreasureHuntersHouse_MapScript1_270A2E: ; 8270A2E

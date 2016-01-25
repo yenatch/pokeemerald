@@ -1,8 +1,6 @@
 gInsideOfTruck_MapScripts: ; 823BEDA
-	.byte 1
-	.4byte gInsideOfTruck_MapScript1_23BEE5
-	.byte 5
-	.4byte gInsideOfTruck_MapScript1_23BF01
+	map_script 1, gInsideOfTruck_MapScript1_23BEE5
+	map_script 5, gInsideOfTruck_MapScript1_23BF01
 	.byte 0
 
 gInsideOfTruck_MapScript1_23BEE5: ; 823BEE5

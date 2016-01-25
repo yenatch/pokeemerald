@@ -1,10 +1,7 @@
 gLittlerootTown_ProfessorBirchsLab_MapScripts: ; 81F9C91
-	.byte 3
-	.4byte gLittlerootTown_ProfessorBirchsLab_MapScript1_1F9CA1
-	.byte 4
-	.4byte gLittlerootTown_ProfessorBirchsLab_MapScript2_1F9D06
-	.byte 2
-	.4byte gLittlerootTown_ProfessorBirchsLab_MapScript2_1F9DB9
+	map_script 3, gLittlerootTown_ProfessorBirchsLab_MapScript1_1F9CA1
+	map_script 4, gLittlerootTown_ProfessorBirchsLab_MapScript2_1F9D06
+	map_script 2, gLittlerootTown_ProfessorBirchsLab_MapScript2_1F9DB9
 	.byte 0
 
 gLittlerootTown_ProfessorBirchsLab_MapScript1_1F9CA1: ; 81F9CA1
@@ -41,27 +38,13 @@ gLittlerootTown_ProfessorBirchsLab_EventScript_1F9CF7: ; 81F9CF7
 	end
 
 gLittlerootTown_ProfessorBirchsLab_MapScript2_1F9D06: ; 81F9D06
-	.2byte 16516
-	.2byte 2
-	.4byte gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D40
-	.2byte 16595
-	.2byte 1
-	.4byte gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D45
-	.2byte 16595
-	.2byte 2
-	.4byte gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D45
-	.2byte 16595
-	.2byte 3
-	.4byte gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D71
-	.2byte 16595
-	.2byte 6
-	.4byte gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D71
-	.2byte 16595
-	.2byte 4
-	.4byte gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D75
-	.2byte 16595
-	.2byte 5
-	.4byte gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D75
+	map_script_2 0x4084, 2, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D40
+	map_script_2 0x40d3, 1, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D45
+	map_script_2 0x40d3, 2, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D45
+	map_script_2 0x40d3, 3, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D71
+	map_script_2 0x40d3, 6, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D71
+	map_script_2 0x40d3, 4, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D75
+	map_script_2 0x40d3, 5, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D75
 	.2byte 0
 
 gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D40: ; 81F9D40
@@ -102,18 +85,10 @@ gLittlerootTown_ProfessorBirchsLab_EventScript_1F9D75: ; 81F9D75
 	end
 
 gLittlerootTown_ProfessorBirchsLab_MapScript2_1F9DB9: ; 81F9DB9
-	.2byte 16516
-	.2byte 2
-	.4byte gLittlerootTown_ProfessorBirchsLab_EventScript_1F9DDB
-	.2byte 16516
-	.2byte 4
-	.4byte gLittlerootTown_ProfessorBirchsLab_EventScript_1F9E67
-	.2byte 16595
-	.2byte 1
-	.4byte gLittlerootTown_ProfessorBirchsLab_EventScript_1F9E80
-	.2byte 16595
-	.2byte 4
-	.4byte gLittlerootTown_ProfessorBirchsLab_EventScript_1F9F62
+	map_script_2 0x4084, 2, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9DDB
+	map_script_2 0x4084, 4, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9E67
+	map_script_2 0x40d3, 1, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9E80
+	map_script_2 0x40d3, 4, gLittlerootTown_ProfessorBirchsLab_EventScript_1F9F62
 	.2byte 0
 
 gLittlerootTown_ProfessorBirchsLab_EventScript_1F9DDB: ; 81F9DDB

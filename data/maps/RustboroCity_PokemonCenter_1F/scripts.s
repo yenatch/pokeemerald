@@ -1,8 +1,6 @@
 gRustboroCity_PokemonCenter_1F_MapScripts: ; 8214D62
-	.byte 3
-	.4byte gRustboroCity_PokemonCenter_1F_MapScript1_214D6D
-	.byte 5
-	.4byte gRustboroCity_PokemonCenter_1F_MapScript1_277C30
+	map_script 3, gRustboroCity_PokemonCenter_1F_MapScript1_214D6D
+	map_script 5, gRustboroCity_PokemonCenter_1F_MapScript1_277C30
 	.byte 0
 
 gRustboroCity_PokemonCenter_1F_MapScript1_214D6D: ; 8214D6D

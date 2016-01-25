@@ -1,7 +1,7 @@
 gOldaleTown_MapObjects: ; 8527854
-	object_event 1, 14, 0, 16, 0, 11, 0, 3, 9, 0, 0, 0, 0, 0, 0, gOldaleTown_EventScript_1E8EF3, 0, 0, 0
-	object_event 2, 83, 0, 13, 0, 7, 0, 3, 8, 0, 0, 0, 0, 0, 0, gOldaleTown_EventScript_1E8EFC, 0, 0, 0
-	object_event 3, 39, 0, 8, 0, 9, 0, 3, 10, 0, 0, 0, 0, 0, 0, gOldaleTown_EventScript_1E901F, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_GIRL_3, 0, 16, 0, 11, 0, 3, 9, 0, 0, 0, 0, 0, 0, gOldaleTown_EventScript_1E8EF3, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_MART_EMPLOYEE, 0, 13, 0, 7, 0, 3, 8, 0, 0, 0, 0, 0, 0, gOldaleTown_EventScript_1E8EFC, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_MANIAC, 0, 8, 0, 9, 0, 3, 10, 0, 0, 0, 0, 0, 0, gOldaleTown_EventScript_1E901F, 0, 0, 0
 	object_event 4, 240, 0, 11, 0, 19, 0, 3, 7, 17, 0, 0, 0, 0, 0, gOldaleTown_EventScript_1E9070, 979, 0, 0
 
 gOldaleTown_MapWarps: ; 85278B4

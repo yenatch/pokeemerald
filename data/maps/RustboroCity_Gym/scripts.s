@@ -2,7 +2,7 @@ gRustboroCity_Gym_MapScripts: ; 8212F30
 	.byte 0
 
 gRustboroCity_Gym_EventScript_212F31: ; 8212F31
-	trainerbattle 1, 265, 0, gRustboroCity_Gym_Text_21362A, gRustboroCity_Gym_Text_21370B, gRustboroCity_Gym_EventScript_212F66
+	trainerbattle 1, TRAINER_ROXANNE_1, 0, gRustboroCity_Gym_Text_21362A, gRustboroCity_Gym_Text_21370B, gRustboroCity_Gym_EventScript_212F66
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gRustboroCity_Gym_EventScript_212FC8
@@ -43,25 +43,25 @@ gRustboroCity_Gym_EventScript_212FA4: ; 8212FA4
 	end
 
 gRustboroCity_Gym_EventScript_212FC8: ; 8212FC8
-	trainerbattle 7, 265, 0, gRustboroCity_Gym_Text_213C2F, gRustboroCity_Gym_Text_213CF9, gRustboroCity_Gym_Text_213D93
+	trainerbattle 7, TRAINER_ROXANNE_1, 0, gRustboroCity_Gym_Text_213C2F, gRustboroCity_Gym_Text_213CF9, gRustboroCity_Gym_Text_213D93
 	loadptr 0, gRustboroCity_Gym_Text_213D12
 	callstd 6
 	end
 
 gRustboroCity_Gym_EventScript_212FE3: ; 8212FE3
-	trainerbattle 0, 320, 0, gRustboroCity_Gym_Text_2133E9, gRustboroCity_Gym_Text_21342D
+	trainerbattle 0, TRAINER_JOSH, 0, gRustboroCity_Gym_Text_2133E9, gRustboroCity_Gym_Text_21342D
 	loadptr 0, gRustboroCity_Gym_Text_213447
 	callstd 6
 	end
 
 gRustboroCity_Gym_EventScript_212FFA: ; 8212FFA
-	trainerbattle 0, 321, 0, gRustboroCity_Gym_Text_213486, gRustboroCity_Gym_Text_2134C6
+	trainerbattle 0, TRAINER_TOMMY, 0, gRustboroCity_Gym_Text_213486, gRustboroCity_Gym_Text_2134C6
 	loadptr 0, gRustboroCity_Gym_Text_2134E6
 	callstd 6
 	end
 
 gRustboroCity_Gym_EventScript_213011: ; 8213011
-	trainerbattle 0, 571, 0, gRustboroCity_Gym_Text_213533, gRustboroCity_Gym_Text_213589
+	trainerbattle 0, TRAINER_MARC, 0, gRustboroCity_Gym_Text_213533, gRustboroCity_Gym_Text_213589
 	loadptr 0, gRustboroCity_Gym_Text_2135C0
 	callstd 6
 	end

@@ -1,8 +1,6 @@
 gRoute110_TrickHousePuzzle6_MapScripts: ; 826DDA7
-	.byte 3
-	.4byte gRoute110_TrickHousePuzzle6_MapScript1_26DDB2
-	.byte 4
-	.4byte gRoute110_TrickHousePuzzle6_MapScript2_26DDB6
+	map_script 3, gRoute110_TrickHousePuzzle6_MapScript1_26DDB2
+	map_script 4, gRoute110_TrickHousePuzzle6_MapScript2_26DDB6
 	.byte 0
 
 gRoute110_TrickHousePuzzle6_MapScript1_26DDB2: ; 826DDB2
@@ -10,9 +8,7 @@ gRoute110_TrickHousePuzzle6_MapScript1_26DDB2: ; 826DDB2
 	end
 
 gRoute110_TrickHousePuzzle6_MapScript2_26DDB6: ; 826DDB6
-	.2byte 16384
-	.2byte 16384
-	.4byte gRoute110_TrickHousePuzzle6_EventScript_26DDC0
+	map_script_2 0x4000, 16384, gRoute110_TrickHousePuzzle6_EventScript_26DDC0
 	.2byte 0
 
 gRoute110_TrickHousePuzzle6_EventScript_26DDC0: ; 826DDC0
@@ -32,19 +28,19 @@ gRoute110_TrickHousePuzzle6_EventScript_26DDD6: ; 826DDD6
 	end
 
 gRoute110_TrickHousePuzzle6_EventScript_26DDE1: ; 826DDE1
-	trainerbattle 0, 561, 0, gRoute110_TrickHousePuzzle6_Text_26DE93, gRoute110_TrickHousePuzzle6_Text_26DED2
+	trainerbattle 0, TRAINER_SOPHIA, 0, gRoute110_TrickHousePuzzle6_Text_26DE93, gRoute110_TrickHousePuzzle6_Text_26DED2
 	loadptr 0, gRoute110_TrickHousePuzzle6_Text_26DEF3
 	callstd 6
 	end
 
 gRoute110_TrickHousePuzzle6_EventScript_26DDF8: ; 826DDF8
-	trainerbattle 0, 407, 0, gRoute110_TrickHousePuzzle6_Text_26DF55, gRoute110_TrickHousePuzzle6_Text_26DF8D
+	trainerbattle 0, TRAINER_BENNY, 0, gRoute110_TrickHousePuzzle6_Text_26DF55, gRoute110_TrickHousePuzzle6_Text_26DF8D
 	loadptr 0, gRoute110_TrickHousePuzzle6_Text_26DFA0
 	callstd 6
 	end
 
 gRoute110_TrickHousePuzzle6_EventScript_26DE0F: ; 826DE0F
-	trainerbattle 0, 554, 0, gRoute110_TrickHousePuzzle6_Text_26DFD7, gRoute110_TrickHousePuzzle6_Text_26E004
+	trainerbattle 0, TRAINER_SEBASTIAN, 0, gRoute110_TrickHousePuzzle6_Text_26DFD7, gRoute110_TrickHousePuzzle6_Text_26E004
 	loadptr 0, gRoute110_TrickHousePuzzle6_Text_26E048
 	callstd 6
 	end

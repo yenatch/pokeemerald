@@ -1,8 +1,6 @@
 gTerraCave_End_MapScripts: ; 823B0B0
-	.byte 5
-	.4byte gTerraCave_End_MapScript1_23B0BB
-	.byte 3
-	.4byte gTerraCave_End_MapScript1_23B0D9
+	map_script 5, gTerraCave_End_MapScript1_23B0BB
+	map_script 3, gTerraCave_End_MapScript1_23B0D9
 	.byte 0
 
 gTerraCave_End_MapScript1_23B0BB: ; 823B0BB

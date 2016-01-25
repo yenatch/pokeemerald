@@ -1,12 +1,9 @@
 gAbandonedShip_HiddenFloorRooms_MapScripts: ; 8238C49
-	.byte 2
-	.4byte gAbandonedShip_HiddenFloorRooms_MapScript2_238C4F
+	map_script 2, gAbandonedShip_HiddenFloorRooms_MapScript2_238C4F
 	.byte 0
 
 gAbandonedShip_HiddenFloorRooms_MapScript2_238C4F: ; 8238C4F
-	.2byte 16385
-	.2byte 0
-	.4byte gAbandonedShip_HiddenFloorRooms_EventScript_238C59
+	map_script_2 0x4001, 0, gAbandonedShip_HiddenFloorRooms_EventScript_238C59
 	.2byte 0
 
 gAbandonedShip_HiddenFloorRooms_EventScript_238C59: ; 8238C59

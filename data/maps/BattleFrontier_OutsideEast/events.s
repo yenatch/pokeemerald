@@ -1,30 +1,30 @@
 gBattleFrontier_OutsideEast_MapObjects: ; 853BB10
-	object_event 1, 5, 0, 20, 0, 17, 0, 0, 27, 19, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242C67, 0, 0, 0
-	object_event 2, 33, 0, 42, 0, 15, 0, 0, 2, 49, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242C70, 0, 0, 0
-	object_event 3, 55, 0, 53, 0, 6, 0, 0, 8, 2, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242C79, 0, 0, 0
-	object_event 4, 40, 0, 54, 0, 16, 0, 0, 2, 18, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242C82, 0, 0, 0
-	object_event 5, 44, 0, 37, 0, 32, 0, 0, 7, 0, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242C8B, 0, 0, 0
-	object_event 6, 27, 0, 41, 0, 56, 0, 3, 9, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242C94, 0, 0, 0
-	object_event 7, 22, 0, 8, 0, 46, 0, 0, 1, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242CBB, 0, 0, 0
-	object_event 8, 51, 0, 34, 0, 41, 0, 0, 28, 19, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242CE1, 0, 0, 0
-	object_event 9, 15, 0, 45, 0, 47, 0, 3, 1, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242CB2, 0, 0, 0
-	object_event 10, 57, 0, 59, 0, 35, 0, 0, 26, 97, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242CC4, 0, 0, 0
-	object_event 11, 6, 0, 18, 0, 40, 0, 0, 1, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242CCD, 0, 0, 0
-	object_event 12, 19, 0, 17, 0, 40, 0, 0, 10, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242CD6, 0, 0, 0
-	object_event 13, 208, 0, 40, 0, 56, 0, 3, 1, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242C9F, 0, 0, 0
-	object_event 14, 228, 0, 54, 0, 62, 0, 3, 8, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242CEA, 842, 0, 0
-	object_event 15, 39, 0, 42, 0, 34, 0, 3, 1, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242D79, 0, 0, 0
-	object_event 16, 14, 0, 51, 0, 53, 0, 3, 2, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242D82, 0, 0, 0
-	object_event 17, 37, 0, 62, 0, 18, 0, 0, 46, 98, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242D8B, 0, 0, 0
-	object_event 18, 33, 0, 11, 0, 21, 0, 0, 1, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242D94, 0, 0, 0
-	object_event 19, 34, 0, 10, 0, 21, 0, 0, 10, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242D9D, 0, 0, 0
-	object_event 20, 34, 0, 16, 0, 30, 0, 0, 2, 35, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242DA6, 0, 0, 0
-	object_event 21, 44, 0, 33, 0, 14, 0, 0, 7, 0, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242DAF, 0, 0, 0
-	object_event 22, 39, 0, 54, 0, 31, 0, 0, 9, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242DB8, 0, 0, 0
-	object_event 23, 26, 0, 54, 0, 32, 0, 0, 7, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242DC3, 0, 0, 0
-	object_event 24, 30, 0, 58, 0, 55, 0, 3, 17, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242DE9, 0, 0, 0
-	object_event 25, 48, 0, 48, 0, 41, 0, 0, 7, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242DE0, 0, 0, 0
-	object_event 26, 31, 0, 29, 0, 14, 0, 0, 7, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242E08, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_LITTLE_BOY_1, 0, 20, 0, 17, 0, 0, 27, 19, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242C67, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_MAN_4, 0, 42, 0, 15, 0, 0, 2, 49, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242C70, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_HIKER, 0, 53, 0, 6, 0, 0, 8, 2, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242C79, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_HEX_MANIAC, 0, 54, 0, 16, 0, 0, 2, 18, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242C82, 0, 0, 0
+	object_event 5, FIELD_OBJ_GFX_BLACK_BELT, 0, 37, 0, 32, 0, 0, 7, 0, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242C8B, 0, 0, 0
+	object_event 6, FIELD_OBJ_GFX_COOK, 0, 41, 0, 56, 0, 3, 9, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242C94, 0, 0, 0
+	object_event 7, FIELD_OBJ_GFX_OLD_WOMAN_1, 0, 8, 0, 46, 0, 0, 1, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242CBB, 0, 0, 0
+	object_event 8, FIELD_OBJ_GFX_RUNNING_TRIATHLETE_M, 0, 34, 0, 41, 0, 0, 28, 19, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242CE1, 0, 0, 0
+	object_event 9, FIELD_OBJ_GFX_BOY_4, 0, 45, 0, 47, 0, 3, 1, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242CB2, 0, 0, 0
+	object_event 10, FIELD_OBJ_GFX_CYCLING_TRIATHLETE_F, 0, 59, 0, 35, 0, 0, 26, 97, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242CC4, 0, 0, 0
+	object_event 11, FIELD_OBJ_GFX_LITTLE_GIRL_1, 0, 18, 0, 40, 0, 0, 1, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242CCD, 0, 0, 0
+	object_event 12, FIELD_OBJ_GFX_MAN_1, 0, 17, 0, 40, 0, 0, 10, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242CD6, 0, 0, 0
+	object_event 13, FIELD_OBJ_GFX_ZIGZAGOON, 0, 40, 0, 56, 0, 3, 1, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242C9F, 0, 0, 0
+	object_event 14, FIELD_OBJ_GFX_SUDOWOODO, 0, 54, 0, 62, 0, 3, 8, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242CEA, 842, 0, 0
+	object_event 15, FIELD_OBJ_GFX_MANIAC, 0, 42, 0, 34, 0, 3, 1, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242D79, 0, 0, 0
+	object_event 16, FIELD_OBJ_GFX_GIRL_3, 0, 51, 0, 53, 0, 3, 2, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242D82, 0, 0, 0
+	object_event 17, FIELD_OBJ_GFX_PSYCHIC_M, 0, 62, 0, 18, 0, 0, 46, 98, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242D8B, 0, 0, 0
+	object_event 18, FIELD_OBJ_GFX_MAN_4, 0, 11, 0, 21, 0, 0, 1, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242D94, 0, 0, 0
+	object_event 19, FIELD_OBJ_GFX_WOMAN_7, 0, 10, 0, 21, 0, 0, 10, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242D9D, 0, 0, 0
+	object_event 20, FIELD_OBJ_GFX_WOMAN_7, 0, 16, 0, 30, 0, 0, 2, 35, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242DA6, 0, 0, 0
+	object_event 21, FIELD_OBJ_GFX_BLACK_BELT, 0, 33, 0, 14, 0, 0, 7, 0, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242DAF, 0, 0, 0
+	object_event 22, FIELD_OBJ_GFX_MANIAC, 0, 54, 0, 31, 0, 0, 9, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242DB8, 0, 0, 0
+	object_event 23, FIELD_OBJ_GFX_WOMAN_5, 0, 54, 0, 32, 0, 0, 7, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242DC3, 0, 0, 0
+	object_event 24, FIELD_OBJ_GFX_OLD_WOMAN_2, 0, 58, 0, 55, 0, 3, 17, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242DE9, 0, 0, 0
+	object_event 25, FIELD_OBJ_GFX_GENTLEMAN, 0, 48, 0, 41, 0, 0, 7, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242DE0, 0, 0, 0
+	object_event 26, FIELD_OBJ_GFX_CAMPER, 0, 29, 0, 14, 0, 0, 7, 17, 0, 0, 0, 0, 0, gBattleFrontier_OutsideEast_EventScript_242E08, 0, 0, 0
 
 gBattleFrontier_OutsideEast_MapWarps: ; 853BD80
 	warp_def 16, 14, 0, 0, BattleFrontier_BattleTowerLobby

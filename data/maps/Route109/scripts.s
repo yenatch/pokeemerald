@@ -398,31 +398,31 @@ gRoute109_EventScript_1EEA34: ; 81EEA34
 	end
 
 gRoute109_EventScript_1EEA3D: ; 81EEA3D
-	trainerbattle 0, 158, 0, gRoute109_Text_297140, gRoute109_Text_29717D
+	trainerbattle 0, TRAINER_DAVID, 0, gRoute109_Text_297140, gRoute109_Text_29717D
 	loadptr 0, gRoute109_Text_297191
 	callstd 6
 	end
 
 gRoute109_EventScript_1EEA54: ; 81EEA54
-	trainerbattle 0, 448, 0, gRoute109_Text_2971D1, gRoute109_Text_2971FD
+	trainerbattle 0, TRAINER_ALICE, 0, gRoute109_Text_2971D1, gRoute109_Text_2971FD
 	loadptr 0, gRoute109_Text_29720F
 	callstd 6
 	end
 
 gRoute109_EventScript_1EEA6B: ; 81EEA6B
-	trainerbattle 0, 490, 0, gRoute109_Text_297235, gRoute109_Text_29727B
+	trainerbattle 0, TRAINER_HUEY, 0, gRoute109_Text_297235, gRoute109_Text_29727B
 	loadptr 0, gRoute109_Text_29728C
 	callstd 6
 	end
 
 gRoute109_EventScript_1EEA82: ; 81EEA82
-	trainerbattle 0, 491, 0, gRoute109_Text_2972B3, gRoute109_Text_2972CE
+	trainerbattle 0, TRAINER_EDMOND, 0, gRoute109_Text_2972B3, gRoute109_Text_2972CE
 	loadptr 0, gRoute109_Text_2972ED
 	callstd 6
 	end
 
 gRoute109_EventScript_1EEA99: ; 81EEA99
-	trainerbattle 2, 64, 0, gRoute109_Text_29733B, gRoute109_Text_297379, gRoute109_EventScript_1EEAC5
+	trainerbattle 2, TRAINER_RICKY_1, 0, gRoute109_Text_29733B, gRoute109_Text_297379, gRoute109_EventScript_1EEAC5
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gRoute109_EventScript_1EEAE4
@@ -444,13 +444,13 @@ gRoute109_EventScript_1EEAC5: ; 81EEAC5
 	end
 
 gRoute109_EventScript_1EEAE4: ; 81EEAE4
-	trainerbattle 5, 64, 0, gRoute109_Text_2973FF, gRoute109_Text_297437
+	trainerbattle 5, TRAINER_RICKY_1, 0, gRoute109_Text_2973FF, gRoute109_Text_297437
 	loadptr 0, gRoute109_Text_297458
 	callstd 6
 	end
 
 gRoute109_EventScript_1EEAFB: ; 81EEAFB
-	trainerbattle 2, 57, 0, gRoute109_Text_29749C, gRoute109_Text_2974CF, gRoute109_EventScript_1EEB27
+	trainerbattle 2, TRAINER_LOLA_1, 0, gRoute109_Text_29749C, gRoute109_Text_2974CF, gRoute109_EventScript_1EEB27
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gRoute109_EventScript_1EEB46
@@ -472,55 +472,55 @@ gRoute109_EventScript_1EEB27: ; 81EEB27
 	end
 
 gRoute109_EventScript_1EEB46: ; 81EEB46
-	trainerbattle 5, 57, 0, gRoute109_Text_297538, gRoute109_Text_297576
+	trainerbattle 5, TRAINER_LOLA_1, 0, gRoute109_Text_297538, gRoute109_Text_297576
 	loadptr 0, gRoute109_Text_29757D
 	callstd 6
 	end
 
 gRoute109_EventScript_1EEB5D: ; 81EEB5D
-	trainerbattle 0, 58, 0, gRoute109_Text_2975C0, gRoute109_Text_297601
+	trainerbattle 0, TRAINER_AUSTINA, 0, gRoute109_Text_2975C0, gRoute109_Text_297601
 	loadptr 0, gRoute109_Text_29762A
 	callstd 6
 	end
 
 gRoute109_EventScript_1EEB74: ; 81EEB74
-	trainerbattle 0, 59, 0, gRoute109_Text_297667, gRoute109_Text_297691
+	trainerbattle 0, TRAINER_GWEN, 0, gRoute109_Text_297667, gRoute109_Text_297691
 	loadptr 0, gRoute109_Text_2976A4
 	callstd 6
 	end
 
 gRoute109_EventScript_1EEB8B: ; 81EEB8B
-	trainerbattle 0, 345, 0, gRoute109_Text_2976C5, gRoute109_Text_2976FC
+	trainerbattle 0, TRAINER_CARTER, 0, gRoute109_Text_2976C5, gRoute109_Text_2976FC
 	loadptr 0, gRoute109_Text_297715
 	callstd 6
 	end
 
 gRoute109_EventScript_1EEBA2: ; 81EEBA2
-	trainerbattle 4, 680, 0, gRoute109_Text_297754, gRoute109_Text_2977B0, gRoute109_Text_29781D
+	trainerbattle 4, TRAINER_MEL_AND_PAUL, 0, gRoute109_Text_297754, gRoute109_Text_2977B0, gRoute109_Text_29781D
 	loadptr 0, gRoute109_Text_2977C7
 	callstd 6
 	end
 
 gRoute109_EventScript_1EEBBD: ; 81EEBBD
-	trainerbattle 4, 680, 0, gRoute109_Text_297872, gRoute109_Text_2978BD, gRoute109_Text_29792E
+	trainerbattle 4, TRAINER_MEL_AND_PAUL, 0, gRoute109_Text_297872, gRoute109_Text_2978BD, gRoute109_Text_29792E
 	loadptr 0, gRoute109_Text_2978F1
 	callstd 6
 	end
 
 gRoute109_EventScript_1EEBD8: ; 81EEBD8
-	trainerbattle 0, 698, 0, gRoute109_Text_29798A, gRoute109_Text_2979AE
+	trainerbattle 0, TRAINER_CHANDLER, 0, gRoute109_Text_29798A, gRoute109_Text_2979AE
 	loadptr 0, gRoute109_Text_2979BF
 	callstd 6
 	end
 
 gRoute109_EventScript_1EEBEF: ; 81EEBEF
-	trainerbattle 0, 697, 0, gRoute109_Text_2979EC, gRoute109_Text_297A15
+	trainerbattle 0, TRAINER_HAILEY, 0, gRoute109_Text_2979EC, gRoute109_Text_297A15
 	loadptr 0, gRoute109_Text_297A40
 	callstd 6
 	end
 
 gRoute109_EventScript_1EEC06: ; 81EEC06
-	trainerbattle 0, 742, 0, gRoute109_Text_297A82, gRoute109_Text_297AC7
+	trainerbattle 0, TRAINER_ELIJAH, 0, gRoute109_Text_297A82, gRoute109_Text_297AC7
 	loadptr 0, gRoute109_Text_297AE5
 	callstd 6
 	end

@@ -1,8 +1,6 @@
 gBattleFrontier_ReceptionGate_MapScripts: ; 82661DA
-	.byte 2
-	.4byte gBattleFrontier_ReceptionGate_MapScript2_2661E9
-	.byte 3
-	.4byte gBattleFrontier_ReceptionGate_MapScript1_2661E5
+	map_script 2, gBattleFrontier_ReceptionGate_MapScript2_2661E9
+	map_script 3, gBattleFrontier_ReceptionGate_MapScript1_2661E5
 	.byte 0
 
 gBattleFrontier_ReceptionGate_MapScript1_2661E5: ; 82661E5
@@ -10,9 +8,7 @@ gBattleFrontier_ReceptionGate_MapScript1_2661E5: ; 82661E5
 	end
 
 gBattleFrontier_ReceptionGate_MapScript2_2661E9: ; 82661E9
-	.2byte 16592
-	.2byte 0
-	.4byte gBattleFrontier_ReceptionGate_EventScript_2661F3
+	map_script_2 0x40d0, 0, gBattleFrontier_ReceptionGate_EventScript_2661F3
 	.2byte 0
 
 gBattleFrontier_ReceptionGate_EventScript_2661F3: ; 82661F3

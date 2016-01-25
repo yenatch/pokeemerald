@@ -1,6 +1,6 @@
 gShoalCave_LowTideLowerRoom_MapObjects: ; 85363DC
-	object_event 1, 87, 0, 25, 0, 3, 0, 3, 1, 0, 0, 0, 0, 0, 0, gShoalCave_LowTideLowerRoom_EventScript_2908BA, 17, 0, 0
-	object_event 2, 44, 0, 11, 0, 4, 0, 3, 2, 17, 0, 0, 0, 0, 0, gShoalCave_LowTideLowerRoom_EventScript_2371B2, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_PUSHABLE_BOULDER, 0, 25, 0, 3, 0, 3, 1, 0, 0, 0, 0, 0, 0, gShoalCave_LowTideLowerRoom_EventScript_2908BA, 17, 0, 0
+	object_event 2, FIELD_OBJ_GFX_BLACK_BELT, 0, 11, 0, 4, 0, 3, 2, 17, 0, 0, 0, 0, 0, gShoalCave_LowTideLowerRoom_EventScript_2371B2, 0, 0, 0
 
 gShoalCave_LowTideLowerRoom_MapWarps: ; 853640C
 	warp_def 7, 2, 3, 3, ShoalCave_LowTideInnerRoom

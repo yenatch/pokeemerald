@@ -2,13 +2,13 @@ gMagmaHideout_3F_1R_MapScripts: ; 823A1B2
 	.byte 0
 
 gMagmaHideout_3F_1R_EventScript_23A1B3: ; 823A1B3
-	trainerbattle 0, 724, 0, gMagmaHideout_3F_1R_Text_23A1E1, gMagmaHideout_3F_1R_Text_23A229
+	trainerbattle 0, TRAINER_GRUNT_46, 0, gMagmaHideout_3F_1R_Text_23A1E1, gMagmaHideout_3F_1R_Text_23A229
 	loadptr 0, gMagmaHideout_3F_1R_Text_23A246
 	callstd 6
 	end
 
 gMagmaHideout_3F_1R_EventScript_23A1CA: ; 823A1CA
-	trainerbattle 0, 731, 0, gMagmaHideout_3F_1R_Text_23A293, gMagmaHideout_3F_1R_Text_23A353
+	trainerbattle 0, TRAINER_GRUNT_53, 0, gMagmaHideout_3F_1R_Text_23A293, gMagmaHideout_3F_1R_Text_23A353
 	loadptr 0, gMagmaHideout_3F_1R_Text_23A37C
 	callstd 6
 	end

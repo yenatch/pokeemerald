@@ -1,8 +1,6 @@
 gAbandonedShip_HiddenFloorCorridors_MapScripts: ; 823896C
-	.byte 5
-	.4byte gAbandonedShip_HiddenFloorCorridors_MapScript1_238977
-	.byte 1
-	.4byte gAbandonedShip_HiddenFloorCorridors_MapScript1_238980
+	map_script 5, gAbandonedShip_HiddenFloorCorridors_MapScript1_238977
+	map_script 1, gAbandonedShip_HiddenFloorCorridors_MapScript1_238980
 	.byte 0
 
 gAbandonedShip_HiddenFloorCorridors_MapScript1_238977: ; 8238977

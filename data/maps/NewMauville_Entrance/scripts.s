@@ -1,8 +1,6 @@
 gNewMauville_Entrance_MapScripts: ; 82372AD
-	.byte 1
-	.4byte gNewMauville_Entrance_MapScript1_2372B8
-	.byte 3
-	.4byte gNewMauville_Entrance_MapScript1_2372FB
+	map_script 1, gNewMauville_Entrance_MapScript1_2372B8
+	map_script 3, gNewMauville_Entrance_MapScript1_2372FB
 	.byte 0
 
 gNewMauville_Entrance_MapScript1_2372B8: ; 82372B8

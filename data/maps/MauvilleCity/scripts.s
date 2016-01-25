@@ -1,6 +1,5 @@
 gMauvilleCity_MapScripts: ; 81DF385
-	.byte 3
-	.4byte gMauvilleCity_MapScript1_1DF38B
+	map_script 3, gMauvilleCity_MapScript1_1DF38B
 	.byte 0
 
 gMauvilleCity_MapScript1_1DF38B: ; 81DF38B
@@ -231,7 +230,7 @@ gMauvilleCity_EventScript_1DF628: ; 81DF628
 gMauvilleCity_EventScript_1DF63A: ; 81DF63A
 	loadptr 0, gMauvilleCity_Text_1DFB6D
 	callstd 4
-	trainerbattle 3, 656, 0, gMauvilleCity_Text_1DFB96
+	trainerbattle 3, TRAINER_WALLY_2, 0, gMauvilleCity_Text_1DFB96
 	move 6, gMauvilleCity_Movement_2725A8
 	waitmove 0
 	loadptr 0, gMauvilleCity_Text_1DFBC3

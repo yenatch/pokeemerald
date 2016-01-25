@@ -1,14 +1,9 @@
 gSootopolisCity_MapScripts: ; 81E565C
-	.byte 1
-	.4byte gSootopolisCity_MapScript1_1E5676
-	.byte 3
-	.4byte gSootopolisCity_MapScript1_1E56EF
-	.byte 5
-	.4byte gSootopolisCity_MapScript1_1E590B
-	.byte 2
-	.4byte gSootopolisCity_MapScript2_1E5914
-	.byte 4
-	.4byte gSootopolisCity_MapScript2_1E58DB
+	map_script 1, gSootopolisCity_MapScript1_1E5676
+	map_script 3, gSootopolisCity_MapScript1_1E56EF
+	map_script 5, gSootopolisCity_MapScript1_1E590B
+	map_script 2, gSootopolisCity_MapScript2_1E5914
+	map_script 4, gSootopolisCity_MapScript2_1E58DB
 	.byte 0
 
 gSootopolisCity_MapScript1_1E5676: ; 81E5676
@@ -177,9 +172,7 @@ gSootopolisCity_EventScript_1E58D3: ; 81E58D3
 	return
 
 gSootopolisCity_MapScript2_1E58DB: ; 81E58DB
-	.2byte 16478
-	.2byte 5
-	.4byte gSootopolisCity_EventScript_1E58E5
+	map_script_2 0x405e, 5, gSootopolisCity_EventScript_1E58E5
 	.2byte 0
 
 gSootopolisCity_EventScript_1E58E5: ; 81E58E5
@@ -203,12 +196,8 @@ gSootopolisCity_MapScript1_1E590B: ; 81E590B
 	end
 
 gSootopolisCity_MapScript2_1E5914: ; 81E5914
-	.2byte 16478
-	.2byte 1
-	.4byte gSootopolisCity_EventScript_1E5926
-	.2byte 16586
-	.2byte 1
-	.4byte gSootopolisCity_EventScript_1E5BFE
+	map_script_2 0x405e, 1, gSootopolisCity_EventScript_1E5926
+	map_script_2 0x40ca, 1, gSootopolisCity_EventScript_1E5BFE
 	.2byte 0
 
 gSootopolisCity_EventScript_1E5926: ; 81E5926

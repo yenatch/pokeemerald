@@ -50,7 +50,7 @@ gAquaHideout_1F_EventScript_2334EE: ; 82334EE
 	end
 
 gAquaHideout_1F_EventScript_2334F8: ; 82334F8
-	trainerbattle 2, 2, 0, gAquaHideout_1F_Text_23393D, gAquaHideout_1F_Text_233964, gAquaHideout_1F_EventScript_233513
+	trainerbattle 2, TRAINER_GRUNT_1, 0, gAquaHideout_1F_Text_23393D, gAquaHideout_1F_Text_233964, gAquaHideout_1F_EventScript_233513
 	loadptr 0, gAquaHideout_1F_Text_233977
 	callstd 6
 	end

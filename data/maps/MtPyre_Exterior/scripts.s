@@ -1,6 +1,5 @@
 gMtPyre_Exterior_MapScripts: ; 8231FCC
-	.byte 3
-	.4byte gMtPyre_Exterior_MapScript1_231FD2
+	map_script 3, gMtPyre_Exterior_MapScript1_231FD2
 	.byte 0
 
 gMtPyre_Exterior_MapScript1_231FD2: ; 8231FD2

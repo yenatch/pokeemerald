@@ -22,7 +22,7 @@ gRoute102_EventScript_1EC0FC: ; 81EC0FC
 	end
 
 gRoute102_EventScript_1EC105: ; 81EC105
-	trainerbattle 2, 318, 0, gRoute102_Text_294513, gRoute102_Text_29457C, gRoute102_EventScript_1EC146
+	trainerbattle 2, TRAINER_CALVIN_1, 0, gRoute102_Text_294513, gRoute102_Text_29457C, gRoute102_EventScript_1EC146
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gRoute102_EventScript_1EC19C
@@ -72,25 +72,25 @@ gRoute102_EventScript_1EC183: ; 81EC183
 	end
 
 gRoute102_EventScript_1EC19C: ; 81EC19C
-	trainerbattle 5, 318, 0, gRoute102_Text_2946AE, gRoute102_Text_29470C
+	trainerbattle 5, TRAINER_CALVIN_1, 0, gRoute102_Text_2946AE, gRoute102_Text_29470C
 	loadptr 0, gRoute102_Text_29473C
 	callstd 6
 	end
 
 gRoute102_EventScript_1EC1B3: ; 81EC1B3
-	trainerbattle 0, 615, 0, gRoute102_Text_29480C, gRoute102_Text_294847
+	trainerbattle 0, TRAINER_RICK, 0, gRoute102_Text_29480C, gRoute102_Text_294847
 	loadptr 0, gRoute102_Text_294859
 	callstd 6
 	end
 
 gRoute102_EventScript_1EC1CA: ; 81EC1CA
-	trainerbattle 0, 603, 0, gRoute102_Text_29489E, gRoute102_Text_2948F3
+	trainerbattle 0, TRAINER_TIANA, 0, gRoute102_Text_29489E, gRoute102_Text_2948F3
 	loadptr 0, gRoute102_Text_294916
 	callstd 6
 	end
 
 gRoute102_EventScript_1EC1E1: ; 81EC1E1
-	trainerbattle 0, 333, 0, gRoute102_Text_294775, gRoute102_Text_2947AA
+	trainerbattle 0, TRAINER_ALLEN, 0, gRoute102_Text_294775, gRoute102_Text_2947AA
 	loadptr 0, gRoute102_Text_2947DB
 	callstd 6
 	end

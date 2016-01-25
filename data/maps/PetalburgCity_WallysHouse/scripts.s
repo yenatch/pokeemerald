@@ -1,14 +1,10 @@
 gPetalburgCity_WallysHouse_MapScripts: ; 8204229
-	.byte 2
-	.4byte gPetalburgCity_WallysHouse_MapScript2_204247
-	.byte 4
-	.4byte gPetalburgCity_WallysHouse_MapScript2_204234
+	map_script 2, gPetalburgCity_WallysHouse_MapScript2_204247
+	map_script 4, gPetalburgCity_WallysHouse_MapScript2_204234
 	.byte 0
 
 gPetalburgCity_WallysHouse_MapScript2_204234: ; 8204234
-	.2byte 16471
-	.2byte 4
-	.4byte gPetalburgCity_WallysHouse_EventScript_20423E
+	map_script_2 0x4057, 4, gPetalburgCity_WallysHouse_EventScript_20423E
 	.2byte 0
 
 gPetalburgCity_WallysHouse_EventScript_20423E: ; 820423E
@@ -17,9 +13,7 @@ gPetalburgCity_WallysHouse_EventScript_20423E: ; 820423E
 	end
 
 gPetalburgCity_WallysHouse_MapScript2_204247: ; 8204247
-	.2byte 16471
-	.2byte 4
-	.4byte gPetalburgCity_WallysHouse_EventScript_204251
+	map_script_2 0x4057, 4, gPetalburgCity_WallysHouse_EventScript_204251
 	.2byte 0
 
 gPetalburgCity_WallysHouse_EventScript_204251: ; 8204251

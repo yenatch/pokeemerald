@@ -1,5 +1,5 @@
 gArtisanCave_B1F_MapObjects: ; 8537708
-	object_event 1, 59, 0, 32, 0, 38, 0, 3, 1, 17, 0, 0, 0, 0, 0, gArtisanCave_B1F_EventScript_2914C4, 1162, 0, 0
+	object_event 1, FIELD_OBJ_GFX_ITEM_BALL, 0, 32, 0, 38, 0, 3, 1, 17, 0, 0, 0, 0, 0, gArtisanCave_B1F_EventScript_2914C4, 1162, 0, 0
 
 gArtisanCave_B1F_MapWarps: ; 8537720
 	warp_def 8, 48, 0, 10, BattleFrontier_OutsideWest

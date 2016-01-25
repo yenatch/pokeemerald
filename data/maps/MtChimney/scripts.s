@@ -1,8 +1,6 @@
 gMtChimney_MapScripts: ; 822EDC1
-	.byte 5
-	.4byte gMtChimney_MapScript1_22EDD2
-	.byte 3
-	.4byte gMtChimney_MapScript1_22EDCC
+	map_script 5, gMtChimney_MapScript1_22EDD2
+	map_script 3, gMtChimney_MapScript1_22EDCC
 	.byte 0
 
 gMtChimney_MapScript1_22EDCC: ; 822EDCC
@@ -51,7 +49,7 @@ gMtChimney_EventScript_22EE0B: ; 822EE0B
 	waitmove 0
 	loadptr 0, gMtChimney_Text_22F32E
 	callstd 4
-	trainerbattle 3, 602, 0, gMtChimney_Text_22F5CF
+	trainerbattle 3, TRAINER_MAXIE_2, 0, gMtChimney_Text_22F5CF
 	loadptr 0, gMtChimney_Text_22F5F7
 	callstd 4
 	closebutton
@@ -221,13 +219,13 @@ gMtChimney_EventScript_22F065: ; 822F065
 	end
 
 gMtChimney_EventScript_22F06E: ; 822F06E
-	trainerbattle 0, 597, 0, gMtChimney_Text_22F6AA, gMtChimney_Text_22F72C
+	trainerbattle 0, TRAINER_TABITHA_2, 0, gMtChimney_Text_22F6AA, gMtChimney_Text_22F72C
 	loadptr 0, gMtChimney_Text_22F76D
 	callstd 6
 	end
 
 gMtChimney_EventScript_22F085: ; 822F085
-	trainerbattle 0, 579, 0, gMtChimney_Text_22F7A2, gMtChimney_Text_22F83A
+	trainerbattle 0, TRAINER_GRUNT_31, 0, gMtChimney_Text_22F7A2, gMtChimney_Text_22F83A
 	loadptr 0, gMtChimney_Text_22F859
 	callstd 6
 	end
@@ -315,7 +313,7 @@ gMtChimney_EventScript_22F141: ; 822F141
 	end
 
 gMtChimney_EventScript_22F14A: ; 822F14A
-	trainerbattle 2, 313, 0, gMtChimney_Text_23001D, gMtChimney_Text_230076, gMtChimney_EventScript_22F176
+	trainerbattle 2, TRAINER_SHELBY_1, 0, gMtChimney_Text_23001D, gMtChimney_Text_230076, gMtChimney_EventScript_22F176
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gMtChimney_EventScript_22F195
@@ -337,37 +335,37 @@ gMtChimney_EventScript_22F176: ; 822F176
 	end
 
 gMtChimney_EventScript_22F195: ; 822F195
-	trainerbattle 5, 313, 0, gMtChimney_Text_230153, gMtChimney_Text_2301BB
+	trainerbattle 5, TRAINER_SHELBY_1, 0, gMtChimney_Text_230153, gMtChimney_Text_2301BB
 	loadptr 0, gMtChimney_Text_2301E7
 	callstd 6
 	end
 
 gMtChimney_EventScript_22F1AC: ; 822F1AC
-	trainerbattle 0, 124, 0, gMtChimney_Text_23022A, gMtChimney_Text_23026D
+	trainerbattle 0, TRAINER_MELISSA, 0, gMtChimney_Text_23022A, gMtChimney_Text_23026D
 	loadptr 0, gMtChimney_Text_230292
 	callstd 6
 	end
 
 gMtChimney_EventScript_22F1C3: ; 822F1C3
-	trainerbattle 0, 125, 0, gMtChimney_Text_2302BD, gMtChimney_Text_230304
+	trainerbattle 0, TRAINER_SHEILA, 0, gMtChimney_Text_2302BD, gMtChimney_Text_230304
 	loadptr 0, gMtChimney_Text_23033A
 	callstd 6
 	end
 
 gMtChimney_EventScript_22F1DA: ; 822F1DA
-	trainerbattle 0, 126, 0, gMtChimney_Text_2303DF, gMtChimney_Text_230436
+	trainerbattle 0, TRAINER_SHIRLEY, 0, gMtChimney_Text_2303DF, gMtChimney_Text_230436
 	loadptr 0, gMtChimney_Text_230463
 	callstd 6
 	end
 
 gMtChimney_EventScript_22F1F1: ; 822F1F1
-	trainerbattle 0, 146, 0, gMtChimney_Text_22F8B6, gMtChimney_Text_22F921
+	trainerbattle 0, TRAINER_GRUNT_24, 0, gMtChimney_Text_22F8B6, gMtChimney_Text_22F921
 	loadptr 0, gMtChimney_Text_22F93A
 	callstd 6
 	end
 
 gMtChimney_EventScript_22F208: ; 822F208
-	trainerbattle 2, 1, 0, gMtChimney_Text_2304B3, gMtChimney_Text_2304F7, gMtChimney_EventScript_22F234
+	trainerbattle 2, TRAINER_SAWYER_1, 0, gMtChimney_Text_2304B3, gMtChimney_Text_2304F7, gMtChimney_EventScript_22F234
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gMtChimney_EventScript_22F253
@@ -389,7 +387,7 @@ gMtChimney_EventScript_22F234: ; 822F234
 	end
 
 gMtChimney_EventScript_22F253: ; 822F253
-	trainerbattle 5, 1, 0, gMtChimney_Text_23059C, gMtChimney_Text_2305E3
+	trainerbattle 5, TRAINER_SAWYER_1, 0, gMtChimney_Text_23059C, gMtChimney_Text_2305E3
 	loadptr 0, gMtChimney_Text_230614
 	callstd 6
 	end

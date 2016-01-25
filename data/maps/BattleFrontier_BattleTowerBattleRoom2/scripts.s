@@ -1,10 +1,7 @@
 gBattleFrontier_BattleTowerBattleRoom2_MapScripts: ; 8248EE8
-	.byte 3
-	.4byte gBattleFrontier_BattleTowerBattleRoom2_MapScript1_248EF8
-	.byte 4
-	.4byte gBattleFrontier_BattleTowerBattleRoom2_MapScript2_248F33
-	.byte 2
-	.4byte gBattleFrontier_BattleTowerBattleRoom2_MapScript2_248F43
+	map_script 3, gBattleFrontier_BattleTowerBattleRoom2_MapScript1_248EF8
+	map_script 4, gBattleFrontier_BattleTowerBattleRoom2_MapScript2_248F33
+	map_script 2, gBattleFrontier_BattleTowerBattleRoom2_MapScript2_248F43
 	.byte 0
 
 gBattleFrontier_BattleTowerBattleRoom2_MapScript1_248EF8: ; 8248EF8
@@ -32,9 +29,7 @@ gBattleFrontier_BattleTowerBattleRoom2_EventScript_248F2F: ; 8248F2F
 	return
 
 gBattleFrontier_BattleTowerBattleRoom2_MapScript2_248F33: ; 8248F33
-	.2byte 16385
-	.2byte 0
-	.4byte gBattleFrontier_BattleTowerBattleRoom2_EventScript_248F3D
+	map_script_2 0x4001, 0, gBattleFrontier_BattleTowerBattleRoom2_EventScript_248F3D
 	.2byte 0
 
 gBattleFrontier_BattleTowerBattleRoom2_EventScript_248F3D: ; 8248F3D
@@ -42,9 +37,7 @@ gBattleFrontier_BattleTowerBattleRoom2_EventScript_248F3D: ; 8248F3D
 	end
 
 gBattleFrontier_BattleTowerBattleRoom2_MapScript2_248F43: ; 8248F43
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattleTowerBattleRoom2_EventScript_248F4D
+	map_script_2 0x4000, 0, gBattleFrontier_BattleTowerBattleRoom2_EventScript_248F4D
 	.2byte 0
 
 gBattleFrontier_BattleTowerBattleRoom2_EventScript_248F4D: ; 8248F4D

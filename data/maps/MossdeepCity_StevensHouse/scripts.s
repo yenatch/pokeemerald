@@ -1,10 +1,7 @@
 gMossdeepCity_StevensHouse_MapScripts: ; 8222784
-	.byte 1
-	.4byte gMossdeepCity_StevensHouse_MapScript1_222794
-	.byte 3
-	.4byte gMossdeepCity_StevensHouse_MapScript1_2227A8
-	.byte 2
-	.4byte gMossdeepCity_StevensHouse_MapScript2_2227C0
+	map_script 1, gMossdeepCity_StevensHouse_MapScript1_222794
+	map_script 3, gMossdeepCity_StevensHouse_MapScript1_2227A8
+	map_script 2, gMossdeepCity_StevensHouse_MapScript2_2227C0
 	.byte 0
 
 gMossdeepCity_StevensHouse_MapScript1_222794: ; 8222794
@@ -27,9 +24,7 @@ gMossdeepCity_StevensHouse_EventScript_2227B4: ; 82227B4
 	return
 
 gMossdeepCity_StevensHouse_MapScript2_2227C0: ; 82227C0
-	.2byte 16582
-	.2byte 1
-	.4byte gMossdeepCity_StevensHouse_EventScript_2227CA
+	map_script_2 0x40c6, 1, gMossdeepCity_StevensHouse_EventScript_2227CA
 	.2byte 0
 
 gMossdeepCity_StevensHouse_EventScript_2227CA: ; 82227CA

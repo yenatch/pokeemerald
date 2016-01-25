@@ -1,22 +1,13 @@
 gBattleFrontier_BattlePyramidEmptySquare_MapScripts: ; 8252A33
-	.byte 5
-	.4byte gBattleFrontier_BattlePyramidEmptySquare_MapScript1_252AA2
-	.byte 2
-	.4byte gBattleFrontier_BattlePyramidEmptySquare_MapScript2_252A43
-	.byte 3
-	.4byte gBattleFrontier_BattlePyramidEmptySquare_MapScript1_252BCA
+	map_script 5, gBattleFrontier_BattlePyramidEmptySquare_MapScript1_252AA2
+	map_script 2, gBattleFrontier_BattlePyramidEmptySquare_MapScript2_252A43
+	map_script 3, gBattleFrontier_BattlePyramidEmptySquare_MapScript1_252BCA
 	.byte 0
 
 gBattleFrontier_BattlePyramidEmptySquare_MapScript2_252A43: ; 8252A43
-	.2byte 16397
-	.2byte 1
-	.4byte gBattleFrontier_BattlePyramidEmptySquare_EventScript_252A5D
-	.2byte 16398
-	.2byte 0
-	.4byte gBattleFrontier_BattlePyramidEmptySquare_EventScript_252A98
-	.2byte 16399
-	.2byte 1
-	.4byte gBattleFrontier_BattlePyramidEmptySquare_EventScript_252A8F
+	map_script_2 0x400d, 1, gBattleFrontier_BattlePyramidEmptySquare_EventScript_252A5D
+	map_script_2 0x400e, 0, gBattleFrontier_BattlePyramidEmptySquare_EventScript_252A98
+	map_script_2 0x400f, 1, gBattleFrontier_BattlePyramidEmptySquare_EventScript_252A8F
 	.2byte 0
 
 gBattleFrontier_BattlePyramidEmptySquare_EventScript_252A5D: ; 8252A5D
@@ -157,7 +148,7 @@ gBattlePyramidSquare13_EventScript_252C4F: ; 8252C4F
 gBattlePyramidSquare14_EventScript_252C4F: ; 8252C4F
 gBattlePyramidSquare15_EventScript_252C4F: ; 8252C4F
 gBattlePyramidSquare16_EventScript_252C4F: ; 8252C4F
-	trainerbattle 9, 494, 0, gBattlePyramidSquare01_Text_252C8D, gBattlePyramidSquare01_Text_252C8D
+	trainerbattle 9, TRAINER_PHILLIP, 0, gBattlePyramidSquare01_Text_252C8D, gBattlePyramidSquare01_Text_252C8D
 	setvar 0x8004, 10
 	special 243
 	waittext

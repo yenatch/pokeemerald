@@ -1,6 +1,5 @@
 gRoute114_LanettesHouse_MapScripts: ; 822B2C8
-	.byte 3
-	.4byte gRoute114_LanettesHouse_MapScript1_22B2CE
+	map_script 3, gRoute114_LanettesHouse_MapScript1_22B2CE
 	.byte 0
 
 gRoute114_LanettesHouse_MapScript1_22B2CE: ; 822B2CE

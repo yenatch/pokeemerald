@@ -1,10 +1,7 @@
 gSlateportCity_BattleTentBattleRoom_MapScripts: ; 8209960
-	.byte 3
-	.4byte gSlateportCity_BattleTentBattleRoom_MapScript1_209970
-	.byte 4
-	.4byte gSlateportCity_BattleTentBattleRoom_MapScript2_20999A
-	.byte 2
-	.4byte gSlateportCity_BattleTentBattleRoom_MapScript2_2099B4
+	map_script 3, gSlateportCity_BattleTentBattleRoom_MapScript1_209970
+	map_script 4, gSlateportCity_BattleTentBattleRoom_MapScript2_20999A
+	map_script 2, gSlateportCity_BattleTentBattleRoom_MapScript2_2099B4
 	.byte 0
 
 gSlateportCity_BattleTentBattleRoom_MapScript1_209970: ; 8209970
@@ -28,9 +25,7 @@ gSlateportCity_BattleTentBattleRoom_EventScript_209994: ; 8209994
 	return
 
 gSlateportCity_BattleTentBattleRoom_MapScript2_20999A: ; 820999A
-	.2byte 16385
-	.2byte 0
-	.4byte gSlateportCity_BattleTentBattleRoom_EventScript_2099A4
+	map_script_2 0x4001, 0, gSlateportCity_BattleTentBattleRoom_EventScript_2099A4
 	.2byte 0
 
 gSlateportCity_BattleTentBattleRoom_EventScript_2099A4: ; 82099A4
@@ -40,9 +35,7 @@ gSlateportCity_BattleTentBattleRoom_EventScript_2099A4: ; 82099A4
 	end
 
 gSlateportCity_BattleTentBattleRoom_MapScript2_2099B4: ; 82099B4
-	.2byte 16384
-	.2byte 0
-	.4byte gSlateportCity_BattleTentBattleRoom_EventScript_2099BE
+	map_script_2 0x4000, 0, gSlateportCity_BattleTentBattleRoom_EventScript_2099BE
 	.2byte 0
 
 gSlateportCity_BattleTentBattleRoom_EventScript_2099BE: ; 82099BE

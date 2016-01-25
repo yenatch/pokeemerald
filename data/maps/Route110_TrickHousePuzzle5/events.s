@@ -1,9 +1,9 @@
 gRoute110_TrickHousePuzzle5_MapObjects: ; 853E4C0
-	object_event 1, 19, 0, 6, 0, 17, 0, 3, 9, 0, 0, 0, 0, 0, 0, gRoute110_TrickHousePuzzle5_EventScript_26CB32, 0, 0, 0
-	object_event 2, 19, 0, 0, 0, 7, 0, 3, 10, 0, 0, 0, 0, 0, 0, gRoute110_TrickHousePuzzle5_EventScript_26CB53, 0, 0, 0
-	object_event 3, 19, 0, 14, 0, 10, 0, 3, 9, 0, 0, 0, 0, 0, 0, gRoute110_TrickHousePuzzle5_EventScript_26CB74, 0, 0, 0
-	object_event 4, 19, 0, 14, 0, 19, 0, 3, 9, 0, 0, 0, 0, 0, 0, gRoute110_TrickHousePuzzle5_EventScript_26CB95, 0, 0, 0
-	object_event 5, 19, 0, 10, 0, 4, 0, 3, 10, 0, 0, 0, 0, 0, 0, gRoute110_TrickHousePuzzle5_EventScript_26CBB6, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_MAN_1, 0, 6, 0, 17, 0, 3, 9, 0, 0, 0, 0, 0, 0, gRoute110_TrickHousePuzzle5_EventScript_26CB32, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_MAN_1, 0, 0, 0, 7, 0, 3, 10, 0, 0, 0, 0, 0, 0, gRoute110_TrickHousePuzzle5_EventScript_26CB53, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_MAN_1, 0, 14, 0, 10, 0, 3, 9, 0, 0, 0, 0, 0, 0, gRoute110_TrickHousePuzzle5_EventScript_26CB74, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_MAN_1, 0, 14, 0, 19, 0, 3, 9, 0, 0, 0, 0, 0, 0, gRoute110_TrickHousePuzzle5_EventScript_26CB95, 0, 0, 0
+	object_event 5, FIELD_OBJ_GFX_MAN_1, 0, 10, 0, 4, 0, 3, 10, 0, 0, 0, 0, 0, 0, gRoute110_TrickHousePuzzle5_EventScript_26CBB6, 0, 0, 0
 
 gRoute110_TrickHousePuzzle5_MapWarps: ; 853E538
 	warp_def 0, 21, 3, 2, Route110_TrickHouseEntrance

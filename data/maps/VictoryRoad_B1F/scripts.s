@@ -2,31 +2,31 @@ gVictoryRoad_B1F_MapScripts: ; 82364E4
 	.byte 0
 
 gVictoryRoad_B1F_EventScript_2364E5: ; 82364E5
-	trainerbattle 0, 81, 0, gVictoryRoad_B1F_Text_236558, gVictoryRoad_B1F_Text_2365AD
+	trainerbattle 0, TRAINER_SAMUEL, 0, gVictoryRoad_B1F_Text_236558, gVictoryRoad_B1F_Text_2365AD
 	loadptr 0, gVictoryRoad_B1F_Text_2365C4
 	callstd 6
 	end
 
 gVictoryRoad_B1F_EventScript_2364FC: ; 82364FC
-	trainerbattle 0, 97, 0, gVictoryRoad_B1F_Text_2365FD, gVictoryRoad_B1F_Text_23664D
+	trainerbattle 0, TRAINER_SHANNON, 0, gVictoryRoad_B1F_Text_2365FD, gVictoryRoad_B1F_Text_23664D
 	loadptr 0, gVictoryRoad_B1F_Text_236678
 	callstd 6
 	end
 
 gVictoryRoad_B1F_EventScript_236513: ; 8236513
-	trainerbattle 0, 98, 0, gVictoryRoad_B1F_Text_2366C2, gVictoryRoad_B1F_Text_23670B
+	trainerbattle 0, TRAINER_MICHELLE, 0, gVictoryRoad_B1F_Text_2366C2, gVictoryRoad_B1F_Text_23670B
 	loadptr 0, gVictoryRoad_B1F_Text_23671B
 	callstd 6
 	end
 
 gVictoryRoad_B1F_EventScript_23652A: ; 823652A
-	trainerbattle 0, 540, 0, gVictoryRoad_B1F_Text_236757, gVictoryRoad_B1F_Text_236780
+	trainerbattle 0, TRAINER_MITCHELL, 0, gVictoryRoad_B1F_Text_236757, gVictoryRoad_B1F_Text_236780
 	loadptr 0, gVictoryRoad_B1F_Text_2367A7
 	callstd 6
 	end
 
 gVictoryRoad_B1F_EventScript_236541: ; 8236541
-	trainerbattle 0, 546, 0, gVictoryRoad_B1F_Text_2367FD, gVictoryRoad_B1F_Text_23683B
+	trainerbattle 0, TRAINER_HALLE, 0, gVictoryRoad_B1F_Text_2367FD, gVictoryRoad_B1F_Text_23683B
 	loadptr 0, gVictoryRoad_B1F_Text_23684C
 	callstd 6
 	end

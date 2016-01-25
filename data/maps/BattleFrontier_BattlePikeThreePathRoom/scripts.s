@@ -1,34 +1,19 @@
 gBattleFrontier_BattlePikeThreePathRoom_MapScripts: ; 825C843
-	.byte 5
-	.4byte gBattleFrontier_BattlePikeThreePathRoom_MapScript1_2C423E
-	.byte 2
-	.4byte gBattleFrontier_BattlePikeThreePathRoom_MapScript2_25C853
-	.byte 4
-	.4byte gBattleFrontier_BattlePikeThreePathRoom_MapScript2_25C87D
+	map_script 5, gBattleFrontier_BattlePikeThreePathRoom_MapScript1_2C423E
+	map_script 2, gBattleFrontier_BattlePikeThreePathRoom_MapScript2_25C853
+	map_script 4, gBattleFrontier_BattlePikeThreePathRoom_MapScript2_25C87D
 	.byte 0
 
 gBattleFrontier_BattlePikeThreePathRoom_MapScript2_25C853: ; 825C853
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattlePikeThreePathRoom_EventScript_25C891
-	.2byte 16384
-	.2byte 1
-	.4byte gBattleFrontier_BattlePikeThreePathRoom_EventScript_25C89A
-	.2byte 16384
-	.2byte 2
-	.4byte gBattleFrontier_BattlePikeThreePathRoom_EventScript_25C8A4
-	.2byte 16389
-	.2byte 0
-	.4byte gBattleFrontier_BattlePikeThreePathRoom_EventScript_25CA78
-	.2byte 16389
-	.2byte 1
-	.4byte gBattleFrontier_BattlePikeThreePathRoom_EventScript_25CA97
+	map_script_2 0x4000, 0, gBattleFrontier_BattlePikeThreePathRoom_EventScript_25C891
+	map_script_2 0x4000, 1, gBattleFrontier_BattlePikeThreePathRoom_EventScript_25C89A
+	map_script_2 0x4000, 2, gBattleFrontier_BattlePikeThreePathRoom_EventScript_25C8A4
+	map_script_2 0x4005, 0, gBattleFrontier_BattlePikeThreePathRoom_EventScript_25CA78
+	map_script_2 0x4005, 1, gBattleFrontier_BattlePikeThreePathRoom_EventScript_25CA97
 	.2byte 0
 
 gBattleFrontier_BattlePikeThreePathRoom_MapScript2_25C87D: ; 825C87D
-	.2byte 16388
-	.2byte 0
-	.4byte gBattleFrontier_BattlePikeThreePathRoom_EventScript_25C887
+	map_script_2 0x4004, 0, gBattleFrontier_BattlePikeThreePathRoom_EventScript_25C887
 	.2byte 0
 
 gBattleFrontier_BattlePikeThreePathRoom_EventScript_25C887: ; 825C887

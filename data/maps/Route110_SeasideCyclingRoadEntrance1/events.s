@@ -1,5 +1,5 @@
 gRoute110_SeasideCyclingRoadEntrance1_MapObjects: ; 853E9A0
-	object_event 1, 83, 0, 7, 0, 2, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRoute110_SeasideCyclingRoadEntrance1_EventScript_26EA78, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_MART_EMPLOYEE, 0, 7, 0, 2, 0, 3, 8, 0, 0, 0, 0, 0, 0, gRoute110_SeasideCyclingRoadEntrance1_EventScript_26EA78, 0, 0, 0
 
 gRoute110_SeasideCyclingRoadEntrance1_MapWarps: ; 853E9B8
 	warp_def 1, 5, 0, 4, Route110

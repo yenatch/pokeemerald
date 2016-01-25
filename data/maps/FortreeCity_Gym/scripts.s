@@ -1,8 +1,6 @@
 gFortreeCity_Gym_MapScripts: ; 82165AB
-	.byte 3
-	.4byte gFortreeCity_Gym_MapScript1_2165B6
-	.byte 4
-	.4byte gFortreeCity_Gym_MapScript2_2165BA
+	map_script 3, gFortreeCity_Gym_MapScript1_2165B6
+	map_script 4, gFortreeCity_Gym_MapScript2_2165BA
 	.byte 0
 
 gFortreeCity_Gym_MapScript1_2165B6: ; 82165B6
@@ -10,9 +8,7 @@ gFortreeCity_Gym_MapScript1_2165B6: ; 82165B6
 	end
 
 gFortreeCity_Gym_MapScript2_2165BA: ; 82165BA
-	.2byte 16384
-	.2byte 16384
-	.4byte gFortreeCity_Gym_EventScript_2165C4
+	map_script_2 0x4000, 16384, gFortreeCity_Gym_EventScript_2165C4
 	.2byte 0
 
 gFortreeCity_Gym_EventScript_2165C4: ; 82165C4
@@ -20,7 +16,7 @@ gFortreeCity_Gym_EventScript_2165C4: ; 82165C4
 	end
 
 gFortreeCity_Gym_EventScript_2165C8: ; 82165C8
-	trainerbattle 1, 270, 0, gFortreeCity_Gym_Text_216D75, gFortreeCity_Gym_Text_216E60, gFortreeCity_Gym_EventScript_2165FD
+	trainerbattle 1, TRAINER_WINONA_1, 0, gFortreeCity_Gym_Text_216D75, gFortreeCity_Gym_Text_216E60, gFortreeCity_Gym_EventScript_2165FD
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gFortreeCity_Gym_EventScript_21668D
@@ -80,43 +76,43 @@ gFortreeCity_Gym_EventScript_21666A: ; 821666A
 	return
 
 gFortreeCity_Gym_EventScript_21668D: ; 821668D
-	trainerbattle 7, 270, 0, gFortreeCity_Gym_Text_217100, gFortreeCity_Gym_Text_2171E6, gFortreeCity_Gym_Text_217292
+	trainerbattle 7, TRAINER_WINONA_1, 0, gFortreeCity_Gym_Text_217100, gFortreeCity_Gym_Text_2171E6, gFortreeCity_Gym_Text_217292
 	loadptr 0, gFortreeCity_Gym_Text_21720B
 	callstd 6
 	end
 
 gFortreeCity_Gym_EventScript_2166A8: ; 82166A8
-	trainerbattle 0, 401, 0, gFortreeCity_Gym_Text_2168A2, gFortreeCity_Gym_Text_2168D3
+	trainerbattle 0, TRAINER_JARED, 0, gFortreeCity_Gym_Text_2168A2, gFortreeCity_Gym_Text_2168D3
 	loadptr 0, gFortreeCity_Gym_Text_2168E7
 	callstd 6
 	end
 
 gFortreeCity_Gym_EventScript_2166BF: ; 82166BF
-	trainerbattle 0, 404, 0, gFortreeCity_Gym_Text_21695A, gFortreeCity_Gym_Text_2169C7
+	trainerbattle 0, TRAINER_EDWARDO, 0, gFortreeCity_Gym_Text_21695A, gFortreeCity_Gym_Text_2169C7
 	loadptr 0, gFortreeCity_Gym_Text_2169F1
 	callstd 6
 	end
 
 gFortreeCity_Gym_EventScript_2166D6: ; 82166D6
-	trainerbattle 0, 654, 0, gFortreeCity_Gym_Text_216A66, gFortreeCity_Gym_Text_216AC4
+	trainerbattle 0, TRAINER_FLINT, 0, gFortreeCity_Gym_Text_216A66, gFortreeCity_Gym_Text_216AC4
 	loadptr 0, gFortreeCity_Gym_Text_216AD7
 	callstd 6
 	end
 
 gFortreeCity_Gym_EventScript_2166ED: ; 82166ED
-	trainerbattle 0, 655, 0, gFortreeCity_Gym_Text_216B1A, gFortreeCity_Gym_Text_216B51
+	trainerbattle 0, TRAINER_ASHLEY, 0, gFortreeCity_Gym_Text_216B1A, gFortreeCity_Gym_Text_216B51
 	loadptr 0, gFortreeCity_Gym_Text_216B5F
 	callstd 6
 	end
 
 gFortreeCity_Gym_EventScript_216704: ; 8216704
-	trainerbattle 0, 402, 0, gFortreeCity_Gym_Text_216B9E, gFortreeCity_Gym_Text_216C18
+	trainerbattle 0, TRAINER_HUMBERTO, 0, gFortreeCity_Gym_Text_216B9E, gFortreeCity_Gym_Text_216C18
 	loadptr 0, gFortreeCity_Gym_Text_216C32
 	callstd 6
 	end
 
 gFortreeCity_Gym_EventScript_21671B: ; 821671B
-	trainerbattle 0, 803, 0, gFortreeCity_Gym_Text_216C96, gFortreeCity_Gym_Text_216CF2
+	trainerbattle 0, TRAINER_DARIUS, 0, gFortreeCity_Gym_Text_216C96, gFortreeCity_Gym_Text_216CF2
 	loadptr 0, gFortreeCity_Gym_Text_216D0F
 	callstd 6
 	end

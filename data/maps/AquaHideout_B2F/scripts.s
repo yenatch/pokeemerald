@@ -1,6 +1,5 @@
 gAquaHideout_B2F_MapScripts: ; 8233DCF
-	.byte 3
-	.4byte gAquaHideout_B2F_MapScript1_233DD5
+	map_script 3, gAquaHideout_B2F_MapScript1_233DD5
 	.byte 0
 
 gAquaHideout_B2F_MapScript1_233DD5: ; 8233DD5
@@ -25,7 +24,7 @@ gAquaHideout_B2F_EventScript_233DE5: ; 8233DE5
 	end
 
 gAquaHideout_B2F_EventScript_233E09: ; 8233E09
-	trainerbattle 2, 30, 0, gAquaHideout_B2F_Text_233EDD, gAquaHideout_B2F_Text_233F8D, gAquaHideout_B2F_EventScript_233E25
+	trainerbattle 2, TRAINER_MATT, 0, gAquaHideout_B2F_Text_233EDD, gAquaHideout_B2F_Text_233F8D, gAquaHideout_B2F_EventScript_233E25
 	loadptr 0, gAquaHideout_B2F_Text_233FF2
 	callstd 4
 	release
@@ -66,7 +65,7 @@ gAquaHideout_B2F_Movement_233E80: ; 8233E80
 	.incbin "base_emerald.gba", 0x233e85, 0x5
 
 gAquaHideout_B2F_EventScript_233E8A: ; 8233E8A
-	trainerbattle 2, 5, 0, gAquaHideout_B2F_Text_2340B4, gAquaHideout_B2F_Text_2340F0, gAquaHideout_B2F_EventScript_233EA5
+	trainerbattle 2, TRAINER_GRUNT_4, 0, gAquaHideout_B2F_Text_2340B4, gAquaHideout_B2F_Text_2340F0, gAquaHideout_B2F_EventScript_233EA5
 	loadptr 0, gAquaHideout_B2F_Text_234112
 	callstd 6
 	end
@@ -78,13 +77,13 @@ gAquaHideout_B2F_EventScript_233EA5: ; 8233EA5
 	end
 
 gAquaHideout_B2F_EventScript_233EAF: ; 8233EAF
-	trainerbattle 0, 28, 0, gAquaHideout_B2F_Text_23412D, gAquaHideout_B2F_Text_2341CE
+	trainerbattle 0, TRAINER_GRUNT_22, 0, gAquaHideout_B2F_Text_23412D, gAquaHideout_B2F_Text_2341CE
 	loadptr 0, gAquaHideout_B2F_Text_2341FE
 	callstd 6
 	end
 
 gAquaHideout_B2F_EventScript_233EC6: ; 8233EC6
-	trainerbattle 0, 193, 0, gAquaHideout_B2F_Text_23426F, gAquaHideout_B2F_Text_2342CC
+	trainerbattle 0, TRAINER_GRUNT_26, 0, gAquaHideout_B2F_Text_23426F, gAquaHideout_B2F_Text_2342CC
 	loadptr 0, gAquaHideout_B2F_Text_2342FF
 	callstd 6
 	end

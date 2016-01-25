@@ -1,5 +1,5 @@
 gSeafloorCavern_Entrance_MapObjects: ; 85356BC
-	object_event 1, 117, 0, 10, 0, 2, 0, 3, 7, 17, 0, 0, 0, 0, 0, gSeafloorCavern_Entrance_EventScript_234485, 941, 0, 0
+	object_event 1, FIELD_OBJ_GFX_AQUA_MEMBER_M, 0, 10, 0, 2, 0, 3, 7, 17, 0, 0, 0, 0, 0, gSeafloorCavern_Entrance_EventScript_234485, 941, 0, 0
 
 gSeafloorCavern_Entrance_MapWarps: ; 85356D4
 	warp_def 10, 18, 3, 0, Underwater4

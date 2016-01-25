@@ -1,6 +1,5 @@
 gSkyPillar_5F_MapScripts: ; 82396A2
-	.byte 3
-	.4byte gSkyPillar_5F_MapScript1_2396A8
+	map_script 3, gSkyPillar_5F_MapScript1_2396A8
 	.byte 0
 
 gSkyPillar_5F_MapScript1_2396A8: ; 82396A8

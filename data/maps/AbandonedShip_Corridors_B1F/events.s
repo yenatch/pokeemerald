@@ -1,6 +1,6 @@
 gAbandonedShip_Corridors_B1F_MapObjects: ; 8536808
-	object_event 1, 54, 0, 2, 0, 8, 0, 3, 2, 17, 0, 0, 0, 0, 0, gAbandonedShip_Corridors_B1F_EventScript_237DBF, 0, 0, 0
-	object_event 2, 49, 0, 9, 0, 6, 0, 3, 14, 0, 0, 1, 0, 4, 0, gAbandonedShip_Corridors_B1F_EventScript_237E13, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_TUBER_M, 0, 2, 0, 8, 0, 3, 2, 17, 0, 0, 0, 0, 0, gAbandonedShip_Corridors_B1F_EventScript_237DBF, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_SAILOR, 0, 9, 0, 6, 0, 3, 14, 0, 0, 1, 0, 4, 0, gAbandonedShip_Corridors_B1F_EventScript_237E13, 0, 0, 0
 
 gAbandonedShip_Corridors_B1F_MapWarps: ; 8536838
 	warp_def 6, 4, 3, 2, AbandonedShip_Rooms2_B1F

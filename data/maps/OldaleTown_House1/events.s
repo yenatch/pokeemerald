@@ -1,5 +1,5 @@
 gOldaleTown_House1_MapObjects: ; 852D7B4
-	object_event 1, 20, 0, 6, 0, 4, 0, 3, 2, 17, 0, 0, 0, 0, 0, gOldaleTown_House1_EventScript_1FBE86, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_WOMAN_3, 0, 6, 0, 4, 0, 3, 2, 17, 0, 0, 0, 0, 0, gOldaleTown_House1_EventScript_1FBE86, 0, 0, 0
 
 gOldaleTown_House1_MapWarps: ; 852D7CC
 	warp_def 3, 8, 0, 0, OldaleTown

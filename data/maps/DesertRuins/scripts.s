@@ -1,10 +1,7 @@
 gDesertRuins_MapScripts: ; 822D95B
-	.byte 5
-	.4byte gDesertRuins_MapScript1_22D96B
-	.byte 1
-	.4byte gDesertRuins_MapScript1_22D989
-	.byte 3
-	.4byte gDesertRuins_MapScript1_22D9CA
+	map_script 5, gDesertRuins_MapScript1_22D96B
+	map_script 1, gDesertRuins_MapScript1_22D989
+	map_script 3, gDesertRuins_MapScript1_22D9CA
 	.byte 0
 
 gDesertRuins_MapScript1_22D96B: ; 822D96B

@@ -30,7 +30,7 @@ gSeafloorCavern_Room9_EventScript_234DC9: ; 8234DC9
 	waitmove 0
 	loadptr 0, gSeafloorCavern_Room9_Text_23512C
 	callstd 4
-	trainerbattle 3, 34, 0, gSeafloorCavern_Room9_Text_2351BC
+	trainerbattle 3, TRAINER_ARCHIE, 0, gSeafloorCavern_Room9_Text_2351BC
 	loadptr 0, gSeafloorCavern_Room9_Text_2351E5
 	callstd 4
 	setweather 0

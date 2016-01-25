@@ -1,6 +1,5 @@
 gRoute111_OldLadysRestStop_MapScripts: ; 822A916
-	.byte 3
-	.4byte gRoute111_OldLadysRestStop_MapScript1_22A91C
+	map_script 3, gRoute111_OldLadysRestStop_MapScript1_22A91C
 	.byte 0
 
 gRoute111_OldLadysRestStop_MapScript1_22A91C: ; 822A91C

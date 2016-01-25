@@ -1,6 +1,5 @@
 gFarawayIsland_Entrance_MapScripts: ; 8267C8E
-	.byte 3
-	.4byte gFarawayIsland_Entrance_MapScript1_267C94
+	map_script 3, gFarawayIsland_Entrance_MapScript1_267C94
 	.byte 0
 
 gFarawayIsland_Entrance_MapScript1_267C94: ; 8267C94

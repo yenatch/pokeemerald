@@ -1,8 +1,6 @@
 gRoute128_MapScripts: ; 81F6B38
-	.byte 3
-	.4byte gRoute128_MapScript1_1F6B43
-	.byte 2
-	.4byte gRoute128_MapScript2_1F6B4D
+	map_script 3, gRoute128_MapScript1_1F6B43
+	map_script 2, gRoute128_MapScript2_1F6B4D
 	.byte 0
 
 gRoute128_MapScript1_1F6B43: ; 81F6B43
@@ -11,9 +9,7 @@ gRoute128_MapScript1_1F6B43: ; 81F6B43
 	end
 
 gRoute128_MapScript2_1F6B4D: ; 81F6B4D
-	.2byte 16507
-	.2byte 1
-	.4byte gRoute128_EventScript_1F6B57
+	map_script_2 0x407b, 1, gRoute128_EventScript_1F6B57
 	.2byte 0
 
 gRoute128_EventScript_1F6B57: ; 81F6B57
@@ -171,7 +167,7 @@ gRoute128_Movement_1F6CBB: ; 81F6CBB
 	step_end
 
 gRoute128_EventScript_1F6CBE: ; 81F6CBE
-	trainerbattle 2, 376, 0, gRoute128_Text_2A287F, gRoute128_Text_2A28AB, gRoute128_EventScript_1F6CEA
+	trainerbattle 2, TRAINER_ISAIAH_1, 0, gRoute128_Text_2A287F, gRoute128_Text_2A28AB, gRoute128_EventScript_1F6CEA
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gRoute128_EventScript_1F6D09
@@ -193,13 +189,13 @@ gRoute128_EventScript_1F6CEA: ; 81F6CEA
 	end
 
 gRoute128_EventScript_1F6D09: ; 81F6D09
-	trainerbattle 5, 376, 0, gRoute128_Text_2A2975, gRoute128_Text_2A29B8
+	trainerbattle 5, TRAINER_ISAIAH_1, 0, gRoute128_Text_2A2975, gRoute128_Text_2A29B8
 	loadptr 0, gRoute128_Text_2A29DC
 	callstd 6
 	end
 
 gRoute128_EventScript_1F6D20: ; 81F6D20
-	trainerbattle 2, 386, 0, gRoute128_Text_2A2A1F, gRoute128_Text_2A2A94, gRoute128_EventScript_1F6D4C
+	trainerbattle 2, TRAINER_KATELYN_1, 0, gRoute128_Text_2A2A1F, gRoute128_Text_2A2A94, gRoute128_EventScript_1F6D4C
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gRoute128_EventScript_1F6D6B
@@ -221,37 +217,37 @@ gRoute128_EventScript_1F6D4C: ; 81F6D4C
 	end
 
 gRoute128_EventScript_1F6D6B: ; 81F6D6B
-	trainerbattle 5, 386, 0, gRoute128_Text_2A2B41, gRoute128_Text_2A2BAB
+	trainerbattle 5, TRAINER_KATELYN_1, 0, gRoute128_Text_2A2B41, gRoute128_Text_2A2BAB
 	loadptr 0, gRoute128_Text_2A2BDD
 	callstd 6
 	end
 
 gRoute128_EventScript_1F6D82: ; 81F6D82
-	trainerbattle 0, 670, 0, gRoute128_Text_2A2C1C, gRoute128_Text_2A2C79
+	trainerbattle 0, TRAINER_ALEXA, 0, gRoute128_Text_2A2C1C, gRoute128_Text_2A2C79
 	loadptr 0, gRoute128_Text_2A2C95
 	callstd 6
 	end
 
 gRoute128_EventScript_1F6D99: ; 81F6D99
-	trainerbattle 0, 671, 0, gRoute128_Text_2A2CD9, gRoute128_Text_2A2CFE
+	trainerbattle 0, TRAINER_RUBEN, 0, gRoute128_Text_2A2CD9, gRoute128_Text_2A2CFE
 	loadptr 0, gRoute128_Text_2A2D0D
 	callstd 6
 	end
 
 gRoute128_EventScript_1F6DB0: ; 81F6DB0
-	trainerbattle 0, 673, 0, gRoute128_Text_2A2D3D, gRoute128_Text_2A2DA9
+	trainerbattle 0, TRAINER_WAYNE, 0, gRoute128_Text_2A2D3D, gRoute128_Text_2A2DA9
 	loadptr 0, gRoute128_Text_2A2DBA
 	callstd 6
 	end
 
 gRoute128_EventScript_1F6DC7: ; 81F6DC7
-	trainerbattle 0, 578, 0, gRoute128_Text_2A2E0F, gRoute128_Text_2A2E44
+	trainerbattle 0, TRAINER_HARRISON, 0, gRoute128_Text_2A2E0F, gRoute128_Text_2A2E44
 	loadptr 0, gRoute128_Text_2A2E6C
 	callstd 6
 	end
 
 gRoute128_EventScript_1F6DDE: ; 81F6DDE
-	trainerbattle 0, 464, 0, gRoute128_Text_2A2EC8, gRoute128_Text_2A2EFA
+	trainerbattle 0, TRAINER_CARLEE, 0, gRoute128_Text_2A2EC8, gRoute128_Text_2A2EFA
 	loadptr 0, gRoute128_Text_2A2F2F
 	callstd 6
 	end

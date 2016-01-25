@@ -1,8 +1,6 @@
 gMossdeepCity_SpaceCenter_1F_MapScripts: ; 8222F41
-	.byte 1
-	.4byte gMossdeepCity_SpaceCenter_1F_MapScript1_222FC2
-	.byte 3
-	.4byte gMossdeepCity_SpaceCenter_1F_MapScript1_222F4C
+	map_script 1, gMossdeepCity_SpaceCenter_1F_MapScript1_222FC2
+	map_script 3, gMossdeepCity_SpaceCenter_1F_MapScript1_222F4C
 	.byte 0
 
 gMossdeepCity_SpaceCenter_1F_MapScript1_222F4C: ; 8222F4C
@@ -243,19 +241,19 @@ gMossdeepCity_SpaceCenter_1F_EventScript_2231CF: ; 82231CF
 	end
 
 gMossdeepCity_SpaceCenter_1F_EventScript_2231DA: ; 82231DA
-	trainerbattle 0, 586, 0, gMossdeepCity_SpaceCenter_1F_Text_22396C, gMossdeepCity_SpaceCenter_1F_Text_223999
+	trainerbattle 0, TRAINER_GRUNT_32, 0, gMossdeepCity_SpaceCenter_1F_Text_22396C, gMossdeepCity_SpaceCenter_1F_Text_223999
 	loadptr 0, gMossdeepCity_SpaceCenter_1F_Text_2239AA
 	callstd 6
 	end
 
 gMossdeepCity_SpaceCenter_1F_EventScript_2231F1: ; 82231F1
-	trainerbattle 0, 22, 0, gMossdeepCity_SpaceCenter_1F_Text_2239E6, gMossdeepCity_SpaceCenter_1F_Text_223A21
+	trainerbattle 0, TRAINER_GRUNT_16, 0, gMossdeepCity_SpaceCenter_1F_Text_2239E6, gMossdeepCity_SpaceCenter_1F_Text_223A21
 	loadptr 0, gMossdeepCity_SpaceCenter_1F_Text_223A4B
 	callstd 6
 	end
 
 gMossdeepCity_SpaceCenter_1F_EventScript_223208: ; 8223208
-	trainerbattle 0, 587, 0, gMossdeepCity_SpaceCenter_1F_Text_223A8A, gMossdeepCity_SpaceCenter_1F_Text_223AFA
+	trainerbattle 0, TRAINER_GRUNT_33, 0, gMossdeepCity_SpaceCenter_1F_Text_223A8A, gMossdeepCity_SpaceCenter_1F_Text_223AFA
 	loadptr 0, gMossdeepCity_SpaceCenter_1F_Text_223B37
 	callstd 6
 	end
@@ -267,7 +265,7 @@ gMossdeepCity_SpaceCenter_1F_EventScript_22321F: ; 822321F
 	jumpif 1, gMossdeepCity_SpaceCenter_1F_EventScript_22326E
 	loadptr 0, gMossdeepCity_SpaceCenter_1F_Text_223B90
 	callstd 4
-	trainerbattle 3, 116, 0, gMossdeepCity_SpaceCenter_1F_Text_223BC2
+	trainerbattle 3, TRAINER_GRUNT_23, 0, gMossdeepCity_SpaceCenter_1F_Text_223BC2
 	setflag 191
 	moveoffscreen 9
 	copyvar 0x8000, 0x800c

@@ -1,5 +1,5 @@
 gLilycoveCity_House2_MapObjects: ; 8531F48
-	object_event 1, 17, 0, 0, 0, 4, 0, 3, 8, 0, 0, 0, 0, 0, 0, gLilycoveCity_House2_EventScript_21ED75, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_FAT_MAN, 0, 0, 0, 4, 0, 3, 8, 0, 0, 0, 0, 0, 0, gLilycoveCity_House2_EventScript_21ED75, 0, 0, 0
 
 gLilycoveCity_House2_MapWarps: ; 8531F60
 	warp_def 2, 7, 0, 9, LilycoveCity

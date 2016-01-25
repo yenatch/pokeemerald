@@ -1,8 +1,8 @@
 gFallarborTown_MapObjects: ; 8527BE0
-	object_event 1, 8, 0, 8, 0, 11, 0, 3, 8, 16, 0, 0, 0, 0, 0, gFallarborTown_EventScript_1EB22B, 0, 0, 0
-	object_event 2, 21, 0, 11, 0, 9, 0, 3, 5, 1, 0, 0, 0, 0, 0, gFallarborTown_EventScript_1EB20C, 0, 0, 0
-	object_event 3, 48, 0, 11, 0, 15, 0, 3, 3, 17, 0, 0, 0, 0, 0, gFallarborTown_EventScript_1EB234, 0, 0, 0
-	object_event 4, 214, 0, 8, 0, 12, 0, 3, 1, 1, 0, 0, 0, 0, 0, gFallarborTown_EventScript_1EB23D, 907, 0, 0
+	object_event 1, FIELD_OBJ_GFX_GIRL_1, 0, 8, 0, 11, 0, 3, 8, 16, 0, 0, 0, 0, 0, gFallarborTown_EventScript_1EB22B, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_OLD_MAN_1, 0, 11, 0, 9, 0, 3, 5, 1, 0, 0, 0, 0, 0, gFallarborTown_EventScript_1EB20C, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_GENTLEMAN, 0, 11, 0, 15, 0, 3, 3, 17, 0, 0, 0, 0, 0, gFallarborTown_EventScript_1EB234, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_AZURILL, 0, 8, 0, 12, 0, 3, 1, 1, 0, 0, 0, 0, 0, gFallarborTown_EventScript_1EB23D, 907, 0, 0
 
 gFallarborTown_MapWarps: ; 8527C40
 	warp_def 15, 15, 0, 0, FallarborTown_Mart

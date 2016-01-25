@@ -1,6 +1,6 @@
 gSouthernIsland_Exterior_MapObjects: ; 853B83C
-	object_event 1, 49, 0, 13, 0, 23, 0, 3, 7, 0, 0, 0, 0, 0, 0, gSouthernIsland_Exterior_EventScript_2429D2, 0, 0, 0
-	object_event 2, 140, 0, 13, 0, 25, 0, 1, 10, 0, 0, 0, 0, 0, 0, 0x0, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_SAILOR, 0, 13, 0, 23, 0, 3, 7, 0, 0, 0, 0, 0, 0, gSouthernIsland_Exterior_EventScript_2429D2, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_SS_TIDAL, 0, 13, 0, 25, 0, 1, 10, 0, 0, 0, 0, 0, 0, 0x0, 0, 0, 0
 
 gSouthernIsland_Exterior_MapWarps: ; 853B86C
 	warp_def 14, 5, 3, 0, SouthernIsland_Interior

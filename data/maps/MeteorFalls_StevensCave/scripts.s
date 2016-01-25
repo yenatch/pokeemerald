@@ -15,7 +15,7 @@ gMeteorFalls_StevensCave_EventScript_23B182: ; 823B182
 	waitmove 0
 	loadptr 0, gMeteorFalls_StevensCave_Text_23B1E1
 	callstd 4
-	trainerbattle 3, 804, 0, gMeteorFalls_StevensCave_Text_23B32D
+	trainerbattle 3, TRAINER_STEVEN, 0, gMeteorFalls_StevensCave_Text_23B32D
 	loadptr 0, gMeteorFalls_StevensCave_Text_23B358
 	callstd 4
 	setflag 1272

@@ -1,5 +1,5 @@
 gEverGrandeCity_DrakesRoom_MapObjects: ; 85336C4
-	object_event 1, 124, 0, 6, 0, 5, 0, 3, 8, 0, 0, 0, 0, 0, 0, gEverGrandeCity_DrakesRoom_EventScript_2286F3, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_DRAKE, 0, 6, 0, 5, 0, 3, 8, 0, 0, 0, 0, 0, 0, gEverGrandeCity_DrakesRoom_EventScript_2286F3, 0, 0, 0
 
 gEverGrandeCity_DrakesRoom_MapWarps: ; 85336DC
 	warp_def 6, 13, 3, 1, EverGrandeCity_Hall3

@@ -1,10 +1,7 @@
 gBattleFrontier_BattlePalaceBattleRoom_MapScripts: ; 824F815
-	.byte 3
-	.4byte gBattleFrontier_BattlePalaceBattleRoom_MapScript1_24F825
-	.byte 2
-	.4byte gBattleFrontier_BattlePalaceBattleRoom_MapScript2_24F861
-	.byte 4
-	.4byte gBattleFrontier_BattlePalaceBattleRoom_MapScript2_24FE34
+	map_script 3, gBattleFrontier_BattlePalaceBattleRoom_MapScript1_24F825
+	map_script 2, gBattleFrontier_BattlePalaceBattleRoom_MapScript2_24F861
+	map_script 4, gBattleFrontier_BattlePalaceBattleRoom_MapScript2_24FE34
 	.byte 0
 
 gBattleFrontier_BattlePalaceBattleRoom_MapScript1_24F825: ; 824F825
@@ -32,9 +29,7 @@ gBattleFrontier_BattlePalaceBattleRoom_EventScript_24F856: ; 824F856
 	return
 
 gBattleFrontier_BattlePalaceBattleRoom_MapScript2_24F861: ; 824F861
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattlePalaceBattleRoom_EventScript_24F86B
+	map_script_2 0x4000, 0, gBattleFrontier_BattlePalaceBattleRoom_EventScript_24F86B
 	.2byte 0
 
 gBattleFrontier_BattlePalaceBattleRoom_EventScript_24F86B: ; 824F86B
@@ -402,9 +397,7 @@ gVerdanturfTown_BattleTentBattleRoom_EventScript_24FDF7: ; 824FDF7
 	return
 
 gBattleFrontier_BattlePalaceBattleRoom_MapScript2_24FE34: ; 824FE34
-	.2byte 16385
-	.2byte 0
-	.4byte gBattleFrontier_BattlePalaceBattleRoom_EventScript_24FE3E
+	map_script_2 0x4001, 0, gBattleFrontier_BattlePalaceBattleRoom_EventScript_24FE3E
 	.2byte 0
 
 gBattleFrontier_BattlePalaceBattleRoom_EventScript_24FE3E: ; 824FE3E

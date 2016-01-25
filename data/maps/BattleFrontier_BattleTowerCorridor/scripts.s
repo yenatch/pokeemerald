@@ -1,8 +1,6 @@
 gBattleFrontier_BattleTowerCorridor_MapScripts: ; 8241AAA
-	.byte 1
-	.4byte gBattleFrontier_BattleTowerCorridor_MapScript1_241AB5
-	.byte 2
-	.4byte gBattleFrontier_BattleTowerCorridor_MapScript2_241AE6
+	map_script 1, gBattleFrontier_BattleTowerCorridor_MapScript1_241AB5
+	map_script 2, gBattleFrontier_BattleTowerCorridor_MapScript2_241AE6
 	.byte 0
 
 gBattleFrontier_BattleTowerCorridor_MapScript1_241AB5: ; 8241AB5
@@ -18,9 +16,7 @@ gBattleFrontier_BattleTowerCorridor_EventScript_241AD3: ; 8241AD3
 	end
 
 gBattleFrontier_BattleTowerCorridor_MapScript2_241AE6: ; 8241AE6
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattleTowerCorridor_EventScript_241AF0
+	map_script_2 0x4000, 0, gBattleFrontier_BattleTowerCorridor_EventScript_241AF0
 	.2byte 0
 
 gBattleFrontier_BattleTowerCorridor_EventScript_241AF0: ; 8241AF0

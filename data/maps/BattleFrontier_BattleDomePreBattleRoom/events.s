@@ -1,5 +1,5 @@
 gBattleFrontier_BattleDomePreBattleRoom_MapObjects: ; 853C188
-	object_event 1, 85, 0, 5, 0, 2, 0, 3, 8, 17, 0, 0, 0, 0, 0, 0x0, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_TEALA, 0, 5, 0, 2, 0, 3, 8, 17, 0, 0, 0, 0, 0, 0x0, 0, 0, 0
 
 gBattleFrontier_BattleDomePreBattleRoom_MapWarps: ; 853C1A0
 	warp_def 6, 8, 3, 1, BattleFrontier_OutsideWest

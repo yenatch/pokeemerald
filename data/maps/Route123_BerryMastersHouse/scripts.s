@@ -1,6 +1,5 @@
 gRoute123_BerryMastersHouse_MapScripts: ; 826F83B
-	.byte 3
-	.4byte gRoute123_BerryMastersHouse_MapScript1_26F841
+	map_script 3, gRoute123_BerryMastersHouse_MapScript1_26F841
 	.byte 0
 
 gRoute123_BerryMastersHouse_MapScript1_26F841: ; 826F841

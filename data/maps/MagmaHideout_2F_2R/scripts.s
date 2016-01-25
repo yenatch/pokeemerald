@@ -2,25 +2,25 @@ gMagmaHideout_2F_2R_MapScripts: ; 8239E07
 	.byte 0
 
 gMagmaHideout_2F_2R_EventScript_239E08: ; 8239E08
-	trainerbattle 0, 730, 0, gMagmaHideout_2F_2R_Text_239E64, gMagmaHideout_2F_2R_Text_239EA5
+	trainerbattle 0, TRAINER_GRUNT_52, 0, gMagmaHideout_2F_2R_Text_239E64, gMagmaHideout_2F_2R_Text_239EA5
 	loadptr 0, gMagmaHideout_2F_2R_Text_239EBB
 	callstd 6
 	end
 
 gMagmaHideout_2F_2R_EventScript_239E1F: ; 8239E1F
-	trainerbattle 0, 721, 0, gMagmaHideout_2F_2R_Text_239F31, gMagmaHideout_2F_2R_Text_239F71
+	trainerbattle 0, TRAINER_GRUNT_43, 0, gMagmaHideout_2F_2R_Text_239F31, gMagmaHideout_2F_2R_Text_239F71
 	loadptr 0, gMagmaHideout_2F_2R_Text_239FA1
 	callstd 6
 	end
 
 gMagmaHideout_2F_2R_EventScript_239E36: ; 8239E36
-	trainerbattle 0, 722, 0, gMagmaHideout_2F_2R_Text_239FDE, gMagmaHideout_2F_2R_Text_23A050
+	trainerbattle 0, TRAINER_GRUNT_44, 0, gMagmaHideout_2F_2R_Text_239FDE, gMagmaHideout_2F_2R_Text_23A050
 	loadptr 0, gMagmaHideout_2F_2R_Text_23A07D
 	callstd 6
 	end
 
 gMagmaHideout_2F_2R_EventScript_239E4D: ; 8239E4D
-	trainerbattle 0, 723, 0, gMagmaHideout_2F_2R_Text_23A0E4, gMagmaHideout_2F_2R_Text_23A14C
+	trainerbattle 0, TRAINER_GRUNT_45, 0, gMagmaHideout_2F_2R_Text_23A0E4, gMagmaHideout_2F_2R_Text_23A14C
 	loadptr 0, gMagmaHideout_2F_2R_Text_23A16F
 	callstd 6
 	end

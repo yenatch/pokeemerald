@@ -1,6 +1,6 @@
 gOldaleTown_House2_MapObjects: ; 852D7F0
-	object_event 1, 18, 0, 4, 0, 4, 0, 3, 10, 0, 0, 0, 0, 0, 0, gOldaleTown_House2_EventScript_1FBF5B, 0, 0, 0
-	object_event 2, 38, 0, 7, 0, 4, 0, 3, 9, 0, 0, 0, 0, 0, 0, gOldaleTown_House2_EventScript_1FBF64, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_WOMAN_2, 0, 4, 0, 4, 0, 3, 10, 0, 0, 0, 0, 0, 0, gOldaleTown_House2_EventScript_1FBF5B, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_SCHOOL_KID_M, 0, 7, 0, 4, 0, 3, 9, 0, 0, 0, 0, 0, 0, gOldaleTown_House2_EventScript_1FBF64, 0, 0, 0
 
 gOldaleTown_House2_MapWarps: ; 852D820
 	warp_def 3, 7, 0, 1, OldaleTown

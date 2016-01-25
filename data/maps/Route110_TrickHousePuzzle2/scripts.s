@@ -1,8 +1,6 @@
 gRoute110_TrickHousePuzzle2_MapScripts: ; 826BB73
-	.byte 5
-	.4byte gRoute110_TrickHousePuzzle2_MapScript1_26BB7E
-	.byte 3
-	.4byte gRoute110_TrickHousePuzzle2_MapScript1_26BBAB
+	map_script 5, gRoute110_TrickHousePuzzle2_MapScript1_26BB7E
+	map_script 3, gRoute110_TrickHousePuzzle2_MapScript1_26BBAB
 	.byte 0
 
 gRoute110_TrickHousePuzzle2_MapScript1_26BB7E: ; 826BB7E
@@ -92,19 +90,19 @@ gRoute110_TrickHousePuzzle2_EventScript_26BC62: ; 826BC62
 	return
 
 gRoute110_TrickHousePuzzle2_EventScript_26BC75: ; 826BC75
-	trainerbattle 0, 274, 0, gRoute110_TrickHousePuzzle2_Text_26BD25, gRoute110_TrickHousePuzzle2_Text_26BD45
+	trainerbattle 0, TRAINER_TED, 0, gRoute110_TrickHousePuzzle2_Text_26BD25, gRoute110_TrickHousePuzzle2_Text_26BD45
 	loadptr 0, gRoute110_TrickHousePuzzle2_Text_26BD70
 	callstd 6
 	end
 
 gRoute110_TrickHousePuzzle2_EventScript_26BC8C: ; 826BC8C
-	trainerbattle 0, 275, 0, gRoute110_TrickHousePuzzle2_Text_26BD9E, gRoute110_TrickHousePuzzle2_Text_26BDCF
+	trainerbattle 0, TRAINER_PAUL, 0, gRoute110_TrickHousePuzzle2_Text_26BD9E, gRoute110_TrickHousePuzzle2_Text_26BDCF
 	loadptr 0, gRoute110_TrickHousePuzzle2_Text_26BDEC
 	callstd 6
 	end
 
 gRoute110_TrickHousePuzzle2_EventScript_26BCA3: ; 826BCA3
-	trainerbattle 0, 281, 0, gRoute110_TrickHousePuzzle2_Text_26BE31, gRoute110_TrickHousePuzzle2_Text_26BE77
+	trainerbattle 0, TRAINER_GEORGIA, 0, gRoute110_TrickHousePuzzle2_Text_26BE31, gRoute110_TrickHousePuzzle2_Text_26BE77
 	loadptr 0, gRoute110_TrickHousePuzzle2_Text_26BE97
 	callstd 6
 	end

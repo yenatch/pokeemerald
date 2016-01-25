@@ -1,9 +1,9 @@
 gDewfordTown_MapObjects: ; 8527964
-	object_event 1, 20, 0, 7, 0, 12, 0, 3, 5, 1, 0, 0, 0, 0, 0, gDewfordTown_EventScript_1E95B1, 0, 0, 0
-	object_event 2, 21, 0, 12, 0, 9, 0, 3, 9, 16, 0, 0, 0, 3, 0, gDewfordTown_EventScript_1E9511, 740, 0, 0
-	object_event 3, 50, 0, 12, 0, 14, 0, 3, 5, 1, 0, 0, 0, 0, 0, gDewfordTown_EventScript_1E95D5, 0, 0, 0
-	object_event 4, 88, 0, 12, 0, 8, 0, 1, 8, 0, 0, 0, 0, 0, 0, 0x0, 743, 0, 0
-	object_event 5, 7, 0, 1, 0, 6, 0, 3, 1, 0, 0, 0, 0, 0, 0, gDewfordTown_EventScript_1E9922, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_WOMAN_3, 0, 7, 0, 12, 0, 3, 5, 1, 0, 0, 0, 0, 0, gDewfordTown_EventScript_1E95B1, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_OLD_MAN_1, 0, 12, 0, 9, 0, 3, 9, 16, 0, 0, 0, 3, 0, gDewfordTown_EventScript_1E9511, 740, 0, 0
+	object_event 3, FIELD_OBJ_GFX_FISHERMAN, 0, 12, 0, 14, 0, 3, 5, 1, 0, 0, 0, 0, 0, gDewfordTown_EventScript_1E95D5, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_MR_BRINEYS_BOAT, 0, 12, 0, 8, 0, 1, 8, 0, 0, 0, 0, 0, 0, 0x0, 743, 0, 0
+	object_event 5, FIELD_OBJ_GFX_BOY_1, 0, 1, 0, 6, 0, 3, 1, 0, 0, 0, 0, 0, 0, gDewfordTown_EventScript_1E9922, 0, 0, 0
 
 gDewfordTown_MapWarps: ; 85279DC
 	warp_def 3, 3, 0, 0, DewfordTown_Hall

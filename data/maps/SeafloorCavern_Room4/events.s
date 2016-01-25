@@ -1,6 +1,6 @@
 gSeafloorCavern_Room4_MapObjects: ; 8535994
-	object_event 1, 117, 0, 5, 0, 8, 0, 3, 17, 17, 0, 1, 0, 3, 0, gSeafloorCavern_Room4_EventScript_234C9C, 946, 0, 0
-	object_event 2, 118, 0, 5, 0, 12, 0, 3, 7, 17, 0, 1, 0, 3, 0, gSeafloorCavern_Room4_EventScript_234CB3, 946, 0, 0
+	object_event 1, FIELD_OBJ_GFX_AQUA_MEMBER_M, 0, 5, 0, 8, 0, 3, 17, 17, 0, 1, 0, 3, 0, gSeafloorCavern_Room4_EventScript_234C9C, 946, 0, 0
+	object_event 2, FIELD_OBJ_GFX_AQUA_MEMBER_F, 0, 5, 0, 12, 0, 3, 7, 17, 0, 1, 0, 3, 0, gSeafloorCavern_Room4_EventScript_234CB3, 946, 0, 0
 
 gSeafloorCavern_Room4_MapWarps: ; 85359C4
 	warp_def 13, 1, 3, 1, SeafloorCavern_Room2

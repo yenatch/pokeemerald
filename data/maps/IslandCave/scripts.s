@@ -1,10 +1,7 @@
 gIslandCave_MapScripts: ; 8238E2A
-	.byte 5
-	.4byte gIslandCave_MapScript1_238E3A
-	.byte 1
-	.4byte gIslandCave_MapScript1_238E58
-	.byte 3
-	.4byte gIslandCave_MapScript1_238E99
+	map_script 5, gIslandCave_MapScript1_238E3A
+	map_script 1, gIslandCave_MapScript1_238E58
+	map_script 3, gIslandCave_MapScript1_238E99
 	.byte 0
 
 gIslandCave_MapScript1_238E3A: ; 8238E3A

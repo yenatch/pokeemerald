@@ -1,8 +1,6 @@
 gPetalburgCity_PokemonCenter_1F_MapScripts: ; 82079E8
-	.byte 3
-	.4byte gPetalburgCity_PokemonCenter_1F_MapScript1_2079F3
-	.byte 5
-	.4byte gPetalburgCity_PokemonCenter_1F_MapScript1_277C30
+	map_script 3, gPetalburgCity_PokemonCenter_1F_MapScript1_2079F3
+	map_script 5, gPetalburgCity_PokemonCenter_1F_MapScript1_277C30
 	.byte 0
 
 gPetalburgCity_PokemonCenter_1F_MapScript1_2079F3: ; 82079F3

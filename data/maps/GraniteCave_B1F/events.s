@@ -1,5 +1,5 @@
 gGraniteCave_B1F_MapObjects: ; 8534420
-	object_event 1, 59, 0, 15, 0, 21, 0, 3, 1, 0, 0, 0, 0, 0, 0, gGraniteCave_B1F_EventScript_29115D, 1051, 0, 0
+	object_event 1, FIELD_OBJ_GFX_ITEM_BALL, 0, 15, 0, 21, 0, 3, 1, 0, 0, 0, 0, 0, 0, gGraniteCave_B1F_EventScript_29115D, 1051, 0, 0
 
 gGraniteCave_B1F_MapWarps: ; 8534438
 	warp_def 25, 13, 3, 1, GraniteCave_1F

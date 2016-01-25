@@ -1,24 +1,13 @@
 gSSTidalCorridor_MapScripts: ; 823BFCF
-	.byte 2
-	.4byte gSSTidalCorridor_MapScript2_23BFD5
+	map_script 2, gSSTidalCorridor_MapScript2_23BFD5
 	.byte 0
 
 gSSTidalCorridor_MapScript2_23BFD5: ; 823BFD5
-	.2byte 16596
-	.2byte 0
-	.4byte gSSTidalCorridor_EventScript_23C219
-	.2byte 16564
-	.2byte 1
-	.4byte gSSTidalCorridor_EventScript_23BFFF
-	.2byte 16564
-	.2byte 5
-	.4byte gSSTidalCorridor_EventScript_23C015
-	.2byte 16564
-	.2byte 9
-	.4byte gSSTidalCorridor_EventScript_23C067
-	.2byte 16564
-	.2byte 10
-	.4byte gSSTidalCorridor_EventScript_23C07D
+	map_script_2 0x40d4, 0, gSSTidalCorridor_EventScript_23C219
+	map_script_2 0x40b4, 1, gSSTidalCorridor_EventScript_23BFFF
+	map_script_2 0x40b4, 5, gSSTidalCorridor_EventScript_23C015
+	map_script_2 0x40b4, 9, gSSTidalCorridor_EventScript_23C067
+	map_script_2 0x40b4, 10, gSSTidalCorridor_EventScript_23C07D
 	.2byte 0
 
 gSSTidalCorridor_EventScript_23BFFF: ; 823BFFF

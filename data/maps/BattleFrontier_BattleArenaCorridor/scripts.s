@@ -1,12 +1,9 @@
 gBattleFrontier_BattleArenaCorridor_MapScripts: ; 82573B9
-	.byte 2
-	.4byte gBattleFrontier_BattleArenaCorridor_MapScript2_2573BF
+	map_script 2, gBattleFrontier_BattleArenaCorridor_MapScript2_2573BF
 	.byte 0
 
 gBattleFrontier_BattleArenaCorridor_MapScript2_2573BF: ; 82573BF
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattleArenaCorridor_EventScript_2573C9
+	map_script_2 0x4000, 0, gBattleFrontier_BattleArenaCorridor_EventScript_2573C9
 	.2byte 0
 
 gBattleFrontier_BattleArenaCorridor_EventScript_2573C9: ; 82573C9

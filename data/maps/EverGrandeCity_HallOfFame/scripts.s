@@ -1,14 +1,10 @@
 gEverGrandeCity_HallOfFame_MapScripts: ; 822982C
-	.byte 2
-	.4byte gEverGrandeCity_HallOfFame_MapScript2_229846
-	.byte 4
-	.4byte gEverGrandeCity_HallOfFame_MapScript2_229837
+	map_script 2, gEverGrandeCity_HallOfFame_MapScript2_229846
+	map_script 4, gEverGrandeCity_HallOfFame_MapScript2_229837
 	.byte 0
 
 gEverGrandeCity_HallOfFame_MapScript2_229837: ; 8229837
-	.2byte 16385
-	.2byte 0
-	.4byte gEverGrandeCity_HallOfFame_EventScript_229841
+	map_script_2 0x4001, 0, gEverGrandeCity_HallOfFame_EventScript_229841
 	.2byte 0
 
 gEverGrandeCity_HallOfFame_EventScript_229841: ; 8229841
@@ -16,9 +12,7 @@ gEverGrandeCity_HallOfFame_EventScript_229841: ; 8229841
 	end
 
 gEverGrandeCity_HallOfFame_MapScript2_229846: ; 8229846
-	.2byte 16385
-	.2byte 0
-	.4byte gEverGrandeCity_HallOfFame_EventScript_229850
+	map_script_2 0x4001, 0, gEverGrandeCity_HallOfFame_EventScript_229850
 	.2byte 0
 
 gEverGrandeCity_HallOfFame_EventScript_229850: ; 8229850

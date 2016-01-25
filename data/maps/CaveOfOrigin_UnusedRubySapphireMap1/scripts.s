@@ -1,6 +1,5 @@
 gCaveOfOrigin_UnusedRubySapphireMap1_MapScripts: ; 8235778
-	.byte 3
-	.4byte gCaveOfOrigin_UnusedRubySapphireMap1_MapScript1_23577E
+	map_script 3, gCaveOfOrigin_UnusedRubySapphireMap1_MapScript1_23577E
 	.byte 0
 
 gCaveOfOrigin_UnusedRubySapphireMap1_MapScript1_23577E: ; 823577E

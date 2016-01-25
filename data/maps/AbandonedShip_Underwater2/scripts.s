@@ -1,6 +1,5 @@
 gAbandonedShip_Underwater2_MapScripts: ; 823895D
-	.byte 5
-	.4byte gAbandonedShip_Underwater2_MapScript1_238963
+	map_script 5, gAbandonedShip_Underwater2_MapScript1_238963
 	.byte 0
 
 gAbandonedShip_Underwater2_MapScript1_238963: ; 8238963

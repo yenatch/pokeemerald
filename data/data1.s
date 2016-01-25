@@ -4929,30 +4929,14 @@ gRustboroCity_PokemonCenter_2F_MapScript2_276B6C: ; 8276B6C
 gSlateportCity_PokemonCenter_2F_MapScript2_276B6C: ; 8276B6C
 gSootopolisCity_PokemonCenter_2F_MapScript2_276B6C: ; 8276B6C
 gVerdanturfTown_PokemonCenter_2F_MapScript2_276B6C: ; 8276B6C
-	.2byte 16519
-	.2byte 1
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276BAE
-	.2byte 16519
-	.2byte 2
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276BAE
-	.2byte 16519
-	.2byte 5
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276BAE
-	.2byte 16519
-	.2byte 3
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276BAE
-	.2byte 16519
-	.2byte 4
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276BAE
-	.2byte 16519
-	.2byte 6
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276BAE
-	.2byte 16519
-	.2byte 7
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276BAE
-	.2byte 16519
-	.2byte 8
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276BAE
+	map_script_2 0x4087, 1, gOldaleTown_PokemonCenter_2F_EventScript_276BAE
+	map_script_2 0x4087, 2, gOldaleTown_PokemonCenter_2F_EventScript_276BAE
+	map_script_2 0x4087, 5, gOldaleTown_PokemonCenter_2F_EventScript_276BAE
+	map_script_2 0x4087, 3, gOldaleTown_PokemonCenter_2F_EventScript_276BAE
+	map_script_2 0x4087, 4, gOldaleTown_PokemonCenter_2F_EventScript_276BAE
+	map_script_2 0x4087, 6, gOldaleTown_PokemonCenter_2F_EventScript_276BAE
+	map_script_2 0x4087, 7, gOldaleTown_PokemonCenter_2F_EventScript_276BAE
+	map_script_2 0x4087, 8, gOldaleTown_PokemonCenter_2F_EventScript_276BAE
 	.2byte 0
 
 gMossdeepCity_GameCorner_1F_EventScript_276BAE: ; 8276BAE
@@ -5041,33 +5025,15 @@ gRustboroCity_PokemonCenter_2F_MapScript2_276C3B: ; 8276C3B
 gSlateportCity_PokemonCenter_2F_MapScript2_276C3B: ; 8276C3B
 gSootopolisCity_PokemonCenter_2F_MapScript2_276C3B: ; 8276C3B
 gVerdanturfTown_PokemonCenter_2F_MapScript2_276C3B: ; 8276C3B
-	.2byte 16589
-	.2byte 1
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276DE0
-	.2byte 16519
-	.2byte 1
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276C85
-	.2byte 16519
-	.2byte 2
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276C85
-	.2byte 16519
-	.2byte 5
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276C85
-	.2byte 16519
-	.2byte 3
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276CE7
-	.2byte 16519
-	.2byte 4
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276D2C
-	.2byte 16519
-	.2byte 6
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276D6C
-	.2byte 16519
-	.2byte 7
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276C85
-	.2byte 16519
-	.2byte 8
-	.4byte gOldaleTown_PokemonCenter_2F_EventScript_276C9D
+	map_script_2 0x40cd, 1, gOldaleTown_PokemonCenter_2F_EventScript_276DE0
+	map_script_2 0x4087, 1, gOldaleTown_PokemonCenter_2F_EventScript_276C85
+	map_script_2 0x4087, 2, gOldaleTown_PokemonCenter_2F_EventScript_276C85
+	map_script_2 0x4087, 5, gOldaleTown_PokemonCenter_2F_EventScript_276C85
+	map_script_2 0x4087, 3, gOldaleTown_PokemonCenter_2F_EventScript_276CE7
+	map_script_2 0x4087, 4, gOldaleTown_PokemonCenter_2F_EventScript_276D2C
+	map_script_2 0x4087, 6, gOldaleTown_PokemonCenter_2F_EventScript_276D6C
+	map_script_2 0x4087, 7, gOldaleTown_PokemonCenter_2F_EventScript_276C85
+	map_script_2 0x4087, 8, gOldaleTown_PokemonCenter_2F_EventScript_276C9D
 	.2byte 0
 
 gOldaleTown_PokemonCenter_2F_EventScript_276C85: ; 8276C85
@@ -9928,70 +9894,70 @@ gRoute111_EventScript_28CDD2: ; 828CDD2
 	return
 
 gRoute111_EventScript_28CDD6: ; 828CDD6
-	trainerbattle 6, 51, 0, gRoute111_Text_28AF05, gRoute111_Text_28B000, gRoute111_Text_28B5EC, gRoute111_EventScript_28CF56
+	trainerbattle 6, TRAINER_GABBY_AND_TY_1, 0, gRoute111_Text_28AF05, gRoute111_Text_28B000, gRoute111_Text_28B5EC, gRoute111_EventScript_28CF56
 	loadptr 0, gRoute111_Text_28B5C0
 	callstd 4
 	release
 	end
 
 gRoute111_EventScript_28CDF6: ; 828CDF6
-	trainerbattle 6, 51, 0, gRoute111_Text_28B75C, gRoute111_Text_28B8B1, gRoute111_Text_28B841, gRoute111_EventScript_28CF56
+	trainerbattle 6, TRAINER_GABBY_AND_TY_1, 0, gRoute111_Text_28B75C, gRoute111_Text_28B8B1, gRoute111_Text_28B841, gRoute111_EventScript_28CF56
 	loadptr 0, gRoute111_Text_28B805
 	callstd 4
 	release
 	end
 
 gRoute118_EventScript_28CE16: ; 828CE16
-	trainerbattle 6, 52, 0, gRoute118_Text_28AF7D, gRoute118_Text_28B719, gRoute118_Text_28B5EC, gRoute118_EventScript_28CFC3
+	trainerbattle 6, TRAINER_GABBY_AND_TY_2, 0, gRoute118_Text_28AF7D, gRoute118_Text_28B719, gRoute118_Text_28B5EC, gRoute118_EventScript_28CFC3
 	loadptr 0, gRoute118_Text_28B5C0
 	callstd 4
 	release
 	end
 
 gRoute118_EventScript_28CE36: ; 828CE36
-	trainerbattle 6, 52, 0, gRoute118_Text_28B7B1, gRoute118_Text_28B8F6, gRoute118_Text_28B841, gRoute118_EventScript_28CFC3
+	trainerbattle 6, TRAINER_GABBY_AND_TY_2, 0, gRoute118_Text_28B7B1, gRoute118_Text_28B8F6, gRoute118_Text_28B841, gRoute118_EventScript_28CFC3
 	loadptr 0, gRoute118_Text_28B805
 	callstd 4
 	release
 	end
 
 gRoute120_EventScript_28CE56: ; 828CE56
-	trainerbattle 6, 53, 0, gRoute120_Text_28AF7D, gRoute120_Text_28B719, gRoute120_Text_28B5EC, gRoute120_EventScript_28CFC3
+	trainerbattle 6, TRAINER_GABBY_AND_TY_3, 0, gRoute120_Text_28AF7D, gRoute120_Text_28B719, gRoute120_Text_28B5EC, gRoute120_EventScript_28CFC3
 	loadptr 0, gRoute120_Text_28B5C0
 	callstd 4
 	release
 	end
 
 gRoute120_EventScript_28CE76: ; 828CE76
-	trainerbattle 6, 53, 0, gRoute120_Text_28B7B1, gRoute120_Text_28B8F6, gRoute120_Text_28B841, gRoute120_EventScript_28CFC3
+	trainerbattle 6, TRAINER_GABBY_AND_TY_3, 0, gRoute120_Text_28B7B1, gRoute120_Text_28B8F6, gRoute120_Text_28B841, gRoute120_EventScript_28CFC3
 	loadptr 0, gRoute120_Text_28B805
 	callstd 4
 	release
 	end
 
 gRoute111_EventScript_28CE96: ; 828CE96
-	trainerbattle 6, 54, 0, gRoute111_Text_28AF7D, gRoute111_Text_28B719, gRoute111_Text_28B5EC, gRoute111_EventScript_28CFC3
+	trainerbattle 6, TRAINER_GABBY_AND_TY_4, 0, gRoute111_Text_28AF7D, gRoute111_Text_28B719, gRoute111_Text_28B5EC, gRoute111_EventScript_28CFC3
 	loadptr 0, gRoute111_Text_28B5C0
 	callstd 4
 	release
 	end
 
 gRoute111_EventScript_28CEB6: ; 828CEB6
-	trainerbattle 6, 54, 0, gRoute111_Text_28B7B1, gRoute111_Text_28B8F6, gRoute111_Text_28B841, gRoute111_EventScript_28CFC3
+	trainerbattle 6, TRAINER_GABBY_AND_TY_4, 0, gRoute111_Text_28B7B1, gRoute111_Text_28B8F6, gRoute111_Text_28B841, gRoute111_EventScript_28CFC3
 	loadptr 0, gRoute111_Text_28B805
 	callstd 4
 	release
 	end
 
 gRoute118_EventScript_28CED6: ; 828CED6
-	trainerbattle 6, 55, 0, gRoute118_Text_28AF7D, gRoute118_Text_28B719, gRoute118_Text_28B5EC, gRoute118_EventScript_28CFC3
+	trainerbattle 6, TRAINER_GABBY_AND_TY_5, 0, gRoute118_Text_28AF7D, gRoute118_Text_28B719, gRoute118_Text_28B5EC, gRoute118_EventScript_28CFC3
 	loadptr 0, gRoute118_Text_28B5C0
 	callstd 4
 	release
 	end
 
 gRoute118_EventScript_28CEF6: ; 828CEF6
-	trainerbattle 6, 55, 0, gRoute118_Text_28B7B1, gRoute118_Text_28B8F6, gRoute118_Text_28B841, gRoute118_EventScript_28CFC3
+	trainerbattle 6, TRAINER_GABBY_AND_TY_5, 0, gRoute118_Text_28B7B1, gRoute118_Text_28B8F6, gRoute118_Text_28B841, gRoute118_EventScript_28CFC3
 	loadptr 0, gRoute118_Text_28B805
 	callstd 4
 	release
@@ -10000,7 +9966,7 @@ gRoute118_EventScript_28CEF6: ; 828CEF6
 gRoute111_EventScript_28CF16: ; 828CF16
 gRoute118_EventScript_28CF16: ; 828CF16
 gRoute120_EventScript_28CF16: ; 828CF16
-	trainerbattle 6, 56, 0, gRoute111_Text_28AF7D, gRoute111_Text_28B719, gRoute111_Text_28B5EC, gRoute111_EventScript_28CFC3
+	trainerbattle 6, TRAINER_GABBY_AND_TY_6, 0, gRoute111_Text_28AF7D, gRoute111_Text_28B719, gRoute111_Text_28B5EC, gRoute111_EventScript_28CFC3
 	loadptr 0, gRoute111_Text_28B5C0
 	callstd 4
 	release
@@ -10009,7 +9975,7 @@ gRoute120_EventScript_28CF16: ; 828CF16
 gRoute111_EventScript_28CF36: ; 828CF36
 gRoute118_EventScript_28CF36: ; 828CF36
 gRoute120_EventScript_28CF36: ; 828CF36
-	trainerbattle 6, 56, 0, gRoute111_Text_28B7B1, gRoute111_Text_28B8F6, gRoute111_Text_28B841, gRoute111_EventScript_28CFC3
+	trainerbattle 6, TRAINER_GABBY_AND_TY_6, 0, gRoute111_Text_28B7B1, gRoute111_Text_28B8F6, gRoute111_Text_28B841, gRoute111_EventScript_28CFC3
 	loadptr 0, gRoute111_Text_28B805
 	callstd 4
 	release
@@ -19933,9 +19899,7 @@ gMirageTower_3F_MapScript2_2A8327: ; 82A8327
 gMtPyre_2F_MapScript2_2A8327: ; 82A8327
 gSkyPillar_2F_MapScript2_2A8327: ; 82A8327
 gSkyPillar_4F_MapScript2_2A8327: ; 82A8327
-	.2byte 16418
-	.2byte 0
-	.4byte gGraniteCave_B1F_EventScript_2A8337
+	map_script_2 0x4022, 0, gGraniteCave_B1F_EventScript_2A8337
 	.2byte 0
 
 gGraniteCave_B1F_MapScript1_2A8331: ; 82A8331
@@ -21399,9 +21363,7 @@ gBattleFrontier_BattlePikeRandomRoom1_EventScript_2C3ECF: ; 82C3ECF
 	end
 
 gBattleFrontier_BattlePikeRandomRoom1_MapScript2_2C3EDE: ; 82C3EDE
-	.2byte 16388
-	.2byte 0
-	.4byte gBattleFrontier_BattlePikeRandomRoom1_EventScript_2C3EE8
+	map_script_2 0x4004, 0, gBattleFrontier_BattlePikeRandomRoom1_EventScript_2C3EE8
 	.2byte 0
 
 gBattleFrontier_BattlePikeRandomRoom1_EventScript_2C3EE8: ; 82C3EE8
@@ -22807,9 +22769,7 @@ gTrainerHill_Roof_MapScript1_2C8336: ; 82C8336
 
 gTrainerHill_1F_MapScript2_2C8372: ; 82C8372
 gTrainerHill_2F_MapScript2_2C8372: ; 82C8372
-	.2byte 16387
-	.2byte 0
-	.4byte gTrainerHill_1F_EventScript_2C837C
+	map_script_2 0x4003, 0, gTrainerHill_1F_EventScript_2C837C
 	.2byte 0
 
 gTrainerHill_1F_EventScript_2C837C: ; 82C837C
@@ -22821,12 +22781,8 @@ gTrainerHill_2F_MapScript2_2C8381: ; 82C8381
 gTrainerHill_3F_MapScript2_2C8381: ; 82C8381
 gTrainerHill_4F_MapScript2_2C8381: ; 82C8381
 gTrainerHill_Roof_MapScript2_2C8381: ; 82C8381
-	.2byte 16386
-	.2byte 0
-	.4byte gTrainerHill_1F_EventScript_2C83A6
-	.2byte 16385
-	.2byte 1
-	.4byte gTrainerHill_1F_EventScript_2C83DF
+	map_script_2 0x4002, 0, gTrainerHill_1F_EventScript_2C83A6
+	map_script_2 0x4001, 1, gTrainerHill_1F_EventScript_2C83DF
 	.2byte 0
 
 gUnknown_082C8393: ; 82C8393

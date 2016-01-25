@@ -1,12 +1,8 @@
 gBattleFrontier_BattleTowerLobby_MapScripts: ; 823E67B
-	.byte 5
-	.4byte gBattleFrontier_BattleTowerLobby_MapScript1_23E690
-	.byte 3
-	.4byte gBattleFrontier_BattleTowerLobby_MapScript1_23E694
-	.byte 2
-	.4byte gBattleFrontier_BattleTowerLobby_MapScript2_23E6DD
-	.byte 4
-	.4byte gBattleFrontier_BattleTowerLobby_MapScript2_23E6C9
+	map_script 5, gBattleFrontier_BattleTowerLobby_MapScript1_23E690
+	map_script 3, gBattleFrontier_BattleTowerLobby_MapScript1_23E694
+	map_script 2, gBattleFrontier_BattleTowerLobby_MapScript2_23E6DD
+	map_script 4, gBattleFrontier_BattleTowerLobby_MapScript2_23E6C9
 	.byte 0
 
 gBattleFrontier_BattleTowerLobby_MapScript1_23E690: ; 823E690
@@ -35,9 +31,7 @@ gBattleFrontier_BattleTowerLobby_EventScript_23E6C1: ; 823E6C1
 	jump gBattleFrontier_BattleTowerLobby_EventScript_23E6C0
 
 gBattleFrontier_BattleTowerLobby_MapScript2_23E6C9: ; 823E6C9
-	.2byte 16385
-	.2byte 0
-	.4byte gBattleFrontier_BattleTowerLobby_EventScript_23E6D3
+	map_script_2 0x4001, 0, gBattleFrontier_BattleTowerLobby_EventScript_23E6D3
 	.2byte 0
 
 gBattleFrontier_BattleTowerLobby_EventScript_23E6D3: ; 823E6D3
@@ -46,21 +40,11 @@ gBattleFrontier_BattleTowerLobby_EventScript_23E6D3: ; 823E6D3
 	end
 
 gBattleFrontier_BattleTowerLobby_MapScript2_23E6DD: ; 823E6DD
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattleTowerLobby_EventScript_23E707
-	.2byte 16384
-	.2byte 1
-	.4byte gBattleFrontier_BattleTowerLobby_EventScript_23E710
-	.2byte 16384
-	.2byte 2
-	.4byte gBattleFrontier_BattleTowerLobby_EventScript_23E8EE
-	.2byte 16384
-	.2byte 3
-	.4byte gBattleFrontier_BattleTowerLobby_EventScript_23E758
-	.2byte 16384
-	.2byte 4
-	.4byte gBattleFrontier_BattleTowerLobby_EventScript_23E7F2
+	map_script_2 0x4000, 0, gBattleFrontier_BattleTowerLobby_EventScript_23E707
+	map_script_2 0x4000, 1, gBattleFrontier_BattleTowerLobby_EventScript_23E710
+	map_script_2 0x4000, 2, gBattleFrontier_BattleTowerLobby_EventScript_23E8EE
+	map_script_2 0x4000, 3, gBattleFrontier_BattleTowerLobby_EventScript_23E758
+	map_script_2 0x4000, 4, gBattleFrontier_BattleTowerLobby_EventScript_23E7F2
 	.2byte 0
 
 gBattleFrontier_BattleTowerLobby_EventScript_23E707: ; 823E707

@@ -1,8 +1,6 @@
 gSootopolisCity_MysteryEventsHouse_1F_MapScripts: ; 8227953
-	.byte 3
-	.4byte gSootopolisCity_MysteryEventsHouse_1F_MapScript1_22795E
-	.byte 2
-	.4byte gSootopolisCity_MysteryEventsHouse_1F_MapScript2_22799D
+	map_script 3, gSootopolisCity_MysteryEventsHouse_1F_MapScript1_22795E
+	map_script 2, gSootopolisCity_MysteryEventsHouse_1F_MapScript2_22799D
 	.byte 0
 
 gSootopolisCity_MysteryEventsHouse_1F_MapScript1_22795E: ; 822795E
@@ -27,15 +25,9 @@ gSootopolisCity_MysteryEventsHouse_1F_EventScript_227991: ; 8227991
 	return
 
 gSootopolisCity_MysteryEventsHouse_1F_MapScript2_22799D: ; 822799D
-	.2byte 16576
-	.2byte 1
-	.4byte gSootopolisCity_MysteryEventsHouse_1F_EventScript_2279B7
-	.2byte 16576
-	.2byte 2
-	.4byte gSootopolisCity_MysteryEventsHouse_1F_EventScript_2279B7
-	.2byte 16576
-	.2byte 3
-	.4byte gSootopolisCity_MysteryEventsHouse_1F_EventScript_2279B7
+	map_script_2 0x40c0, 1, gSootopolisCity_MysteryEventsHouse_1F_EventScript_2279B7
+	map_script_2 0x40c0, 2, gSootopolisCity_MysteryEventsHouse_1F_EventScript_2279B7
+	map_script_2 0x40c0, 3, gSootopolisCity_MysteryEventsHouse_1F_EventScript_2279B7
 	.2byte 0
 
 gSootopolisCity_MysteryEventsHouse_1F_EventScript_2279B7: ; 82279B7

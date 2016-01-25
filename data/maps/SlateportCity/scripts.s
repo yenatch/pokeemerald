@@ -1,8 +1,6 @@
 gSlateportCity_MapScripts: ; 81DCC61
-	.byte 3
-	.4byte gSlateportCity_MapScript1_1DCC6C
-	.byte 2
-	.4byte gSlateportCity_MapScript2_1DCD12
+	map_script 3, gSlateportCity_MapScript1_1DCC6C
+	map_script 2, gSlateportCity_MapScript2_1DCD12
 	.byte 0
 
 gSlateportCity_MapScript1_1DCC6C: ; 81DCC6C
@@ -52,9 +50,7 @@ gSlateportCity_EventScript_1DCD06: ; 81DCD06
 	return
 
 gSlateportCity_MapScript2_1DCD12: ; 81DCD12
-	.2byte 16594
-	.2byte 1
-	.4byte gSlateportCity_EventScript_1DCD1C
+	map_script_2 0x40d2, 1, gSlateportCity_EventScript_1DCD1C
 	.2byte 0
 
 gSlateportCity_EventScript_1DCD1C: ; 81DCD1C

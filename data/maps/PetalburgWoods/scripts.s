@@ -31,7 +31,7 @@ gPetalburgWoods_EventScript_22DFD7: ; 822DFD7
 	waitmove 0
 	loadptr 0, gPetalburgWoods_Text_22E4A5
 	callstd 4
-	trainerbattle 3, 10, 0, gPetalburgWoods_Text_22E542
+	trainerbattle 3, TRAINER_GRUNT_8, 0, gPetalburgWoods_Text_22E542
 	move 3, gPetalburgWoods_Movement_22E1F9
 	waitmove 0
 	call gPetalburgWoods_EventScript_22E138
@@ -72,7 +72,7 @@ gPetalburgWoods_EventScript_22E079: ; 822E079
 	waitmove 0
 	loadptr 0, gPetalburgWoods_Text_22E4A5
 	callstd 4
-	trainerbattle 3, 10, 0, gPetalburgWoods_Text_22E542
+	trainerbattle 3, TRAINER_GRUNT_8, 0, gPetalburgWoods_Text_22E542
 	move 3, gPetalburgWoods_Movement_22E1F9
 	waitmove 0
 	call gPetalburgWoods_EventScript_22E138
@@ -299,13 +299,13 @@ gPetalburgWoods_EventScript_22E264: ; 822E264
 	end
 
 gPetalburgWoods_EventScript_22E26D: ; 822E26D
-	trainerbattle 0, 616, 0, gPetalburgWoods_Text_22E77D, gPetalburgWoods_Text_22E7C1
+	trainerbattle 0, TRAINER_LYLE, 0, gPetalburgWoods_Text_22E77D, gPetalburgWoods_Text_22E7C1
 	loadptr 0, gPetalburgWoods_Text_22E7EF
 	callstd 6
 	end
 
 gPetalburgWoods_EventScript_22E284: ; 822E284
-	trainerbattle 2, 621, 0, gPetalburgWoods_Text_22E827, gPetalburgWoods_Text_22E86B, gPetalburgWoods_EventScript_22E2C5
+	trainerbattle 2, TRAINER_JAMES_1, 0, gPetalburgWoods_Text_22E827, gPetalburgWoods_Text_22E86B, gPetalburgWoods_EventScript_22E2C5
 	specialval 0x800d, 60
 	compare 0x800d, 1
 	jumpif 1, gPetalburgWoods_EventScript_22E31B
@@ -355,7 +355,7 @@ gPetalburgWoods_EventScript_22E302: ; 822E302
 	end
 
 gPetalburgWoods_EventScript_22E31B: ; 822E31B
-	trainerbattle 5, 621, 0, gPetalburgWoods_Text_22E966, gPetalburgWoods_Text_22E998
+	trainerbattle 5, TRAINER_JAMES_1, 0, gPetalburgWoods_Text_22E966, gPetalburgWoods_Text_22E998
 	loadptr 0, gPetalburgWoods_Text_22E9B6
 	callstd 6
 	end

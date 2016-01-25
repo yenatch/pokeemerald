@@ -1,8 +1,6 @@
 gFortreeCity_MapScripts: ; 81E25A4
-	.byte 3
-	.4byte gFortreeCity_MapScript1_1E25AF
-	.byte 5
-	.4byte gFortreeCity_MapScript1_1E25B3
+	map_script 3, gFortreeCity_MapScript1_1E25AF
+	map_script 5, gFortreeCity_MapScript1_1E25B3
 	.byte 0
 
 gFortreeCity_MapScript1_1E25AF: ; 81E25AF

@@ -1,6 +1,6 @@
 gSootopolisCity_Gym_1F_MapObjects: ; 8532FF4
-	object_event 1, 218, 0, 8, 0, 2, 0, 0, 8, 0, 0, 0, 0, 0, 0, gSootopolisCity_Gym_1F_EventScript_224F44, 0, 0, 0
-	object_event 2, 23, 0, 7, 0, 24, 0, 3, 8, 0, 0, 0, 0, 0, 0, gSootopolisCity_Gym_1F_EventScript_225040, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_JUAN, 0, 8, 0, 2, 0, 0, 8, 0, 0, 0, 0, 0, 0, gSootopolisCity_Gym_1F_EventScript_224F44, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_MAN_2, 0, 7, 0, 24, 0, 3, 8, 0, 0, 0, 0, 0, 0, gSootopolisCity_Gym_1F_EventScript_225040, 0, 0, 0
 
 gSootopolisCity_Gym_1F_MapWarps: ; 8533024
 	warp_def 8, 25, 0, 2, SootopolisCity

@@ -1,9 +1,9 @@
 gTrainerHill_Entrance_MapObjects: ; 853D874
-	object_event 1, 85, 0, 11, 0, 6, 0, 3, 9, 17, 0, 0, 0, 0, 0, gTrainerHill_Entrance_EventScript_2681FD, 0, 0, 0
-	object_event 2, 58, 0, 4, 0, 9, 0, 3, 8, 17, 0, 0, 0, 0, 0, gTrainerHill_Entrance_EventScript_2681EF, 0, 0, 0
-	object_event 3, 83, 0, 14, 0, 9, 0, 3, 8, 17, 0, 0, 0, 0, 0, gTrainerHill_Entrance_EventScript_2683C7, 0, 0, 0
-	object_event 4, 14, 0, 5, 0, 14, 0, 3, 2, 17, 0, 0, 0, 0, 0, gTrainerHill_Entrance_EventScript_2683AC, 0, 0, 0
-	object_event 5, 33, 0, 14, 0, 15, 0, 3, 2, 17, 0, 0, 0, 0, 0, gTrainerHill_Entrance_EventScript_268391, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_TEALA, 0, 11, 0, 6, 0, 3, 9, 17, 0, 0, 0, 0, 0, gTrainerHill_Entrance_EventScript_2681FD, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_NURSE, 0, 4, 0, 9, 0, 3, 8, 17, 0, 0, 0, 0, 0, gTrainerHill_Entrance_EventScript_2681EF, 0, 0, 0
+	object_event 3, FIELD_OBJ_GFX_MART_EMPLOYEE, 0, 14, 0, 9, 0, 3, 8, 17, 0, 0, 0, 0, 0, gTrainerHill_Entrance_EventScript_2683C7, 0, 0, 0
+	object_event 4, FIELD_OBJ_GFX_GIRL_3, 0, 5, 0, 14, 0, 3, 2, 17, 0, 0, 0, 0, 0, gTrainerHill_Entrance_EventScript_2683AC, 0, 0, 0
+	object_event 5, FIELD_OBJ_GFX_MAN_4, 0, 14, 0, 15, 0, 3, 2, 17, 0, 0, 0, 0, 0, gTrainerHill_Entrance_EventScript_268391, 0, 0, 0
 
 gTrainerHill_Entrance_MapWarps: ; 853D8EC
 	warp_def 9, 16, 3, 4, Route111

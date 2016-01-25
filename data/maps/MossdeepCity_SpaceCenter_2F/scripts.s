@@ -1,8 +1,6 @@
 gMossdeepCity_SpaceCenter_2F_MapScripts: ; 8223D58
-	.byte 3
-	.4byte gMossdeepCity_SpaceCenter_2F_MapScript1_223D63
-	.byte 2
-	.4byte gMossdeepCity_SpaceCenter_2F_MapScript2_223DB5
+	map_script 3, gMossdeepCity_SpaceCenter_2F_MapScript1_223D63
+	map_script 2, gMossdeepCity_SpaceCenter_2F_MapScript2_223DB5
 	.byte 0
 
 gMossdeepCity_SpaceCenter_2F_MapScript1_223D63: ; 8223D63
@@ -29,9 +27,7 @@ gMossdeepCity_SpaceCenter_2F_EventScript_223D9F: ; 8223D9F
 	return
 
 gMossdeepCity_SpaceCenter_2F_MapScript2_223DB5: ; 8223DB5
-	.2byte 16543
-	.2byte 1
-	.4byte gMossdeepCity_SpaceCenter_2F_EventScript_223DBF
+	map_script_2 0x409f, 1, gMossdeepCity_SpaceCenter_2F_EventScript_223DBF
 	.2byte 0
 
 gMossdeepCity_SpaceCenter_2F_EventScript_223DBF: ; 8223DBF
@@ -61,21 +57,21 @@ gMossdeepCity_SpaceCenter_2F_Movement_223E07: ; 8223E07
 gMossdeepCity_SpaceCenter_2F_EventScript_223E09: ; 8223E09
 	loadptr 0, gMossdeepCity_SpaceCenter_2F_Text_22442D
 	callstd 4
-	trainerbattle 3, 588, 0, gMossdeepCity_SpaceCenter_2F_Text_224461
+	trainerbattle 3, TRAINER_GRUNT_34, 0, gMossdeepCity_SpaceCenter_2F_Text_224461
 	move 6, gMossdeepCity_SpaceCenter_2F_Movement_223E85
 	waitmove 0
 	move 255, gMossdeepCity_SpaceCenter_2F_Movement_2725A4
 	waitmove 0
 	loadptr 0, gMossdeepCity_SpaceCenter_2F_Text_22446E
 	callstd 4
-	trainerbattle 3, 589, 0, gMossdeepCity_SpaceCenter_2F_Text_224499
+	trainerbattle 3, TRAINER_GRUNT_35, 0, gMossdeepCity_SpaceCenter_2F_Text_224499
 	move 5, gMossdeepCity_SpaceCenter_2F_Movement_223E81
 	waitmove 0
 	move 255, gMossdeepCity_SpaceCenter_2F_Movement_2725A8
 	waitmove 0
 	loadptr 0, gMossdeepCity_SpaceCenter_2F_Text_2244AB
 	callstd 4
-	trainerbattle 3, 590, 0, gMossdeepCity_SpaceCenter_2F_Text_2244F1
+	trainerbattle 3, TRAINER_GRUNT_36, 0, gMossdeepCity_SpaceCenter_2F_Text_2244F1
 	move 7, gMossdeepCity_SpaceCenter_2F_Movement_223E89
 	waitmove 0
 	setvar 0x409f, 2

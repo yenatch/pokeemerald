@@ -1,5 +1,5 @@
 gRoute114_FossilManiacsHouse_MapObjects: ; 8533CFC
-	object_event 1, 5, 0, 3, 0, 2, 0, 3, 8, 17, 0, 0, 0, 0, 0, gRoute114_FossilManiacsHouse_EventScript_22AD3A, 0, 0, 0
+	object_event 1, FIELD_OBJ_GFX_LITTLE_BOY_1, 0, 3, 0, 2, 0, 3, 8, 17, 0, 0, 0, 0, 0, gRoute114_FossilManiacsHouse_EventScript_22AD3A, 0, 0, 0
 
 gRoute114_FossilManiacsHouse_MapWarps: ; 8533D14
 	warp_def 4, 7, 0, 1, Route114

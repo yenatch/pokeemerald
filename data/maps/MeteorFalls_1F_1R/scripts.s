@@ -1,6 +1,5 @@
 gMeteorFalls_1F_1R_MapScripts: ; 822BD2A
-	.byte 1
-	.4byte gMeteorFalls_1F_1R_MapScript1_22BD30
+	map_script 1, gMeteorFalls_1F_1R_MapScript1_22BD30
 	.byte 0
 
 gMeteorFalls_1F_1R_MapScript1_22BD30: ; 822BD30

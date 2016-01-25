@@ -1,8 +1,6 @@
 gLilycoveCity_ContestLobby_MapScripts: ; 821A211
-	.byte 3
-	.4byte gLilycoveCity_ContestLobby_MapScript1_21A21C
-	.byte 2
-	.4byte gLilycoveCity_ContestLobby_MapScript2_21A243
+	map_script 3, gLilycoveCity_ContestLobby_MapScript1_21A21C
+	map_script 2, gLilycoveCity_ContestLobby_MapScript2_21A243
 	.byte 0
 
 gLilycoveCity_ContestLobby_MapScript1_21A21C: ; 821A21C
@@ -24,12 +22,8 @@ gLilycoveCity_ContestLobby_EventScript_21A23C: ; 821A23C
 	return
 
 gLilycoveCity_ContestLobby_MapScript2_21A243: ; 821A243
-	.2byte 16537
-	.2byte 1
-	.4byte gLilycoveCity_ContestLobby_EventScript_21A255
-	.2byte 16537
-	.2byte 2
-	.4byte gLilycoveCity_ContestLobby_EventScript_21A427
+	map_script_2 0x4099, 1, gLilycoveCity_ContestLobby_EventScript_21A255
+	map_script_2 0x4099, 2, gLilycoveCity_ContestLobby_EventScript_21A427
 	.2byte 0
 
 gLilycoveCity_ContestLobby_EventScript_21A255: ; 821A255

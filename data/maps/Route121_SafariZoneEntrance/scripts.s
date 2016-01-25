@@ -1,12 +1,9 @@
 gRoute121_SafariZoneEntrance_MapScripts: ; 822BBBB
-	.byte 2
-	.4byte gRoute121_SafariZoneEntrance_MapScript2_22BBC1
+	map_script 2, gRoute121_SafariZoneEntrance_MapScript2_22BBC1
 	.byte 0
 
 gRoute121_SafariZoneEntrance_MapScript2_22BBC1: ; 822BBC1
-	.2byte 16548
-	.2byte 1
-	.4byte gRoute121_SafariZoneEntrance_EventScript_22BBCB
+	map_script_2 0x40a4, 1, gRoute121_SafariZoneEntrance_EventScript_22BBCB
 	.2byte 0
 
 gRoute121_SafariZoneEntrance_EventScript_22BBCB: ; 822BBCB

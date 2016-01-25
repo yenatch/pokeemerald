@@ -1,8 +1,8 @@
 gLilycoveCity_LilycoveMuseum_2F_MapObjects: ; 8531428
-	object_event 1, 48, 0, 10, 0, 8, 0, 3, 7, 0, 0, 0, 0, 0, 0, gLilycoveCity_LilycoveMuseum_2F_EventScript_219866, 0, 0, 0
-	object_event 2, 10, 0, 19, 0, 10, 0, 3, 2, 17, 0, 0, 0, 0, 0, gLilycoveCity_LilycoveMuseum_2F_EventScript_21998A, 777, 0, 0
-	object_event 3, 21, 0, 7, 0, 3, 0, 3, 2, 17, 0, 0, 0, 0, 0, gLilycoveCity_LilycoveMuseum_2F_EventScript_219993, 780, 0, 0
-	object_event 4, 15, 0, 14, 0, 6, 0, 3, 2, 17, 0, 0, 0, 0, 0, gLilycoveCity_LilycoveMuseum_2F_EventScript_21999C, 780, 0, 0
+	object_event 1, FIELD_OBJ_GFX_GENTLEMAN, 0, 10, 0, 8, 0, 3, 7, 0, 0, 0, 0, 0, 0, gLilycoveCity_LilycoveMuseum_2F_EventScript_219866, 0, 0, 0
+	object_event 2, FIELD_OBJ_GFX_GIRL_2, 0, 19, 0, 10, 0, 3, 2, 17, 0, 0, 0, 0, 0, gLilycoveCity_LilycoveMuseum_2F_EventScript_21998A, 777, 0, 0
+	object_event 3, FIELD_OBJ_GFX_OLD_MAN_1, 0, 7, 0, 3, 0, 3, 2, 17, 0, 0, 0, 0, 0, gLilycoveCity_LilycoveMuseum_2F_EventScript_219993, 780, 0, 0
+	object_event 4, FIELD_OBJ_GFX_BOY_4, 0, 14, 0, 6, 0, 3, 2, 17, 0, 0, 0, 0, 0, gLilycoveCity_LilycoveMuseum_2F_EventScript_21999C, 780, 0, 0
 
 gLilycoveCity_LilycoveMuseum_2F_MapWarps: ; 8531488
 	warp_def 13, 1, 0, 2, LilycoveCity_LilycoveMuseum_1F

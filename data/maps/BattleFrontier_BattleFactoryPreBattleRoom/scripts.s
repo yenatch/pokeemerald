@@ -1,14 +1,10 @@
 gBattleFrontier_BattleFactoryPreBattleRoom_MapScripts: ; 8259ABA
-	.byte 2
-	.4byte gBattleFrontier_BattleFactoryPreBattleRoom_MapScript2_259AEF
-	.byte 4
-	.4byte gBattleFrontier_BattleFactoryPreBattleRoom_MapScript2_259AC5
+	map_script 2, gBattleFrontier_BattleFactoryPreBattleRoom_MapScript2_259AEF
+	map_script 4, gBattleFrontier_BattleFactoryPreBattleRoom_MapScript2_259AC5
 	.byte 0
 
 gBattleFrontier_BattleFactoryPreBattleRoom_MapScript2_259AC5: ; 8259AC5
-	.2byte 16385
-	.2byte 0
-	.4byte gBattleFrontier_BattleFactoryPreBattleRoom_EventScript_259ACF
+	map_script_2 0x4001, 0, gBattleFrontier_BattleFactoryPreBattleRoom_EventScript_259ACF
 	.2byte 0
 
 gBattleFrontier_BattleFactoryPreBattleRoom_EventScript_259ACF: ; 8259ACF
@@ -23,9 +19,7 @@ gBattleFrontier_BattleFactoryPreBattleRoom_EventScript_259AEA: ; 8259AEA
 	end
 
 gBattleFrontier_BattleFactoryPreBattleRoom_MapScript2_259AEF: ; 8259AEF
-	.2byte 16384
-	.2byte 0
-	.4byte gBattleFrontier_BattleFactoryPreBattleRoom_EventScript_259AF9
+	map_script_2 0x4000, 0, gBattleFrontier_BattleFactoryPreBattleRoom_EventScript_259AF9
 	.2byte 0
 
 gBattleFrontier_BattleFactoryPreBattleRoom_EventScript_259AF9: ; 8259AF9
