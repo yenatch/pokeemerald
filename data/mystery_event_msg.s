@@ -8,8 +8,6 @@
 	.include "asm/macros/event.inc"
 	.include "constants/constants.inc"
 
-	.include "data/specials.inc"
-
 
 	.section .rodata
 

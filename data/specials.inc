@@ -1,13 +1,12 @@
 #ifndef GUARD_SPECIALS_H 
 #define GUARD_SPECIALS_H 
 .macro def_special ptr
-.set SPECIAL_\ptr, __special__
-.set __special__, __special__ + 1
+.global SPECIAL_\ptr
+SPECIAL_\ptr:
 	.4byte \ptr
 	.endm
 
-.set __special__, 0
-		.align 2
+	.align 2
 gSpecials:: @ 81DBA64
 	def_special HealPlayerParty
 	def_special sub_809D2BC
